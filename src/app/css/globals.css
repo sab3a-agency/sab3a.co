@@ -22,7 +22,8 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  /* outline: 1px solid black !important; For Debug */
+  /* For Debug */
+  /* outline: 1px solid black !important; */
 }
 
 body {
@@ -1086,7 +1087,7 @@ footer .textBox a {
   width: 94% !important;
 }
 .infoServers h1 {
-  width: 16rem;
+  width: 100% !important;
 }
 .partImages .row {
   justify-content: center !important;
@@ -1182,8 +1183,8 @@ hr {
 /* Service Page Style */
 
 .Hero .head h1 {
-  width: 100% !important;
-  font-size: 4rem;
+  width: 73% !important;
+  font-size: 3rem;
   font-weight: bold;
   letter-spacing: 1px;
   color: var(--Color-Primary);
@@ -1269,13 +1270,17 @@ marquee {
   padding: 1rem;
   border-radius: 2rem;
   text-decoration: none;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   border: 0.1rem solid var(--Color-Primary);
   color: var(--Color-White-White-200);
   transition: all 0.3s ease-in-out;
   display: block;
   text-align: center;
   width: 9rem;
+  -webkit-border-radius: 2rem;
+  -moz-border-radius: 2rem;
+  -ms-border-radius: 2rem;
+  -o-border-radius: 2rem;
 }
 .letsDoit .wrapper a:hover {
   background: var(--Color-Primary);
@@ -1681,7 +1686,7 @@ marquee {
     align-items: center !important;
   }
   .Hero .head h1 {
-    width: 43% !important;
+    width: 52% !important;
     font-size: 5rem;
   }
   .adv h2 {
