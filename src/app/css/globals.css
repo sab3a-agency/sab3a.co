@@ -13,7 +13,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  /* outline: 1px solid black !important; */
+  outline: 1px solid black !important;
 }
 
 @font-face {
@@ -587,9 +587,9 @@ button.carousel-control-next:hover,
 }
 
 .btns {
+  width: 23%;
   position: relative;
   display: inline-flex;
-  width: 23%;
   height: 6rem;
   right: 3rem;
   top: 0rem;
@@ -1173,7 +1173,7 @@ hr {
 /* Service Page Style */
 
 .Hero .head h1 {
-  width: 55rem;
+  width: 100% !important;
   font-size: 4rem;
   font-weight: bold;
   letter-spacing: 1px;
@@ -1238,7 +1238,7 @@ hr {
   font-size: 5rem;
 }
 .adv .info p {
-  width: 55rem !important;
+  width: 100% !important;
   font-size: 3rem !important;
 }
 .adv .info {
@@ -1274,11 +1274,11 @@ marquee {
 }
 
 .letsDoit .wrapper p {
-  font-size: 5rem;
+  font-size: 3rem;
   display: flex;
   flex-direction: column;
   text-align: justify;
-  width: 132%;
+  width: 100%;
   color: white;
 }
 .letsDoit .row a img#arrow {
@@ -1301,6 +1301,9 @@ marquee {
 }
 .marqueeLg {
   display: none;
+}
+.PartnersMarquee_sm {
+  width: 100% !important;
 }
 
 /* ------------------------------ */
@@ -1723,5 +1726,11 @@ marquee {
   }
   .title.m-5 {
     margin-bottom: 5rem !important;
+  }
+  .btns {
+    width: 10% !important;
+  }
+  .sessionWhyChooseUs .BoxText {
+    width: 75% !important;
   }
 }

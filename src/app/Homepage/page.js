@@ -25,6 +25,7 @@ export function HomePage() {
             <ActWithTeam />
             <OurVision />
             <Questiones />
+
         </>
     );
 }
