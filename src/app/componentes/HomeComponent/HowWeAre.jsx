@@ -1,6 +1,8 @@
 "use client";
 
-const DataAboutUs = {
+import { useState } from "react";
+
+const Defultdata = {
   small: "من نحن",
   title: "نحن أفضل وكالة",
   spanText: "شريك تقني",
@@ -26,6 +28,7 @@ const DataAboutUs = {
   ],
 };
 export default function HowWeAre() {
+  let [DataAboutUs, setDataAboutUs] = useState(Defultdata);
   return (
     <div className="HowWeAre mt-80">
       <div className="container py-5 mt-5">
@@ -62,7 +65,7 @@ export default function HowWeAre() {
                     className="box d-flex gap-4 align-items-center "
                   >
                     <div className="icon">
-                      <img src={feature.iconSrc} alt="icon" loading="lazy" />
+                      <img src={feature.iconSrc} alt="icon" />
                     </div>
                     <div className="information  d-flex flex-column align-items-start justify-content-center ">
                       <h3>{feature.title}</h3>

@@ -7,17 +7,17 @@ let data = {
   discription: `   نعمل على إنشاء أكثر الأماكن جاذبية وذات مغزى للأعمال الصغيرة.
                 فريقنا دائمًا جاهز لمساعدتك.`,
   box1: [
-    "/img/Avatar0.svg",
-    "/img/Avatar1.svg",
-    "/img/Avatar2.svg",
-    "/img/Avatar3.svg",
-    "/img/Review_Faces.svg",
+    "/img/Avatar0.png",
+    "/img/Avatar1.png",
+    "/img/Avatar2.png",
+    "/img/Avatar3.png",
+    "/img/Review_Faces.png",
   ],
   box2: [
-    "/img/Avatar4.svg",
-    "/img/Avatar5.svg",
-    "/img/Logomark.svg",
-    "/img/Avatar0.svg",
+    "/img/Avatar4.png",
+    "/img/Avatar5.png",
+    "/img/Logomark.png",
+    "/img/Avatar0.png",
   ],
 };
 

@@ -1,7 +1,7 @@
 "use client";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
-const data = {
+const dataDEfult = {
   Massges: `                  انضم إلينا في رحلة الابتكار والإبداع، حيث نبني معًا شيئًا
                   استثنائيًا يفوق التوقعات.`,
   src: "/img/SomeOne_kofia.png",
@@ -45,6 +45,7 @@ export default function HeroPart1() {
     return () => observer.disconnect();
   }, []);
 
+  const [data, setData] = useState(dataDEfult);
   return (
     <>
       <div className="container p-5 mt-80 pt-0">

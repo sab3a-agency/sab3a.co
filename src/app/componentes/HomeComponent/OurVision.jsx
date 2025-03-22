@@ -1,8 +1,8 @@
 "use client";
 
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
-const OurVisionData = {
+const OurVisionDataDefult = {
   small: " رؤيتنا ",
   title: "  نؤمن بأن  ",
   span: " التكنولوجيا والإبداع  ",
@@ -23,12 +23,17 @@ const OurVisionData = {
 
 export default function OurVision() {
   useEffect(() => {
-    const handleScroll = () => {
-      const boxWrapper = document.querySelector(".boxWrapper");
-      if (!boxWrapper) return;
+    const bars = document.querySelectorAll(".bar2");
+    const numbers = document.querySelectorAll(".number");
 
-      if (window.scrollY + window.innerHeight >= boxWrapper.offsetTop) {
-        document.querySelectorAll(".bar2").forEach((bar2) => {
+    if (!bars.length || !numbers.length) return;
+
+    const observer = new IntersectionObserver(
+      (entries, observer) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) return;
+
+          const bar2 = entry.target;
           const span2 = bar2.querySelector("span");
           const number2 = bar2.querySelector(".number");
           const targetHeight2 = parseInt(span2.dataset.height);
@@ -48,15 +53,25 @@ export default function OurVision() {
                 span2.style.background = "rgba(137, 175, 72, 1)";
               }
 
-              setTimeout(() => requestAnimationFrame(animateHeight), 10);
+              requestAnimationFrame(animateHeight);
             }
           };
 
           requestAnimationFrame(animateHeight);
+          observer.unobserve(bar2);
         });
+      },
+      { threshold: 0.5 }
+    );
 
-        // to be sure that the number is animated
-        document.querySelectorAll(".number").forEach((numberEl) => {
+    bars.forEach((bar2) => observer.observe(bar2));
+
+    const numberObserver = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) return;
+
+          const numberEl = entry.target;
           const targetValue = parseInt(numberEl.dataset.target);
           if (numberEl.dataset.animated === "true") return;
           numberEl.dataset.animated = "true";
@@ -67,19 +82,25 @@ export default function OurVision() {
             if (currentValue < targetValue) {
               currentValue++;
               numberEl.textContent = `${currentValue}%`;
-              setTimeout(() => requestAnimationFrame(animateNumber), 5);
+              requestAnimationFrame(animateNumber);
             }
           };
 
           requestAnimationFrame(animateNumber);
         });
-      }
-    };
+      },
+      { threshold: 0.5 }
+    );
 
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
+    numbers.forEach((numberEl) => numberObserver.observe(numberEl));
+
+    return () => {
+      observer.disconnect();
+      numberObserver.disconnect();
+    };
   }, []);
 
+  const [OurVisionData] = useState(OurVisionDataDefult);
   return (
     <>
       <section className="OurVision mt-80">

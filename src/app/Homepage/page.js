@@ -12,6 +12,7 @@ import WhyChooseUs from "../componentes/HomeComponent/whyChooseUs";
 
 
 
+
 export function HomePage() {
     return (
         <>

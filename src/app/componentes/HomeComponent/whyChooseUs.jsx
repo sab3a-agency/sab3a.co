@@ -1,13 +1,13 @@
 "use client";
 
-import { useState } from "react";
+import { useMemo, useState } from "react";
 
 const Defultdata = {
   srces: [
-    "/img/withHeadphone.jpeg	",
+    "/img/withHeadphone.png	",
     "/img/image.png",
-    "/img/withMindMap.jpeg",
-    "/img/AlwaysReady.jpeg",
+    "/img/withMindMap.png",
+    "/img/AlwaysReady.png",
   ],
   title: " رفع ",
   span: " وجودك الرقمي ",
@@ -41,7 +41,7 @@ const Defultdata = {
   ],
 };
 export default function WhyChooseUs() {
-  const [data, setData] = useState(Defultdata);
+  const data = useMemo(() => Defultdata, []);
   return (
     <div className="sessionWhyChooseUs ">
       <div className="container p-5 mt-5">
@@ -50,12 +50,7 @@ export default function WhyChooseUs() {
             <div className="row">
               <div className="col-6 col-md-2 mb-3  d-none d-md-block">
                 <div className="wapp">
-                  <img
-                    src={data.srces[0]}
-                    alt="img"
-                    data-aos="fade-left"
-                    loading="lazy"
-                  />
+                  <img src={data.srces[0]} alt="img" data-aos="fade-left" />
                 </div>
               </div>
               <div className="col-6 col-md-6 mb-3 order-3 order-md-2">
@@ -65,29 +60,18 @@ export default function WhyChooseUs() {
                     src={data.srces[1]}
                     alt="img "
                     data-aos="zoom-in"
-                    loading="lazy"
                   />
                 </div>
               </div>
               <div className="col-6 col-md-3 mb-3">
                 <div className="wappLongimg">
-                  <img
-                    src={data.srces[2]}
-                    alt="img"
-                    data-aos="zoom-in"
-                    loading="lazy"
-                  />
+                  <img src={data.srces[2]} alt="img" data-aos="zoom-in" />
                 </div>
               </div>
 
               <div className="col-6 col-md-2 mb-3">
                 <div className="wappLongimg">
-                  <img
-                    src={data.srces[3]}
-                    alt="img"
-                    data-aos="fade-right"
-                    loading="lazy"
-                  />
+                  <img src={data.srces[3]} alt="img" data-aos="fade-right" />
                 </div>
               </div>
             </div>

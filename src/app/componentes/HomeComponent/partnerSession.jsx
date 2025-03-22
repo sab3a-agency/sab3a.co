@@ -63,9 +63,10 @@ const chunkArray = (arr, size) => {
   return result;
 };
 
-const groupedPartners = chunkArray(partners, 11);
+const groupedPartnersDefult = chunkArray(partners, 11);
 
 export default function PartnerSession() {
+  const [groupedPartners, setgroupedPartners] = useState(groupedPartnersDefult);
   return (
     <div className="Your_partner_in_success">
       <div className="container mt-80">

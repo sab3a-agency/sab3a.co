@@ -1,20 +1,11 @@
 @font-face {
   font-family: "Sukar";
-  src: url("/sabaa/public/Fonts/alfont_com_Sukar-Regular.woff2") format("woff2");
+  src: url("/sabaa/public/fonts/alfont_com_Sukar-Regular.ttf")
+    format("truetype");
   font-weight: 400;
+  font-style: italic;
 }
 
-@font-face {
-  font-family: "Sukar";
-  src: url("/sabaa/public/Fonts/alfont_com_Sukar-Bold.woff") format("woff");
-  font-weight: 700;
-}
-
-@font-face {
-  font-family: "Sukar";
-  src: url("/sabaa/public/Fonts/alfont_com_Sukar-Black.ttf") format("truetype");
-  font-weight: 900;
-}
 :root {
   --Color-Secondary: #e75050;
   --Color-Primary: rgba(51, 134, 86, 1);
@@ -25,24 +16,25 @@
   --Color-Black-Black-500: rgba(37, 36, 36, 1);
   --Color-Warning-Warning-100: rgba(254, 237, 197, 1);
   --Color-text-secondary: rgba(109, 108, 108, 1);
+  --bs-body-font-family: Sukar !important;
 }
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  /* outline: 1px solid black !important;// For Debug  */
+  /* outline: 1px solid black !important; For Debug */
 }
 
 body {
   overflow-x: hidden;
-  font-family: "Sukar";
-  font-weight: 900;
   letter-spacing: 0%;
   text-align: center;
   outline: none !important;
   border: none !important;
   /* padding-top: 4rem; */
+  font-size: "Sukar" !important;
 }
+
 img:focus,
 a:focus {
   outline: none !important;
@@ -107,7 +99,7 @@ nav button.btn.btn-success,
   border-radius: 50px;
   border-width: 1px;
   padding: 0 2rem;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
 }
 
 .ContentOurServices {
@@ -217,7 +209,8 @@ img.w-50 {
 }
 
 .text-wikala {
-  font-size: 7rem;
+  font-size: 5rem;
+  font-weight: 900;
   line-height: 81.42px;
   text-align: right;
   color: var(--Color-Secondary);
@@ -228,6 +221,7 @@ img.w-50 {
   line-height: 58.42px;
   color: var(--Color-Primary);
   margin: 0rem 10px;
+  font-weight: 900;
 }
 .innerWrappe.col-md-3.gap-5 {
   margin: 4rem 0rem;
@@ -282,7 +276,7 @@ img.w-50 {
 .box_2 span,
 .box_1 span {
   color: var(--Color-Secondary);
-  font-size: 4rem;
+  font-size: 5rem;
 }
 .innerBox h3 {
   text-align: justify !important;
@@ -305,7 +299,7 @@ img.w-50 {
   width: 100% !important;
 }
 .Text-Running .row {
-  padding: 1.1rem;
+  padding: 2.1rem;
 }
 .RunningLikePost {
   position: relative;
@@ -324,9 +318,10 @@ img.w-50 {
 } */
 
 .ContentOurServices .Text {
-  font-size: 5rem;
+  font-size: 4rem;
   width: 100% !important;
   color: var(--Color-Primary);
+  font-weight: 900;
 }
 
 .ContentOurServices p {
@@ -405,7 +400,7 @@ img.w-50 {
 }
 
 .sessionWhyChooseUs h3 {
-  font-size: 5.8rem;
+  font-size: 4.8rem;
   text-align: justify;
   font-weight: 900;
   color: var(--Color-Primary);
@@ -416,7 +411,7 @@ img.w-50 {
 }
 .sessionWhyChooseUs p {
   /* font-size: 2.5rem; */
-  font-size: 2.3rem;
+  font-size: 1.8rem;
   text-align: justify;
   margin: 35px 1px;
   font-weight: 100;
@@ -601,11 +596,11 @@ button.carousel-control-next:hover,
 }
 
 .btns {
-  width: 23%;
+  width: 21%;
   position: relative;
   display: inline-flex;
   height: 6rem;
-  right: 3rem;
+  right: 1rem;
   top: 0rem;
 }
 
@@ -1482,6 +1477,9 @@ marquee {
   p.text-wikala.mt-5 {
     margin: 0rem !important;
   }
+  .text-wikala {
+    font-size: 6rem !important;
+  }
   .BigText {
     line-height: 58.42px;
   }
@@ -1610,7 +1608,7 @@ marquee {
     height: 63rem !important;
   }
   .HowWeAre .info h3 {
-    width: 70% !important;
+    width: 80% !important;
   }
   .WrappersubSession {
     padding: 4rem;
@@ -1623,7 +1621,7 @@ marquee {
     font-size: 1.5rem;
   }
   .WrappersubSession .boxs .box .information p {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     width: 46rem;
   }
   .btns {
@@ -1752,7 +1750,7 @@ marquee {
     width: 75% !important;
   }
   .ContentOurServices .Text {
-    width: 103% !important;
+    width: 110% !important;
   }
   .divWitherProgress {
     width: 102% !important;

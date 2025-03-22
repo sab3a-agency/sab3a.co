@@ -38,7 +38,7 @@ export default function Herosection() {
                         key={index}
                         className="sliderImg col-md-3 d-flex justify-content-center align-items-center gap-5"
                       >
-                        <img src={data.innerSrc} loading="lazy" alt="Star" />
+                        <img src={data.innerSrc} alt="Star" />
                         <small>{title}</small>
                       </div>
                     );
