@@ -1,0 +1,158 @@
+@import url("../css/ComoneStyle.css");
+.heroPackages span,
+.heroPackages small {
+  color: var(--Color-Secondary);
+  font-weight: 900;
+  line-height: 100%;
+  letter-spacing: 0px;
+  text-align: center;
+}
+
+.heroPackages h1.my-4 {
+  font-size: 5rem;
+  color: var(--Color-Primary);
+  font-weight: 900;
+  line-height: 100%;
+  letter-spacing: 0px;
+  text-align: center;
+}
+
+.heroPackages p {
+  width: 100%;
+  font-size: 2rem;
+  font-weight: 400;
+  color: var(--Color-text-secondary);
+}
+
+.heroPackages small {
+  font-size: 2.5rem;
+}
+.questiones .container {
+  width: 100% !important;
+}
+hr {
+  display: block;
+  opacity: 4;
+  visibility: visible;
+  margin-top: 11rem;
+  color: rgb(233 233 233);
+  padding: 40px 100px;
+}
+.questiones p {
+  padding: 0rem;
+  font-size: 2rem;
+}
+
+.heroPackages .boxWrapper {
+  background: var(--background);
+  padding: 6rem;
+  border-radius: 6rem;
+  text-align: justify;
+  border: 1px solid var(--Color-Black-Black-50);
+  width: 100%;
+  box-shadow: 0px 13px 16px -4px rgba(16, 24, 40, 0.08);
+  cursor: pointer !important;
+  position: relative;
+  overflow: hidden;
+}
+.heroPackages .boxWrapper h4 {
+  font-size: 2.3rem;
+  font-weight: 900;
+  color: var(--Color-Primary);
+}
+.heroPackages .boxWrapper h2 {
+  font-size: 5.6rem;
+  font-weight: 900;
+}
+.heroPackages .boxWrapper p {
+  width: 100%;
+  font-size: 1.9rem;
+  color: var(--Color-text-primary);
+  font-weight: 400;
+  white-space: pre-line;
+  letter-spacing: 0px;
+}
+
+.Wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box-innerfeatures {
+  position: relative;
+}
+
+.outerbtn {
+  background: var(--Color-White-White-500);
+  width: 127%;
+  position: relative;
+  bottom: -6rem;
+  left: 6rem;
+  padding: 4rem 0rem;
+}
+.boxWrapper.Active {
+  background: var(--Color-Primary) !important;
+  color: var(--background) !important;
+  box-shadow: 0px 63px 57.2px -45px rgba(34, 197, 94, 0.25) !important;
+}
+
+.boxWrapper.Active h4,
+.boxWrapper.Active p {
+  color: var(--background) !important;
+}
+.boxWrapper.Active .outerbtn {
+  background: var(--Color-White-Transparance);
+}
+
+.heroPackages .boxWrapper button {
+  padding: 8px;
+  outline: none;
+  background: transparent;
+  font-size: 2.3rem;
+  background: var(--Color-Primary);
+  width: 85%;
+  border-radius: 6rem;
+  border: 1px solid
+    var(--Color-button-background-primary-disable, rgba(176, 208, 190, 1));
+  font-weight: 400;
+  letter-spacing: 0%;
+  color: var(--Color-Black-Black-50);
+  transition: all 0.3s ease-out;
+}
+.boxWrapper:hover button {
+  background: var(--Color-Primary-hover);
+}
+
+.boxWrapper.Active button {
+  color: var(--Color-Primary);
+  border: 1px solid
+    var(--Color-button-background-primary-disable, rgba(176, 208, 190, 1));
+  transition: all 0.3s ease-out;
+  background: var(--Color-White-White-500);
+}
+.boxWrapper.Active:hover button {
+  background: var(--Color-White-hover);
+}
+
+button.accordion-button.collapsed {
+  font-size: 1.9rem !important;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 10px;
+  }
+  .WrapperBoxOuter {
+    flex-direction: row !important;
+  }
+  .outerbtn {
+    left: 7rem !important;
+  }
+  .questiones p {
+    padding: 0 36rem;
+  }
+  .heroPackages h1.my-4 {
+    font-size: 6rem;
+  }
+}

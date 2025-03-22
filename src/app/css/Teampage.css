@@ -1,0 +1,163 @@
+@import url("../css/ComoneStyle.css");
+
+.information h5 {
+  font-size: 2.5rem;
+  width: 100%;
+  font-weight: 700;
+  color: var(--Color-Primary);
+}
+.wrapperImge img {
+  border-radius: 4rem 4rem 0rem 0rem;
+}
+.icones small {
+  font-size: 1.9rem;
+  padding: 0rem 0.5rem;
+  margin-left: 0.5rem;
+  font-weight: 100;
+}
+.icones {
+  align-items: baseline;
+}
+.icones p {
+  width: 62%;
+  text-align: justify;
+}
+
+.icones small:not(:last-child) {
+  border-left: 2px solid;
+}
+.wrapperLink .icon {
+  background: rgba(249, 249, 251, 1);
+  border: 1px solid rgba(235, 235, 235, 1);
+  padding: 10px;
+  border-radius: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.information path {
+  color: var(--Color-Primary);
+}
+.wrapperImge {
+  height: 48.3rem;
+  overflow: hidden;
+}
+.wrapperLink .icones p {
+  width: 65%;
+  text-align: justify;
+}
+.RestOfTheTeam .box .Wrapp {
+  overflow: hidden;
+  height: 25rem;
+  border-radius: 5.2rem;
+}
+
+.about h5 {
+  font-size: 2.5rem;
+  color: var(--Color-Primary);
+}
+
+.box .about span {
+  font-size: 2rem;
+  color: var(--Color-text-secondary);
+  font-weight: 100;
+}
+.hero h2 {
+  font-size: 4rem;
+  font-weight: 900;
+  color: var(--Color-Primary);
+}
+.hero span {
+  font-size: 2rem;
+  font-weight: 400;
+  color: var(--Color-text-secondary);
+}
+.JourneyPoints {
+  margin-top: 5rem !important;
+}
+.cyrcle::before {
+  content: "";
+  display: block;
+  background: transparent;
+  border: 1px solid var(--Color-Black-Black-50);
+  margin: 1rem 30px;
+  width: 2rem;
+  height: 2rem !important;
+  border-radius: 5rem;
+}
+.Active::before {
+  content: "";
+  background: var(--Color-Secondary);
+  border: none;
+}
+
+.cyrcle::after {
+  content: "";
+  display: block;
+  background: var(--Color-Black-Black-50);
+  width: 2px;
+  border-radius: 0px;
+  height: 120px;
+  margin: -1rem 37px;
+}
+.last-item::after {
+  height: 0px !important;
+}
+
+.JourneyPoints small {
+  display: flex;
+  font-size: 2rem;
+  justify-content: center;
+  align-items: center;
+  color: gray;
+  font-weight: 100;
+}
+.JourneyPoints .heading h3 {
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+.JourneyPoints .heading p {
+  font-size: 1.9rem;
+  font-weight: 100;
+  width: 100%;
+  width: 79%;
+  text-align: justify;
+}
+.targets .box {
+  border-top: 1px solid var(--Color-Black-Black-50);
+  padding: 2rem;
+}
+.detals p {
+  font-size: 2rem;
+  margin-right: 5rem;
+  font-weight: 400;
+}
+.red {
+  color: var(--Color-Secondary);
+}
+
+.detals h3 {
+  font-size: 4rem;
+}
+.Section2 .letsDoit {
+  display: none;
+  opacity: 0;
+  visibility: hidden;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 10px;
+  }
+  .Hero .head {
+    flex-direction: row !important;
+  }
+  .RestOfTheTeam .box .Wrapp {
+    overflow: hidden;
+    height: 28rem;
+  }
+
+  .cyrcle::after {
+    margin: -1rem 39px;
+  }
+}

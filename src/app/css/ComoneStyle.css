@@ -1,0 +1,42 @@
+:root {
+  --Color-Secondary: #e75050;
+  --Color-Primary: rgba(51, 134, 86, 1);
+  --Color-White: rgba(242, 246, 248, 1);
+  --Color-Primary-Primary-50: rgb(230, 240, 234);
+  --Color-White-White-200: rgba(246, 249, 250, 1);
+  --Color-Black-Black-50: rgba(233, 233, 233, 1);
+  --Color-Black-Black-500: rgba(37, 36, 36, 1);
+  --Color-Warning-Warning-100: rgba(254, 237, 197, 1);
+  --Color-text-secondary: rgba(109, 108, 108, 1);
+  --background: rgba(255, 255, 255, 1);
+  --Color-text-primary: rgba(37, 36, 36, 1);
+  --Color-White-White-500: rgba(236, 241, 244, 1);
+  --Color-White-Transparance: rgba(241, 245, 249, 0.1);
+  --Color-button-background-primary-disable: rgba(176, 208, 190, 1);
+  --Color-Primary-hover: rgb(36, 122, 72);
+  --Color-White-hover: rgb(255, 255, 255);
+}
+@font-face {
+  font-family: "Sukar";
+  src: url("/sabaa/public/Fonts/Sukar.ttf") format("truetype");
+}
+
+body {
+  overflow-x: hidden;
+  font-family: Sukar !important;
+  font-weight: 900;
+  letter-spacing: 0%;
+  text-align: center;
+  outline: none !important;
+  border: none !important;
+  /* padding-top: 4rem; */
+}
+html {
+  font-size: 8px;
+}
+.mt-50 {
+  margin-top: 6rem;
+}
+.mt-80 {
+  margin-top: 13rem;
+}
