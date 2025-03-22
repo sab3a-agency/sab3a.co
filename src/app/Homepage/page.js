@@ -7,7 +7,7 @@ import PartnerSession from "../componentes/HomeComponent/partnerSession";
 import Questiones from "../componentes/HomeComponent/questiones";
 import Services from "../componentes/HomeComponent/services";
 import WhyChooseUs from "../componentes/HomeComponent/whyChooseUs";
-import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
+// import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 
 const faqData = {
     head: {
@@ -17,7 +17,7 @@ const faqData = {
             "كوكالة رائدة في الحلول الرقمية، نقدم إجابات شاملة لأسئلتك لمساعدتك على فهم كيفية تحويل أفكارك إلى نجاح رقمي.",
         links: [
             { text: "اتصل بنا", href: "#" },
-            { text: "أسئلة أخرى", isButton: true, icon: faArrowLeft },
+            { text: "أسئلة أخرى", isButton: true, icon: "faArrowLeft" },
         ],
     },
     questions: [

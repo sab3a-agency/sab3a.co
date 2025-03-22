@@ -1,6 +1,11 @@
 "use client";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
+
+const iconMap = {
+  faArrowLeft: faArrowLeft,
+};
 
 export default function Questiones({ faqData }) {
   return (
@@ -22,7 +27,13 @@ export default function Questiones({ faqData }) {
                       type="button"
                       className="btn btn-success d-flex justify-content-center align-items-center"
                     >
-                      {link.text} <FontAwesomeIcon icon={link.icon} />
+                      {link.text}
+                      {iconMap[link.icon] && (
+                        <FontAwesomeIcon
+                          icon={iconMap[link.icon]}
+                          className="ms-2"
+                        />
+                      )}
                     </button>
                   ) : (
                     <a key={index} href={link.href}>
