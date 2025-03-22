@@ -4,7 +4,7 @@ import { useMemo, useState } from "react";
 
 const Defultdata = {
   srces: [
-    "/img/withHeadphone.png	",
+    "/img/withHeadphone.png",
     "/img/image.png",
     "/img/withMindMap.png",
     "/img/AlwaysReady.png",
