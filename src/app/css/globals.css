@@ -9,13 +9,13 @@
   --Color-Warning-Warning-100: rgba(254, 237, 197, 1);
   --Color-text-secondary: rgba(109, 108, 108, 1);
 }
-/*  {
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-   outline: 1px solid black !important; 
-} 
-*/
+  outline: 1px solid black !important;
+}
+
 @font-face {
   font-family: "Sukar";
   src: url("/sabaa/public/Fonts/Sukar.ttf") format("truetype");
@@ -30,6 +30,7 @@ body {
   outline: none !important;
   border: none !important;
   /* padding-top: 4rem; */
+  background: teal !important;
 }
 img:focus,
 a:focus {
@@ -118,7 +119,7 @@ nav .container {
 }
 
 .container.onscroll {
-  width: 90%;
+  width: 80%;
 }
 
 /* small nav */
@@ -387,7 +388,7 @@ img.w-50 {
 
 /* sessionWhyChooseUs  part2 */
 .sessionWhyChooseUs .BoxText {
-  width: 46rem;
+  width: 100%;
 }
 
 .sessionWhyChooseUs h3 {
@@ -589,7 +590,7 @@ button.carousel-control-next:hover,
 .btns {
   position: relative;
   display: inline-flex;
-  width: 13rem;
+  width: 11rem;
   height: 6rem;
   right: 7rem;
   top: 0rem;
@@ -670,6 +671,7 @@ button.carousel-control-next:hover,
   gap: 2rem;
   margin-top: 5rem;
 }
+
 /* ------Brogress---------- */
 
 .heroprogress {
@@ -1426,6 +1428,10 @@ marquee {
 }
 .innerinfo h4 {
   font-size: 1.8rem !important;
+}
+
+.divWitherProgress {
+  width: 98%;
 }
 
 /* ----------------------------- */
