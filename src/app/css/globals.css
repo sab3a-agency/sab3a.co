@@ -9,6 +9,12 @@
   --Color-Warning-Warning-100: rgba(254, 237, 197, 1);
   --Color-text-secondary: rgba(109, 108, 108, 1);
 }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: 1px solid black !important;
+}
 @font-face {
   font-family: "Sukar";
   src: url("/sabaa/public/Fonts/Sukar.ttf") format("truetype");
@@ -304,13 +310,13 @@ img.w-50 {
 
 .ContentOurServices .Text {
   font-size: 5rem;
-  width: 55rem !important;
+  width: 48rem !important;
   color: var(--Color-Primary);
 }
 
 .ContentOurServices p {
   font-size: 2.2rem;
-  width: 54rem !important;
+  width: 47rem !important;
   font-weight: 400 !important;
   letter-spacing: 1px;
   font-weight: 400;
@@ -380,7 +386,7 @@ img.w-50 {
 
 /* sessionWhyChooseUs  part2 */
 .sessionWhyChooseUs .BoxText {
-  width: 50rem;
+  width: 46rem;
 }
 
 .sessionWhyChooseUs h3 {
@@ -477,7 +483,7 @@ img.w-50 {
   letter-spacing: 0px;
   text-align: justify;
   font-size: 2rem;
-  width: 56rem;
+  width: 90% !important;
 }
 
 .info small {
@@ -1066,7 +1072,7 @@ footer .textBox a {
 }
 .HowWeAre .info p {
   font-size: 2.5rem;
-  width: 57rem !important;
+  width: 94% !important;
 }
 .infoServers h1 {
   width: 16rem;
@@ -1157,6 +1163,10 @@ hr {
   opacity: 0;
   visibility: hidden;
 }
+.title.m-5 {
+  margin: 0 !important;
+}
+
 /* ------------------------------ */
 /* Service Page Style */
 
