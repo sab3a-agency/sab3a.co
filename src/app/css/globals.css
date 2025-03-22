@@ -1454,6 +1454,9 @@ marquee {
     padding: 0.9rem;
     border-radius: 4rem;
   }
+  .onscroll {
+    width: 100% !important;
+  }
   .imgText {
     width: 88% !important;
     top: 8px;
@@ -1736,5 +1739,8 @@ marquee {
   }
   .ContentOurServices .Text {
     width: 103% !important;
+  }
+  .divWitherProgress {
+    width: 102% !important;
   }
 }
