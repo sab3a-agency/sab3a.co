@@ -1,3 +1,4 @@
+"use client";
 import ActWithTeam from "../componentes/HomeComponent/ActWithTeam";
 import HeroPart1 from "../componentes/HomeComponent/HeroPart1";
 import Herosection from "../componentes/HomeComponent/heroSection";
