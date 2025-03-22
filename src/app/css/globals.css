@@ -1,3 +1,20 @@
+@font-face {
+  font-family: "Sukar";
+  src: url("/sabaa/public/Fonts/alfont_com_Sukar-Regular.woff2") format("woff2");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Sukar";
+  src: url("/sabaa/public/Fonts/alfont_com_Sukar-Bold.woff") format("woff");
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "Sukar";
+  src: url("/sabaa/public/Fonts/alfont_com_Sukar-Black.ttf") format("truetype");
+  font-weight: 900;
+}
 :root {
   --Color-Secondary: #e75050;
   --Color-Primary: rgba(51, 134, 86, 1);
@@ -16,14 +33,9 @@
   /* outline: 1px solid black !important;// For Debug  */
 }
 
-@font-face {
-  font-family: "Sukar";
-  src: url("/sabaa/public/Fonts/Sukar.ttf") format("truetype");
-}
-
 body {
   overflow-x: hidden;
-  font-family: Sukar !important;
+  font-family: "Sukar";
   font-weight: 900;
   letter-spacing: 0%;
   text-align: center;
@@ -59,6 +71,8 @@ a:focus {
 }
 
 button.navbar-toggler {
+  font-family: "Sukar" !important;
+  font-weight: 700;
   padding: 13px !important;
   background-color: #00682c;
   border: none;
