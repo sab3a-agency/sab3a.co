@@ -13,7 +13,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  outline: 1px solid black !important;
+  /* outline: 1px solid black !important; */
 }
 
 @font-face {
@@ -311,13 +311,13 @@ img.w-50 {
 
 .ContentOurServices .Text {
   font-size: 5rem;
-  width: 48rem !important;
+  width: 100% !important;
   color: var(--Color-Primary);
 }
 
 .ContentOurServices p {
   font-size: 2.2rem;
-  width: 47rem !important;
+  width: 100% !important;
   font-weight: 400 !important;
   letter-spacing: 1px;
   font-weight: 400;
@@ -589,9 +589,9 @@ button.carousel-control-next:hover,
 .btns {
   position: relative;
   display: inline-flex;
-  width: 11rem;
+  width: 23%;
   height: 6rem;
-  right: 7rem;
+  right: 3rem;
   top: 0rem;
 }
 
@@ -723,7 +723,7 @@ button.carousel-control-next:hover,
   padding: 1rem;
   border-radius: 1rem;
   font-weight: 100;
-  width: 9rem;
+  width: 72% !important;
 }
 .imgwrap a img {
   width: 9rem;

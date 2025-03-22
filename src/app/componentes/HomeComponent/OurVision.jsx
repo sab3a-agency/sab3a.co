@@ -124,7 +124,7 @@ export default function OurVision() {
               <div className="divWitherProgress row d-flex flex-column gap-1">
                 <div className="outerWrapper col-12 col-md-6">
                   <div className="boxImg">
-                    <img src="../img/Meating.jpeg" alt="img" />
+                    <img src="../img/Meating.jpeg" alt="img" loading="lazy" />
                   </div>
                 </div>
                 <div className="heroprogress col-12 col-md-6">
@@ -155,7 +155,7 @@ export default function OurVision() {
                         <span>20%</span>
                         <span>+</span>
                       </div>
-                      <img src="../img/shape.svg" alt="Shape" />
+                      <img src="../img/shape.svg" alt="Shape" loading="lazy" />
                     </div>
                   </div>
                 </div>

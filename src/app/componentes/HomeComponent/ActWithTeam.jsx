@@ -43,7 +43,7 @@ export default function ActWithTeam() {
                 return (
                   <div className="imgWrapper" key={index}>
                     <a href="#">
-                      <img src={item} alt="img" />
+                      <img src={item} alt="img" loading="lazy" />
                     </a>
                   </div>
                 );
@@ -57,7 +57,7 @@ export default function ActWithTeam() {
                     key={index}
                   >
                     <a href="#">
-                      <img src={item} alt="img" />
+                      <img src={item} alt="img" loading="lazy" />
                     </a>
                   </div>
                 );

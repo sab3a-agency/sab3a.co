@@ -131,6 +131,7 @@ export default function PartnerSession() {
                                 src={partner.src}
                                 alt="شعار الشريك"
                                 className="img-fluid"
+                                loading="lazy"
                               />
                             </a>
                           </div>
@@ -152,6 +153,7 @@ export default function PartnerSession() {
                                 src={partner.src}
                                 alt="شعار الشريك"
                                 className="img-fluidv d-flex flex-wrap align-items-center justify-content-center "
+                                loading="lazy"
                               />
                             </a>
                           </div>

@@ -36,6 +36,7 @@ export default function HowWeAre() {
                 src={DataAboutUs.imgSrc}
                 alt="meeting_img"
                 className="img-fluid"
+                loading="lazy"
               />
             </div>
           </div>
@@ -61,7 +62,7 @@ export default function HowWeAre() {
                     className="box d-flex gap-4 align-items-center "
                   >
                     <div className="icon">
-                      <img src={feature.iconSrc} alt="icon" />
+                      <img src={feature.iconSrc} alt="icon" loading="lazy" />
                     </div>
                     <div className="information  d-flex flex-column align-items-start justify-content-center ">
                       <h3>{feature.title}</h3>

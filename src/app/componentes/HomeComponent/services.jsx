@@ -98,7 +98,12 @@ export default function Services() {
                         className="box d-flex align-items-center justify-content-center"
                       >
                         <div className="Wrappericon d-flex justify-content-center align-items-center">
-                          <img className="icon" src={box.src} alt="icon" />
+                          <img
+                            className="icon"
+                            loading="lazy"
+                            src={box.src}
+                            alt="icon"
+                          />
                         </div>
                         <div className="info">
                           <h1>{box.title}</h1>
@@ -117,7 +122,12 @@ export default function Services() {
                         className="box d-flex align-items-center justify-content-center"
                       >
                         <div className="Wrappericon d-flex justify-content-center align-items-center">
-                          <img className="icon" src={box.src} alt="icon" />
+                          <img
+                            className="icon"
+                            loading="lazy"
+                            src={box.src}
+                            alt="icon"
+                          />
                         </div>
                         <div className="info">
                           <h1>{box.title}</h1>
