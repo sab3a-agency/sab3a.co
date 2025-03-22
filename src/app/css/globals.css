@@ -1666,7 +1666,7 @@ marquee {
     align-items: center !important;
   }
   .Hero .head h1 {
-    width: 56rem;
+    width: 43% !important;
     font-size: 5rem;
   }
   .adv h2 {
@@ -1714,6 +1714,7 @@ marquee {
   .SimilarWorks .leftSide p {
     width: 100%;
   }
+
   .leftSide small {
     padding: 0px 2rem;
     font-size: 1.9rem;
@@ -1732,5 +1733,8 @@ marquee {
   }
   .sessionWhyChooseUs .BoxText {
     width: 75% !important;
+  }
+  .ContentOurServices .Text {
+    width: 103% !important;
   }
 }

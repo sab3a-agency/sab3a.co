@@ -155,4 +155,7 @@ button.accordion-button.collapsed {
   .heroPackages h1.my-4 {
     font-size: 6rem;
   }
+  .outerbtn {
+    width: 127%;
+  }
 }
