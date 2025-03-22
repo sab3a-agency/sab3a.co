@@ -102,7 +102,7 @@ nav .container {
 /* HEADER Scroll */
 .onscroll {
   position: fixed;
-  z-index: 999999999999999999999;
+  z-index: 100000000000000000000 !important;
   background: rgba(255, 255, 255, 0.14);
   box-shadow: -20px 0px 39px 0px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(24px) !important;
