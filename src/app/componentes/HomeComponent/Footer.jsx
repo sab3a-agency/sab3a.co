@@ -7,6 +7,8 @@ import {
   faTiktok,
   faYoutube,
 } from "@fortawesome/free-brands-svg-icons";
+// import { text } from "@fortawesome/fontawesome-svg-core";
+import Link from "next/link";
 
 const footerData = {
   socialLinks: [
@@ -16,7 +18,14 @@ const footerData = {
     { icon: faTiktok, link: "#" },
     { icon: faYoutube, link: "#" },
   ],
-  quickLinks: ["الرئيسية", "خدماتنا", "الباقات", "المدونة", "من نحن"],
+  quickLinks: [
+    { text: "الرئيسية", paht: "/" },
+    { text: "خدماتنا", paht: "/servicesPage" },
+    { text: "الباقات", paht: "/OurePackagesPage" },
+    { text: "فريقنا", paht: "/OurTeamPage" },
+    { text: "المدونة", paht: "/BlogPage" },
+  ],
+
   fields: [
     "تطوير البرمجيات",
     "تصميم تجربة المستخدم",
@@ -84,14 +93,14 @@ export default function Footer() {
                 <div className="list ">
                   <h4>روابط سريعة</h4>
                   <ul>
-                    {footerData.quickLinks.map((link, index) => (
+                    {footerData.quickLinks.map((page, index) => (
                       <li key={index}>
-                        <a href="#">{link}</a>
+                        <Link href={page.paht}>{page.text}</Link>
                       </li>
                     ))}
                   </ul>
                 </div>
-                <div className="list ">
+                <div className="list">
                   <h4>المجالات التي نعمل بها</h4>
                   <ul>
                     {footerData.fields.map((field, index) => (

@@ -1,0 +1,74 @@
+@import url("../css/ComoneStyle.css");
+
+.HeroBlog .head {
+  text-align: justify !important;
+}
+.HeroBlog .head p {
+  width: 67%;
+  font-weight: 400;
+  margin: 0 !important;
+  font-size: 1.8rem;
+  line-height: 150%;
+  letter-spacing: -2%;
+}
+.HeroBlog .head h1 {
+  width: 100% !important;
+  font-size: 4rem;
+  font-weight: 900;
+  color: var(--Color-Primary);
+}
+
+.box img {
+  width: 100% !important;
+  border-radius: 6em;
+  height: 450px !important;
+  object-fit: cover;
+}
+.box {
+  overflow: hidden;
+}
+.boxbody small div::after {
+  content: "";
+  display: block;
+  background: var(--Color-Primary);
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 5rem;
+  margin: 1rem 0rem;
+}
+.boxbody small span {
+  font-size: 1.3rem;
+  font-weight: 400;
+}
+.boxbody small small {
+  background: var(--Color-Primary-Primary-50);
+  padding: 0.5rem 2rem;
+  border-radius: 3rem;
+  font-size: 1.2rem;
+  color: var(--Color-Primary);
+  font-weight: 400;
+}
+.boxTitle {
+  font-size: 1.9rem;
+  font-weight: 700;
+}
+.btn {
+  padding: 5px 12px;
+  width: 22%;
+  border-radius: 3rem;
+  font-size: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .HeroBlog .head {
+    flex-direction: row !important;
+  }
+  .HeroBlog .head p {
+    width: 34%;
+    font-size: 1.8rem;
+  }
+  .HeroBlog .head h1 {
+    width: 32% !important;
+    font-size: 5rem;
+  }
+}

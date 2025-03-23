@@ -140,9 +140,6 @@ button.accordion-button.collapsed {
 }
 
 @media (min-width: 768px) {
-  html {
-    font-size: 10px;
-  }
   .WrapperBoxOuter {
     flex-direction: row !important;
   }

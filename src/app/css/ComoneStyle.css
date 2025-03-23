@@ -15,6 +15,7 @@
   --Color-button-background-primary-disable: rgba(176, 208, 190, 1);
   --Color-Primary-hover: rgb(36, 122, 72);
   --Color-White-hover: rgb(255, 255, 255);
+  --Color-Primary-Primary-50: rgba(230, 240, 234, 1);
 }
 @font-face {
   font-family: "Sukar";
@@ -39,4 +40,9 @@ html {
 }
 .mt-80 {
   margin-top: 13rem;
+}
+@media (min-width: 768px) {
+  html {
+    font-size: 10px;
+  }
 }
