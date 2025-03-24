@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import Image from "next/image";
 
 const partners = [
   {
@@ -63,10 +63,9 @@ const chunkArray = (arr, size) => {
   return result;
 };
 
-const groupedPartnersDefult = chunkArray(partners, 11);
+const groupedPartners = chunkArray(partners, 11);
 
 export default function PartnerSession() {
-  const [groupedPartners, setgroupedPartners] = useState(groupedPartnersDefult);
   return (
     <div className="Your_partner_in_success">
       <div className="container mt-80">
@@ -128,10 +127,12 @@ export default function PartnerSession() {
                               target="_blank"
                               rel="noopener noreferrer"
                             >
-                              <img
+                              <Image
                                 src={partner.src}
                                 alt="شعار الشريك"
                                 className="img-fluid"
+                                width={1000}
+                                height={1000}
                                 loading="lazy"
                               />
                             </a>

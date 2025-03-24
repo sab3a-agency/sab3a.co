@@ -1,18 +1,12 @@
 "use client";
 
-import AOS from "aos";
-import "aos/dist/aos.css";
-import { useEffect } from "react";
 import { HomePage } from "./Homepage/page";
 
-export default function Home() {
-  useEffect(() => {
-    AOS.init({
-      duration: 600,
-      once: true,
-      easing: "ease-out",
-    });
-  }, []);
 
-  return <HomePage />;
+export default function Home() {
+
+  return (
+    <HomePage />
+  );
+
 }

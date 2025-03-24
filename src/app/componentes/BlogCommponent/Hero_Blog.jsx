@@ -1,12 +1,16 @@
+"use client";
+import { useMemo } from "react";
 import ArticalGrid from "./ArticalGrid";
 
-const Data = {
-  title: ` رؤى رقمية
-من خبراء `,
-  span: " سبعة.",
-  discriptions: `في سبعة، نقدم حلولًا رقمية مبتكرة لمساعدة العلامات التجارية على النمو والتميز. استكشف خدماتنا المصممة لتعزيز حضورك الرقمي.`,
-};
 export default function Hero_Blog() {
+  const Data = useMemo(() => {
+    return {
+      title: ` رؤى رقمية
+  من خبراء `,
+      span: " سبعة.",
+      discriptions: `في سبعة، نقدم حلولًا رقمية مبتكرة لمساعدة العلامات التجارية على النمو والتميز. استكشف خدماتنا المصممة لتعزيز حضورك الرقمي.`,
+    };
+  }, []);
   return (
     <section className="HeroBlog mt-50">
       <div className="container">

@@ -1,8 +1,6 @@
 "use client";
-
-import { useMemo, useState } from "react";
-
-const Defultdata = {
+import Image from "next/image";
+const data = {
   srces: [
     "/img/withHeadphone.png",
     "/img/image.png",
@@ -41,7 +39,6 @@ const Defultdata = {
   ],
 };
 export default function WhyChooseUs() {
-  const data = useMemo(() => Defultdata, []);
   return (
     <div className="sessionWhyChooseUs ">
       <div className="container p-5 mt-5">
@@ -50,28 +47,52 @@ export default function WhyChooseUs() {
             <div className="row">
               <div className="col-6 col-md-2 mb-3  d-none d-md-block">
                 <div className="wapp">
-                  <img src={data.srces[0]} alt="img" data-aos="fade-left" />
+                  <Image
+                    src={data.srces[0]}
+                    width={1000}
+                    height={1000}
+                    alt="img"
+                    data-aos="fade-left"
+                    loading="lazy"
+                  />
                 </div>
               </div>
               <div className="col-6 col-md-6 mb-3 order-3 order-md-2">
                 <div className="wappLongimg">
-                  <img
+                  <Image
                     id="wappLongimg"
                     src={data.srces[1]}
                     alt="img "
                     data-aos="zoom-in"
+                    width={1000}
+                    height={1000}
+                    loading="lazy"
                   />
                 </div>
               </div>
               <div className="col-6 col-md-3 mb-3">
                 <div className="wappLongimg">
-                  <img src={data.srces[2]} alt="img" data-aos="zoom-in" />
+                  <Image
+                    src={data.srces[2]}
+                    alt="img"
+                    data-aos="zoom-in"
+                    width={1000}
+                    height={1000}
+                    loading="lazy"
+                  />
                 </div>
               </div>
 
               <div className="col-6 col-md-2 mb-3">
                 <div className="wappLongimg">
-                  <img src={data.srces[3]} alt="img" data-aos="fade-right" />
+                  <Image
+                    src={data.srces[3]}
+                    alt="img"
+                    data-aos="fade-right"
+                    width={1000}
+                    height={1000}
+                    loading="lazy"
+                  />
                 </div>
               </div>
             </div>

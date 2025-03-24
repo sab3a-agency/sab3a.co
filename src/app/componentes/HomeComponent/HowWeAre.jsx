@@ -1,15 +1,13 @@
 "use client";
-
-import { useState } from "react";
-
-const Defultdata = {
+import Image from "next/image";
+const DataAboutUs = {
   small: "من نحن",
   title: "نحن أفضل وكالة",
   spanText: "شريك تقني",
   titleEnd: " في مجال تقنية المعلومات",
   description:
     "استكشف مجموعة شاملة من خدمات تكنولوجيا المعلومات مصممة لتلبية الاحتياجات الفريدة لعملك. من تطوير البرمجيات المخصصة إلى استشارات تكنولوجيا المعلومات، نقدم حلولاً تدفع عملك إلى الأمام.",
-  imgSrc: "img/image.png",
+  imgSrc: "/img/image.png",
   features: [
     {
       id: 1,
@@ -28,18 +26,19 @@ const Defultdata = {
   ],
 };
 export default function HowWeAre() {
-  let [DataAboutUs, setDataAboutUs] = useState(Defultdata);
   return (
     <div className="HowWeAre mt-80">
       <div className="container py-5 mt-5">
         <div className="row align-items-center">
           <div className="col-12 col-md-6 text-center" data-aos="fade-left">
             <div className="imgWrapp">
-              <img
+              <Image
+                className="img-fluid"
                 src={DataAboutUs.imgSrc}
                 alt="meeting_img"
-                className="img-fluid"
                 loading="lazy"
+                width={1000}
+                height={1000}
               />
             </div>
           </div>

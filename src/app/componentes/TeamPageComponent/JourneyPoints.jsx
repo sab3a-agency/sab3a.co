@@ -1,5 +1,6 @@
 "use client";
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
+
 const JourneyPoint = [
   {
     small: " 2004 ",
@@ -32,6 +33,7 @@ const JourneyPoint = [
     p: " اليوم، في عام 2024، تقف إنوفارت ستوديو كمنارة للإبداع والابتكار. مع فريق موهوب ومحفظة متنوعة، نستمر في تقديم تجارب رقمية استثنائية للعملاء في جميع أنحاء العالم. ",
   },
 ];
+
 const target = [
   {
     src: "/img/TeamPage/briefcase.svg",
@@ -54,29 +56,28 @@ const target = [
     descrption: "عملاء سعداء",
   },
 ];
+
 const data = JourneyPoint.slice(0, 3);
 const data2 = JourneyPoint.slice(3, JourneyPoint.length);
-export default function JourneyPoints() {
-  useEffect(() => {
-    const counters = document.querySelectorAll(".counter");
 
+export default function JourneyPoints() {
+  const countersRef = useRef([]);
+
+  useEffect(() => {
     const startCount = (counter, index) => {
       let start = 0;
-      const end = parseInt(counter.getAttribute("data-target"), 10);
+      const end = parseInt(counter.dataset.target, 10);
       const duration = 3000;
       const step = Math.ceil(end / (duration / 100));
 
-      const updateCounter = () => {
+      const interval = setInterval(() => {
         start += step;
         if (start >= end) {
           start = end;
           clearInterval(interval);
         }
-
         counter.innerText = (index === 1 ? "" : "+") + start;
-      };
-
-      const interval = setInterval(updateCounter, 50);
+      }, 50);
     };
 
     const observer = new IntersectionObserver(
@@ -94,79 +95,79 @@ export default function JourneyPoints() {
       { threshold: 0.5 }
     );
 
-    counters.forEach((counter, index) => observer.observe(counter, index));
+    countersRef.current.forEach((counter, index) => {
+      if (counter) observer.observe(counter);
+    });
+
+    return () => observer.disconnect();
   }, []);
 
   return (
-    <section className="JourneyPoints  ">
+    <section className="JourneyPoints">
       <div className="container">
-        <div className="row ">
+        <div className="row">
           <div className="col-12 col-md-6">
-            {data.map((item, index) => {
-              return (
-                <div
-                  key={index}
-                  className="box d-flex align-items-start justify-content-center gap-4"
-                  data-aos="fade-down"
-                  data-aos-easing="linear"
-                  data-aos-duration={index * 500}
-                >
-                  <div
-                    className={`cyrcle ${index === 0 ? "Active" : ""}`}
-                  ></div>
-                  <small>{item.small}</small>
-                  <div className="heading d-flex flex-column justify-content-center align-items-start gap-2">
-                    <h3>{item.h3}</h3>
-                    <p>{item.p}</p>
-                  </div>
+            {data.map((item, index) => (
+              <div
+                key={index}
+                className="box d-flex align-items-start justify-content-center gap-4"
+                data-aos="fade-down"
+                data-aos-easing="linear"
+                data-aos-duration={index * 500}
+              >
+                <div className={`cyrcle ${index === 0 ? "Active" : ""}`}></div>
+                <small>{item.small}</small>
+                <div className="heading d-flex flex-column justify-content-center align-items-start gap-2">
+                  <h3>{item.h3}</h3>
+                  <p>{item.p}</p>
                 </div>
-              );
-            })}
+              </div>
+            ))}
           </div>
           <div className="col-12 col-md-6">
-            {data2.map((item, index) => {
-              return (
+            {data2.map((item, index) => (
+              <div
+                key={index}
+                className="box d-flex align-items-start gap-4"
+                data-aos="fade-up"
+                data-aos-easing="linear"
+                data-aos-duration={index * 500 + 10}
+              >
                 <div
-                  key={index}
-                  className="box d-flex align-items-start  gap-4"
-                  data-aos="fade-up"
-                  data-aos-easing="linear"
-                  data-aos-duration={index * 500 + 10}
-                >
-                  <div
-                    className={`cyrcle ${
-                      index === data2.length - 1 ? "last-item" : ""
-                    }`}
-                  ></div>
-                  <small>{item.small}</small>
-                  <div className="heading d-flex flex-column  align-items-start gap-2">
-                    <h3>{item.h3}</h3>
-                    <p>{item.p}</p>
-                  </div>
+                  className={`cyrcle ${
+                    index === data2.length - 1 ? "last-item" : ""
+                  }`}
+                ></div>
+                <small>{item.small}</small>
+                <div className="heading d-flex flex-column align-items-start gap-2">
+                  <h3>{item.h3}</h3>
+                  <p>{item.p}</p>
                 </div>
-              );
-            })}
+              </div>
+            ))}
           </div>
         </div>
 
         <div className="targets row mt-50">
-          {target.map((item, index) => {
-            return (
-              <div key={index} className="col-6 col-md-3">
-                <div className="box ">
-                  <div className="detals d-flex flex-column justify-content-center align-items-center">
-                    <div className="d-flex gap-5">
-                      <img src={item.src} alt="icon" />
-                      <h3 className="counter" data-target={item.target}>
-                        0
-                      </h3>
-                    </div>
-                    <p data-aos="fade-up">{item.descrption}</p>
+          {target.map((item, index) => (
+            <div key={index} className="col-6 col-md-3">
+              <div className="box">
+                <div className="detals d-flex flex-column justify-content-center align-items-center">
+                  <div className="d-flex gap-5">
+                    <img src={item.src} alt="icon" />
+                    <h3
+                      ref={(el) => (countersRef.current[index] = el)}
+                      className="counter"
+                      data-target={item.target}
+                    >
+                      0
+                    </h3>
                   </div>
+                  <p data-aos="fade-up">{item.descrption}</p>
                 </div>
               </div>
-            );
-          })}
+            </div>
+          ))}
         </div>
       </div>
     </section>

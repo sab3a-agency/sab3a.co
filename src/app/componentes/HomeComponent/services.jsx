@@ -1,7 +1,5 @@
 "use client";
 
-import { useState } from "react";
-
 let data = {
   titleEnd: "المصممة لاحتياجات عملك",
   span: " تكنولوجيا المعلومات  ",

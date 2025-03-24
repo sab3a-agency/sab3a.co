@@ -3,6 +3,8 @@
 import { useParams } from "next/navigation";
 import { use, useEffect } from "react";
 
+import Image from "next/image";
+
 const data = {
   intro: `
   هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا
@@ -19,7 +21,7 @@ const data = {
           المصمم أن يضع نصوصا مؤقتة على التصميم ليظهر للعميل الشكل كاملاً،دور
           مولد النص العربى أن يوفر على المصمم عناء البحث عن نص بديل لا علاقة
           له بالموضوع الذى يتحدث عنه التصميم فيظهر بشكل لا يليق.`,
-  src: "../img/ServicePage/img3.png",
+  src: "/img/ServicePage/img3.png",
 };
 const projectsData = [
   {
@@ -67,6 +69,9 @@ const projectsData = [
   },
 ];
 export default function FirstSection() {
+  // Think About how to get the data  by id
+  //  Still have a problem undifined id but in terminal its showing the id ??
+  // --------------------
   // const params = useParams();
   // console.log(params.ProjectsDetails);
 
@@ -78,6 +83,8 @@ export default function FirstSection() {
   // }
 
   // const data = project;
+  // --------------------
+
   return (
     <>
       <section className="FirstSection mt-50">
@@ -85,7 +92,13 @@ export default function FirstSection() {
           <p className="mb-5">{data.intro}</p>
         </div>
         <div className="imgWrapper">
-          <img src={"../img/ServicePage/img3.png"} alt="img" />
+          <Image
+            src={"/img/ServicePage/img3.png"}
+            alt="img"
+            width={1000}
+            height={800}
+            loading="lazy"
+          />
         </div>
         <div className="infoWrapper d-flex flex-column justify-content-center align-items-center container">
           <p className="m-5">{data.FisrtDiscription}</p>
