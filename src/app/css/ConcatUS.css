@@ -1,0 +1,55 @@
+@import url("../css/ComoneStyle.css");
+
+.box {
+  width: 40% !important;
+}
+.head {
+  text-align: justify !important;
+}
+.head .containerTitle {
+  display: block;
+  width: 15%;
+  background: var(--Color-White-White-200);
+  color: var(--Color-Primary);
+  text-align: center;
+  padding: 0.5rem;
+  font-size: 2rem;
+  border-radius: 7rem;
+  margin-bottom: 3rem;
+  font-weight: 100;
+}
+.head p {
+  color: var(--Color-text-secondary);
+  font-weight: 100;
+  font-size: 1.5rem;
+}
+.head .doted::after {
+  content: "";
+  width: 8px;
+  height: 8px;
+  border-radius: 5rem;
+  background: var(--Color-Primary);
+  display: block;
+}
+
+.ContentText .box h4.my-3 {
+  font-size: 2rem;
+  font-weight: 900;
+}
+
+.ContentText .box p {
+  font-size: 1.2rem;
+  font-weight: 100;
+}
+
+.ContentText .box a,
+.ContentText .box span {
+  text-decoration: none;
+  color: var(--Color-Primary);
+  font-size: 1.5rem;
+  font-weight: 100;
+}
+
+.ContentText .box span {
+  width: 133%;
+}

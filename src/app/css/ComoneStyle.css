@@ -16,6 +16,7 @@
   --Color-Primary-hover: rgb(36, 122, 72);
   --Color-White-hover: rgb(255, 255, 255);
   --Color-Primary-Primary-50: rgba(230, 240, 234, 1);
+  --Color-White-White-200: rgba(246, 249, 250, 1);
 }
 @font-face {
   font-family: "Sukar";
