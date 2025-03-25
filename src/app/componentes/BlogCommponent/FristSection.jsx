@@ -70,16 +70,12 @@ const data = {
 export default function FirstSection({ projectsData }) {
   // Think About how to get the data  by id
   const param = useParams();
-  // console.log(`The param is ::..:: `, param);
-  const CurrentData = projectsData.find((project) => {
-    return project.id === Number(param.ProjectsDetails);
-  });
-
-  //should pass ID number from url
-  const ArticalPage = projectsData.find((project) => {
+  //   console.log(`The param is ::..:: `, param);
+  const CurrentData = projectsData?.find((project) => {
     return project.id === Number(param.ArticalPage);
   });
-  // console.log(CurrentData);
+
+  console.log(CurrentData);
 
   return (
     <>
@@ -88,7 +84,7 @@ export default function FirstSection({ projectsData }) {
           <p className="mb-5">{data.intro}</p>
         </div>
         <div className="imgWrapper">
-          <img src={CurrentData.src} alt="img" loading="lazy" />
+          <img src={CurrentData?.src} alt="img" loading="lazy" />
         </div>
         <div className="infoWrapper d-flex flex-column justify-content-center align-items-center container">
           <p className="m-5">{data.FisrtDiscription}</p>

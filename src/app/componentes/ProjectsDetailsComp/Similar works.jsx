@@ -2,14 +2,16 @@ import OurProgectes from "../ServeceComponent/OurProgectes";
 
 const DefultData = [
   {
-    img: "../img/ServicePage/img1.png",
+    id: 1,
+    src: "../img/ServicePage/img1.png",
     title: "تطوير البرمجيات المخصصة",
     discription:
       "هذا النص هو مثال لنص يمكن ان يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى",
     tags: ["الرعاية الصحية", "العلامة التجارية", " الهوية البصرية", " التغليف"],
   },
   {
-    img: "../img/ServicePage/img2.png",
+    id: 2,
+    src: "../img/ServicePage/img2.png",
     title: " اسم المشروع",
     discription: "نقدم تحليلاً دقيقًا لأنظمتك",
     tags: ["الرعاية الصحية", "العلامة التجارية", " الهوية البصرية", " التغليف"],

@@ -8,7 +8,7 @@ import Link from "next/link";
 const DefultBoxData = [
   {
     id: 1,
-    img: "/img/ServicePage/img1.png",
+    src: "/img/ServicePage/img1.png",
     title: "تطوير البرمجيات المخصصة",
     discription:
       "هذا النص هو مثال لنص يمكن ان يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى",
@@ -16,35 +16,35 @@ const DefultBoxData = [
   },
   {
     id: 2,
-    img: "/img/ServicePage/img2.png",
+    src: "/img/ServicePage/img2.png",
     title: " اسم المشروع",
     discription: "نقدم تحليلاً دقيقًا لأنظمتك",
     tags: ["الرعاية الصحية", "العلامة التجارية", " الهوية البصرية", " التغليف"],
   },
   {
     id: 3,
-    img: "/img/ServicePage/img3.png",
+    src: "/img/ServicePage/img3.png",
     title: " اسم المشروع",
     discription: "نقدم تحليلاً دقيقًا لأنظمتك",
     tags: ["الرعاية الصحية", "العلامة التجارية", " الهوية البصرية", " التغليف"],
   },
   {
     id: 4,
-    img: "/img/ServicePage/img4.png",
+    src: "/img/ServicePage/img4.png",
     title: " اسم المشروع",
     discription: "نقدم تحليلاً دقيقًا لأنظمتك",
     tags: ["الرعاية الصحية", "العلامة التجارية", " الهوية البصرية", " التغليف"],
   },
   {
     id: 5,
-    img: "/img/ServicePage/img5.png",
+    src: "/img/ServicePage/img5.png",
     title: " اسم المشروع",
     discription: "نقدم تحليلاً دقيقًا لأنظمتك",
     tags: ["الرعاية الصحية", "العلامة التجارية", " الهوية البصرية", " التغليف"],
   },
   {
     id: 6,
-    img: "/img/ServicePage/img6.png",
+    src: "/img/ServicePage/img6.png",
     title: " اسم المشروع",
     discription: "نقدم تحليلاً دقيقًا لأنظمتك",
     tags: ["الرعاية الصحية", "العلامة التجارية", " الهوية البصرية", " التغليف"],
@@ -77,7 +77,7 @@ export default function OurProgectes({ DefultData }) {
               className="imgWrapper"
               style={{ cursor: "pointer" }}
             >
-              <img src={features.img} alt="box_img" loading="lazy" />
+              <img src={features.src} alt="box_img" loading="lazy" />
             </Link>
 
             <div className="info mt-2 p-3">

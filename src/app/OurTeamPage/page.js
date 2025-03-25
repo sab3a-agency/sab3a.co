@@ -20,7 +20,7 @@ export default function OureTeam() {
             <HeroTeamSection />
             <OurJourney />
             <Section2 />
-            <LetsDoit data={LetsDitedata} />
+
 
         </>
     );

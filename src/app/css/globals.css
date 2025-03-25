@@ -1362,6 +1362,8 @@ marquee {
 }
 .FirstSection .imgWrapper img {
   width: 100% !important;
+  height: 600px;
+  object-fit: cover;
 }
 .FirstSection .infoWrapper p {
   font-size: 2rem;

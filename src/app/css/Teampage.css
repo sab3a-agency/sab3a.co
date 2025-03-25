@@ -160,4 +160,10 @@
   .cyrcle::after {
     margin: -1rem 39px;
   }
+
+  .Section2 .letsDoit {
+    display: block;
+    opacity: 100;
+    visibility: visible;
+  }
 }
