@@ -53,3 +53,200 @@
 .ContentText .box span {
   width: 133%;
 }
+
+.ConcatUS .form-label {
+  text-align: justify !important;
+  width: 100% !important;
+}
+
+.ConcatUS .form-label input {
+  width: 100% !important;
+  padding: 1rem 1rem;
+  box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+  outline: none;
+  border: 1px solid var(--Color-Black-Black-50);
+  border-radius: 8px;
+  font-size: 1.5rem;
+}
+
+.ConcatUS .form-label h6 {
+  font-size: 1.6rem !important;
+  font-weight: 700;
+}
+
+.react-tel-input .form-control {
+  padding: 7px;
+}
+.flag {
+  display: none;
+}
+.phone-container.d-flex.align-items-center.gap-2 {
+  position: relative;
+}
+.custom-phone-input {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 5px;
+  background: white;
+  width: 100%;
+}
+
+.country-name-box {
+  padding: 10px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #333;
+  white-space: nowrap;
+}
+
+.phone-input-container {
+  flex-grow: 1;
+}
+
+.hide-flag .flag {
+  display: none !important; /* إخفاء العلم */
+}
+
+.react-tel-input .form-control {
+  padding: 0px;
+  background: transparent;
+  border: 0px;
+}
+.country-name-box {
+  position: absolute;
+}
+.form-label {
+  margin-bottom: 0px !important;
+}
+.custom-phone-input {
+  padding: 0px !important;
+}
+
+input.form-control.custom-input:focus {
+  box-shadow: none !important;
+  border: none !important;
+}
+.react-tel-input .selected-flag {
+  width: 17rem !important;
+  border: none !important;
+  background: transparent !important;
+}
+
+.react-tel-input .selected-flag,
+.react-tel-input .flag-dropdown {
+  background: transparent !important;
+  z-index: 2;
+  border: none !important;
+}
+
+.country-name-box {
+  z-index: 1;
+  font-size: 1rem !important;
+}
+input.form-control.custom-input {
+  width: 95% !important;
+}
+textarea.form-control {
+  padding: 2rem !important;
+}
+
+textarea {
+  font-size: 2rem !important;
+  resize: none !important;
+}
+.form-control:focus {
+  border: 1px solid var(--Color-Black-Black-50) !important;
+  box-shadow: none !important;
+}
+.custom-phone-input {
+  border: 1px solid var(--Color-Black-Black-50) !important;
+  padding: 3px !important;
+}
+.config {
+  font-size: 1.5rem;
+  width: 100% !important;
+  color: var(--Color-text-secondary);
+}
+.btn {
+  font-size: 2rem;
+  border-radius: 5rem;
+}
+
+/*  Second Section Style */
+
+.SecondSection {
+  background-color: var(--Color-Black-Black-50);
+  padding: 5rem 5rem;
+}
+
+.SecondSectionBtn {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5rem;
+  background: var(--Color-text-secondary);
+  box-shadow: 0px 6px 24px 0px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  cursor: pointer;
+  border: none;
+  padding: 18px 25px;
+  gap: 5rem;
+}
+
+.SecondSectionBtn:after {
+  content: " ";
+  width: 100%;
+  height: 100%;
+  background: var(--Color-Secondary);
+  position: absolute;
+  transition: all 0.4s ease-in-out;
+  left: 100%;
+}
+
+.SecondSectionBtn:hover::after {
+  left: 0;
+}
+
+.SecondSectionBtn:hover::after {
+  width: 100%;
+}
+
+.SecondSectionBtn span {
+  text-align: center;
+  text-decoration: none;
+  width: 100%;
+  color: #fff;
+  font-size: 1.7em;
+  font-weight: 700;
+
+  z-index: 20;
+  transition: all 0.3s ease-in-out;
+}
+
+.SecondSectionBtn:hover span {
+  color: var(--background);
+  animation: scaleUp 0.3s ease-in-out;
+}
+
+@keyframes scaleUp {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(0.95);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+.SecondSection button img {
+  z-index: 20;
+  background: var(--Color-Black-Black-500);
+  padding: 0.9rem;
+  border-radius: 5rem;
+}
