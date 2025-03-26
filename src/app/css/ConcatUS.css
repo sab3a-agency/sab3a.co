@@ -18,7 +18,7 @@
   margin-bottom: 3rem;
   font-weight: 100;
 }
-.ConcatUS .head p {
+.head p {
   color: var(--Color-text-secondary);
   font-weight: 100;
   font-size: 1.5rem;
@@ -177,7 +177,7 @@ textarea {
 /*  Second Section Style */
 
 .SecondSection {
-  background-color: var(--Color-Black-Black-50);
+  background-color: var(--Color-White-White-100);
   padding: 5rem 5rem;
 }
 
@@ -249,4 +249,37 @@ textarea {
   background: var(--Color-Black-Black-500);
   padding: 0.9rem;
   border-radius: 5rem;
+}
+.see_more svg.svg-inline--fa.fa-arrow-right {
+  transform: rotate(182deg);
+  color: var(--background);
+}
+
+.box_ditales small {
+  font-size: 1.2rem;
+  background: rgba(255, 244, 236, 1);
+  padding: 1rem;
+  border-radius: 0.5rem;
+  color: rgba(255, 137, 61, 1);
+
+  font-weight: 100;
+}
+.box_ditales p {
+  font-size: 2rem;
+  width: 65%;
+  text-align: justify;
+}
+
+.box_ditales p span {
+  color: var(--Color-Secondary);
+  font-weight: 700;
+}
+.see_more {
+  font-size: large;
+  background: green;
+  color: aliceblue;
+  padding: 1.5rem;
+  border: none;
+  border-radius: 5rem;
+  font-weight: 100 !important;
 }
