@@ -1,12 +1,12 @@
 @import url("../css/ComoneStyle.css");
 
-.box {
+.ConcatUS .box {
   width: 40% !important;
 }
-.head {
+.ConcatUS .head {
   text-align: justify !important;
 }
-.head .containerTitle {
+.ConcatUS .head .containerTitle {
   display: block;
   width: 15%;
   background: var(--Color-White-White-200);
@@ -18,12 +18,12 @@
   margin-bottom: 3rem;
   font-weight: 100;
 }
-.head p {
+.ConcatUS .head p {
   color: var(--Color-text-secondary);
   font-weight: 100;
   font-size: 1.5rem;
 }
-.head .doted::after {
+.ConcatUS .head .doted::after {
   content: "";
   width: 8px;
   height: 8px;
