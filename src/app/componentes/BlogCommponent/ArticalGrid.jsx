@@ -28,7 +28,10 @@ export default function ArticalGrid({ data }) {
                 </small>
                 <span>{item.date}</span>
                 <h5 className="boxTitle my-4">{item.title}</h5>
-                <Link href="/" className="btn btn-success ">
+                <Link
+                  href={`/BlogPage/${item.id}`}
+                  className="btn btn-success "
+                >
                   {item.btn}
                 </Link>
               </div>

@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 let Data = [
   {
     ouetricon: "/img/Packages/Shape.svg",
@@ -72,7 +74,12 @@ export function BoxPackage() {
                 </div>
                 <div className="outerbtn">
                   <div className="Wrapper">
-                    <button>{outeritem.btnContent}</button>
+                    <Link
+                      href="/ConcatUS"
+                      className="d-flex justify-content-center"
+                    >
+                      <button>{outeritem.btnContent}</button>
+                    </Link>
                   </div>
                 </div>
               </div>

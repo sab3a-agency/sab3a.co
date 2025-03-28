@@ -1,3 +1,4 @@
+import Link from "next/link";
 import GrideTeam from "./GrideTeam";
 
 const Data = {
@@ -26,14 +27,14 @@ export default function HeroTeamSection() {
               <span>{Data.otherSpan}</span>
             </small>
           </h1>
-          <a
-            href="#"
+          <Link
+            href="/ConcatUS"
             className="d-flex align-items-center gap-4 text-decoration-none  justify-content-center"
             data-aos="fade-up-right"
           >
             <img id="arrow" src="../img/ServicePage/arrow.svg" alt="arrow" />
             <h4>{Data.btnContent}</h4>
-          </a>
+          </Link>
         </div>
         <GrideTeam />
       </div>

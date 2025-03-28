@@ -21,8 +21,10 @@
 .head p {
   color: var(--Color-text-secondary);
   font-weight: 100;
-  font-size: 1.5rem;
+  font-size: 2rem;
+  text-align: justify;
 }
+
 .ConcatUS .head .doted::after {
   content: "";
   width: 8px;
@@ -266,7 +268,7 @@ textarea {
 }
 .box_ditales p {
   font-size: 2rem;
-  width: 65%;
+  width: 68%;
   text-align: justify;
 }
 
@@ -282,4 +284,81 @@ textarea {
   border: none;
   border-radius: 5rem;
   font-weight: 100 !important;
+}
+.ThirdeSection {
+  position: relative;
+}
+img.star {
+  position: absolute;
+  top: -14%;
+  left: 27%;
+  width: 1.5%;
+}
+img#Wow-Emoje {
+  position: absolute;
+  top: 80%;
+  left: 12%;
+  width: 14%;
+}
+img.dimon {
+  background: #ffbd4f;
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  left: 16%;
+  align-items: center;
+  padding: 0.3%;
+  top: 47%;
+  border-radius: 100% !important;
+  width: 6%;
+}
+
+img.star {
+  position: absolute;
+  top: -14%;
+  left: 27%;
+  width: 4.5%;
+}
+img.hero-star {
+  width: 4%;
+  position: absolute;
+  top: -14px;
+  left: 20%;
+}
+@media (min-width: 768px) {
+  .SecondSection .d-flex.justify-content-between.align-items-start.w-100 {
+    flex-direction: row !important;
+  }
+  .head p {
+    color: var(--Color-text-secondary);
+    font-weight: 100;
+    font-size: 1.5rem;
+  }
+
+  img.star {
+    position: absolute;
+    top: -14%;
+    left: 27%;
+    width: 1.5%;
+  }
+  img.hero-star {
+    width: 2%;
+    position: absolute;
+    right: 35%;
+    top: 0;
+  }
+  img.dimon {
+    left: 17%;
+    top: 23px;
+    width: 2%;
+  }
+  .box_ditales p {
+    width: 65%;
+  }
+  img#Wow-Emoje {
+    position: absolute;
+    top: 68%;
+    left: 16%;
+    width: 5%;
+  }
 }
