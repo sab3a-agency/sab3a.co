@@ -2,57 +2,58 @@
 import FirstSection from "@/app/componentes/BlogCommponent/FristSection";
 import OtherArticals from "@/app/componentes/BlogCommponent/otherArticals";
 import Hero from "@/app/componentes/ProjectsDetailsComp/hero";
-import SimilarWorks from "@/app/componentes/ProjectsDetailsComp/Similar works";
 import { useParams } from "next/navigation";
 import { useMemo } from "react";
+import "../../css/BolgStyle.css";
+
 
 export default function ArticalPage() {
     //Assume you have an array of projects  you will get from the backend
     const Articals = useMemo(
         () => [
             {
-                id: 1,
-                src: "/img/Blog/img1.png",
+                id: "1",
+                src: "../img/Blog/img1.png",
                 title: "عنوان المقال التجريبي",
                 btn: "اقرا المزيد",
                 span: "20 أكتوبر",
                 small: "الأعمال",
             },
             {
-                id: 2,
-                src: "/img/Blog/img2.png",
+                id: "2",
+                src: "../img/Blog/img2.png",
                 title: "عنوان المقال التجريبي",
                 btn: "اقرا المزيد",
                 span: "20 أكتوبر",
                 small: "الأعمال",
             },
             {
-                id: 3,
-                src: "/img/Blog/img3.png",
+                id: "3",
+                src: "../img/Blog/img3.png",
                 title: "عنوان المقال التجريبي",
                 btn: "اقرا المزيد",
                 span: "20 أكتوبر",
                 small: "الأعمال",
             },
             {
-                id: 4,
-                src: "/img/Blog/img4.png",
+                id: "4",
+                src: "../img/Blog/img4.png",
                 title: "عنوان المقال التجريبي",
                 btn: "اقرا المزيد",
                 span: "20 أكتوبر",
                 small: "الأعمال",
             },
             {
-                id: 5,
-                src: "/img/Blog/img5.png",
+                id: "5",
+                src: "../img/Blog/img5.png",
                 title: "عنوان المقال التجريبي",
                 btn: "اقرا المزيد",
                 span: "20 أكتوبر",
                 small: "الأعمال",
             },
             {
-                id: 6,
-                src: "/img/Blog/img6.png",
+                id: "6",
+                src: "../img/Blog/img6.png",
                 title: "عنوان المقال التجريبي",
                 btn: "اقرا المزيد",
                 span: "20 أكتوبر",
@@ -63,7 +64,7 @@ export default function ArticalPage() {
     );
     // to giet the id from the url
     const params = useParams();
-    const Artical = Articals.find((Artical) => Artical.id === Number(params.ArticalPage));
+    const Artical = Articals.find((Artical) => Artical.id === params.ArticalPage);
     // console.log(`The found Artical is ::  `, Artical);
 
 
@@ -76,8 +77,9 @@ export default function ArticalPage() {
             small: Artical.small,
         },
     ];
-    //the Artical Data will disply
+    //the Artical target Data will disply
     const Firstdata = [{
+        id: Artical.id,
         intro: `
         هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا
         النص من مولد النص العربى، حيث يمكنك أن تولد مثل هذا النص أو العديد
@@ -93,8 +95,9 @@ export default function ArticalPage() {
                 المصمم أن يضع نصوصا مؤقتة على التصميم ليظهر للعميل الشكل كاملاً،دور
                 مولد النص العربى أن يوفر على المصمم عناء البحث عن نص بديل لا علاقة
                 له بالموضوع الذى يتحدث عنه التصميم فيظهر بشكل لا يليق.`,
-        src: Artical.src
+        src: `${Artical.src}`
     }];
+
 
 
     return (

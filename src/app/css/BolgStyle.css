@@ -77,7 +77,7 @@
 }
 
 .SimilarArticals .col-md-4 {
-  width: 49.3333% !important;
+  width: 100% !important;
 }
 
 @media (min-width: 768px) {
@@ -91,5 +91,8 @@
   .HeroBlog .head h1 {
     width: 32% !important;
     font-size: 5rem;
+  }
+  .SimilarArticals .col-md-4 {
+    width: 50% !important;
   }
 }

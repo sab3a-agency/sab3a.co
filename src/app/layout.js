@@ -1,5 +1,3 @@
-
-import { icon } from "@fortawesome/fontawesome-svg-core";
 import HomeLayout from "./Homepage/layout";
 
 

@@ -5,15 +5,13 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 
 export default function Header() {
-  const pathname = usePathname(); //  استخدم usePathname بدلاً من useLocationفي  React
+  const pathname = usePathname(); //  استخدمت usePathname بدلاً من useLocationفي  React
   const [Active, setActive] = useState("");
   const currentPage = [
     { path: "/", name: "الرئيسية" },
     { path: "/servicesPage", name: "خدمتنا" },
     { path: "/OurePackagesPage", name: "الباقات" },
     { path: "/OurTeamPage", name: "فريقنا" },
-    { path: "/BlogPage", name: "المدونة" },
-    // { path: "/Who_we_arePage", name: "من نحن" },
   ];
   useEffect(() => {
     const activePage = currentPage.find((item) => item.path === pathname);
@@ -75,9 +73,11 @@ export default function Header() {
             ))}
           </ul>
           <div id="btn">
-            <button className="btn btn-success" type="submit">
-              اتصل بنا
-            </button>
+            <Link href={"/ConcatUS"}>
+              <button className="btn btn-success" type="submit">
+                اتصل بنا
+              </button>
+            </Link>
           </div>
         </div>
       </div>
