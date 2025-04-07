@@ -5,7 +5,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 
 export default function Header() {
-  const pathname = usePathname(); //  تاستخدم usePathname بدلاً من useLocationفي  React
+  const pathname = usePathname();
   const [Active, setActive] = useState("");
   const currentPage = [
     { path: "/", name: "الرئيسية" },
@@ -14,6 +14,7 @@ export default function Header() {
     { path: "/OurTeamPage", name: "فريقنا" },
     { path: "/BlogPage", name: "المدونة" },
   ];
+
   useEffect(() => {
     const activePage = currentPage.find((item) => item.path === pathname);
     if (activePage) {
@@ -35,10 +36,20 @@ export default function Header() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, [pathname]);
 
+  const closeNavbar = () => {
+    const navbarCollapse = document.getElementById("navbarNav");
+    if (navbarCollapse.classList.contains("show")) {
+      const bsCollapse = new bootstrap.Collapse(navbarCollapse, {
+        toggle: false,
+      });
+      bsCollapse.hide();
+    }
+  };
+
   return (
     <nav className="navbar navbar-expand-lg bg-body-tertiary p-3 d-flex justify-content-center align-items-baseline mt-2">
       <div className="container">
-        <Link className="navbar-brand" href="/">
+        <Link className="navbar-brand" href="/" onClick={closeNavbar}>
           <img src="/img/IconSite.svg" alt="img" />
         </Link>
         <button
@@ -56,7 +67,11 @@ export default function Header() {
           <ul className="navbar-nav mx-auto d-flex align-items-center gap-5">
             {currentPage.map((item) => (
               <li className="nav-item" key={item.name}>
-                <Link className="nav-link" href={item.path}>
+                <Link
+                  className="nav-link"
+                  href={item.path}
+                  onClick={closeNavbar}
+                >
                   <span
                     style={{
                       color:
@@ -74,7 +89,7 @@ export default function Header() {
             ))}
           </ul>
           <div id="btn">
-            <Link href="/ConcatUS">
+            <Link href="/ConcatUS" onClick={closeNavbar}>
               <button className="btn btn-success" type="submit">
                 اتصل بنا
               </button>

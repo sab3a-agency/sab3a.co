@@ -77,7 +77,7 @@ export default function OurProgectes({ DefultData }) {
               className="imgWrapper"
               style={{ cursor: "pointer" }}
             >
-              <img src={features.src} alt="box_img" loading="lazy" />
+              <img src={features.src} alt="box_img" loading="eager" />
             </Link>
 
             <div className="info mt-2 p-3">

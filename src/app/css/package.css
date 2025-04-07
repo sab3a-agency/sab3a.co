@@ -77,20 +77,30 @@ hr {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 5rem;
 }
 
 .box-innerfeatures {
   position: relative;
 }
 
-.outerbtn {
+.Wrapper a:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 16%;
   background: var(--Color-White-White-500);
-  width: 135%;
-  position: relative;
-  bottom: -6rem;
-  left: 6rem;
-  padding: 4rem 0rem;
+
+  width: 100%;
+  z-index: -1;
 }
+.boxWrapper.Active .Wrapper a:after {
+  content: "";
+  background: #0000000f;
+}
+
 .boxWrapper.Active {
   background: var(--Color-Primary) !important;
   color: var(--background) !important;
@@ -111,7 +121,7 @@ hr {
   background: transparent;
   font-size: 2.3rem;
   background: var(--Color-Primary);
-  width: 85%;
+  width: 100%;
   border-radius: 6rem;
   border: 1px solid
     var(--Color-button-background-primary-disable, rgba(176, 208, 190, 1));
@@ -119,6 +129,8 @@ hr {
   letter-spacing: 0%;
   color: var(--Color-Black-Black-50);
   transition: all 0.3s ease-out;
+  position: relative;
+  bottom: -3rem;
 }
 .boxWrapper:hover button {
   background: var(--Color-Primary-hover);

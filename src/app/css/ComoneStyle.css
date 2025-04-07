@@ -20,8 +20,8 @@
   --Color-White-White-100: rgba(249, 251, 252, 1);
 }
 @font-face {
-  font-family: "Sukar";
-  src: url("/sabaa/public/Fonts/Sukar.ttf") format("truetype");
+  font-family: "Sukar" !important;
+  src: url("/sabaa/public/Fonts/Sukar.ttf") format("truetype") !important;
 }
 
 body {

@@ -72,15 +72,14 @@ export function BoxPackage() {
                     })}
                   </div>
                 </div>
-                <div className="outerbtn">
-                  <div className="Wrapper">
-                    <Link
-                      href="/ConcatUS"
-                      className="d-flex justify-content-center"
-                    >
-                      <button>{outeritem.btnContent}</button>
-                    </Link>
-                  </div>
+
+                <div className="Wrapper ">
+                  <Link
+                    href="/ConcatUS"
+                    className="d-flex justify-content-center"
+                  >
+                    <button>{outeritem.btnContent}</button>
+                  </Link>
                 </div>
               </div>
             );

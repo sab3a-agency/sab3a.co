@@ -70,7 +70,7 @@ export default function GrideTeam() {
         {Data.map((item, index) => (
           <div key={item.name || index} className="col-12 col-md-6">
             <div className="wrapperImge mt-3">
-              <img src={item.src} alt={item.name} />
+              <img src={item.src} alt={item.name} loading="eager" />
             </div>
             <div className="information d-flex flex-column justify-content-center align-items-start">
               <div className="container">
@@ -119,7 +119,7 @@ export default function GrideTeam() {
                 data-aos-delay={index * 100}
               >
                 <div className="Wrapp">
-                  <img src={item.src} alt={item.name} />
+                  <img src={item.src} alt={item.name} loading="lazy" />
                 </div>
                 <div className="about d-flex flex-column align-items-start ">
                   <h5 className="mt-3">{item.name}</h5>

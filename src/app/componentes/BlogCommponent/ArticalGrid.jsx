@@ -15,7 +15,7 @@ export default function ArticalGrid({ data }) {
                   src={item.src}
                   className="box-img-top"
                   alt="img"
-                  loading="lazy"
+                  loading="eager"
                   width={1000}
                   height={1000}
                 />

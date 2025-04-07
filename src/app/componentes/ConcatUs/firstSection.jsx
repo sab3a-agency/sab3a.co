@@ -15,13 +15,8 @@ const getCountryName = (countryCode) => {
 };
 
 export default function FirstSiction() {
-  const [phone, setPhone] = useState("");
+  const [phoneValue, setPhone] = useState("");
   const [country, setCountry] = useState("US");
-
-  const handleChange = (value, countryData) => {
-    setPhone(value);
-    setCountry(countryData?.countryCode?.toUpperCase() || "SA");
-  };
 
   const data = {
     small: "اتصل",
@@ -48,6 +43,36 @@ export default function FirstSiction() {
         phone: "+96878495068",
       },
     ],
+  };
+  // Now need to do Functionality to accept data from form
+
+  const [value, setValue] = useState({
+    name: "",
+    family: "",
+    email: "",
+    phone: "",
+    message: "",
+    Accept: false,
+  });
+  const handleChange = (phoneValue, countryData) => {
+    setPhone(phoneValue);
+    setCountry(countryData?.countryCode?.toUpperCase() || "SA");
+    setValue((prev) => ({ ...prev, phone: phoneValue }));
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    alert(
+      `
+      TestingFormSendData ..
+      
+    Hello :: 
+     Your Name :: ${value.name} ${value.family} ,
+     Your Email :: ${value.email} ,
+     your PhoneNumber :: ${value.phone} ,
+     your Massage :: ${value.message} ,
+     your Accept :: ${value.Accept} `
+    );
   };
 
   return (
@@ -89,26 +114,34 @@ export default function FirstSiction() {
               </p>
             </div>
 
-            <form className="mt-5">
+            {/* Form */}
+            <form className="mt-5" onSubmit={handleSubmit}>
               <div className="container">
                 <div className="row g-3">
-                  {["الاسم الأول", "اسم العائلة", "البريد الإلكتروني"].map(
-                    (label, idx) => (
-                      <div key={idx} className="col-6 col-md-6">
-                        <label className="form-label">
-                          <h6>{label}</h6>
-                          <input
-                            type={
-                              label === "البريد الإلكتروني" ? "email" : "text"
-                            }
-                            className="form-control"
-                            placeholder={label}
-                            required
-                          />
-                        </label>
-                      </div>
-                    )
-                  )}
+                  {[
+                    { label: "الاسم الأول", key: "name", type: "text" },
+                    { label: "اسم العائلة", key: "family", type: "text" },
+                    { label: "البريد الإلكتروني", key: "email", type: "email" },
+                  ].map(({ label, key, type }) => (
+                    <div key={key} className="col-6 col-md-6">
+                      <label className="form-label">
+                        <h6>{label}</h6>
+                        <input
+                          type={type}
+                          className="form-control"
+                          placeholder={label}
+                          required
+                          value={value[key]}
+                          onChange={(e) =>
+                            setValue((prev) => ({
+                              ...prev,
+                              [key]: e.target.value,
+                            }))
+                          }
+                        />
+                      </label>
+                    </div>
+                  ))}
 
                   <div className="col-6 col-md-6">
                     <div className="phone-input-container">
@@ -118,7 +151,7 @@ export default function FirstSiction() {
                       <div className="custom-phone-input">
                         <PhoneInput
                           country={country.toLowerCase()}
-                          value={phone}
+                          value={phoneValue}
                           onChange={handleChange}
                           enableSearch={true}
                           disableSearchIcon={true}
@@ -146,12 +179,30 @@ export default function FirstSiction() {
                         placeholder="كيف يمكننا مساعدتك؟"
                         className="form-control"
                         required
+                        value={value.message}
+                        onChange={(e) =>
+                          setValue((prev) => ({
+                            ...prev,
+                            message: e.target.value,
+                          }))
+                        }
                       ></textarea>
                     </div>
                   </div>
 
                   <div className="col-6 col-md-12 d-flex align-items-center gap-4">
-                    <input type="checkbox" required id="" name="" />
+                    <input
+                      type="checkbox"
+                      required
+                      id=""
+                      name=""
+                      onClick={() => {
+                        setValue((prev) => ({
+                          ...prev,
+                          Accept: !prev.Accept,
+                        }));
+                      }}
+                    />
                     <label>
                       <h6 className="config my-4">
                         أنت توافق على سياسة الخصوصية الودية لدينا.
@@ -159,14 +210,7 @@ export default function FirstSiction() {
                     </label>
                   </div>
 
-                  <button
-                    className="btn btn-success p-3"
-                    onClick={(event) => {
-                      event.preventDefault();
-                    }}
-                  >
-                    إرسال الرسالة
-                  </button>
+                  <button className="btn btn-success p-3">إرسال الرسالة</button>
                 </div>
               </div>
             </form>
