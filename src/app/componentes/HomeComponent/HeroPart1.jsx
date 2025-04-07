@@ -62,6 +62,7 @@ export default function HeroPart1() {
             alt="صورة شخص يرتدي كوفية"
             data-aos="fade-up"
             src={data.src}
+            loading="eager"
           />
           <div className="col-md-5" data-aos="fade-right">
             <p className="text-wikala">{data.title}</p>
@@ -79,8 +80,14 @@ export default function HeroPart1() {
               className="w-75 SecondImg"
               src="/img/BoardsPoster.png"
               alt="لوحة إعلانية"
+              loading="eager"
             />
-            <img id="innerManshit" src="/img/withHeroHome.png" alt="manshit" />
+            <img
+              id="innerManshit"
+              src="/img/withHeroHome.png"
+              alt="manshit"
+              loading="eager"
+            />
           </div>
         </div>
       </div>
