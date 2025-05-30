@@ -1,13 +1,13 @@
-"use client";
+"use client"
 import {
   faInstagram,
   faLinkedin,
   faSquareFacebook,
   faTiktok,
-  faYoutube,
-} from "@fortawesome/free-brands-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { useState } from "react";
+  faYoutube
+} from "@fortawesome/free-brands-svg-icons"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { useState } from "react"
 
 const DataDefult = [
   {
@@ -16,13 +16,13 @@ const DataDefult = [
     small: [
       " الرئيس التنفيذي ",
       " المؤسس ",
-      "  خبير في تصميم تجارب المستخدم وحلول الأعمال التقنية. ",
+      "  خبير في تصميم تجارب المستخدم وحلول الأعمال التقنية. "
     ],
 
     socialLinks: [
       { icon: faSquareFacebook, link: "#" },
-      { icon: faLinkedin, link: "#" },
-    ],
+      { icon: faLinkedin, link: "#" }
+    ]
   },
   {
     src: "/img/TeamPage/Nour.png",
@@ -30,40 +30,40 @@ const DataDefult = [
     small: [
       " الرئيس التقني ",
       "  المؤسس المشارك  ",
-      "  خبير في تطوير الأنظمة الخلفية وتحليل البيانات. ",
+      "  خبير في تطوير الأنظمة الخلفية وتحليل البيانات. "
     ],
     socialLinks: [
       { icon: faSquareFacebook, link: "#" },
-      { icon: faLinkedin, link: "#" },
-    ],
-  },
-];
+      { icon: faLinkedin, link: "#" }
+    ]
+  }
+]
 
 const RestOfTheTeamDefualt = [
   {
     src: "/img/TeamPage/omar.png",
     name: " عمر أبو مطر ",
-    jobTitle: " مطور تطبيقات أيفون ",
+    jobTitle: " مطور تطبيقات أيفون "
   },
   {
     src: "/img/TeamPage/Mohamed.png",
     name: "محمد المدهون ",
-    jobTitle: " مطور تطبيقات أندرويد   ",
+    jobTitle: " مطور تطبيقات أندرويد   "
   },
   {
     src: "/img/TeamPage/om_Matar.png",
     name: "عمر مطر ",
-    jobTitle: "   مطور مواقع إلكترونية  ",
+    jobTitle: "   مطور مواقع إلكترونية  "
   },
   {
     src: "/img/TeamPage/Feras.png",
     name: "فراس أبو القمبز ",
-    jobTitle: "   مطور الواجهة الخلفية   ",
-  },
-];
+    jobTitle: "   مطور الواجهة الخلفية   "
+  }
+]
 export default function GrideTeam() {
-  const [Data, setData] = useState(DataDefult);
-  const [RestOfTheTeam, setRestOfTheTeam] = useState(RestOfTheTeamDefualt);
+  const [Data, setData] = useState(DataDefult)
+  const [RestOfTheTeam, setRestOfTheTeam] = useState(RestOfTheTeamDefualt)
   return (
     <div className="Gred mt-50" data-aos="fade-up">
       <div className="row">
@@ -131,5 +131,5 @@ export default function GrideTeam() {
         </div>
       </div>
     </div>
-  );
+  )
 }

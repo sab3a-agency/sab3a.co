@@ -1,13 +1,13 @@
-"use client";
-import Link from "next/link";
-import OurProgectes from "./OurProgectes";
+"use client"
+import Link from "next/link"
+import OurProgectes from "./OurProgectes"
 
 const Data = {
   title: "   دعنا",
   span: " نتعاون معك ",
   titleEnd: "لرفع مستوى علامتك التجارية وتحقيق أهدافك.",
-  btnContent: " تواصل معنا ",
-};
+  btnContent: " تواصل معنا "
+}
 
 export default function Hero_Service() {
   return (
@@ -43,5 +43,5 @@ export default function Hero_Service() {
         </div>
       </section>
     </>
-  );
+  )
 }

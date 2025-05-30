@@ -5,8 +5,8 @@ export default function ImgesSection() {
     "/img/ProjectsDetails/adv3.png",
     "/img/ProjectsDetails/adv4.png",
     "/img/ProjectsDetails/adv5.png",
-    "/img/ProjectsDetails/adv6.png",
-  ];
+    "/img/ProjectsDetails/adv6.png"
+  ]
   return (
     <section className="ImgesSection mt-80">
       <div className="wrapperImg d-flex flex-column justify-content-center">
@@ -15,9 +15,9 @@ export default function ImgesSection() {
             <div key={img + "_" + index} className="imgWrapper">
               <img loading="lazy" src={img} alt="adv_img" />
             </div>
-          );
+          )
         })}
       </div>
     </section>
-  );
+  )
 }

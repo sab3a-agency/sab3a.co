@@ -1,14 +1,14 @@
-"use client";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+"use client"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import {
   faSquareFacebook,
   faInstagram,
   faLinkedin,
   faTiktok,
-  faYoutube,
-} from "@fortawesome/free-brands-svg-icons";
+  faYoutube
+} from "@fortawesome/free-brands-svg-icons"
 // import { text } from "@fortawesome/fontawesome-svg-core";
-import Link from "next/link";
+import Link from "next/link"
 
 const footerData = {
   socialLinks: [
@@ -16,14 +16,14 @@ const footerData = {
     { icon: faInstagram, link: "#" },
     { icon: faLinkedin, link: "#" },
     { icon: faTiktok, link: "#" },
-    { icon: faYoutube, link: "#" },
+    { icon: faYoutube, link: "#" }
   ],
   quickLinks: [
     { text: "الرئيسية", paht: "/" },
     { text: "خدماتنا", paht: "/servicesPage" },
     { text: "الباقات", paht: "/OurePackagesPage" },
     { text: "فريقنا", paht: "/OurTeamPage" },
-    { text: "المدونة", paht: "/BlogPage" },
+    { text: "المدونة", paht: "/BlogPage" }
   ],
 
   fields: [
@@ -31,30 +31,30 @@ const footerData = {
     "تصميم تجربة المستخدم",
     "تطوير التطبيقات والمواقع",
     "الفن الرقمي",
-    "التسويق الرقمي",
+    "التسويق الرقمي"
   ],
   contacts: [
     {
       icon: "../img/phone.svg",
       title: "هاتف",
       value: "+968 7849 5068",
-      link: "tel:+96878495068",
+      link: "tel:+96878495068"
     },
     {
       icon: "../img/Massge.svg",
       title: "البريد الإلكتروني",
       value: "sab3a.agency@gmail.com",
-      link: "mailto:sab3a.agency@gmail.com",
-    },
+      link: "mailto:sab3a.agency@gmail.com"
+    }
   ],
   infoItems: [
     { icon: "../img/location.svg", text: "نعمل عن بعد من عُمان ومصر" },
     {
       icon: "../img/clock.svg",
-      text: "من الأحد إلى الخميس، 9:30 صباحًا - 5:30 مساءً",
-    },
-  ],
-};
+      text: "من الأحد إلى الخميس، 9:30 صباحًا - 5:30 مساءً"
+    }
+  ]
+}
 
 export default function Footer() {
   return (
@@ -69,7 +69,7 @@ export default function Footer() {
               </a>
             </div>
 
-            <div className="innerFooterContent d-flex justify-content-between flex-column align-items-start gap-5 ">
+            <div className="innerFooterContent d-flex justify-content-between flex-wrap flex-column align-items-start gap-5 ">
               <div className="info">
                 <p>
                   وكالة تقنية متخصصة في تقديم حلول رقمية مبتكرة. نعتمد على
@@ -90,22 +90,22 @@ export default function Footer() {
                 </div>
               </div>
               <div className="d-flex wrap  gap-5">
-                <div className="list ">
-                  <h4>روابط سريعة</h4>
-                  <ul>
-                    {footerData.quickLinks.map((page, index) => (
-                      <li key={index}>
-                        <Link href={page.paht}>{page.text}</Link>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
                 <div className="list">
                   <h4>المجالات التي نعمل بها</h4>
                   <ul>
                     {footerData.fields.map((field, index) => (
                       <li key={index}>
                         <a href="#">{field}</a>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                <div className="list ">
+                  <h4>روابط سريعة</h4>
+                  <ul>
+                    {footerData.quickLinks.map((page, index) => (
+                      <li key={index}>
+                        <Link href={page.paht}>{page.text}</Link>
                       </li>
                     ))}
                   </ul>
@@ -130,14 +130,14 @@ export default function Footer() {
               <img src="/img/Sab3a.svg" alt="img" />
             </div>
             <hr />
-            <div className="FooterBottom mt-4 d-flex justify-content-between">
+            <div className="FooterBottom mt-4 d-flex justify-content-between flex-warp">
+              <p className="Text_copyRight">
+                جميع الحقوق محفوظة&copy; 2025 <span>وكالة سبعة الرقمية</span>
+              </p>
               <div className="textBox d-flex gap-5">
                 <a href="#">سياسة الاستخدام والخصوصية</a>
                 <a href="#">شروط الاستخدام</a>
               </div>
-              <p className="Text_copyRight">
-                جميع الحقوق محفوظة&copy; 2025 <span>وكالة سبعة الرقمية</span>
-              </p>
               <div className="social ">
                 <div className="icons d-flex justify-content-between align-items-center gap-5">
                   {footerData.socialLinks.map((social, index) => (
@@ -156,5 +156,5 @@ export default function Footer() {
         </div>
       </footer>
     </>
-  );
+  )
 }

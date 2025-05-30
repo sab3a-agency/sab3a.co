@@ -1,12 +1,12 @@
-"use client";
-import LetsDoit from "./LetsDoit";
-import { PartnersMarquee } from "./marquees";
+"use client"
+import LetsDoit from "./LetsDoit"
+import { PartnersMarquee } from "./marquees"
 const LetsDitedata = {
   btnContent: " معاملة خاصة ",
   discription: " ابدأ رحلة لاكتشاف ",
   smallDescription: "عالم من استراتيجيات التصميم المبتكرة.",
-  letsDoit: " دعنا نصمم غرضك هنا  ",
-};
+  letsDoit: " دعنا نصمم غرضك هنا  "
+}
 
 const Data = {
   title: "      شريكك في",
@@ -16,8 +16,8 @@ const Data = {
   innerTitleEnd: "، نؤمن بأن التصميم الاستثنائي يتجاوز الجماليات.",
   discriptions: ` إنه يشمل الوظائف والقدرة على تحقيق الغرض المقصود. فريقنا الم
                 dedicated هو مدفوع بهدف إنشاء علامات تجارية تُحدث تأثيرًا ذا
-                مغزى.`,
-};
+                مغزى.`
+}
 export default function Section2() {
   return (
     <section className="Section2 mt-80 ">
@@ -47,5 +47,5 @@ export default function Section2() {
       <PartnersMarquee />
       <LetsDoit data={LetsDitedata} />
     </section>
-  );
+  )
 }

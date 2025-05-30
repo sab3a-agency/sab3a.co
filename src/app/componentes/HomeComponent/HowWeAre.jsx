@@ -1,5 +1,5 @@
-"use client";
-import Image from "next/image";
+"use client"
+import Image from "next/image"
 const DataAboutUs = {
   small: "من نحن",
   title: "نحن أفضل وكالة",
@@ -14,17 +14,17 @@ const DataAboutUs = {
       iconSrc: "../img/magicicon.svg",
       title: "أفضل حل",
       description:
-        "اكتشف أفضل حل لاحتياجاتك. حل التحديات، بسط العمليات، وحقق النتائج المثلى.",
+        "اكتشف أفضل حل لاحتياجاتك. حل التحديات، بسط العمليات، وحقق النتائج المثلى."
     },
     {
       id: 2,
       iconSrc: "../img/Authentication_icon.svg",
       title: "جوائز أفضل اختيار",
       description:
-        "نعترف بالتميز: اكتشف جوائز أفضل اختيار. اكتشف المنتجات والخدمات والعلامات التجارية الرائدة التي تستحق النظر فيها.",
-    },
-  ],
-};
+        "نعترف بالتميز: اكتشف جوائز أفضل اختيار. اكتشف المنتجات والخدمات والعلامات التجارية الرائدة التي تستحق النظر فيها."
+    }
+  ]
+}
 export default function HowWeAre() {
   return (
     <div className="HowWeAre mt-80">
@@ -44,7 +44,7 @@ export default function HowWeAre() {
           </div>
 
           <div
-            className="col-12 col-md-6 d-flex flex-column gap-5"
+            className="col-12 col-md-6 d-flex flex-column gap-3"
             data-aos="fade-right"
           >
             <div className="info mb-4 mt-5 container">
@@ -63,8 +63,12 @@ export default function HowWeAre() {
                     key={feature.id}
                     className="box d-flex gap-4 align-items-center "
                   >
-                    <div className="icon">
-                      <img src={feature.iconSrc} alt="icon" />
+                    <div className="icon ">
+                      <img
+                        src={feature.iconSrc}
+                        style={{ maxWidth: 'none!important' }}
+                        alt="icon"
+                      />
                     </div>
                     <div className="information  d-flex flex-column align-items-start justify-content-center ">
                       <h3>{feature.title}</h3>
@@ -78,5 +82,5 @@ export default function HowWeAre() {
         </div>
       </div>
     </div>
-  );
+  )
 }

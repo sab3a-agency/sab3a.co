@@ -90,7 +90,7 @@ export default function Services() {
           <div className="infoServers p-5 mt-5">
             <div className="container">
               <div className="row">
-                <div className="col-md-6 d-flex justify-content-center align-items-center ">
+                <div className="col-md-6 d-flex justify-content-center  ">
                   <div className="side_1" data-aos="fade-up-left">
                     {data.Boxes.map((box, index) => (
                       <div

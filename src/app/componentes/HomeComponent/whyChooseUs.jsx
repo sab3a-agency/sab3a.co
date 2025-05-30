@@ -1,11 +1,11 @@
-"use client";
-import Image from "next/image";
+"use client"
+import Image from "next/image"
 const data = {
   srces: [
     "/img/withHeadphone.png",
     "/img/image.png",
     "/img/withMindMap.png",
-    "/img/AlwaysReady.png",
+    "/img/AlwaysReady.png"
   ],
   title: " رفع ",
   span: " وجودك الرقمي ",
@@ -18,26 +18,26 @@ const data = {
     {
       title: " الخبراء ",
       discription: `                            يقدم فريقنا المتمرس من محترفي تكنولوجيا المعلومات
-                            ثروة من الخبرة، مع مهارات متنوعة وشغف بالابتكار. `,
+                            ثروة من الخبرة، مع مهارات متنوعة وشغف بالابتكار. `
     },
     {
       title: " سجل حافل مثبت ",
       discription: `                             ثق في النتائج. النجاح الراسخ لإنو تك هو دليل على
-                            قدرتنا على تقديم مشاريع ناجحة.  `,
+                            قدرتنا على تقديم مشاريع ناجحة.  `
     },
     {
       title: " حلول مخصصة ",
       discription: `                              نقوم بصياغة حلول تكنولوجيا المعلومات المصممة خصيصًا
                             لتتناسب مع احتياجات عملك المحددة، مما يضمن توافقًا
-                            مثاليًا مع أهدافك.        `,
+                            مثاليًا مع أهدافك.        `
     },
     {
       title: " دعم مستمر ",
       discription: `                            يقدم فريقنا المتمرس من محترفي تكنولوجيا المعلومات
-                            ثروة من الخبرة، مع مهارات متنوعة وشغف بالابتكار. `,
-    },
-  ],
-};
+                            ثروة من الخبرة، مع مهارات متنوعة وشغف بالابتكار. `
+    }
+  ]
+}
 export default function WhyChooseUs() {
   return (
     <div className="sessionWhyChooseUs ">
@@ -45,7 +45,7 @@ export default function WhyChooseUs() {
         <div className="partImages">
           {
             <div className="row">
-              <div className="col-6 col-md-2 mb-3  d-none d-md-block">
+              <div className="col-6 col-md-2 mb-3 d-none d-md-block">
                 <div className="wapp">
                   <Image
                     src={data.srces[0]}
@@ -107,7 +107,7 @@ export default function WhyChooseUs() {
                   <span>{data.span}</span>
                   {data.titleEnd}
                 </h3>
-                <p>{data.discription}</p>
+                <p >{data.discription}</p>
                 <button className="btn btn-danger d-flex align-items-center  justify-content-center">
                   {data.btn}
                 </button>
@@ -130,7 +130,7 @@ export default function WhyChooseUs() {
                               <p>{box.discription}</p>
                             </div>
                           </div>
-                        );
+                        )
                       })}
                     </div>
                   </div>
@@ -153,5 +153,5 @@ export default function WhyChooseUs() {
         </div>
       </div>
     </div>
-  );
+  )
 }

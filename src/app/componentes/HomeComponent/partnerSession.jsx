@@ -1,15 +1,15 @@
-"use client";
+"use client"
 
-import Image from "next/image";
+import Image from "next/image"
 
 const partners = [
   {
     src: "/img/partnersLogo/transport-general-authority-seeklogo 1.svg",
-    link: "https://example.com/1",
+    link: "https://example.com/1"
   },
   {
     src: "/img/partnersLogo/saudi-inovation-logo .svg",
-    link: "https://example.com/2",
+    link: "https://example.com/2"
   },
   { src: "/img/partnersLogo/image 9.svg", link: "https://example.com/3" },
   { src: "/img/partnersLogo/image 8.svg", link: "https://example.com/4" },
@@ -21,20 +21,20 @@ const partners = [
   { src: "/img/partnersLogo/image 2.svg", link: "https://example.com/10" },
   {
     src: "/img/partnersLogo/GATEKEEPER_LOGO_72 1.svg",
-    link: "https://example.com/11",
+    link: "https://example.com/11"
   },
   { src: "/img/partnersLogo/download.svg", link: "https://example.com/12" },
   {
     src: "/img/partnersLogo/Asset 11200 1.svg",
-    link: "https://example.com/13",
+    link: "https://example.com/13"
   },
   {
     src: "/img/partnersLogo/transport-general-authority-seeklogo 1.svg",
-    link: "https://example.com/1",
+    link: "https://example.com/1"
   },
   {
     src: "/img/partnersLogo/saudi-inovation-logo .svg",
-    link: "https://example.com/2",
+    link: "https://example.com/2"
   },
   { src: "/img/partnersLogo/image 9.svg", link: "https://example.com/3" },
   { src: "/img/partnersLogo/image 8.svg", link: "https://example.com/4" },
@@ -42,35 +42,35 @@ const partners = [
   { src: "/img/partnersLogo/image 6.svg", link: "https://example.com/6" },
   { src: "/img/partnersLogo/image 5.svg", link: "https://example.com/7" },
   { src: "/img/partnersLogo/image 4.svg", link: "https://example.com/8" },
-  { src: "/img/partnersLogo/image 3.svg", link: "https://example.com/9" },
-  { src: "/img/partnersLogo/image 2.svg", link: "https://example.com/10" },
-  {
-    src: "/img/partnersLogo/GATEKEEPER_LOGO_72 1.svg",
-    link: "https://example.com/11",
-  },
-  { src: "/img/partnersLogo/download.svg", link: "https://example.com/12" },
-  {
-    src: "/img/partnersLogo/Asset 11200 1.svg",
-    link: "https://example.com/13",
-  },
-];
+  { src: "/img/partnersLogo/image 3.svg", link: "https://example.com/9" }
+  // { src: "/img/partnersLogo/image 2.svg", link: "https://example.com/10" },
+  // {
+  //   src: "/img/partnersLogo/GATEKEEPER_LOGO_72 1.svg",
+  //   link: "https://example.com/11",
+  // },
+  // { src: "/img/partnersLogo/download.svg", link: "https://example.com/12" },
+  // {
+  //   src: "/img/partnersLogo/Asset 11200 1.svg",
+  //   link: "https://example.com/13",
+  // },
+]
 
 const chunkArray = (arr, size) => {
-  let result = [];
+  let result = []
   for (let i = 0; i < arr.length; i += size) {
-    result.push(arr.slice(i, i + size));
+    result.push(arr.slice(i, i + size))
   }
-  return result;
-};
+  return result
+}
 
-const groupedPartners = chunkArray(partners, 11);
+const groupedPartners = chunkArray(partners, 11)
 
 export default function PartnerSession() {
   return (
     <div className="Your_partner_in_success">
       <div className="container mt-80">
         <div
-          className="title m-5 d-flex justify-content-justify align-items-center"
+          className="title m-5 d-flex justify-content-between align-items-center"
           data-aos="zoom-in"
         >
           <h3>
@@ -108,8 +108,6 @@ export default function PartnerSession() {
             <div className="carousel-inner">
               {/* data-bs-interval="carousel" to auto scroll */}
               {groupedPartners.map((group, index) => {
-                const row1 = group.slice(0, 7);
-                const row2 = group.slice(6, 11);
                 return (
                   <div
                     key={index}
@@ -117,10 +115,10 @@ export default function PartnerSession() {
                   >
                     <div className="d-flex flex-column align-items-center gap-3">
                       <div className="Wrapperbox d-flex  gap-3">
-                        {row1.map((partner, i) => (
+                        {group.map((partner, i) => (
                           <div
                             key={i}
-                            className="box p-2  d-flex  justify-content-center align-items-center "
+                            className="box p-2 d-flex  justify-content-center align-items-center "
                           >
                             <a
                               href={partner.link}
@@ -140,7 +138,7 @@ export default function PartnerSession() {
                         ))}
                       </div>
 
-                      <div className="Wrapperbox d-flex flex-wrap justify-content-center gap-3">
+                      {/* <div className="Wrapperbox d-flex flex-wrap justify-content-center gap-3">
                         {row2.map((partner, i) => (
                           <div
                             key={i}
@@ -160,15 +158,15 @@ export default function PartnerSession() {
                             </a>
                           </div>
                         ))}
-                      </div>
+                      </div> */}
                     </div>
                   </div>
-                );
+                )
               })}
             </div>
           </div>
         </div>
       </div>
     </div>
-  );
+  )
 }

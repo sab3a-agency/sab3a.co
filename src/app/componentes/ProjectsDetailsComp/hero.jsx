@@ -1,8 +1,8 @@
-"use client";
-import { useRouter } from "next/navigation";
+"use client"
+import { useRouter } from "next/navigation"
 
 export default function Hero({ DefultData }) {
-  let Back = useRouter();
+  let Back = useRouter()
   return (
     <>
       <section className="Hero mt-50">
@@ -37,5 +37,5 @@ export default function Hero({ DefultData }) {
         </div>
       </section>
     </>
-  );
+  )
 }

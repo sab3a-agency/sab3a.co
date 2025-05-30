@@ -15,8 +15,8 @@ export default function SecondSeation() {
             "الأدوات المكتبية",
             "الهوية الرقمية",
             "إرشادات العلامة التجارية",
-            "الزي الرسمي",
-          ],
+            "الزي الرسمي"
+          ]
         },
         {
           icon: "/img/ProjectsDetails/lamp-on.svg",
@@ -26,8 +26,8 @@ export default function SecondSeation() {
             "كتابة النصوص",
             "كتابة السيناريو",
             " إدارة التصوير الفوتوغرافي",
-            " خطة التسويق",
-          ],
+            " خطة التسويق"
+          ]
         },
         {
           icon: "/img/ProjectsDetails/lamp-on.svg",
@@ -37,8 +37,8 @@ export default function SecondSeation() {
             " تحديد موقع العلامة التجارية",
             "استراتيجية التواصل ",
             " إدارة التصوير الفوتوغرافي",
-            " هيكل العلامة التجارية ",
-          ],
+            " هيكل العلامة التجارية "
+          ]
         },
         {
           icon: "/img/ProjectsDetails/story.svg",
@@ -49,12 +49,12 @@ export default function SecondSeation() {
             "الموقع الإلكتروني",
             " واجهة المستخدم",
             " تجربة المستخدم",
-            " النمذجة ",
-          ],
-        },
-      ],
-    },
-  ];
+            " النمذجة "
+          ]
+        }
+      ]
+    }
+  ]
   return (
     <section className="SecondSeation mt-50">
       <div className="container">
@@ -100,5 +100,5 @@ export default function SecondSeation() {
         </div>
       </div>
     </section>
-  );
+  )
 }

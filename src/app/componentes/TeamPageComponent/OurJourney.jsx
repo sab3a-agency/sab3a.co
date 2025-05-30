@@ -1,10 +1,10 @@
-import JourneyPoints from "./JourneyPoints";
+import JourneyPoints from "./JourneyPoints"
 
 const data = {
   title: " رحلتنا ",
   discription:
-    " بدأت سبعة بفكرة بسيطة: دمج الابتكار مع الفن لخلق تجارب رقمية تبرز. ",
-};
+    " بدأت سبعة بفكرة بسيطة: دمج الابتكار مع الفن لخلق تجارب رقمية تبرز. "
+}
 export default function OurJourney() {
   return (
     <section className="OurJourney mt-50">
@@ -19,5 +19,5 @@ export default function OurJourney() {
         <JourneyPoints />
       </div>
     </section>
-  );
+  )
 }

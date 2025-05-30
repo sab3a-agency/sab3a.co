@@ -1,13 +1,13 @@
-import Link from "next/link";
-import GrideTeam from "./GrideTeam";
+import Link from "next/link"
+import GrideTeam from "./GrideTeam"
 
 const Data = {
   title: "   فريقنا: ",
   span: " شريكك   ",
   titleEnd: " المثالي لتحقيق التميز ",
   otherSpan: "  الرقمي!   ",
-  btnContent: " تواصل معنا ",
-};
+  btnContent: " تواصل معنا "
+}
 
 export default function HeroTeamSection() {
   return (
@@ -39,5 +39,5 @@ export default function HeroTeamSection() {
         <GrideTeam />
       </div>
     </section>
-  );
+  )
 }

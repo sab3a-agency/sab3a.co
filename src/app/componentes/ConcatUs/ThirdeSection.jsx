@@ -1,5 +1,5 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faArrowRight } from "@fortawesome/free-solid-svg-icons"
 
 export default function ThirdeSection() {
   return (
@@ -38,5 +38,5 @@ export default function ThirdeSection() {
       />
       <img src="/img/ConcatUS/Star.svg" lt="dimon" className="star" />
     </section>
-  );
+  )
 }

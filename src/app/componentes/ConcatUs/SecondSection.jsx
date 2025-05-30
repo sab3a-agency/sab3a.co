@@ -1,4 +1,4 @@
-"use client";
+"use client"
 
 export default function SecondSection() {
   return (
@@ -20,5 +20,5 @@ export default function SecondSection() {
         </div>
       </div>
     </section>
-  );
+  )
 }

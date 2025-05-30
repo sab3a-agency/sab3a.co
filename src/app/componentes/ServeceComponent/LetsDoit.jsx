@@ -1,6 +1,6 @@
-"use client";
+"use client"
 
-import Link from "next/link";
+import Link from "next/link"
 
 export default function LetsDoit({ data }) {
   return (
@@ -31,5 +31,5 @@ export default function LetsDoit({ data }) {
         </div>
       </div>
     </section>
-  );
+  )
 }

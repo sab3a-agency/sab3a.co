@@ -1,4 +1,4 @@
-import OurProgectes from "../ServeceComponent/OurProgectes";
+import OurProgectes from "../ServeceComponent/OurProgectes"
 
 const DefultData = [
   {
@@ -7,16 +7,16 @@ const DefultData = [
     title: "تطوير البرمجيات المخصصة",
     discription:
       "هذا النص هو مثال لنص يمكن ان يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى",
-    tags: ["الرعاية الصحية", "العلامة التجارية", " الهوية البصرية", " التغليف"],
+    tags: ["الرعاية الصحية", "العلامة التجارية", " الهوية البصرية", " التغليف"]
   },
   {
     id: 2,
     src: "../img/ServicePage/img2.png",
     title: " اسم المشروع",
     discription: "نقدم تحليلاً دقيقًا لأنظمتك",
-    tags: ["الرعاية الصحية", "العلامة التجارية", " الهوية البصرية", " التغليف"],
-  },
-];
+    tags: ["الرعاية الصحية", "العلامة التجارية", " الهوية البصرية", " التغليف"]
+  }
+]
 export default function SimilarWorks() {
   return (
     <section className="SimilarWorks mt-80 ">
@@ -35,5 +35,5 @@ export default function SimilarWorks() {
         <OurProgectes DefultData={DefultData} />
       </div>
     </section>
-  );
+  )
 }

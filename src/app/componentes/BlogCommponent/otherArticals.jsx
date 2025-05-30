@@ -1,6 +1,6 @@
-"use client";
-import { useMemo } from "react";
-import ArticalGrid from "./ArticalGrid";
+"use client"
+import { useMemo } from "react"
+import ArticalGrid from "./ArticalGrid"
 
 export default function OtherArticals() {
   //Assume you have an array of projects  you will get from the backend
@@ -12,7 +12,7 @@ export default function OtherArticals() {
         title: "عنوان المقال التجريبي",
         btn: "اقرا المزيد",
         span: "20 أكتوبر",
-        small: "الأعمال",
+        small: "الأعمال"
       },
       {
         id: 2,
@@ -20,11 +20,11 @@ export default function OtherArticals() {
         title: "عنوان المقال التجريبي",
         btn: "اقرا المزيد",
         span: "20 أكتوبر",
-        small: "الأعمال",
-      },
+        small: "الأعمال"
+      }
     ],
     []
-  );
+  )
 
   return (
     <section className="SimilarArticals mt-50 ">
@@ -43,5 +43,5 @@ export default function OtherArticals() {
         <ArticalGrid data={data} />
       </div>
     </section>
-  );
+  )
 }

@@ -313,7 +313,7 @@ img.w-50 {
 }
 
 .col-md-3.d-flex.justify-content-center.align-items-center.gap-5 {
-  width: 43rem;
+  /* width: 43rem; */
 }
 /* .ContentOurServices {
 } */
@@ -423,7 +423,9 @@ img.w-50 {
   margin-top: 3rem;
   float: inline-start;
 }
-
+.HeroContent {
+  margin-top: -7.9rem;
+}
 /* sessionWhyChooseUs  part2 */
 
 .ContenerWrapper.d-flex.flex-column.align-items-center {
@@ -509,8 +511,8 @@ img.w-50 {
 
 .part2 .icon img,
 .part1 .icon img {
-  width: 6rem;
-  height: 6rem;
+  width: 60px;
+  height: 60px;
 }
 /*  follow Page HowWeAre */
 .WrappersubSession {
@@ -526,7 +528,7 @@ img.w-50 {
 
 .WrappersubSession .boxs .box .information p {
   font-size: 1.9rem;
-  width: 37rem;
+  /* width: 37rem; */
   text-align: justify;
   font-weight: 100;
 }
@@ -601,7 +603,7 @@ button.carousel-control-next:hover,
   position: relative;
   display: inline-flex;
   height: 6rem;
-  right: 1rem;
+  right: 0rem;
   top: 0rem;
 }
 
@@ -630,7 +632,8 @@ button.carousel-control-next:hover,
 }
 
 .Your_partner_in_success img {
-  width: 16rem;
+  width: 18rem;
+  height: 4rem;
 }
 
 .Your_partner_in_success .imgwrap {
@@ -744,7 +747,7 @@ button.carousel-control-next:hover,
   position: absolute;
   color: #f0f8ff;
   left: 20px;
-  top: 28px;
+  top: 5px;
   z-index: 11111;
 }
 
@@ -766,12 +769,16 @@ button.carousel-control-next:hover,
 .boxImg {
   width: 100% !important;
   overflow: hidden !important;
+  height: 100% !important;
+
 }
 .boxImg img {
   border-radius: 2rem !important;
+  height: 100% !important;
+  object-fit: cover;
 }
 .HowWeAre .row {
-  gap: 5rem;
+  gap: 3rem;
 }
 .HowWeAre .row .col-md-6 {
   width: auto;
@@ -1456,7 +1463,21 @@ marquee {
 /* Responsive  */
 
 /* Convert to diskTop */
-
+@media (min-width: 992px) {
+  .HowWeAre .row .col-md-6 {
+    width: 48% !important;
+  }
+  .innerFooterContent {
+    flex-direction: row !important;
+  }
+  .FooterBottom.mt-4.d-flex.justify-content-between {
+    flex-direction: row;
+  }
+  .infoServers .info p {
+    width: 46rem !important;
+    font-size: 1.5rem !important;
+  }
+}
 @media (min-width: 768px) {
   html {
     font-size: 10px;
@@ -1542,9 +1563,7 @@ marquee {
   .div.d-flex.justify-content-center.align-items-center.gap-4 {
     flex-direction: row;
   }
-  .FooterBottom.mt-4.d-flex.justify-content-between {
-    flex-direction: row;
-  }
+ 
   .d-flex.gap-100 {
     flex-direction: row;
   }
@@ -1609,7 +1628,7 @@ marquee {
   }
   /* section how we are */
   .HowWeAre .row .col-md-6 {
-    width: 48%;
+    width: auto;
   }
   .HowWeAre .imgWrapp img {
     height: 63rem !important;
@@ -1620,21 +1639,18 @@ marquee {
   .WrappersubSession {
     padding: 4rem;
   }
-  .infoServers .info p {
-    width: 46rem !important;
-    font-size: 1.5rem !important;
-  }
+ 
   .HowWeAre .info p {
     font-size: 1.5rem;
   }
   .WrappersubSession .boxs .box .information p {
     font-size: 1.4rem;
-    width: 46rem;
+    /* width: 46rem; */
   }
-  .btns {
+  /* .btns {
     right: 78rem !important;
     top: 0rem !important;
-  }
+  } */
   /* progress */
   .divWitherProgress {
     flex-direction: row !important;
@@ -1644,18 +1660,24 @@ marquee {
   }
   .heroprogress {
     width: 41% !important;
+    /* max-height: 340px; */
   }
   .innerWrapper {
     position: relative !important;
-    top: 6rem !important;
+  }
+  @media (min-width: 1400px) {
+    .heroprogress .innerWrapper {
+       top: 8rem !important;
+
+    }
   }
   .position {
     left: 20px;
-    top: -18px;
+    /* top: -18px; */
   }
-  .questiones .container {
+  /* .questiones .container {
     width: 70rem !important;
-  }
+  } */
   .accordion-body {
     font-size: 1.5rem !important;
   }
@@ -1667,9 +1689,7 @@ marquee {
   .list a {
     font-size: 1.7rem !important;
   }
-  .innerFooterContent {
-    flex-direction: row !important;
-  }
+
   /* ------------------------------ */
   /* Services page Style */
   .adv .info p {

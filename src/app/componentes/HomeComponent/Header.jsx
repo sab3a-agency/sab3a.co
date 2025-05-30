@@ -7,6 +7,7 @@ import { usePathname } from "next/navigation";
 export default function Header() {
   const pathname = usePathname();
   const [Active, setActive] = useState("");
+  
   const currentPage = [
     { path: "/", name: "الرئيسية" },
     { path: "/servicesPage", name: "خدمتنا" },

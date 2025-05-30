@@ -1,8 +1,8 @@
-"use client";
+"use client"
 
-import { useParams } from "next/navigation";
-import React from "react";
-import { data } from "react-router-dom";
+// import { useParams } from "next/navigation"
+import React from "react"
+// import { data } from "react-router-dom"
 
 export default function FirstSection({ projectsData }) {
   // Think About how to get the data  by id
@@ -26,9 +26,9 @@ export default function FirstSection({ projectsData }) {
                 <p>{project.SecondDescription}</p>
               </div>
             </div>
-          );
+          )
         })}
       </section>
     </>
-  );
+  )
 }

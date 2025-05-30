@@ -1,6 +1,6 @@
-"use client";
+"use client"
 
-import { useParams } from "next/navigation";
+import { useParams } from "next/navigation"
 
 // Assume you have an array of projects  you will get from the backend
 // const projectsData = [
@@ -64,21 +64,21 @@ const data = {
           كثير من الأحيان أن يطلع على صورة حقيقية لتصميم الموقع. هنا وجب على
           المصمم أن يضع نصوصا مؤقتة على التصميم ليظهر للعميل الشكل كاملاً،دور
           مولد النص العربى أن يوفر على المصمم عناء البحث عن نص بديل لا علاقة
-          له بالموضوع الذى يتحدث عنه التصميم فيظهر بشكل لا يليق.`,
-};
+          له بالموضوع الذى يتحدث عنه التصميم فيظهر بشكل لا يليق.`
+}
 
 export default function FirstSection({ projectsData }) {
   // Think About how to get the data  by id
-  const param = useParams();
+  const param = useParams()
   // console.log(`The param is ::..:: `, param);
   const CurrentData = projectsData.find((project) => {
-    return project.id === Number(param.ProjectsDetails);
-  });
+    return project.id === Number(param.ProjectsDetails)
+  })
 
   //should pass ID number from url
   const ArticalPage = projectsData.find((project) => {
-    return project.id === Number(param.ArticalPage);
-  });
+    return project.id === Number(param.ArticalPage)
+  })
   // console.log(CurrentData);
 
   return (
@@ -97,5 +97,5 @@ export default function FirstSection({ projectsData }) {
         </div>
       </section>
     </>
-  );
+  )
 }

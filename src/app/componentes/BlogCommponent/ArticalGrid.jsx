@@ -1,7 +1,7 @@
-"use client";
-import Link from "next/link";
-import Image from "next/image";
-import { useMemo } from "react";
+"use client"
+import Link from "next/link"
+import Image from "next/image"
+import { useMemo } from "react"
 
 export default function ArticalGrid({ data }) {
   return (
@@ -37,8 +37,8 @@ export default function ArticalGrid({ data }) {
               </div>
             </div>
           </div>
-        );
+        )
       })}
     </div>
-  );
+  )
 }

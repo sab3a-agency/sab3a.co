@@ -1,10 +1,10 @@
-"use client";
+"use client"
 
-import { useEffect, useState } from "react";
+import { useEffect, useState } from "react"
 // import { useNavigate } from "react-router-dom";
-import Image from "next/image";
+import Image from "next/image"
 // import { useRouter } from "next/navigation";
-import Link from "next/link";
+import Link from "next/link"
 const DefultBoxData = [
   {
     id: 1,
@@ -12,55 +12,55 @@ const DefultBoxData = [
     title: "تطوير البرمجيات المخصصة",
     discription:
       "هذا النص هو مثال لنص يمكن ان يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى",
-    tags: ["الرعاية الصحية", "العلامة التجارية", " الهوية البصرية", " التغليف"],
+    tags: ["الرعاية الصحية", "العلامة التجارية", " الهوية البصرية", " التغليف"]
   },
   {
     id: 2,
     src: "/img/ServicePage/img2.png",
     title: " اسم المشروع",
     discription: "نقدم تحليلاً دقيقًا لأنظمتك",
-    tags: ["الرعاية الصحية", "العلامة التجارية", " الهوية البصرية", " التغليف"],
+    tags: ["الرعاية الصحية", "العلامة التجارية", " الهوية البصرية", " التغليف"]
   },
   {
     id: 3,
     src: "/img/ServicePage/img3.png",
     title: " اسم المشروع",
     discription: "نقدم تحليلاً دقيقًا لأنظمتك",
-    tags: ["الرعاية الصحية", "العلامة التجارية", " الهوية البصرية", " التغليف"],
+    tags: ["الرعاية الصحية", "العلامة التجارية", " الهوية البصرية", " التغليف"]
   },
   {
     id: 4,
     src: "/img/ServicePage/img4.png",
     title: " اسم المشروع",
     discription: "نقدم تحليلاً دقيقًا لأنظمتك",
-    tags: ["الرعاية الصحية", "العلامة التجارية", " الهوية البصرية", " التغليف"],
+    tags: ["الرعاية الصحية", "العلامة التجارية", " الهوية البصرية", " التغليف"]
   },
   {
     id: 5,
     src: "/img/ServicePage/img5.png",
     title: " اسم المشروع",
     discription: "نقدم تحليلاً دقيقًا لأنظمتك",
-    tags: ["الرعاية الصحية", "العلامة التجارية", " الهوية البصرية", " التغليف"],
+    tags: ["الرعاية الصحية", "العلامة التجارية", " الهوية البصرية", " التغليف"]
   },
   {
     id: 6,
     src: "/img/ServicePage/img6.png",
     title: " اسم المشروع",
     discription: "نقدم تحليلاً دقيقًا لأنظمتك",
-    tags: ["الرعاية الصحية", "العلامة التجارية", " الهوية البصرية", " التغليف"],
-  },
-];
+    tags: ["الرعاية الصحية", "العلامة التجارية", " الهوية البصرية", " التغليف"]
+  }
+]
 
 export default function OurProgectes({ DefultData }) {
   // const Router = useRouter();
 
-  const [boxData, setBoxData] = useState(DefultBoxData);
+  const [boxData, setBoxData] = useState(DefultBoxData)
 
   useEffect(() => {
     if (DefultData && Array.isArray(DefultData)) {
-      setBoxData(DefultData);
+      setBoxData(DefultData)
     }
-  }, [DefultData]);
+  }, [DefultData])
 
   return (
     <div
@@ -95,5 +95,5 @@ export default function OurProgectes({ DefultData }) {
         ))}
       </div>
     </div>
-  );
+  )
 }

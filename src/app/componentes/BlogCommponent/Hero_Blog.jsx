@@ -1,6 +1,6 @@
-"use client";
-import { useMemo } from "react";
-import ArticalGrid from "./ArticalGrid";
+"use client"
+import { useMemo } from "react"
+import ArticalGrid from "./ArticalGrid"
 
 export default function Hero_Blog() {
   const HeroData = useMemo(() => {
@@ -8,9 +8,9 @@ export default function Hero_Blog() {
       title: ` رؤى رقمية
   من خبراء `,
       span: " سبعة.",
-      discriptions: `في سبعة، نقدم حلولًا رقمية مبتكرة لمساعدة العلامات التجارية على النمو والتميز. استكشف خدماتنا المصممة لتعزيز حضورك الرقمي.`,
-    };
-  }, []);
+      discriptions: `في سبعة، نقدم حلولًا رقمية مبتكرة لمساعدة العلامات التجارية على النمو والتميز. استكشف خدماتنا المصممة لتعزيز حضورك الرقمي.`
+    }
+  }, [])
 
   const data = useMemo(
     () => [
@@ -20,7 +20,7 @@ export default function Hero_Blog() {
         title: "عنوان المقال التجريبي",
         btn: "اقرا المزيد",
         span: "20 أكتوبر",
-        small: "الأعمال",
+        small: "الأعمال"
       },
       {
         id: 2,
@@ -28,7 +28,7 @@ export default function Hero_Blog() {
         title: "عنوان المقال التجريبي",
         btn: "اقرا المزيد",
         span: "20 أكتوبر",
-        small: "الأعمال",
+        small: "الأعمال"
       },
       {
         id: 3,
@@ -36,7 +36,7 @@ export default function Hero_Blog() {
         title: "عنوان المقال التجريبي",
         btn: "اقرا المزيد",
         span: "20 أكتوبر",
-        small: "الأعمال",
+        small: "الأعمال"
       },
       {
         id: 4,
@@ -44,7 +44,7 @@ export default function Hero_Blog() {
         title: "عنوان المقال التجريبي",
         btn: "اقرا المزيد",
         span: "20 أكتوبر",
-        small: "الأعمال",
+        small: "الأعمال"
       },
       {
         id: 5,
@@ -52,7 +52,7 @@ export default function Hero_Blog() {
         title: "عنوان المقال التجريبي",
         btn: "اقرا المزيد",
         span: "20 أكتوبر",
-        small: "الأعمال",
+        small: "الأعمال"
       },
       {
         id: 6,
@@ -60,11 +60,11 @@ export default function Hero_Blog() {
         title: "عنوان المقال التجريبي",
         btn: "اقرا المزيد",
         span: "20 أكتوبر",
-        small: "الأعمال",
-      },
+        small: "الأعمال"
+      }
     ],
     []
-  );
+  )
 
   return (
     <section className="HeroBlog mt-50">
@@ -79,5 +79,5 @@ export default function Hero_Blog() {
         <ArticalGrid data={data} />
       </div>
     </section>
-  );
+  )
 }

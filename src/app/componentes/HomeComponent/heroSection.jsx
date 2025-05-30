@@ -1,18 +1,18 @@
-"use client";
+"use client"
 const data = {
   src: "/img/meting.jpeg",
   innerSrc: "/img/decorative star.svg",
   smallcontent: [
-    "تطوير",
-    "تصميم واجهة المستخدم وتجربة المستخدم",
-    "تصميم جرافيكي",
     "رسم توضيحي",
-  ],
-};
+    "تصميم جرافيكي",
+    "تصميم واجهة المستخدم وتجربة المستخدم",
+    "تطوير"
+  ]
+}
 export default function Herosection() {
   return (
-    <section className="HeroContent  ">
-      <div className="container p-5  pt-0">
+    <section className="HeroContent">
+      <div className="container p-5 pt-0">
         <div className="lastPart row mt-90">
           <div className="container">
             <div className="imgWrapper" data-aos="fade-up">
@@ -31,7 +31,7 @@ export default function Herosection() {
                 scrollamount="15"
                 loop="infinite"
               >
-                <div className=" col-md-12 d-flex justify-content-center gap-5">
+                <div className="col-md-12 d-flex justify-content-center">
                   {data.smallcontent.map((title, index) => {
                     return (
                       <div
@@ -41,7 +41,7 @@ export default function Herosection() {
                         <img src={data.innerSrc} alt="Star" />
                         <small>{title}</small>
                       </div>
-                    );
+                    )
                   })}
                 </div>
               </marquee>
@@ -50,5 +50,5 @@ export default function Herosection() {
         </div>
       </div>
     </section>
-  );
+  )
 }
