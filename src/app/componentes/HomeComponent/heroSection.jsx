@@ -15,7 +15,7 @@ export default function Herosection() {
       <div className="container p-5 pt-0">
         <div className="lastPart row mt-90">
           <div className="container">
-            <div className="imgWrapper">
+            <div className="imgWrapper" data-aos="fade-up">
               <img src={data.src} loading="lazy" alt="meeting" />
             </div>
           </div>

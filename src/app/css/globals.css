@@ -1489,6 +1489,11 @@ section.HeroContent {
 .RunningLikePost.row {
   padding-left: 0px;
 }
+.box.p-2.d-flex.justify-content-center.align-items-center {
+  height: 15rem !important;
+  width: 1rem !important;
+  margin-top: 3rem !important;
+}
 
 /* ----------------------------- */
 /* Responsive  */
@@ -1565,7 +1570,7 @@ section.HeroContent {
     left: 0px;
   }
   .HeaderWithHeroSition {
-    height: 150rem !important;
+    height: 140rem !important;
   }
   .wapperServices {
     gap: 25rem !important;
@@ -1803,6 +1808,7 @@ section.HeroContent {
   .btns {
     width: 10% !important;
   }
+
   .sessionWhyChooseUs .BoxText {
     width: 75% !important;
   }
@@ -1812,10 +1818,16 @@ section.HeroContent {
   .divWitherProgress {
     width: 102% !important;
   }
+  /* New Changes  */
   .adv h2 {
     font-size: 5rem;
   }
   .adv .info {
     width: 100%;
+  }
+  .box.p-2.d-flex.justify-content-center.align-items-center {
+    height: 15rem !important;
+    width: 15rem !important;
+    margin-top: 0rem !important;
   }
 }

@@ -10,6 +10,8 @@ import Services from "../componentes/HomeComponent/services"
 import WhyChooseUs from "../componentes/HomeComponent/whyChooseUs"
 // import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 
+
+
 export function HomePage() {
   return (
     <>

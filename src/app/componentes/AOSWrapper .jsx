@@ -1,18 +1,19 @@
-"use client" // استخدم هذا إذا كنت في Next.js 13+ مع App Router
-import { useEffect } from "react"
+"use client";
 
-import AOS from "aos"
-import "aos/dist/aos.css"
+import { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
-const AOSWrapper = ({ children }) => {
+const AosWrapper = ({ children }) => {
   useEffect(() => {
+    require("bootstrap/dist/js/bootstrap.bundle.min.js");
     AOS.init({
-      duration: 600,
-      once: true
-    })
-  }, [])
+      duration: 800,
+      once: true,
+    });
+  }, []);
 
-  return <>{children}</>
-}
+  return <>{children}</>;
+};
 
-export default AOSWrapper
+export default AosWrapper;

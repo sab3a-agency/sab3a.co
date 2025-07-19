@@ -64,7 +64,10 @@ export default function Services() {
     <>
       <div className="ContentOurServices">
         <div className="container p-5 mt-4">
-          <div className="wapperServices row d-flex  justify-content-space-between ">
+          <div
+            className="wapperServices row d-flex  justify-content-space-between "
+            data-aos="fade-down"
+          >
             <div className="col-md-4">
               <div className="Text">
                 {data.title}
@@ -87,46 +90,43 @@ export default function Services() {
             </div>
           </div>
 
-          <div className="infoServers p-5 mt-5">
-            <div className="container">
-              <div className="row">
-                <div className="col-md-6 d-flex justify-content-center  ">
-                  <div className="side_1">
-                    {data.Boxes.map((box, index) => (
-                      <div
-                        key={index}
-                        className="box d-flex align-items-center justify-content-center"
-                      >
-                        <div className="Wrappericon d-flex justify-content-center align-items-center">
-                          <img className="icon" src={box.src} alt="icon" />
-                        </div>
-                        <div className="info">
-                          <h1>{box.title}</h1>
-                          <p>{box.innerDescription}</p>
-                        </div>
-                      </div>
-                    ))}
+          {/* Servers */}
+          <div className="infoServers mt-5" data-aos="fade-up">
+            <div className="row">
+              {/* Left side */}
+              <div className="col-md-6 d-flex flex-column gap-4">
+                {data.Boxes.map((box, index) => (
+                  <div
+                    key={index}
+                    className="box d-flex align-items-start p-3  rounded"
+                  >
+                    <div className="Wrappericon me-3 d-flex align-items-center justify-content-center">
+                      <img className="icon" src={box.src} alt="icon" />
+                    </div>
+                    <div className="info">
+                      <h5 className="fw-bold  fs-3">{box.title}</h5>
+                      <p>{box.innerDescription}</p>
+                    </div>
                   </div>
-                </div>
+                ))}
+              </div>
 
-                <div className="col-md-6">
-                  <div className="side_1">
-                    {data.Boxes2.map((box, index) => (
-                      <div
-                        key={index}
-                        className="box d-flex align-items-center justify-content-center"
-                      >
-                        <div className="Wrappericon d-flex justify-content-center align-items-center">
-                          <img className="icon" src={box.src} alt="icon" />
-                        </div>
-                        <div className="info">
-                          <h1>{box.title}</h1>
-                          <p>{box.innerDescription}</p>
-                        </div>
-                      </div>
-                    ))}
+              {/* Right side */}
+              <div className="col-md-6 d-flex flex-column gap-4">
+                {data.Boxes2.map((box, index) => (
+                  <div
+                    key={index}
+                    className="box d-flex align-items-start p-3  rounded"
+                  >
+                    <div className="Wrappericon me-3 d-flex align-items-center justify-content-center">
+                      <img className="icon" src={box.src} alt="icon" />
+                    </div>
+                    <div className="info">
+                      <h5 className="fw-bold  fs-3">{box.title}</h5>
+                      <p>{box.innerDescription}</p>
+                    </div>
                   </div>
-                </div>
+                ))}
               </div>
             </div>
           </div>

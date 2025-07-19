@@ -52,6 +52,7 @@ export default function WhyChooseUs() {
                     width={1000}
                     height={1000}
                     alt="img"
+                    data-aos="fade-left"
                     loading="lazy"
                   />
                 </div>
@@ -62,6 +63,7 @@ export default function WhyChooseUs() {
                     id="wappLongimg"
                     src={data.srces[1]}
                     alt="img "
+                    data-aos="zoom-in"
                     width={1000}
                     height={1000}
                     loading="lazy"
@@ -73,6 +75,7 @@ export default function WhyChooseUs() {
                   <Image
                     src={data.srces[2]}
                     alt="img"
+                    data-aos="zoom-in"
                     width={1000}
                     height={1000}
                     loading="lazy"
@@ -86,6 +89,7 @@ export default function WhyChooseUs() {
                     src={data.srces[3]}
                     alt="img"
                     width={1000}
+                    data-aos="zoom-in"
                     height={1000}
                     loading="lazy"
                   />
@@ -97,7 +101,7 @@ export default function WhyChooseUs() {
         <div className="part2 pt-5 mt-80">
           <div className="row">
             <div className="col-md-6">
-              <div className="BoxText">
+              <div className="BoxText" data-aos="zoom-in">
                 <h3>
                   {data.title}
                   <span>{data.span}</span>
@@ -121,7 +125,7 @@ export default function WhyChooseUs() {
                             key={index}
                             className={`box ${index === 0 ? "Active" : ""}`}
                           >
-                            <div className="boxContent">
+                            <div className="boxContent" data-aos="fade-zoom-in">
                               <h2>{box.title}</h2>
                               <p>{box.discription}</p>
                             </div>
@@ -134,7 +138,7 @@ export default function WhyChooseUs() {
                     <div className="SecondSide d-flex flex-column align-items-center">
                       {data.boxes.slice(2, 4).map((box, index) => (
                         <div key={index} className="box">
-                          <div className="boxContent">
+                          <div className="boxContent" data-aos="fade-zoom-in">
                             <h2>{box.title}</h2>
                             <p>{box.discription}</p>
                           </div>

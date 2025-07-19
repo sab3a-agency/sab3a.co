@@ -69,7 +69,10 @@ export default function PartnerSession() {
   return (
     <div className="Your_partner_in_success">
       <div className="container mt-80">
-        <div className="title m-5 d-flex justify-content-between align-items-center">
+        <div
+          className="title m-5 d-flex justify-content-between align-items-center"
+          data-aos="zoom-in"
+        >
           <h3>
             شريكك في <span>النجاح الرقمي</span>
           </h3>
@@ -100,7 +103,7 @@ export default function PartnerSession() {
             </button>
           </div>
         </div>
-        <div className="partnersLogos row">
+        <div className="partnersLogos row" data-aos="fade-up">
           <div id="carouselExampleInterval" className="carousel slide">
             <div className="carousel-inner">
               {/* data-bs-interval="carousel" to auto scroll */}
@@ -115,7 +118,7 @@ export default function PartnerSession() {
                         {group.map((partner, i) => (
                           <div
                             key={i}
-                            className="box p-2 d-flex  justify-content-center align-items-center "
+                            className="box p-2 d-flex  justify-content-center align-items-center  "
                           >
                             <a
                               href={partner.link}
@@ -134,28 +137,6 @@ export default function PartnerSession() {
                           </div>
                         ))}
                       </div>
-
-                      {/* <div className="Wrapperbox d-flex flex-wrap justify-content-center gap-3">
-                        {row2.map((partner, i) => (
-                          <div
-                            key={i}
-                            className="p-2 box d-flex justify-content-center align-items-center"
-                          >
-                            <a
-                              href={partner.link}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                            >
-                              <img
-                                src={partner.src}
-                                alt="شعار الشريك"
-                                className="img-fluidv d-flex flex-wrap align-items-center justify-content-center "
-                                loading="lazy"
-                              />
-                            </a>
-                          </div>
-                        ))}
-                      </div> */}
                     </div>
                   </div>
                 );

@@ -47,10 +47,13 @@ export default function HeroPart1() {
 
   return (
     <div className="container px-5 mt-80 pt-0">
-      <div className="Part1 row w-100 mx-auto mb-5">
+      <div className="Part1 row w-100 mx-auto mb-5 " data-aos="fade-up">
         <div className="wrap col-md-12 d-flex flex-column gap-5">
           <div className="imgWithText">
-            <div className="imgWrapper d-flex align-items-center">
+            <div
+              className="imgWrapper d-flex align-items-center"
+              data-aos="fade-up"
+            >
               <p className="imgText w-100">{data.Massges}</p>
             </div>
           </div>
@@ -66,7 +69,7 @@ export default function HeroPart1() {
         </div>
       </div>
 
-      <div className=" mt-5 my-5 position-relative">
+      <div className=" mt-5 my-5 position-relative" data-aos="fade-up">
         <div className="col-md-9 d-flex justify-content-center">
           <p className="BigText">{data.advPoster}</p>
         </div>
@@ -88,7 +91,7 @@ export default function HeroPart1() {
         </div>
       </div>
 
-      <div className="d-flex">
+      <div className="d-flex" data-aos="fade-up">
         <div className="innerWrappe col-md-3 gap-5">
           <div className="text">
             <p className="textBox spaheal d-flex align-items-center">

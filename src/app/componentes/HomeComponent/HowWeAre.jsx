@@ -30,7 +30,7 @@ export default function HowWeAre() {
     <div className="HowWeAre mt-80">
       <div className="container py-5 mt-5">
         <div className="row align-items-center">
-          <div className="col-12 col-md-6 text-center">
+          <div className="col-12 col-md-6 text-center" data-aos="zoom-in">
             <div className="imgWrapp">
               <Image
                 className="img-fluid"
@@ -43,7 +43,10 @@ export default function HowWeAre() {
             </div>
           </div>
 
-          <div className="col-12 col-md-6 d-flex flex-column gap-3">
+          <div
+            className="col-12 col-md-6 d-flex flex-column gap-3"
+            data-aos="zoom-in"
+          >
             <div className="info mb-4 mt-5 container">
               <small>{DataAboutUs.small}</small>
               <h3 className="my-4">
