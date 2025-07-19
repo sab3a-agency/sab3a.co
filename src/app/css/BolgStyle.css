@@ -4,16 +4,17 @@
   text-align: justify !important;
 }
 .HeroBlog .head p {
-  width: 67%;
+  width: 85%;
   font-weight: 400;
   margin: 0 !important;
   font-size: 1.8rem;
   line-height: 150%;
   letter-spacing: -2%;
+  margin-top: 2rem !important;
 }
 .HeroBlog .head h1 {
   width: 100% !important;
-  font-size: 4rem;
+  font-size: 3rem;
   font-weight: 900;
   color: var(--Color-Primary);
 }
@@ -21,7 +22,7 @@
 .ArticalGrid .box img {
   width: 100% !important;
   border-radius: 6em;
-  height: 450px !important;
+  height: 350px !important;
   object-fit: cover;
 }
 
@@ -94,5 +95,8 @@
   }
   .SimilarArticals .col-md-4 {
     width: 50% !important;
+  }
+  .ArticalGrid .box img {
+    height: 450px !important;
   }
 }

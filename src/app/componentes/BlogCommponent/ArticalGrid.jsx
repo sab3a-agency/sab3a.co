@@ -1,14 +1,14 @@
-"use client"
-import Link from "next/link"
-import Image from "next/image"
-import { useMemo } from "react"
+"use client";
+import Link from "next/link";
+import Image from "next/image";
+import { useMemo } from "react";
 
 export default function ArticalGrid({ data }) {
   return (
     <div className="ArticalGrid row mt-50">
       {data.map((item, index) => {
         return (
-          <div key={index} className="col-12 col-md-4 mt-5">
+          <div key={index} className="col-12 col-md-4 mt-5" data-aos="fade-up">
             <div className="box mt-5">
               <Link href={`/BlogPage/${item.id}`}>
                 <Image
@@ -37,8 +37,8 @@ export default function ArticalGrid({ data }) {
               </div>
             </div>
           </div>
-        )
+        );
       })}
     </div>
-  )
+  );
 }

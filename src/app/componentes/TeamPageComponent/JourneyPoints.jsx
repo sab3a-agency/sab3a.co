@@ -111,6 +111,9 @@ export default function JourneyPoints() {
               <div
                 key={index}
                 className="box d-flex align-items-start justify-content-center gap-4"
+                data-aos="fade-down"
+                data-aos-easing="linear"
+                data-aos-duration={index * 500}
               >
                 <div className={`cyrcle ${index === 0 ? "Active" : ""}`}></div>
                 <small>{item.small}</small>
@@ -123,7 +126,13 @@ export default function JourneyPoints() {
           </div>
           <div className="col-12 col-md-6">
             {data2.map((item, index) => (
-              <div key={index} className="box d-flex align-items-start gap-4">
+              <div
+                key={index}
+                className="box d-flex align-items-start gap-4"
+                data-aos="fade-up"
+                data-aos-easing="linear"
+                data-aos-duration={index * 500 + 10}
+              >
                 <div
                   className={`cyrcle ${
                     index === data2.length - 1 ? "last-item" : ""
@@ -154,7 +163,7 @@ export default function JourneyPoints() {
                       0
                     </h3>
                   </div>
-                  <p>{item.descrption}</p>
+                  <p data-aos="fade-up">{item.descrption}</p>
                 </div>
               </div>
             </div>

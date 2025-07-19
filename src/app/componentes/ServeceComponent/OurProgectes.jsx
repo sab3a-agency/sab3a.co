@@ -63,7 +63,11 @@ export default function OurProgectes({ DefultData }) {
   }, [DefultData]);
 
   return (
-    <div className="projectsWrapper mt-80">
+    <div
+      className="projectsWrapper mt-80"
+      data-aos="fade-up"
+      data-aos-duration="1000"
+    >
       <div className="row justify-content-between flex-wrap-wrap">
         {boxData.map((features, index) => (
           <div key={index} className="box col-12 col-md-6 ">

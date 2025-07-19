@@ -48,6 +48,7 @@ export function BoxPackage() {
                 key={index}
                 className={`boxWrapper ${index === 1 ? "Active " : ""} `}
                 // data-aos={index % 2 === 0 ? "fade-right" : "fade-left"}
+                data-aos="zoom-in"
               >
                 <div className="container">
                   <small>

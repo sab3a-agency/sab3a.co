@@ -65,7 +65,7 @@ export default function GrideTeam() {
   const [Data, setData] = useState(DataDefult);
   const [RestOfTheTeam, setRestOfTheTeam] = useState(RestOfTheTeamDefualt);
   return (
-    <div className="Gred mt-50">
+    <div className="Gred mt-50" data-aos="fade-up">
       <div className="row">
         {Data.map((item, index) => (
           <div key={item.name || index} className="col-12 col-md-6">
@@ -113,7 +113,11 @@ export default function GrideTeam() {
         <div className="row">
           {RestOfTheTeam.map((item, index) => (
             <div key={item.name || index} className="col-6 col-md-3">
-              <div className="box mt-5">
+              <div
+                className="box mt-5"
+                data-aos="zoom-in"
+                data-aos-delay={index * 100}
+              >
                 <div className="Wrapp">
                   <img src={item.src} alt={item.name} loading="lazy" />
                 </div>

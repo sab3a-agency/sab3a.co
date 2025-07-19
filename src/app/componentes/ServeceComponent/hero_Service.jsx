@@ -15,7 +15,10 @@ export default function Hero_Service() {
       <section className="Hero_Service mt-80">
         <div className="container">
           <div className="Hero">
-            <div className="head d-flex align-items-start justify-content-between flex-column">
+            <div
+              className="head d-flex align-items-start justify-content-between flex-column"
+              data-aos="fade-left"
+            >
               <h1>
                 {Data.title}
                 <span>{Data.span}</span>
@@ -24,6 +27,7 @@ export default function Hero_Service() {
               <Link
                 href="/ConcatUS"
                 className="d-flex align-items-center gap-4 text-decoration-none  justify-content-center"
+                data-aos="fade-up-right"
               >
                 <img
                   id="arrow"

@@ -85,7 +85,7 @@ img {
 
 .mt-80 {
   /* margin-top: 10rem; */
-  margin-top: 13rem;
+  margin-top: 7rem;
 }
 
 .mt-90 {
@@ -978,7 +978,7 @@ footer .line {
   font-size: 1.8rem !important;
 }
 .list h4 {
-  font-size: 3rem;
+  font-size: 2.5rem;
   font-weight: 600;
   color: var(--Color-Primary);
 }
@@ -1189,7 +1189,7 @@ hr {
 /* Service Page Style */
 
 .Hero .head h1 {
-  width: 73% !important;
+  width: 92% !important;
   font-size: 3rem;
   font-weight: bold;
   letter-spacing: 1px;
@@ -1205,7 +1205,7 @@ hr {
 
 .Hero .head h4,
 .letsDoit .row a h4 {
-  font-size: 3rem;
+  font-size: 2.5rem;
   font-weight: 600;
   color: var(--Color-Secondary);
 }
@@ -1295,7 +1295,7 @@ marquee {
 }
 
 .letsDoit .wrapper p {
-  font-size: 3rem;
+  font-size: 2.5rem;
   display: flex;
   flex-direction: column;
   text-align: justify;
@@ -1354,11 +1354,11 @@ marquee {
   border-radius: 6rem;
   font-weight: bold;
   color: var(--Color-Primary);
-  font-size: 2.5rem;
+  font-size: 1.5rem;
 }
 
 .rigthside h1 {
-  font-size: 4rem;
+  font-size: 2.5rem;
   font-weight: 700;
   color: var(--Color-Primary);
 }
@@ -1442,11 +1442,11 @@ marquee {
 }
 
 .SimilarWorks .leftSide p {
-  font-size: 5rem;
+  font-size: 4rem;
   font-weight: bold;
   color: green;
   text-align: justify;
-  width: 91%;
+  width: 69%;
 }
 .headWrapper .projectsWrapper {
   margin-top: 7rem !important;
@@ -1728,7 +1728,7 @@ section.HeroContent {
   /* ------------------------------ */
   /* Services page Style */
   .adv .info p {
-    font-size: 2rem !important;
+    font-size: 3rem !important;
   }
   .Hero .head h1 {
     width: 67rem;
@@ -1772,6 +1772,9 @@ section.HeroContent {
     margin-left: 14px;
     padding-left: 7px;
   }
+  .rigthside h1 {
+    font-size: 4rem;
+  }
   .SecondSeation .hero .title p,
   .FirstSection .infoWrapper p {
     font-size: 1.5rem;
@@ -1795,6 +1798,7 @@ section.HeroContent {
   .leftSide small {
     padding: 0px 2rem;
     font-size: 1.9rem;
+    font-size: 2.5rem;
   }
   .wapperBox h3.my-4 {
     font-size: 2rem;
@@ -1838,6 +1842,9 @@ section.HeroContent {
   }
 
   .head h3 {
+    font-size: 3rem;
+  }
+  .letsDoit .wrapper p {
     font-size: 3rem;
   }
 }

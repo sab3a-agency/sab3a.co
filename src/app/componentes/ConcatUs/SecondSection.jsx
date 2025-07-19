@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 export default function SecondSection() {
   return (
@@ -13,12 +13,19 @@ export default function SecondSection() {
               مع خبرائنا.
             </p>
           </div>
-          <button className="SecondSectionBtn">
+          <button
+            className="SecondSectionBtn"
+            type="submit"
+            onClick={() => {
+              window.location.href =
+                "teal://api.whatsapp.com/send?phone=+96655555555";
+            }}
+          >
             <span>حدد موعد مكالمتك الآن</span>
             <img alt="arrow" src="/img/arrowPrive.svg" />
           </button>
         </div>
       </div>
     </section>
-  )
+  );
 }

@@ -1,4 +1,4 @@
-import { BoxPackage } from "./BoxPackage"
+import { BoxPackage } from "./BoxPackage";
 
 export default function HeroPackages() {
   let Data = {
@@ -7,12 +7,15 @@ export default function HeroPackages() {
     innerspan: "الباقة",
     titleEnd: " التي تناسب مشروعك",
     discription:
-      "سواء كنت تبحث عن بداية سريعة مع MVP أو تطوير مشروع كامل، نحن هنا لمساعدتك في تحقيق أهدافك بكل كفاءة واحترافية. اكتشف الباقات المناسبة أدناه وابدأ رحلتك الرقمية معنا!"
-  }
+      "سواء كنت تبحث عن بداية سريعة مع MVP أو تطوير مشروع كامل، نحن هنا لمساعدتك في تحقيق أهدافك بكل كفاءة واحترافية. اكتشف الباقات المناسبة أدناه وابدأ رحلتك الرقمية معنا!",
+  };
   return (
     <div className="heroPackages mt-50">
       <div className="container">
-        <div className="d-flex flex-column align-items-center justify-content-center">
+        <div
+          className="d-flex flex-column align-items-center justify-content-center"
+          data-aos="fade-up"
+        >
           <small>{Data.span}</small>
           <h1 className="my-4">
             {Data.title}
@@ -24,5 +27,5 @@ export default function HeroPackages() {
         <BoxPackage />
       </div>
     </div>
-  )
+  );
 }

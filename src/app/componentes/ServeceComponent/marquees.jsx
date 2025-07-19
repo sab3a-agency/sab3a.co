@@ -37,6 +37,7 @@ export function PartnersMarquee() {
         direction="left"
         scroll-amount="1900"
         className="marqueeLg mt-80"
+        data-aos="zoom-out"
       >
         {partners.map((partner, index) => (
           <a
@@ -50,21 +51,23 @@ export function PartnersMarquee() {
           </a>
         ))}
       </marquee>
-      <div className="PartnersMarquee_sm row mt-80">
-        <div className="col-12">
+
+      <div className="PartnersMarquee_sm row mt-5" data-aos="zoom-in">
+        <div className="col-12 d-flex flex-wrap justify-content-center align-items-center gap-3">
           {partners.map((partner, index) => (
             <a
               key={index}
               href={partner.link}
               target="_blank"
               rel="noopener noreferrer"
-              className="mx-5"
+              className="mx-2"
             >
-              <div className="outerImgWrrap d-inline-flex align-items-center justify-content-center">
+              <div className="outerImgWrrap d-flex align-items-center justify-content-center">
                 <img
                   src={partner.src}
                   alt="partner_logo"
-                  className="partner_logo h-16 w-auto"
+                  className="partner_logo"
+                  style={{ height: "60px", width: "auto" }}
                 />
               </div>
             </a>

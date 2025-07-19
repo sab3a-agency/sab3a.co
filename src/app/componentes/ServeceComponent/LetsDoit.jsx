@@ -7,7 +7,7 @@ export default function LetsDoit({ data }) {
     <section className="letsDoit mt-80">
       <div className="container">
         <div className="row">
-          <div className="col-12 col-md-6">
+          <div className="col-12 col-md-6" data-aos="fade-up">
             <div className="wrapper">
               <a href="#">{data.btnContent}</a>
               <p className="mt-5">
@@ -16,7 +16,10 @@ export default function LetsDoit({ data }) {
               </p>
             </div>
           </div>
-          <div className="col-12 col-md-6 d-flex justify-content-start align-items-end">
+          <div
+            className="col-12 col-md-6 d-flex justify-content-start align-items-end"
+            data-aos="fade-up"
+          >
             <Link
               href="/ConcatUS"
               className="d-flex align-items-center gap-4 text-decoration-none  justify-content-center"

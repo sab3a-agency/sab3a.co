@@ -24,13 +24,16 @@ export default function Section2() {
       <div className="container">
         <div className="adv">
           <div className="row align-items-center">
-            <div className="info col-12 col-md-6">
+            <div className="info col-12" data-aos="zoom-in">
               <h2 className=" d-flex gap-2 justify-content-start">
                 {Data.title}
                 <span>{Data.span}</span>
               </h2>
             </div>
-            <div className="info col-12 col-md-6  d-flex flex-column gap-5">
+            <div
+              className="info col-12 col-md-6  d-flex flex-column gap-5"
+              data-aos="zoom-in"
+            >
               <p>
                 {Data.innerTitle}
                 <span>{Data.innerSpan}</span>

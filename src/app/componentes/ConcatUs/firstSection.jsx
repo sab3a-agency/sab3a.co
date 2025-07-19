@@ -1,22 +1,22 @@
-"use client"
-import dynamic from "next/dynamic"
-import { useState } from "react"
+"use client";
+import dynamic from "next/dynamic";
+import { useState } from "react";
 import {
   getCountryCallingCode,
-  getRegionCodeForCountryCode
-} from "libphonenumber-js"
-import "react-phone-input-2/lib/style.css"
+  getRegionCodeForCountryCode,
+} from "libphonenumber-js";
+import "react-phone-input-2/lib/style.css";
 
-const PhoneInput = dynamic(() => import("react-phone-input-2"), { ssr: false })
+const PhoneInput = dynamic(() => import("react-phone-input-2"), { ssr: false });
 
 const getCountryName = (countryCode) => {
-  const countryNames = new Intl.DisplayNames(["ar"], { type: "region" })
-  return countryNames.of(countryCode) || "غير معروف"
-}
+  const countryNames = new Intl.DisplayNames(["ar"], { type: "region" });
+  return countryNames.of(countryCode) || "غير معروف";
+};
 
 export default function FirstSiction() {
-  const [phoneValue, setPhone] = useState("")
-  const [country, setCountry] = useState("US")
+  const [phoneValue, setPhone] = useState("");
+  const [country, setCountry] = useState("US");
 
   const data = {
     small: "اتصل",
@@ -28,22 +28,22 @@ export default function FirstSiction() {
         img: "/img/ConcatUS/Location.svg",
         title: "البريد الإلكتروني",
         text: "تواصل معنا على مدار الساعة",
-        link: "sab3a.agency@gmail.com"
+        link: "sab3a.agency@gmail.com",
       },
       {
         img: "/img/ConcatUS/Massage.svg",
         title: "مكتب",
         text: "تواصل معنا من أي مكان!",
-        span: "وكالة سبعة رقمية تخدم السعودية، عُمان، ومصر عن بُعد."
+        span: "وكالة سبعة رقمية تخدم السعودية، عُمان، ومصر عن بُعد.",
       },
       {
         img: "/img/ConcatUS/Telphone.svg",
         title: "ساعات العمل",
         text: "من الأحد إلى الخميس من 9:30 صباحًا حتى 5:30 مساءً.",
-        phone: "+96878495068"
-      }
-    ]
-  }
+        phone: "+96878495068",
+      },
+    ],
+  };
   // Now need to do Functionality to accept data from form
 
   const [value, setValue] = useState({
@@ -52,16 +52,16 @@ export default function FirstSiction() {
     email: "",
     phone: "",
     message: "",
-    Accept: false
-  })
+    Accept: false,
+  });
   const handleChange = (phoneValue, countryData) => {
-    setPhone(phoneValue)
-    setCountry(countryData?.countryCode?.toUpperCase() || "SA")
-    setValue((prev) => ({ ...prev, phone: phoneValue }))
-  }
+    setPhone(phoneValue);
+    setCountry(countryData?.countryCode?.toUpperCase() || "SA");
+    setValue((prev) => ({ ...prev, phone: phoneValue }));
+  };
 
   const handleSubmit = (e) => {
-    e.preventDefault()
+    e.preventDefault();
     alert(
       `
       TestingFormSendData ..
@@ -72,8 +72,8 @@ export default function FirstSiction() {
      your PhoneNumber :: ${value.phone} ,
      your Massage :: ${value.message} ,
      your Accept :: ${value.Accept} `
-    )
-  }
+    );
+  };
 
   return (
     <section className="ConcatUS mt-50">
@@ -121,7 +121,7 @@ export default function FirstSiction() {
                   {[
                     { label: "الاسم الأول", key: "name", type: "text" },
                     { label: "اسم العائلة", key: "family", type: "text" },
-                    { label: "البريد الإلكتروني", key: "email", type: "email" }
+                    { label: "البريد الإلكتروني", key: "email", type: "email" },
                   ].map(({ label, key, type }) => (
                     <div key={key} className="col-6 col-md-6">
                       <label className="form-label">
@@ -135,7 +135,7 @@ export default function FirstSiction() {
                           onChange={(e) =>
                             setValue((prev) => ({
                               ...prev,
-                              [key]: e.target.value
+                              [key]: e.target.value,
                             }))
                           }
                         />
@@ -183,7 +183,7 @@ export default function FirstSiction() {
                         onChange={(e) =>
                           setValue((prev) => ({
                             ...prev,
-                            message: e.target.value
+                            message: e.target.value,
                           }))
                         }
                       ></textarea>
@@ -199,8 +199,8 @@ export default function FirstSiction() {
                       onClick={() => {
                         setValue((prev) => ({
                           ...prev,
-                          Accept: !prev.Accept
-                        }))
+                          Accept: !prev.Accept,
+                        }));
                       }}
                     />
                     <label>
@@ -218,5 +218,5 @@ export default function FirstSiction() {
         </div>
       </div>
     </section>
-  )
+  );
 }

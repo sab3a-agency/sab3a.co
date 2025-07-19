@@ -48,7 +48,8 @@
 }
 .RestOfTheTeam .box .Wrapp {
   overflow: hidden;
-  height: 25rem;
+  height: 21rem;
+  width: 21rem;
   border-radius: 5.2rem;
 }
 
@@ -117,10 +118,9 @@
   font-weight: 700;
 }
 .JourneyPoints .heading p {
-  font-size: 1.9rem;
+  font-size: 1.8rem;
   font-weight: 100;
-  width: 100%;
-  width: 79%;
+  width: auto%;
   text-align: justify;
 }
 .targets .box {
@@ -155,6 +155,7 @@
   .RestOfTheTeam .box .Wrapp {
     overflow: hidden;
     height: 28rem;
+    width: auto;
   }
 
   .cyrcle::after {
