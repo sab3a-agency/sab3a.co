@@ -1,49 +1,49 @@
-"use client"
-import { useEffect, useRef } from "react"
+"use client";
+import { useEffect, useRef } from "react";
 
 const data = {
   Massges: `                  انضم إلينا في رحلة الابتكار والإبداع، حيث نبني معًا شيئًا
                   استثنائيًا يفوق التوقعات.`,
   src: "/img/SomeOne_kofia.png",
   title: "وكالة رقمية إبداعية",
-  advPoster: "نحو عالم رقمي يرفع من مستوى أعمالك"
-}
+  advPoster: "نحو عالم رقمي يرفع من مستوى أعمالك",
+};
 
 export default function HeroPart1() {
-  const countersRef = useRef([])
+  const countersRef = useRef([]);
 
   useEffect(() => {
     function startCount(el) {
-      if (el.dataset.animated === "true") return
-      let goal = parseInt(el.dataset.goal)
-      let current = 0
+      if (el.dataset.animated === "true") return;
+      let goal = parseInt(el.dataset.goal);
+      let current = 0;
 
-      el.dataset.animated = "true"
+      el.dataset.animated = "true";
 
       let count = setInterval(() => {
-        el.textContent = ++current
+        el.textContent = ++current;
         if (current >= goal) {
-          clearInterval(count)
+          clearInterval(count);
         }
-      }, 2000 / goal)
+      }, 2000 / goal);
     }
 
     function handleIntersection(entries) {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          startCount(entry.target)
+          startCount(entry.target);
         }
-      })
+      });
     }
 
     let observer = new IntersectionObserver(handleIntersection, {
-      threshold: 0.5
-    })
+      threshold: 0.5,
+    });
 
-    countersRef.current.forEach((el) => observer.observe(el))
+    countersRef.current.forEach((el) => observer.observe(el));
 
-    return () => observer.disconnect()
-  }, [])
+    return () => observer.disconnect();
+  }, []);
 
   return (
     <div className="container px-5 mt-80 pt-0">
@@ -138,5 +138,5 @@ export default function HeroPart1() {
         </div>
       </div>
     </div>
-  )
+  );
 }

@@ -1,15 +1,15 @@
-"use client"
+"use client";
 
-import Image from "next/image"
+import Image from "next/image";
 
 const partners = [
   {
     src: "/img/partnersLogo/transport-general-authority-seeklogo 1.svg",
-    link: "https://example.com/1"
+    link: "https://example.com/1",
   },
   {
     src: "/img/partnersLogo/saudi-inovation-logo .svg",
-    link: "https://example.com/2"
+    link: "https://example.com/2",
   },
   { src: "/img/partnersLogo/image 9.svg", link: "https://example.com/3" },
   { src: "/img/partnersLogo/image 8.svg", link: "https://example.com/4" },
@@ -21,20 +21,20 @@ const partners = [
   { src: "/img/partnersLogo/image 2.svg", link: "https://example.com/10" },
   {
     src: "/img/partnersLogo/GATEKEEPER_LOGO_72 1.svg",
-    link: "https://example.com/11"
+    link: "https://example.com/11",
   },
   { src: "/img/partnersLogo/download.svg", link: "https://example.com/12" },
   {
     src: "/img/partnersLogo/Asset 11200 1.svg",
-    link: "https://example.com/13"
+    link: "https://example.com/13",
   },
   {
     src: "/img/partnersLogo/transport-general-authority-seeklogo 1.svg",
-    link: "https://example.com/1"
+    link: "https://example.com/1",
   },
   {
     src: "/img/partnersLogo/saudi-inovation-logo .svg",
-    link: "https://example.com/2"
+    link: "https://example.com/2",
   },
   { src: "/img/partnersLogo/image 9.svg", link: "https://example.com/3" },
   { src: "/img/partnersLogo/image 8.svg", link: "https://example.com/4" },
@@ -42,7 +42,7 @@ const partners = [
   { src: "/img/partnersLogo/image 6.svg", link: "https://example.com/6" },
   { src: "/img/partnersLogo/image 5.svg", link: "https://example.com/7" },
   { src: "/img/partnersLogo/image 4.svg", link: "https://example.com/8" },
-  { src: "/img/partnersLogo/image 3.svg", link: "https://example.com/9" }
+  { src: "/img/partnersLogo/image 3.svg", link: "https://example.com/9" },
   // { src: "/img/partnersLogo/image 2.svg", link: "https://example.com/10" },
   // {
   //   src: "/img/partnersLogo/GATEKEEPER_LOGO_72 1.svg",
@@ -53,17 +53,17 @@ const partners = [
   //   src: "/img/partnersLogo/Asset 11200 1.svg",
   //   link: "https://example.com/13",
   // },
-]
+];
 
 const chunkArray = (arr, size) => {
-  let result = []
+  let result = [];
   for (let i = 0; i < arr.length; i += size) {
-    result.push(arr.slice(i, i + size))
+    result.push(arr.slice(i, i + size));
   }
-  return result
-}
+  return result;
+};
 
-const groupedPartners = chunkArray(partners, 11)
+const groupedPartners = chunkArray(partners, 11);
 
 export default function PartnerSession() {
   return (
@@ -161,12 +161,12 @@ export default function PartnerSession() {
                       </div> */}
                     </div>
                   </div>
-                )
+                );
               })}
             </div>
           </div>
         </div>
       </div>
     </div>
-  )
+  );
 }

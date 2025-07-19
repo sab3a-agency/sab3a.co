@@ -1,7 +1,6 @@
-"use client"
+"use client";
 
-import { useEffect, useRef, useState } from "react"
-import { Tooltip } from "bootstrap"
+import { useEffect, useRef, useState } from "react";
 
 const OurVisionDataDefult = {
   small: " رؤيتنا ",
@@ -12,103 +11,105 @@ const OurVisionDataDefult = {
   box1: {
     target: "97",
     title: " حلول إبداعية ",
-    innerdescrption: `هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى.`
+    innerdescrption: `هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى.`,
   },
   box2: {
     target: "95",
     title: " الاستراتيجية الرقمية  ",
-    innerdescrption: `نطور استراتيجيات رقمية مبتكرة تساعدك على تحقيق أهدافك وتعزيز وجودك في السوق الرقمي.`
-  }
-}
+    innerdescrption: `نطور استراتيجيات رقمية مبتكرة تساعدك على تحقيق أهدافك وتعزيز وجودك في السوق الرقمي.`,
+  },
+};
 
 export default function OurVision() {
-  const barsRef = useRef([])
-  const numbersRef = useRef([])
+  const barsRef = useRef([]);
+  const numbersRef = useRef([]);
 
   useEffect(() => {
-    if (!barsRef.current.length || !numbersRef.current.length) return
+    if (!barsRef.current.length || !numbersRef.current.length) return;
 
     // IntersectionObserver for bars
     const observer = new IntersectionObserver(
       (entries, observer) => {
         entries.forEach((entry) => {
-          if (!entry.isIntersecting) return
+          if (!entry.isIntersecting) return;
 
-          const bar2 = entry.target
-          const span2 = bar2.querySelector("span")
-          const number2 = bar2.querySelector(".number")
-          const targetHeight2 = parseInt(span2.dataset.height)
+          const bar2 = entry.target;
+          const span2 = bar2.querySelector("span");
+          const number2 = bar2.querySelector(".number");
+          const targetHeight2 = parseInt(span2.dataset.height);
 
-          if (bar2.dataset.animated === "true") return
-          bar2.dataset.animated = "true"
+          if (bar2.dataset.animated === "true") return;
+          bar2.dataset.animated = "true";
 
-          let currentHeight2 = 0
+          let currentHeight2 = 0;
 
           const animateHeight = () => {
             if (currentHeight2 < targetHeight2) {
-              currentHeight2++
-              span2.style.height = `${currentHeight2}%`
-              number2.textContent = `${currentHeight2}%`
+              currentHeight2++;
+              span2.style.height = `${currentHeight2}%`;
+              number2.textContent = `${currentHeight2}%`;
 
               if (currentHeight2 >= 85) {
-                span2.style.background = "rgba(137, 175, 72, 1)"
+                span2.style.background = "rgba(137, 175, 72, 1)";
               }
 
-              requestAnimationFrame(animateHeight)
+              requestAnimationFrame(animateHeight);
             }
-          }
+          };
 
-          requestAnimationFrame(animateHeight)
-          observer.unobserve(bar2)
-        })
+          requestAnimationFrame(animateHeight);
+          observer.unobserve(bar2);
+        });
       },
       { threshold: 0.5 }
-    )
+    );
 
-    barsRef.current.forEach((bar2) => observer.observe(bar2))
+    barsRef.current.forEach((bar2) => observer.observe(bar2));
 
     // IntersectionObserver for number counters
     const numberObserver = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
-          if (!entry.isIntersecting) return
+          if (!entry.isIntersecting) return;
 
-          const numberEl = entry.target
-          const targetValue = parseInt(numberEl.dataset.target)
-          if (numberEl.dataset.animated === "true") return
-          numberEl.dataset.animated = "true"
+          const numberEl = entry.target;
+          const targetValue = parseInt(numberEl.dataset.target);
+          if (numberEl.dataset.animated === "true") return;
+          numberEl.dataset.animated = "true";
 
-          let currentValue = 0
+          let currentValue = 0;
 
           const animateNumber = () => {
             if (currentValue < targetValue) {
-              currentValue++
-              numberEl.textContent = `${currentValue}%`
-              requestAnimationFrame(animateNumber)
+              currentValue++;
+              numberEl.textContent = `${currentValue}%`;
+              requestAnimationFrame(animateNumber);
             }
-          }
+          };
 
-          requestAnimationFrame(animateNumber)
-        })
+          requestAnimationFrame(animateNumber);
+        });
       },
       { threshold: 0.5 }
-    )
+    );
 
-    numbersRef.current.forEach((numberEl) => numberObserver.observe(numberEl))
+    numbersRef.current.forEach((numberEl) => numberObserver.observe(numberEl));
 
-    // Initialize Bootstrap tooltips
-    const tooltipTriggerList = document.querySelectorAll(
-      '[data-bs-toggle="tooltip"]'
-    )
-    tooltipTriggerList.forEach((el) => new Tooltip(el))
+    // ✅ Initialize Bootstrap tooltips dynamically (to fix document is not defined)
+    import("bootstrap/dist/js/bootstrap.esm.min.js").then(({ Tooltip }) => {
+      const tooltipTriggerList = document.querySelectorAll(
+        '[data-bs-toggle="tooltip"]'
+      );
+      tooltipTriggerList.forEach((el) => new Tooltip(el));
+    });
 
     return () => {
-      observer.disconnect()
-      numberObserver.disconnect()
-    }
-  }, [])
+      observer.disconnect();
+      numberObserver.disconnect();
+    };
+  }, []);
 
-  const [OurVisionData] = useState(OurVisionDataDefult)
+  const [OurVisionData] = useState(OurVisionDataDefult);
 
   return (
     <section className="OurVision mt-80">
@@ -193,5 +194,5 @@ export default function OurVision() {
         </div>
       </div>
     </section>
-  )
+  );
 }
