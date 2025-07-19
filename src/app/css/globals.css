@@ -1462,9 +1462,9 @@ marquee {
 /* ----------- Edating Responsev HomeScreen  by Abood in 7/19/25------------------- */
 
 /* Just for Detect the Problem */
-* {
+/* * {
   border: 1px solid;
-}
+} */
 
 .ImagContent {
   display: none;
