@@ -8,6 +8,11 @@ export default function Header() {
   const pathname = usePathname();
   const [Active, setActive] = useState("");
 
+  // if path Change will close the navbar
+  useEffect(() => {
+    closeNavbar();
+  }, [pathname]);
+
   const currentPage = [
     { path: "/", name: "الرئيسية" },
     { path: "/servicesPage", name: "خدمتنا" },

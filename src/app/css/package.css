@@ -9,7 +9,7 @@
 }
 
 .heroPackages h1.my-4 {
-  font-size: 5rem;
+  font-size: 3rem;
   color: var(--Color-Primary);
   font-weight: 900;
   line-height: 100%;
@@ -61,8 +61,11 @@ hr {
   color: var(--Color-Primary);
 }
 .heroPackages .boxWrapper h2 {
-  font-size: 3.6rem;
+  font-size: 2.8rem;
   font-weight: 900;
+  padding-top: 4%;
+  padding-bottom: 3%;
+  width: 100%;
 }
 .heroPackages .boxWrapper p {
   width: 100%;
@@ -172,6 +175,6 @@ button.accordion-button.collapsed {
     width: 127%;
   }
   .heroPackages .boxWrapper h2 {
-    font-size: 5.6rem;
+    font-size: 3.6rem;
   }
 }

@@ -312,9 +312,9 @@ img.w-50 {
   color: var(--Color-White);
 }
 
-.col-md-3.d-flex.justify-content-center.align-items-center.gap-5 {
-  /* width: 43rem; */
-}
+/* .col-md-3.d-flex.justify-content-center.align-items-center.gap-5 {
+  /* width: 43rem; 
+} */
 /* .ContentOurServices {
 } */
 
@@ -853,7 +853,7 @@ img.custemImg {
 }
 
 .head h3 {
-  font-size: 4rem;
+  font-size: 3rem;
   font-weight: 700;
   color: var(--Color-Primary);
 }
@@ -1251,7 +1251,7 @@ hr {
 }
 .adv h2 {
   color: var(--Color-Primary);
-  font-size: 5rem;
+  font-size: 4rem;
 }
 .adv .info p {
   width: 100% !important;
@@ -1259,6 +1259,7 @@ hr {
 }
 .adv .info {
   margin-top: 3rem !important;
+  width: 90% !important;
 }
 
 marquee {
@@ -1461,9 +1462,9 @@ marquee {
 /* ----------- Edating Responsev HomeScreen  by Abood in 7/19/25------------------- */
 
 /* Just for Detect the Problem */
-/* * {
+* {
   border: 1px solid;
-} */
+}
 
 .ImagContent {
   display: none;
@@ -1810,5 +1811,11 @@ section.HeroContent {
   }
   .divWitherProgress {
     width: 102% !important;
+  }
+  .adv h2 {
+    font-size: 5rem;
+  }
+  .adv .info {
+    width: 100%;
   }
 }
