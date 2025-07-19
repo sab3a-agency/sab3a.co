@@ -1,14 +1,14 @@
-"use client"
+"use client";
 
 export function PartnersMarquee() {
   const partners = [
     {
       src: "/img/partnersLogo/transport-general-authority-seeklogo 1.svg",
-      link: "https://example.com/1"
+      link: "https://example.com/1",
     },
     {
       src: "/img/partnersLogo/saudi-inovation-logo .svg",
-      link: "https://example.com/2"
+      link: "https://example.com/2",
     },
     { src: "/img/partnersLogo/image 9.svg", link: "https://example.com/3" },
     { src: "/img/partnersLogo/image 8.svg", link: "https://example.com/4" },
@@ -21,14 +21,14 @@ export function PartnersMarquee() {
 
     {
       src: "/img/partnersLogo/GATEKEEPER_LOGO_72 1.svg",
-      link: "https://example.com/11"
+      link: "https://example.com/11",
     },
     { src: "/img/partnersLogo/download.svg", link: "https://example.com/12" },
     {
       src: "/img/partnersLogo/Asset 11200 1.svg",
-      link: "https://example.com/13"
-    }
-  ]
+      link: "https://example.com/13",
+    },
+  ];
 
   return (
     <>
@@ -50,7 +50,7 @@ export function PartnersMarquee() {
           </a>
         ))}
       </marquee>
-      <div className="PartnersMarquee_sm row mt-80" data-aos="fade-up">
+      <div className="PartnersMarquee_sm row mt-80">
         <div className="col-12">
           {partners.map((partner, index) => (
             <a
@@ -72,5 +72,5 @@ export function PartnersMarquee() {
         </div>
       </div>
     </>
-  )
+  );
 }

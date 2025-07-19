@@ -65,7 +65,7 @@ export default function Services() {
       <div className="ContentOurServices">
         <div className="container p-5 mt-4">
           <div className="wapperServices row d-flex  justify-content-space-between ">
-            <div className="col-md-4" data-aos="fade-left">
+            <div className="col-md-4">
               <div className="Text">
                 {data.title}
 
@@ -74,7 +74,7 @@ export default function Services() {
                 {data.titleEnd}
               </div>
             </div>
-            <div className="col-md-4" data-aos="fade-right">
+            <div className="col-md-4">
               <div className="Description">
                 <p>{data.description}</p>
                 <a
@@ -91,7 +91,7 @@ export default function Services() {
             <div className="container">
               <div className="row">
                 <div className="col-md-6 d-flex justify-content-center  ">
-                  <div className="side_1" data-aos="fade-up-left">
+                  <div className="side_1">
                     {data.Boxes.map((box, index) => (
                       <div
                         key={index}
@@ -110,7 +110,7 @@ export default function Services() {
                 </div>
 
                 <div className="col-md-6">
-                  <div className="side_1" data-aos="fade-up-right">
+                  <div className="side_1">
                     {data.Boxes2.map((box, index) => (
                       <div
                         key={index}

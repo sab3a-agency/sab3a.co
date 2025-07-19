@@ -287,6 +287,7 @@ textarea {
 }
 .ThirdeSection {
   position: relative;
+  width: 99%;
 }
 img.star {
   position: absolute;

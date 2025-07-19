@@ -7,7 +7,7 @@ import { usePathname } from "next/navigation";
 export default function Header() {
   const pathname = usePathname();
   const [Active, setActive] = useState("");
-  
+
   const currentPage = [
     { path: "/", name: "الرئيسية" },
     { path: "/servicesPage", name: "خدمتنا" },
@@ -48,7 +48,7 @@ export default function Header() {
   };
 
   return (
-    <nav className="navbar navbar-expand-lg bg-body-tertiary p-3 d-flex justify-content-center align-items-baseline mt-2">
+    <nav className="navbar navbar-expand-lg bg-body-tertiary p-3 d-flex justify-content-center align-items-baseline mt-2  ">
       <div className="container">
         <Link className="navbar-brand" href="/" onClick={closeNavbar}>
           <img src="/img/IconSite.svg" alt="img" />
@@ -65,7 +65,7 @@ export default function Header() {
           <span className="navbar-toggler-icon"></span>
         </button>
         <div className="collapse navbar-collapse mx-4" id="navbarNav">
-          <ul className="navbar-nav mx-auto d-flex align-items-center gap-5">
+          <ul className="navbar-nav mx-auto d-flex align-items-center flex-wrap gap-5">
             {currentPage.map((item) => (
               <li className="nav-item" key={item.name}>
                 <Link

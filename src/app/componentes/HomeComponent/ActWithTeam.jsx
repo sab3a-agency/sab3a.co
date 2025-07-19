@@ -26,7 +26,7 @@ export default function ActWithTeam() {
     <div className="ActOurTeam mt-80">
       <div className="container p-5">
         <div className="row d-flex flex-column align-items-center gap-5">
-          <div className="col-md-6" data-aos="zoom-in-down">
+          <div className="col-md-6">
             <div className="Actinfo d-flex flex-column align-items-center flex-column">
               <h3>
                 {data.title}
@@ -37,7 +37,7 @@ export default function ActWithTeam() {
             </div>
           </div>
 
-          <div className="col-md-6 col-12" data-aos="zoom-in-up">
+          <div className="col-md-6 col-12">
             <div className="box1  d-flex justify-content-center gap-5">
               {data.box1.map((item, index) => {
                 return (

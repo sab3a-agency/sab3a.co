@@ -39,7 +39,7 @@
   color: var(--Color-Primary);
 }
 .wrapperImge {
-  height: 48.3rem;
+  height: 38.3rem;
   overflow: hidden;
 }
 .wrapperLink .icones p {
@@ -165,5 +165,8 @@
     display: block;
     opacity: 100;
     visibility: visible;
+  }
+  .wrapperImge {
+    height: 48.3rem;
   }
 }

@@ -50,32 +50,28 @@ export default function HeroPart1() {
       <div className="Part1 row w-100 mx-auto mb-5">
         <div className="wrap col-md-12 d-flex flex-column gap-5">
           <div className="imgWithText">
-            <div
-              className="imgWrapper d-flex align-items-center"
-              data-aos="fade-left"
-            >
+            <div className="imgWrapper d-flex align-items-center">
               <p className="imgText w-100">{data.Massges}</p>
             </div>
           </div>
           <img
             className="w-50"
             alt="صورة شخص يرتدي كوفية"
-            data-aos="fade-up"
             src={data.src}
             loading="eager"
           />
-          <div className="col-md-5" data-aos="fade-right">
+          <div className="col-md-5">
             <p className="text-wikala">{data.title}</p>
           </div>
         </div>
       </div>
 
-      <div className=" mt-5 my-5 position-relative" data-aos="fade-up">
+      <div className=" mt-5 my-5 position-relative">
         <div className="col-md-9 d-flex justify-content-center">
           <p className="BigText">{data.advPoster}</p>
         </div>
-        <div className="wrapperPoster col-md-3" data-aos="fade-up">
-          <div className="position-relative">
+        <div className="wrapperPoster col-md-3">
+          <div className="ImagContent position-relative">
             <img
               className="w-75 SecondImg"
               src="/img/BoardsPoster.png"
@@ -92,7 +88,7 @@ export default function HeroPart1() {
         </div>
       </div>
 
-      <div className="d-flex" data-aos="fade-up">
+      <div className="d-flex">
         <div className="innerWrappe col-md-3 gap-5">
           <div className="text">
             <p className="textBox spaheal d-flex align-items-center">

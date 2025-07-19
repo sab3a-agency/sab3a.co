@@ -12,10 +12,13 @@ export default function HomeLayout({ children }) {
     require("bootstrap/dist/js/bootstrap.bundle.min.js")
   }, [])
   return (
-    <AOSWrapper>
+    <>
+      {/*  <AOSWrapper> */}
       <Header />
       {children}
       <Footer />
-    </AOSWrapper>
+      {/*  </AOSWrapper> */}
+
+    </>
   )
 }

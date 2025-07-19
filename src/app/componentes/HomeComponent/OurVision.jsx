@@ -115,7 +115,7 @@ export default function OurVision() {
     <section className="OurVision mt-80">
       <div className="container p-5">
         <div className="OurVisionWapper container">
-          <div className="info" data-aos="fade-left">
+          <div className="info">
             <small>{OurVisionData.small}</small>
             <h3>
               {OurVisionData.title}
@@ -124,10 +124,7 @@ export default function OurVision() {
             </h3>
           </div>
 
-          <div
-            className="boxWrapper d-flex flex-column align-items-center text-center"
-            data-aos="zoom-in"
-          >
+          <div className="boxWrapper d-flex flex-column align-items-center text-center">
             <div className="boxWrap d-flex justify-content-center gap-4">
               <div className="box d-flex flex-column justify-content-center align-items-center">
                 <span

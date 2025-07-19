@@ -69,10 +69,7 @@ export default function PartnerSession() {
   return (
     <div className="Your_partner_in_success">
       <div className="container mt-80">
-        <div
-          className="title m-5 d-flex justify-content-between align-items-center"
-          data-aos="zoom-in"
-        >
+        <div className="title m-5 d-flex justify-content-between align-items-center">
           <h3>
             شريكك في <span>النجاح الرقمي</span>
           </h3>
@@ -103,7 +100,7 @@ export default function PartnerSession() {
             </button>
           </div>
         </div>
-        <div className="partnersLogos row" data-aos="fade-up">
+        <div className="partnersLogos row">
           <div id="carouselExampleInterval" className="carousel slide">
             <div className="carousel-inner">
               {/* data-bs-interval="carousel" to auto scroll */}

@@ -57,7 +57,7 @@ export default function Questiones() {
   return (
     <>
       <hr />
-      <section className="questiones mt-5 p-5" data-aos="zoom-in-up">
+      <section className="questiones mt-5 p-5">
         <div className="container">
           <div className="wrapper">
             <div className="head">

@@ -1,4 +1,4 @@
-"use client"
+"use client";
 const data = {
   src: "/img/meting.jpeg",
   innerSrc: "/img/decorative star.svg",
@@ -6,16 +6,16 @@ const data = {
     "رسم توضيحي",
     "تصميم جرافيكي",
     "تصميم واجهة المستخدم وتجربة المستخدم",
-    "تطوير"
-  ]
-}
+    "تطوير",
+  ],
+};
 export default function Herosection() {
   return (
     <section className="HeroContent">
       <div className="container p-5 pt-0">
         <div className="lastPart row mt-90">
           <div className="container">
-            <div className="imgWrapper" data-aos="fade-up">
+            <div className="imgWrapper">
               <img src={data.src} loading="lazy" alt="meeting" />
             </div>
           </div>
@@ -41,7 +41,7 @@ export default function Herosection() {
                         <img src={data.innerSrc} alt="Star" />
                         <small>{title}</small>
                       </div>
-                    )
+                    );
                   })}
                 </div>
               </marquee>
@@ -50,5 +50,5 @@ export default function Herosection() {
         </div>
       </div>
     </section>
-  )
+  );
 }

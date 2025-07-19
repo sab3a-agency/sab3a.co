@@ -1,4 +1,4 @@
-import Link from "next/link"
+import Link from "next/link";
 
 let Data = [
   {
@@ -14,9 +14,9 @@ let Data = [
       " تكامل مع واجهات برمجية (APIs). ",
       " اختبار الجودة وإصلاح الأخطاء قبل الإطلاق. ",
       "نشر التطبيق/الموقع في بيئة تجريبية.",
-      "نشر التطبيق/الموقع في بيئة تجريبية."
+      "نشر التطبيق/الموقع في بيئة تجريبية.",
     ],
-    btnContent: "ابداء الان"
+    btnContent: "ابداء الان",
   },
   {
     ouetricon: "/img/Packages/twiceShape.svg",
@@ -32,11 +32,11 @@ let Data = [
       " اختبار شامل (وظيفي، أداء، وأمان). ",
       " نشر التطبيق في بيئة إنتاجية.  ",
       " دعم فني وصيانة لمدة 3-6 أشهر بعد الإطلاق. ",
-      " تحديثات وتحسينات دورية حسب الطلب. "
+      " تحديثات وتحسينات دورية حسب الطلب. ",
     ],
-    btnContent: " تواصل معنا "
-  }
-]
+    btnContent: " تواصل معنا ",
+  },
+];
 export function BoxPackage() {
   return (
     <section className="boxPackages mt-5 ">
@@ -47,7 +47,7 @@ export function BoxPackage() {
               <div
                 key={index}
                 className={`boxWrapper ${index === 1 ? "Active " : ""} `}
-                data-aos={index % 2 === 0 ? "fade-right" : "fade-left"}
+                // data-aos={index % 2 === 0 ? "fade-right" : "fade-left"}
               >
                 <div className="container">
                   <small>
@@ -68,7 +68,7 @@ export function BoxPackage() {
                             {item}
                           </p>
                         </div>
-                      )
+                      );
                     })}
                   </div>
                 </div>
@@ -82,10 +82,10 @@ export function BoxPackage() {
                   </Link>
                 </div>
               </div>
-            )
+            );
           })}
         </div>
       </div>
     </section>
-  )
+  );
 }

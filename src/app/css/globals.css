@@ -770,7 +770,6 @@ button.carousel-control-next:hover,
   width: 100% !important;
   overflow: hidden !important;
   height: 100% !important;
-
 }
 .boxImg img {
   border-radius: 2rem !important;
@@ -1459,6 +1458,37 @@ marquee {
   width: 98%;
 }
 
+/* ----------- Edating Responsev HomeScreen  by Abood in 7/19/25------------------- */
+
+/* Just for Detect the Problem */
+/* * {
+  border: 1px solid;
+} */
+
+.ImagContent {
+  display: none;
+}
+
+section.HeroContent {
+  max-width: 100%;
+}
+
+.HeaderWithHeroSition {
+  width: 99% !important;
+}
+.RunningLikePost {
+  width: 100% !important;
+  padding: 0 0 0 0 !important;
+  margin: 0px;
+}
+.RunningLikePost.row.mt-0.p-0 {
+  width: auto;
+  max-width: 100% !important;
+}
+.RunningLikePost.row {
+  padding-left: 0px;
+}
+
 /* ----------------------------- */
 /* Responsive  */
 
@@ -1563,7 +1593,7 @@ marquee {
   .div.d-flex.justify-content-center.align-items-center.gap-4 {
     flex-direction: row;
   }
- 
+
   .d-flex.gap-100 {
     flex-direction: row;
   }
@@ -1639,7 +1669,7 @@ marquee {
   .WrappersubSession {
     padding: 4rem;
   }
- 
+
   .HowWeAre .info p {
     font-size: 1.5rem;
   }
@@ -1667,8 +1697,7 @@ marquee {
   }
   @media (min-width: 1400px) {
     .heroprogress .innerWrapper {
-       top: 8rem !important;
-
+      top: 8rem !important;
     }
   }
   .position {
