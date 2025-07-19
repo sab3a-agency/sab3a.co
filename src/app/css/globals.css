@@ -474,7 +474,7 @@ img.w-50 {
 
 .info h3 {
   width: 94% !important;
-  font-size: 3.8rem;
+  font-size: 2.8rem;
   font-weight: 700;
   color: var(--Color-Primary);
   margin: 3rem 0rem;
@@ -622,7 +622,7 @@ button.carousel-control-next:hover,
 
 .Your_partner_in_success h3 {
   text-align: justify;
-  font-size: 4rem;
+  font-size: 3rem;
   font-weight: 900;
   color: var(--Color-Primary);
 }
@@ -974,7 +974,7 @@ footer .line {
   margin: 0 !important;
 }
 .infoServers .info p {
-  width: 32rem !important;
+  width: auto !important;
   font-size: 1.8rem !important;
 }
 .list h4 {
@@ -1829,5 +1829,8 @@ section.HeroContent {
     height: 15rem !important;
     width: 15rem !important;
     margin-top: 0rem !important;
+  }
+  .info h3 {
+    font-size: 2.8rem;
   }
 }
