@@ -599,7 +599,7 @@ button.carousel-control-next:hover,
 }
 
 .btns {
-  width: 21%;
+  width: 24%;
   position: relative;
   display: inline-flex;
   height: 6rem;
@@ -853,7 +853,7 @@ img.custemImg {
 }
 
 .head h3 {
-  font-size: 3rem;
+  font-size: 2.5rem;
   font-weight: 700;
   color: var(--Color-Primary);
 }
@@ -872,7 +872,7 @@ img.custemImg {
   font-weight: 100;
   margin: 3rem 0rem;
   text-align: center;
-  padding: 0px 7rem;
+  padding: 0px 1rem;
 }
 
 .linkes a {
@@ -1089,7 +1089,7 @@ footer .textBox a {
   position: relative;
 }
 .HowWeAre .info p {
-  font-size: 2.5rem;
+  font-size: 1.9rem;
   width: 94% !important;
 }
 .infoServers h1 {
@@ -1832,5 +1832,12 @@ section.HeroContent {
   }
   .info h3 {
     font-size: 2.8rem;
+  }
+  .questiones p {
+    padding: 0px 7rem;
+  }
+
+  .head h3 {
+    font-size: 3rem;
   }
 }
