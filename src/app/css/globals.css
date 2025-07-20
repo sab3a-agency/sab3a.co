@@ -153,12 +153,13 @@ li.nav-item {
   border-width: 1px;
   background: #f0f4f67d;
   width: 100% !important;
+  padding: 0px !important;
 }
 
 .Part1 .imgWrapper img {
-  width: 33% !important;
+  width: 40% !important;
   position: relative;
-  top: -34px;
+  top: -28px;
 }
 
 .imgText {
@@ -186,7 +187,6 @@ img.w-50 {
 .Part1 .imgWrapper {
   background: #f7f7f7 !important;
   padding: 0.9rem !important;
-  padding-right: 21rem !important;
   border-radius: 14rem !important;
 }
 
@@ -310,6 +310,7 @@ img.w-50 {
   font-size: 2.5rem;
   font-weight: 100;
   color: var(--Color-White);
+  margin-left: 4rem;
 }
 
 /* .col-md-3.d-flex.justify-content-center.align-items-center.gap-5 {
@@ -319,10 +320,11 @@ img.w-50 {
 } */
 
 .ContentOurServices .Text {
-  font-size: 4rem;
+  font-size: 3rem;
   width: 100% !important;
   color: var(--Color-Primary);
   font-weight: 900;
+  text-align: start;
 }
 
 .ContentOurServices p {
@@ -1636,6 +1638,7 @@ section.HeroContent {
   }
   .Text-Running small {
     font-size: 2rem;
+    margin-left: 0rem;
   }
   .SecondImg {
     height: 7rem !important;
@@ -1818,6 +1821,7 @@ section.HeroContent {
   }
   .ContentOurServices .Text {
     width: 110% !important;
+    font-size: 4rem;
   }
   .divWitherProgress {
     width: 102% !important;
@@ -1846,5 +1850,11 @@ section.HeroContent {
   }
   .letsDoit .wrapper p {
     font-size: 3rem;
+  }
+  .Part1 .imgWrapper img {
+    width: 40% !important;
+    position: relative;
+    top: -28px;
+    margin-right: 10%;
   }
 }

@@ -47,24 +47,30 @@ export default function HeroPart1() {
 
   return (
     <div className="container px-5 mt-80 pt-0">
-      <div className="Part1 row w-100 mx-auto mb-5 " data-aos="fade-up">
-        <div className="wrap col-md-12 d-flex flex-column gap-5">
-          <div className="imgWithText">
+      <div className="Part1 row w-100 mx-auto mb-5" data-aos="fade-up">
+        <div className="wrap col-12 d-flex flex-column flex-md-row align-items-center gap-4 gap-md-5">
+          <div className="imgWithText col-12 col-md-6">
             <div
-              className="imgWrapper d-flex align-items-center"
+              className="imgWrapper d-flex align-items-center justify-content-center "
               data-aos="fade-up"
             >
-              <p className="imgText w-100">{data.Massges}</p>
+              <img
+                className="w-20 w-md-50 img-fluid"
+                alt="صورة شخص يرتدي كوفية"
+                src={data.src}
+                loading="eager"
+              />
+
+              <p className="imgText w-100 text-center text-md-start">
+                {data.Massges}
+              </p>
             </div>
           </div>
-          <img
-            className="w-50"
-            alt="صورة شخص يرتدي كوفية"
-            src={data.src}
-            loading="eager"
-          />
-          <div className="col-md-5">
-            <p className="text-wikala">{data.title}</p>
+
+          <div className=" d-flex align-items-center gap-3 w-100  ">
+            <div className="col-12 col-md-10">
+              <p className="text-wikala text-end text-md-start">{data.title}</p>
+            </div>
           </div>
         </div>
       </div>
