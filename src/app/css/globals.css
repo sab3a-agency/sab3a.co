@@ -54,9 +54,9 @@ a:focus {
 
   position: absolute;
   top: 0rem;
-  height: 120rem;
+  height: 100rem;
   width: 100% !important;
-  max-height: 150rem !important;
+  max-height: 120rem !important;
   z-index: -100000;
 }
 .navbar-toggler-icon {
