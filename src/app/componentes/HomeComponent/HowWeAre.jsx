@@ -49,14 +49,14 @@ export default function HowWeAre() {
           >
             <div className="info mb-4 mt-5 container">
               <small>{DataAboutUs.small}</small>
-              <h3 className="my-4">
+              <h3 className="heroinfo my-4">
                 {DataAboutUs.title} <span>{DataAboutUs.spanText}</span>
                 {DataAboutUs.titleEnd}
               </h3>
               <p className="w-100">{DataAboutUs.description}</p>
             </div>
 
-            <div className="WrappersubSession mt-5">
+            <div className="WrappersubSession mt-5 mx-3 mx-md-0">
               <div className="boxs d-flex flex-column  gap-4">
                 {DataAboutUs.features.map((feature) => (
                   <div
@@ -66,7 +66,7 @@ export default function HowWeAre() {
                     <div className="icon ">
                       <img
                         src={feature.iconSrc}
-                        style={{ maxWidth: "none!important" }}
+                        style={{ maxWidth: "20rem !important" }}
                         alt="icon"
                       />
                     </div>

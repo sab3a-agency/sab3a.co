@@ -47,54 +47,45 @@ export default function HeroPart1() {
 
   return (
     <div className="container px-5 mt-80 pt-0">
-      <div className="Part1 row w-100 mx-auto mb-5" data-aos="fade-up">
-        <div className="wrap col-12 d-flex flex-column flex-md-row align-items-center gap-4 gap-md-5">
-          <div className="imgWithText col-12 col-md-6">
-            <div
-              className="imgWrapper d-flex align-items-center justify-content-center "
-              data-aos="fade-up"
-            >
-              <img
-                className="w-20 w-md-50 img-fluid"
-                alt="صورة شخص يرتدي كوفية"
-                src={data.src}
-                loading="eager"
-              />
+      <div className="Part1 row w-100 mx-auto" data-aos="fade-up">
+        <div className="wrap d-md-flex justify-content-between align-content-center align-items-center gap-5">
+          <div
+            className="imgWrapper d-flex align-items-center justify-content-start gap-0 w-100 position-relative "
+            data-aos="fade-up "
+          >
+            <img
+              className="CofiaVector"
+              alt="صورة شخص يرتدي كوفية"
+              src={data.src}
+              loading="eager"
+            />
 
-              <p className="imgText w-100 text-center text-md-start">
-                {data.Massges}
-              </p>
-            </div>
+            <p className="imgText w-100 text-center text-md-start">
+              {data.Massges}
+            </p>
           </div>
 
           <div className=" d-flex align-items-center gap-3 w-100  ">
             <div className="col-12 col-md-10">
-              <p className="text-wikala text-end text-md-start">{data.title}</p>
+              <p className="text-wikala d-flex justify-content-start align-items-start">
+                {data.title}
+              </p>
             </div>
           </div>
         </div>
       </div>
 
-      <div className=" mt-5 my-5 position-relative" data-aos="fade-up">
-        <div className="col-md-9 d-flex justify-content-center">
-          <p className="BigText">{data.advPoster}</p>
-        </div>
-        <div className="wrapperPoster col-md-3">
-          <div className="ImagContent position-relative">
-            <img
-              className="w-75 SecondImg"
-              src="/img/BoardsPoster.png"
-              alt="لوحة إعلانية"
-              loading="eager"
-            />
-            <img
-              id="innerManshit"
-              src="/img/withHeroHome.png"
-              alt="manshit"
-              loading="eager"
-            />
-          </div>
-        </div>
+      <div
+        className="mt-2 my-0 position-relative d-flex justify-content-center align-items-center"
+        data-aos="fade-up"
+      >
+        <p className="BigText">{data.advPoster}</p>
+
+        <img
+          src="/img/BoardsPoster.svg"
+          className="d-none d-md-flex justify-content-center align-items-start  "
+          alt="Saba-Image"
+        />
       </div>
 
       <div className="d-flex" data-aos="fade-up">
@@ -106,25 +97,33 @@ export default function HeroPart1() {
             </p>
           </div>
 
-          <div className="box_1 d-flex justify-content-center">
-            <div className="Box-wrapper d-flex align-items-baseline">
-              <span ref={(el) => (countersRef.current[0] = el)} data-goal="12">
-                0
-              </span>
-              <p className="textBox">سنوات الخبرة</p>
+          <div className="d-flex justify-content-between align-items-center gap-5 w-auto">
+            <div className="box_1 d-flex justify-content-center">
+              <div className="Box-wrapper d-flex align-items-baseline">
+                <span
+                  ref={(el) => (countersRef.current[0] = el)}
+                  data-goal="12"
+                >
+                  0
+                </span>
+                <p className="textBox">سنوات الخبرة</p>
+              </div>
+            </div>
+
+            <div className="box_2 d-flex justify-content-center">
+              <div className="Box-wrapper d-flex align-items-baseline">
+                <span
+                  ref={(el) => (countersRef.current[1] = el)}
+                  data-goal="240"
+                >
+                  0
+                </span>
+                <p className="textBox">تم الانتهاء من المشروع</p>
+              </div>
             </div>
           </div>
 
-          <div className="box_2 d-flex justify-content-center">
-            <div className="Box-wrapper d-flex align-items-baseline">
-              <span ref={(el) => (countersRef.current[1] = el)} data-goal="240">
-                0
-              </span>
-              <p className="textBox">تم الانتهاء من المشروع</p>
-            </div>
-          </div>
-
-          <div className="box_3">
+          <div className="box_3 d-flex">
             <div className="d-flex justify-content-center gap-4">
               <div className="imgs">
                 <img src="../img/Avatar.png" alt="" />
@@ -135,10 +134,17 @@ export default function HeroPart1() {
                   <span className="Star">
                     <img src="../img/Star.svg" alt="" />
                   </span>
-                  <p className="p-1 textBox">4.8 (12K تقييم)</p>
+                  <p className="p-1 textBox3">4.8 (12K تقييم)</p>
                 </div>
               </div>
             </div>
+
+            <img
+              src="/img/BoardsPoster.svg"
+              className="d-flex d-md-none justify-content-center align-items-center  position-relative"
+              style={{ top: "-9rem", width: "18rem", height: "18rem" }}
+              alt="Saba-Image"
+            />
           </div>
         </div>
       </div>

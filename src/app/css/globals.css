@@ -54,9 +54,9 @@ a:focus {
 
   position: absolute;
   top: 0rem;
-  height: 140rem !important;
-
+  height: 120rem;
   width: 100% !important;
+  max-height: 150rem !important;
   z-index: -100000;
 }
 .navbar-toggler-icon {
@@ -101,6 +101,7 @@ nav button.btn.btn-success,
   border-width: 1px;
   padding: 0 2rem;
   font-size: 1.3rem;
+  margin-bottom: 1rem;
 }
 
 .ContentOurServices {
@@ -147,30 +148,30 @@ li.nav-item {
 }
 
 .Part1 .imgWrapper {
-  width: 50%;
+  /* width: 50%; */
   height: 80px;
   border-radius: 56px;
   border-width: 1px;
-  background: #f0f4f67d;
-  width: 100% !important;
+  background: #f0f4f6 !important;
+  width: 85% !important;
   padding: 0px !important;
 }
 
 .Part1 .imgWrapper img {
   width: 40% !important;
   position: relative;
-  top: -28px;
+  top: -3rem;
 }
 
 .imgText {
   width: 91% !important;
-  font-size: 14px !important;
-  text-align: justify;
-  position: relative;
-  top: 1px;
+  text-align: start;
+  font-size: 10.2px !important;
   color: var(--Color-Primary);
+  text-align: start !important;
+  font-weight: 600;
+  margin: 0rem;
 }
-
 /* Editing  */
 
 /* img.w-50 .aos-init.aos-animate {
@@ -179,6 +180,7 @@ li.nav-item {
   top: -7.9rem !important;
   right: 2rem !important;
 } */
+
 img.w-50 {
   position: absolute;
   top: -8rem;
@@ -210,19 +212,20 @@ img.w-50 {
 }
 
 .text-wikala {
-  font-size: 5rem;
+  font-size: 4rem;
   font-weight: 900;
   line-height: 81.42px;
   text-align: right;
   color: var(--Color-Secondary);
 }
 .BigText {
-  font-size: 5rem;
+  font-size: 3rem;
+  margin: 0rem;
   text-align: right;
   line-height: 58.42px;
   color: var(--Color-Primary);
-  margin: 0rem 10px;
   font-weight: 900;
+  margin: 0px;
 }
 .innerWrappe.col-md-3.gap-5 {
   margin: 4rem 0rem;
@@ -250,23 +253,23 @@ img.w-50 {
 }
 
 .textBox {
-  font-weight: 400;
+  font-weight: 500;
   line-height: 31px;
   text-align: right;
-  font-size: 18px;
+  font-size: 12px;
 }
 
 .Box-wrapper {
   font-weight: 900;
   line-height: 65.13px;
-  font-size: 6rem;
+  font-size: 4rem;
   align-items: anchor-center !important;
-  width: 100px;
+  width: 100%;
   gap: 1rem;
 }
 
 .box_2 .Box-wrapper {
-  width: 20rem !important;
+  width: 100% !important;
 }
 .ContentOurServices .container .infoServers .side_1 {
   display: flex;
@@ -289,6 +292,7 @@ img.w-50 {
   width: 100%;
   height: 100%;
   overflow: hidden;
+  margin-top: 0px !important;
 }
 
 .lastPart .imgWrapper img {
@@ -403,7 +407,7 @@ img.w-50 {
 }
 
 .sessionWhyChooseUs h3 {
-  font-size: 4.8rem;
+  font-size: 2.5rem;
   text-align: justify;
   font-weight: 900;
   color: var(--Color-Primary);
@@ -416,13 +420,13 @@ img.w-50 {
   /* font-size: 2.5rem; */
   font-size: 1.8rem;
   text-align: justify;
-  margin: 35px 1px;
+  margin: 1.2rem 1px;
   font-weight: 100;
 }
 
 .sessionWhyChooseUs button.btn.btn-danger {
   padding: 2rem;
-  margin-top: 3rem;
+  margin-top: 0rem;
   float: inline-start;
 }
 .HeroContent {
@@ -450,6 +454,9 @@ img.w-50 {
   color: var(--Color-Primary);
 }
 
+.heroinfo {
+  font-size: 2.3rem !important;
+}
 .ContenerWrapper p {
   text-align: center !important;
   font-size: 1.6rem !important;
@@ -524,12 +531,12 @@ img.w-50 {
   border-radius: 20px;
 }
 .WrappersubSession .boxs .box .information h3 {
-  font-size: 2.1rem;
+  font-size: 1.6rem;
   font-weight: 700;
 }
 
 .WrappersubSession .boxs .box .information p {
-  font-size: 1.9rem;
+  font-size: 1.4rem;
   /* width: 37rem; */
   text-align: justify;
   font-weight: 100;
@@ -555,40 +562,42 @@ img.w-50 {
 
 /* the Style of Carousel  */
 
-.Your_partner_in_success button.carousel-control-next,
-.Your_partner_in_success button.carousel-control-prev {
-  /* background: var(--Color-Secondary); */
-  width: 5rem;
-  height: 5rem;
-  border-radius: 9rem;
+.SucessBtns {
+  outline: none;
+  top: -4rem;
+  left: 5;
+  width: 9rem;
 }
-.carousel-control-prev-icon {
-  background: url("/img/arrowNext.svg") !important;
+.leftBTN {
+  width: 4rem !important;
+  height: 4rem !important;
+  background: transparent;
+  border: 1px solid #e75050;
+  padding: 0.5rem;
+  border-radius: 30rem;
+  cursor: pointer;
   transform: rotate(179deg);
 }
-.carousel-control-next-icon {
-  background: url("/img/arrowNext.svg") !important;
+.rightBTN {
+  width: 4rem !important;
+  height: 4rem !important;
+  background: transparent;
+  border: 1px solid #e75050;
+  padding: 0.5rem;
+  border-radius: 30rem;
+  cursor: pointer;
 }
-button.carousel-control-next,
-.carousel-control-prev {
-  background: #ffffff;
-  border: 1px solid var(--Color-Secondary);
+.leftBTN:hover {
+  border: 1px solid #d3d3d3;
+  background: #e75050;
+  cursor: pointer;
+  transform: rotate(0deg);
 }
-/* arrowPrive Hover */
-
-.carousel-control-prev-icon:hover {
-  background: url("/img/arrowPrive.svg") !important;
-  transform: rotate(359deg);
-}
-.carousel-control-next-icon:hover {
-  background: url("/img/arrowPrive.svg") !important;
+.rightBTN:hover {
+  background: #e75050;
+  border: 1px solid #d3d3d3;
+  cursor: pointer;
   transform: rotate(179deg);
-}
-
-button.carousel-control-next:hover,
-.carousel-control-prev:hover {
-  background: var(--Color-Secondary);
-  border: 1px solid var(--Color-Black-Black-50);
 }
 
 /* End arrowPrive Hover */
@@ -1469,7 +1478,7 @@ marquee {
 } */
 
 .ImagContent {
-  display: none;
+  display: block;
 }
 
 section.HeroContent {
@@ -1533,21 +1542,23 @@ section.HeroContent {
     width: 100% !important;
   }
   .imgText {
-    width: 88% !important;
+    width: 48% !important;
     top: 8px;
+    font-size: 14px !important;
   }
 
-  .Part1 .imgWrapper {
+  /* .Part1 .imgWrapper {
     width: 47rem !important;
-  }
-  p.text-wikala.mt-5 {
-    margin: 0rem !important;
-  }
+  } */
+
   .text-wikala {
     font-size: 6rem !important;
   }
   .BigText {
+    font-size: 6rem;
+    width: 100rem;
     line-height: 58.42px;
+    margin-top: 3rem;
   }
   .section1part1.col-md-12.justify-content-between {
     display: flex;
@@ -1674,6 +1685,9 @@ section.HeroContent {
   }
   .HowWeAre .info h3 {
     width: 80% !important;
+  }
+  .heroinfo {
+    font-size: 3.8rem !important;
   }
   .WrappersubSession {
     padding: 4rem;
@@ -1839,7 +1853,7 @@ section.HeroContent {
     margin-top: 0rem !important;
   }
   .info h3 {
-    font-size: 2.8rem;
+    font-size: 3.8rem;
   }
   .questiones p {
     padding: 0px 7rem;
@@ -1852,9 +1866,35 @@ section.HeroContent {
     font-size: 3rem;
   }
   .Part1 .imgWrapper img {
-    width: 40% !important;
+    width: 20rem !important;
     position: relative;
-    top: -28px;
-    margin-right: 10%;
+    top: -3rem;
+  }
+  .Part1 .imgWrapper {
+    width: 80% !important;
+  }
+  .textBox {
+    font-size: 21px;
+  }
+  .textBox3 {
+    width: 100%;
+  }
+  .lastPart {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    margin-top: 18rem !important;
+  }
+  .sessionWhyChooseUs h3 {
+    font-size: 4.8rem;
+  }
+  .sessionWhyChooseUs p {
+    margin: 35px 1px;
+  }
+  .sessionWhyChooseUs button.btn.btn-danger {
+    margin-top: 2rem;
+  }
+  .SucessBtns {
+    top: -9rem;
   }
 }

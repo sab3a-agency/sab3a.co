@@ -98,7 +98,7 @@ export default function WhyChooseUs() {
             </div>
           }
         </div>
-        <div className="part2 pt-5 mt-80">
+        <div className="part2 pt-md-5 mt-80">
           <div className="row">
             <div className="col-md-6">
               <div className="BoxText" data-aos="zoom-in">

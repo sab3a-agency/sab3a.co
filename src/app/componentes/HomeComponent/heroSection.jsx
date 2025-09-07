@@ -12,8 +12,8 @@ const data = {
 export default function Herosection() {
   return (
     <section className="HeroContent">
-      <div className="container p-5 pt-0">
-        <div className="lastPart row mt-90">
+      <div className="container p-5 pt-0 mb-5 mb-md-0">
+        <div className="lastPart row  mt-90">
           <div className="container">
             <div className="imgWrapper" data-aos="fade-up">
               <img src={data.src} loading="lazy" alt="meeting" />
@@ -21,32 +21,30 @@ export default function Herosection() {
           </div>
         </div>
       </div>
-      <div className="RunningLikePost row mt-0 p-0">
-        <div className="col-md-12">
-          <div className="Text-Running">
-            <div className="row">
-              <marquee
-                behavior="scroll"
-                direction="left"
-                scrollamount="15"
-                loop="infinite"
-              >
-                <div className="col-md-12 d-flex justify-content-center">
-                  {data.smallcontent.map((title, index) => {
-                    return (
-                      <div
-                        key={index}
-                        className="sliderImg col-md-3 d-flex justify-content-center align-items-center gap-5"
-                      >
-                        <img src={data.innerSrc} alt="Star" />
-                        <small>{title}</small>
-                      </div>
-                    );
-                  })}
-                </div>
-              </marquee>
+
+      <div className="RunningLikePost">
+        <div className="Text-Running">
+          <marquee
+            className="my-4"
+            behavior="scroll"
+            direction="left"
+            scrollamount="15"
+            loop="infinite"
+          >
+            <div className="d-flex align-items-center justify-content-between">
+              {data.smallcontent.map((title, index) => {
+                return (
+                  <div
+                    key={index}
+                    className="sliderImg d-flex justify-content-center align-items-center gap-5 px-3"
+                  >
+                    <img src={data.innerSrc} alt="Star" />
+                    <small>{title}</small>
+                  </div>
+                );
+              })}
             </div>
-          </div>
+          </marquee>
         </div>
       </div>
     </section>

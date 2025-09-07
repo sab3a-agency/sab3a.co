@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import { useState } from "react";
 
 const partners = [
   {
@@ -43,16 +44,6 @@ const partners = [
   { src: "/img/partnersLogo/image 5.svg", link: "https://example.com/7" },
   { src: "/img/partnersLogo/image 4.svg", link: "https://example.com/8" },
   { src: "/img/partnersLogo/image 3.svg", link: "https://example.com/9" },
-  // { src: "/img/partnersLogo/image 2.svg", link: "https://example.com/10" },
-  // {
-  //   src: "/img/partnersLogo/GATEKEEPER_LOGO_72 1.svg",
-  //   link: "https://example.com/11",
-  // },
-  // { src: "/img/partnersLogo/download.svg", link: "https://example.com/12" },
-  // {
-  //   src: "/img/partnersLogo/Asset 11200 1.svg",
-  //   link: "https://example.com/13",
-  // },
 ];
 
 const chunkArray = (arr, size) => {
@@ -66,8 +57,11 @@ const chunkArray = (arr, size) => {
 const groupedPartners = chunkArray(partners, 11);
 
 export default function PartnerSession() {
+  const [leftBtnSrc, setLeftBtnSrc] = useState("/img/DefultBTN.svg");
+  const [rightBtnSrc, setRightBtnSrc] = useState("/img/DefultBTN.svg");
+
   return (
-    <div className="Your_partner_in_success">
+    <div className="Your_partner_in_success position-relative">
       <div className="container mt-80">
         <div
           className="title m-5 d-flex justify-content-between align-items-center"
@@ -76,37 +70,39 @@ export default function PartnerSession() {
           <h3>
             شريكك في <span>النجاح الرقمي</span>
           </h3>
-          <div className="btns">
-            <button
-              className="carousel-control-prev"
-              type="button"
-              data-bs-target="#carouselExampleInterval"
-              data-bs-slide="prev"
-            >
-              <span
-                className="carousel-control-prev-icon"
-                aria-hidden="true"
-              ></span>
-              <span className="visually-hidden">Previous</span>
-            </button>
-            <button
-              className="carousel-control-next"
-              type="button"
-              data-bs-target="#carouselExampleInterval"
-              data-bs-slide="next"
-            >
-              <span
-                className="carousel-control-next-icon"
-                aria-hidden="true"
-              ></span>
-              <span className="visually-hidden">Next</span>
-            </button>
-          </div>
+          {/* ================================== */}
         </div>
-        <div className="partnersLogos row" data-aos="fade-up">
-          <div id="carouselExampleInterval" className="carousel slide">
+
+        <div className="partnersLogos" data-aos="fade-up">
+          <div
+            id="carouselExampleInterval"
+            className="carousel slide position-relative"
+          >
+            <div className="SucessBtns d-flex justify-content-between align-items-center gap-5 position-absolute">
+              <img
+                src={leftBtnSrc}
+                alt="Previous"
+                className="leftBTN carousel-control-prev"
+                onMouseEnter={() => setLeftBtnSrc("/img/HoverBTN.svg")}
+                onMouseLeave={() => setLeftBtnSrc("/img/DefultBTN.svg")}
+                type="button"
+                data-bs-target="#carouselExampleInterval"
+                data-bs-slide="prev"
+              />
+              <img
+                className="rightBTN carousel-control-next"
+                src={rightBtnSrc}
+                alt="Next"
+                onMouseEnter={() => setRightBtnSrc("/img/HoverBTN.svg")}
+                onMouseLeave={() => setRightBtnSrc("/img/DefultBTN.svg")}
+                type="button"
+                data-bs-target="#carouselExampleInterval"
+                data-bs-slide="next"
+              />
+            </div>
+            {/* ================================== */}
+
             <div className="carousel-inner">
-              {/* data-bs-interval="carousel" to auto scroll */}
               {groupedPartners.map((group, index) => {
                 return (
                   <div
@@ -114,11 +110,11 @@ export default function PartnerSession() {
                     className={`carousel-item ${index === 0 ? "active" : ""}`}
                   >
                     <div className="d-flex flex-column align-items-center gap-3">
-                      <div className="Wrapperbox d-flex  gap-3">
+                      <div className="Wrapperbox d-flex flex-wrap justify-content-center gap-3">
                         {group.map((partner, i) => (
                           <div
                             key={i}
-                            className="box p-2 d-flex  justify-content-center align-items-center  "
+                            className="box p-2 d-flex justify-content-center align-items-center"
                           >
                             <a
                               href={partner.link}
@@ -129,8 +125,8 @@ export default function PartnerSession() {
                                 src={partner.src}
                                 alt="شعار الشريك"
                                 className="img-fluid"
-                                width={1000}
-                                height={1000}
+                                width={150}
+                                height={150}
                                 loading="lazy"
                               />
                             </a>
