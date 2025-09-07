@@ -64,13 +64,36 @@ export default function PartnerSession() {
     <div className="Your_partner_in_success position-relative">
       <div className="container mt-80">
         <div
-          className="title m-5 d-flex justify-content-between align-items-center"
+          className="title m-5 d-flex justify-content-between align-items-center "
           data-aos="zoom-in"
         >
           <h3>
             شريكك في <span>النجاح الرقمي</span>
           </h3>
           {/* ================================== */}
+
+          <div className="SucessBtns d-flex justify-content-between align-items-center gap-5 position-absolute">
+            <img
+              src={leftBtnSrc}
+              alt="Previous"
+              className="leftBTN carousel-control-prev"
+              onMouseEnter={() => setLeftBtnSrc("/img/HoverBTN.svg")}
+              onMouseLeave={() => setLeftBtnSrc("/img/DefultBTN.svg")}
+              type="button"
+              data-bs-target="#carouselExampleInterval"
+              data-bs-slide="prev"
+            />
+            <img
+              className="rightBTN carousel-control-next"
+              src={rightBtnSrc}
+              alt="Next"
+              onMouseEnter={() => setRightBtnSrc("/img/HoverBTN.svg")}
+              onMouseLeave={() => setRightBtnSrc("/img/DefultBTN.svg")}
+              type="button"
+              data-bs-target="#carouselExampleInterval"
+              data-bs-slide="next"
+            />
+          </div>
         </div>
 
         <div className="partnersLogos" data-aos="fade-up">
@@ -78,28 +101,6 @@ export default function PartnerSession() {
             id="carouselExampleInterval"
             className="carousel slide position-relative"
           >
-            <div className="SucessBtns d-flex justify-content-between align-items-center gap-5 position-absolute">
-              <img
-                src={leftBtnSrc}
-                alt="Previous"
-                className="leftBTN carousel-control-prev"
-                onMouseEnter={() => setLeftBtnSrc("/img/HoverBTN.svg")}
-                onMouseLeave={() => setLeftBtnSrc("/img/DefultBTN.svg")}
-                type="button"
-                data-bs-target="#carouselExampleInterval"
-                data-bs-slide="prev"
-              />
-              <img
-                className="rightBTN carousel-control-next"
-                src={rightBtnSrc}
-                alt="Next"
-                onMouseEnter={() => setRightBtnSrc("/img/HoverBTN.svg")}
-                onMouseLeave={() => setRightBtnSrc("/img/DefultBTN.svg")}
-                type="button"
-                data-bs-target="#carouselExampleInterval"
-                data-bs-slide="next"
-              />
-            </div>
             {/* ================================== */}
 
             <div className="carousel-inner">

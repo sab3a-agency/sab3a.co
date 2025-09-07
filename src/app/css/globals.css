@@ -564,8 +564,8 @@ img.w-50 {
 
 .SucessBtns {
   outline: none;
-  top: -4rem;
-  left: 0;
+  top: 0rem !important;
+  left: 0 !important;
   width: 9rem;
 }
 .leftBTN {
