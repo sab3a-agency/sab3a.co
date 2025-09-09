@@ -1,6 +1,6 @@
-"use client"
-import { useMemo } from "react"
-import ArticalGrid from "./ArticalGrid"
+"use client";
+import { useMemo } from "react";
+import ArticalGrid from "./ArticalGrid";
 
 export default function Hero_Blog() {
   const HeroData = useMemo(() => {
@@ -8,9 +8,9 @@ export default function Hero_Blog() {
       title: ` رؤى رقمية
   من خبراء `,
       span: " سبعة.",
-      discriptions: `في سبعة، نقدم حلولًا رقمية مبتكرة لمساعدة العلامات التجارية على النمو والتميز. استكشف خدماتنا المصممة لتعزيز حضورك الرقمي.`
-    }
-  }, [])
+      discriptions: `في سبعة، نقدم حلولًا رقمية مبتكرة لمساعدة العلامات التجارية على النمو والتميز. استكشف خدماتنا المصممة لتعزيز حضورك الرقمي.`,
+    };
+  }, []);
 
   const data = useMemo(
     () => [
@@ -20,7 +20,7 @@ export default function Hero_Blog() {
         title: "عنوان المقال التجريبي",
         btn: "اقرا المزيد",
         span: "20 أكتوبر",
-        small: "الأعمال"
+        small: "الأعمال",
       },
       {
         id: 2,
@@ -28,7 +28,7 @@ export default function Hero_Blog() {
         title: "عنوان المقال التجريبي",
         btn: "اقرا المزيد",
         span: "20 أكتوبر",
-        small: "الأعمال"
+        small: "الأعمال",
       },
       {
         id: 3,
@@ -36,7 +36,7 @@ export default function Hero_Blog() {
         title: "عنوان المقال التجريبي",
         btn: "اقرا المزيد",
         span: "20 أكتوبر",
-        small: "الأعمال"
+        small: "الأعمال",
       },
       {
         id: 4,
@@ -44,32 +44,16 @@ export default function Hero_Blog() {
         title: "عنوان المقال التجريبي",
         btn: "اقرا المزيد",
         span: "20 أكتوبر",
-        small: "الأعمال"
+        small: "الأعمال",
       },
-      {
-        id: 5,
-        src: "/img/Blog/img5.png",
-        title: "عنوان المقال التجريبي",
-        btn: "اقرا المزيد",
-        span: "20 أكتوبر",
-        small: "الأعمال"
-      },
-      {
-        id: 6,
-        src: "/img/Blog/img6.png",
-        title: "عنوان المقال التجريبي",
-        btn: "اقرا المزيد",
-        span: "20 أكتوبر",
-        small: "الأعمال"
-      }
     ],
     []
-  )
+  );
 
   return (
     <section className="HeroBlog mt-50">
       <div className="container">
-        <div className="head  d-flex flex-column   justify-content-between align-items-start align-text-justify">
+        <div className="head container  d-flex flex-column   justify-content-between align-items-center align-text-justify">
           <h1>
             {HeroData.title}
             <span>{HeroData.span}</span>
@@ -79,5 +63,5 @@ export default function Hero_Blog() {
         <ArticalGrid data={data} />
       </div>
     </section>
-  )
+  );
 }

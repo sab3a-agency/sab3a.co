@@ -64,7 +64,7 @@ export default function OurProgectes({ DefultData }) {
 
   return (
     <div
-      className="projectsWrapper mt-80"
+      className="projectsWrapper mt-5"
       data-aos="fade-up"
       data-aos-duration="1000"
     >

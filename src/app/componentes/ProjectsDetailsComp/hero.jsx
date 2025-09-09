@@ -1,8 +1,8 @@
-"use client"
-import { useRouter } from "next/navigation"
+"use client";
+import { useRouter } from "next/navigation";
 
 export default function Hero({ DefultData }) {
-  let Back = useRouter()
+  let Back = useRouter();
   return (
     <>
       <section className="Hero mt-50">
@@ -21,7 +21,7 @@ export default function Hero({ DefultData }) {
                   >
                     <img src="../img/ProjectsDetails/Icon.svg" alt=" arrow" />
                   </a>
-                  <h1 className="d-flex flex-column align-items-start">
+                  <h1 className="d-flex flex-column align-items-start text-end">
                     {features.title}
                     {features.titleEtc}
                   </h1>
@@ -37,5 +37,5 @@ export default function Hero({ DefultData }) {
         </div>
       </section>
     </>
-  )
+  );
 }

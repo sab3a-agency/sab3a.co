@@ -8,7 +8,8 @@
 
 :root {
   --Color-Secondary: #e75050;
-  --Color-Primary: rgba(51, 134, 86, 1);
+  /* --Color-Primary: rgba(51, 134, 86, 1); */
+  --Color-Primary: #00682c;
   --Color-White: rgba(242, 246, 248, 1);
   --Color-Primary-Primary-50: rgb(230, 240, 234);
   --Color-White-White-200: rgba(246, 249, 250, 1);
@@ -42,7 +43,7 @@ a:focus {
   box-shadow: none !important;
 }
 .mt-50 {
-  margin-top: 6rem;
+  margin-top: 3rem;
 }
 
 .HeaderWithHeroSition {
@@ -497,6 +498,7 @@ img.w-50 {
 
 .info span {
   color: var(--Color-Secondary);
+  font-weight: 900;
 }
 
 .info p {
@@ -864,7 +866,7 @@ img.custemImg {
 }
 
 .head h3 {
-  font-size: 2.5rem;
+  font-size: 2.4rem;
   font-weight: 700;
   color: var(--Color-Primary);
 }
@@ -1202,7 +1204,7 @@ hr {
 .Hero .head h1 {
   width: 92% !important;
   font-size: 3rem;
-  font-weight: bold;
+  font-weight: 900 !important;
   letter-spacing: 1px;
   color: var(--Color-Primary);
 }
@@ -1232,7 +1234,7 @@ hr {
 }
 .projectsWrapper .box h2,
 .adv h2 {
-  font-size: 2.3rem;
+  font-size: 2rem;
   font-weight: 700;
 }
 
@@ -1240,7 +1242,7 @@ hr {
 .adv p {
   width: 100% !important;
   font-weight: 400;
-  font-size: 18px;
+  font-size: 16px;
   line-height: 150%;
   letter-spacing: -2%;
   text-align: justify;
@@ -1266,11 +1268,11 @@ hr {
 }
 .adv .info p {
   width: 100% !important;
-  font-size: 3rem !important;
+  font-size: 2rem !important;
 }
 .adv .info {
   margin-top: 3rem !important;
-  width: 90% !important;
+  width: 100% !important;
 }
 
 marquee {
@@ -1319,6 +1321,9 @@ marquee {
 .Hero_Service .head {
   text-align: justify;
   gap: 3rem;
+}
+.HeroServiceTitle {
+  font-weight: 900 !important;
 }
 .outerImgWrrap {
   border: 1px solid gray;
@@ -1369,7 +1374,8 @@ marquee {
 }
 
 .rigthside h1 {
-  font-size: 2.5rem;
+  font-size: 2.7rem;
+  flex-wrap: wrap;
   font-weight: 700;
   color: var(--Color-Primary);
 }
@@ -1429,7 +1435,7 @@ marquee {
 
 .wapperBox h3.my-4 {
   font-size: 2.8rem;
-  font-weight: 700;
+  font-weight: 900;
 }
 
 .wapperBox li {
@@ -1454,10 +1460,10 @@ marquee {
 
 .SimilarWorks .leftSide p {
   font-size: 4rem;
-  font-weight: bold;
-  color: green;
+  font-weight: 900;
+  color: var(--Color-Primary);
   text-align: justify;
-  width: 69%;
+  width: 83%;
 }
 .headWrapper .projectsWrapper {
   margin-top: 7rem !important;
@@ -1745,23 +1751,23 @@ section.HeroContent {
   /* ------------------------------ */
   /* Services page Style */
   .adv .info p {
-    font-size: 3rem !important;
+    font-size: 2.5rem !important;
   }
-  .Hero .head h1 {
+  /* .Hero .head h1 {
     width: 67rem;
     font-size: 5rem;
-  }
+  } */
   .Hero .head h4,
   .letsDoit .row a h4 {
-    font-size: 2rem;
+    font-size: 3rem;
   }
   .head.d-flex.align-items-start.justify-content-between.flex-column.aos-init.aos-animate {
     flex-direction: row !important;
     align-items: center !important;
   }
   .Hero .head h1 {
-    width: 52% !important;
-    font-size: 5rem;
+    width: 60% !important;
+    font-size: 6rem;
   }
   .adv h2 {
     justify-content: center;
@@ -1790,11 +1796,11 @@ section.HeroContent {
     padding-left: 7px;
   }
   .rigthside h1 {
-    font-size: 4rem;
+    font-size: 2.5rem;
   }
   .SecondSeation .hero .title p,
   .FirstSection .infoWrapper p {
-    font-size: 1.5rem;
+    font-size: 2rem;
   }
   .wapperBox .Box,
   .wapperBox .Box:nth-child(2) {
@@ -1813,9 +1819,9 @@ section.HeroContent {
   }
 
   .leftSide small {
-    padding: 0px 2rem;
-    font-size: 1.9rem;
-    font-size: 2.5rem;
+    padding: 5px 2rem;
+    /* font-size: 1.9rem; */
+    font-size: 1.7rem;
   }
   .wapperBox h3.my-4 {
     font-size: 2rem;

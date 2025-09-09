@@ -16,7 +16,7 @@ export default function Hero_Service() {
         <div className="container">
           <div className="Hero">
             <div
-              className="head d-flex align-items-start justify-content-between flex-column"
+              className="container head d-flex align-items-start justify-content-between flex-column"
               data-aos="fade-left"
             >
               <h1>

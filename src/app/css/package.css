@@ -19,7 +19,7 @@
 
 .heroPackages p {
   width: 100%;
-  font-size: 2rem;
+  font-size: 1.8rem;
   font-weight: 400;
   color: var(--Color-text-secondary);
 }
@@ -56,7 +56,7 @@ hr {
   overflow: hidden;
 }
 .heroPackages .boxWrapper h4 {
-  font-size: 2.3rem;
+  font-size: 2.1rem;
   font-weight: 900;
   color: var(--Color-Primary);
 }
@@ -69,11 +69,10 @@ hr {
 }
 .heroPackages .boxWrapper p {
   width: 100%;
-  font-size: 1.9rem;
+  font-size: 1.5rem;
   color: var(--Color-text-primary);
   font-weight: 400;
-  white-space: pre-line;
-  letter-spacing: 0px;
+  letter-spacing: 0px !important;
 }
 
 .Wrapper {
@@ -176,5 +175,11 @@ button.accordion-button.collapsed {
   }
   .heroPackages .boxWrapper h2 {
     font-size: 3.6rem;
+  }
+  .heroPackages .boxWrapper p {
+    font-size: 1.8rem;
+  }
+  .heroPackages .boxWrapper h4 {
+    font-size: 2.3rem;
   }
 }

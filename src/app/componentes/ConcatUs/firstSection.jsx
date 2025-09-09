@@ -81,7 +81,7 @@ export default function FirstSiction() {
         <div className="row">
           <div className="col-12 col-md-6">
             <div className="head">
-              <div className="containerTitle d-flex justify-content-center align-items-baseline gap-3">
+              <div className="containerTitle  d-flex justify-content-center align-items-baseline gap-3">
                 <div className="doted"></div>
                 <small>{data.small}</small>
               </div>

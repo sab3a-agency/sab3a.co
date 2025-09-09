@@ -3,34 +3,29 @@ import { useEffect, useRef } from "react";
 
 const JourneyPoint = [
   {
-    small: " 2004 ",
-    h3: " تأسيس سبعة ",
-    p: " تأسست إنوفارت ستوديو في عام 2004 برؤية لدمج الابتكار والفن، مقدمة تجارب رقمية فريدة. ",
+    small: " 2020 ",
+    h3: "  البداية من غزة ",
+    p: `انطلقت سبعة (تحت اسم "TechBox") من قلب قطاع غزة على يد المؤسسين إبراهيم ونور. بدأنا كفريق صغير يعمل على مشاريع فريلانسر لصالح شركات ناشئة وأجنبية، بما في ذلك شركات سعودية. كان الاسم "تيك بوكس" يعكس طريقتنا في التفكير خارج الصندوق. أول مشروع لنا كان منصة مشابهة لهنقرستيشن، وكان محطة فخر لنا في بداية الطريق.`,
   },
   {
-    small: " 2006 ",
-    h3: " تأسيس سبعة ",
-    p: " في عام 2006، حصلنا على أول عميل رئيسي لنا، وهو إنجاز كبير أكد نهجنا وأسس لمرحلة النمو المستقبلية.",
+    small: " 2021 ",
+    h3: "  أول عميل رئيسي ",
+    p: `في العام التالي، عملنا على مشروع مميز لصالح شركة سعودية باسم Drive7، وكان نقلة نوعية في نوعية المشاريع التي ننفذها. ومع نهاية العام، قررنا توسيع الفريق، فقمنا ببناء فريق متكامل من كفاءات جامعية متعددة الخلفيات والتخصصات، مما أتاح لنا التعامل مع مشاريع أكبر وأكثر تنوعًا.`,
   },
   {
-    small: " 2012 ",
-    h3: " توسيع الفريق ",
-    p: " في عام 2012، نما فريقنا، حيث جلبنا مواهب جديدة ووجهات نظر متنوعة. سمح لنا هذا التوسع بتولي مشاريع أكثر طموحاً وتقديم نتائج أفضل لعملائنا.  ",
+    small: " 2022 ",
+    h3: " الانتقال إلى سلطنة عُمان",
+    p: `انتقل الفريق المؤسس إلى سلطنة عُمان بهدف توسيع نطاق العمل والوصول إلى أسواق جديدة. كانت هذه الخطوة بداية حقيقية لتحوّل سبعة إلى كيان دولي يقدم خدماته لعملاء من مختلف دول العالم.`,
   },
   {
-    small: " 2015 ",
-    h3: " جوائز الصناعة ",
-    p: " في عام 2015، حصلنا على أول جائزة في الصناعة، تقديراً لالتزامنا بالابتكار والتميز. ",
-  },
-  {
-    small: " 2018 ",
-    h3: " عملاء دوليون ",
-    p: " بحلول عام 2018، وسعنا نطاقنا، متعاونين مع عملاء من جميع أنحاء العالم. ",
+    small: " 2023 ",
+    h3: " التوسع الدولي  ",
+    p: `بدأنا العمل مع عملاء من أوروبا، والخليج، وشمال إفريقيا، مما عزز من مكانتنا كمزود حلول رقمية موثوق على مستوى دولي.`,
   },
   {
     small: " 2024 ",
-    h3: " الآن ",
-    p: " اليوم، في عام 2024، تقف إنوفارت ستوديو كمنارة للإبداع والابتكار. مع فريق موهوب ومحفظة متنوعة، نستمر في تقديم تجارب رقمية استثنائية للعملاء في جميع أنحاء العالم. ",
+    h3: "الآن: سبعة بهوية جديدة وانتشار أوسع",
+    p: `اليوم، وبكل فخر، فريق سبعة يعمل من ثلاث مناطق مختلفة: سلطنة عُمان، مصر، وقطاع غزة. بهوية جديدة ورؤية متجددة، نواصل تقديم حلول تقنية مبتكرة وتجارب رقمية رائدة تخدم الأسواق المحلية والدولية.`,
   },
 ];
 
@@ -57,8 +52,8 @@ const target = [
   },
 ];
 
-const data = JourneyPoint.slice(0, 3);
-const data2 = JourneyPoint.slice(3, JourneyPoint.length);
+const data = JourneyPoint.slice(0, 2);
+const data2 = JourneyPoint.slice(2, JourneyPoint.length);
 
 export default function JourneyPoints() {
   const countersRef = useRef([]);
@@ -90,6 +85,9 @@ export default function JourneyPoints() {
           if (index === 1 || index === 3) {
             entry.target.classList.add("red");
           }
+          if (index === 0 || index === 2) {
+            entry.target.classList.add("Green");
+          }
         });
       },
       { threshold: 0.5 }
@@ -105,19 +103,19 @@ export default function JourneyPoints() {
   return (
     <section className="JourneyPoints">
       <div className="container">
-        <div className="row">
+        <div className="row container">
           <div className="col-12 col-md-6">
             {data.map((item, index) => (
               <div
                 key={index}
-                className="box d-flex align-items-start justify-content-center gap-4"
+                className="Dots_contants box d-flex align-items-start justify-content-center gap-4"
                 data-aos="fade-down"
                 data-aos-easing="linear"
                 data-aos-duration={index * 500}
               >
                 <div className={`cyrcle ${index === 0 ? "Active" : ""}`}></div>
                 <small>{item.small}</small>
-                <div className="heading d-flex flex-column justify-content-center align-items-start gap-2">
+                <div className="heading d-flex flex-column justify-content-center align-items-start gap-2 ">
                   <h3>{item.h3}</h3>
                   <p>{item.p}</p>
                 </div>
@@ -128,7 +126,7 @@ export default function JourneyPoints() {
             {data2.map((item, index) => (
               <div
                 key={index}
-                className="box d-flex align-items-start gap-4"
+                className="Dots_contant box d-flex align-items-start gap-4"
                 data-aos="fade-up"
                 data-aos-easing="linear"
                 data-aos-duration={index * 500 + 10}

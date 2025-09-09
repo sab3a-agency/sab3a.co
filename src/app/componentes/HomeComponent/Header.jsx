@@ -15,7 +15,7 @@ export default function Header() {
 
   const currentPage = [
     { path: "/", name: "الرئيسية" },
-    { path: "/servicesPage", name: "خدمتنا" },
+    { path: "/servicesPage", name: "أعمالنا" },
     { path: "/OurePackagesPage", name: "الباقات" },
     { path: "/OurTeamPage", name: "فريقنا" },
     { path: "/BlogPage", name: "المدونة" },

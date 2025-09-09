@@ -68,7 +68,9 @@ export default function OurePackages() {
     <>
       <HeroPackages />
       <Questiones faqData={faqData} />
-      <LetsDoit data={LetsDitedata} />
+      <div className="div d-none d-md-block">
+        <LetsDoit data={LetsDitedata} />
+      </div>
     </>
   )
 }

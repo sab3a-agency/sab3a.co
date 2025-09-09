@@ -1,5 +1,5 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faArrowRight } from "@fortawesome/free-solid-svg-icons"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 
 export default function ThirdeSection() {
   return (
@@ -23,10 +23,10 @@ export default function ThirdeSection() {
                 حوّل فكرتك إلى واقع مع MVP جاهز للانطلاق مقابل{" "}
                 <span>15,000 ريال </span>فقط. لا تفوّت الفرصة، وانطلق اليوم!
               </p>
-              <button className="see_more d-flex align-items-center gap-2">
+              <a href="#" className="see_more d-flex align-items-center gap-2">
                 الإطلاع على الميزات
                 <FontAwesomeIcon icon={faArrowRight} />
-              </button>
+              </a>
             </div>
           </div>
         </div>
@@ -38,5 +38,5 @@ export default function ThirdeSection() {
       />
       <img src="/img/ConcatUS/Star.svg" lt="dimon" className="star" />
     </section>
-  )
+  );
 }

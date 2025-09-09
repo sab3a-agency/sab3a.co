@@ -195,7 +195,7 @@ textarea {
   overflow: hidden;
   cursor: pointer;
   border: none;
-  padding: 18px 25px;
+  padding: 2px 25px;
   gap: 5rem;
 }
 
@@ -255,9 +255,17 @@ input.search-box {
 }
 .SecondSection button img {
   z-index: 20;
-  background: var(--Color-Black-Black-500);
+  /* background: var(--Color-Black-Black-500); */
   padding: 0.9rem;
+  display: flex;
+  justify-items: end;
+  width: 50% !important;
+  height: 50% !important;
   border-radius: 5rem;
+}
+.react-tel-input .flag-dropdown.open .selected-flag {
+  width: 8rem !important;
+  padding: 0px !important;
 }
 .see_more svg.svg-inline--fa.fa-arrow-right {
   transform: rotate(182deg);
@@ -289,6 +297,7 @@ input.search-box {
   color: aliceblue;
   padding: 1.5rem;
   border: none;
+  width: 20rem;
   border-radius: 5rem;
   font-weight: 100 !important;
 }

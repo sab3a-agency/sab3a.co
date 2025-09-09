@@ -65,7 +65,7 @@ export default function GrideTeam() {
   const [Data, setData] = useState(DataDefult);
   const [RestOfTheTeam, setRestOfTheTeam] = useState(RestOfTheTeamDefualt);
   return (
-    <div className="Gred mt-50" data-aos="fade-up">
+    <div className="Gred mt-50 container" data-aos="fade-up">
       <div className="row">
         {Data.map((item, index) => (
           <div key={item.name || index} className="col-12 col-md-6">

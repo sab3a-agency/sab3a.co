@@ -14,7 +14,7 @@ export default function HeroTeamSection() {
     <section className="Hero mt-50">
       <div className="container">
         <div
-          className="head d-flex align-items-start justify-content-between flex-column gap-5"
+          className="container head d-flex align-items-start justify-content-between flex-column gap-5"
           data-aos="fade-left"
         >
           <h1 className="d-flex flex-column align-items-start">

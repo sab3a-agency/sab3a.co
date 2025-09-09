@@ -1,7 +1,7 @@
-"use client"
+"use client";
 
 // import { useParams } from "next/navigation"
-import React from "react"
+import React from "react";
 // import { data } from "react-router-dom"
 
 export default function FirstSection({ projectsData }) {
@@ -20,15 +20,19 @@ export default function FirstSection({ projectsData }) {
               <div className="imgWrapper">
                 <img src={project.src} alt="img" loading="lazy" />
               </div>
-              <div className="infoWrapper d-flex flex-column justify-content-center align-items-center container">
-                <p className="m-5">{project.FisrtDiscription}</p>
+              <div className="infoWrapper  d-flex flex-column justify-content-center align-items-center ">
+                <p className="mt-5 text-end text-md-center">
+                  {project.FisrtDiscription}
+                </p>
 
-                <p>{project.SecondDescription}</p>
+                <p className="mt-2 text-end text-md-center">
+                  {project.SecondDescription}
+                </p>
               </div>
             </div>
-          )
+          );
         })}
       </section>
     </>
-  )
+  );
 }

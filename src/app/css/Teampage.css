@@ -7,7 +7,7 @@
   color: var(--Color-Primary);
 }
 .wrapperImge img {
-  border-radius: 4rem 4rem 0rem 0rem;
+  border-radius: 4rem 4rem 0rem 0rem !important;
 }
 .icones small {
   font-size: 1.9rem;
@@ -21,6 +21,7 @@
 .icones p {
   width: 62%;
   text-align: justify;
+  line-height: 3rem;
 }
 
 .icones small:not(:last-child) {
@@ -50,7 +51,7 @@
   overflow: hidden;
   height: 21rem;
   width: 21rem;
-  border-radius: 5.2rem;
+  border-radius: 2rem;
 }
 
 .about h5 {
@@ -76,33 +77,39 @@
 .JourneyPoints {
   margin-top: 5rem !important;
 }
+.Dots_contant,
+.Dots_contants {
+  padding-right: 12px;
+  padding-bottom: 2rem;
+}
+.Dots_contant:not(:last-child) {
+  border-right: 3px solid var(--Color-Primary-Primary-50);
+}
+.Dots_contants {
+  border-right: 3px solid var(--Color-Primary-Primary-50);
+  margin-left: 0rem;
+}
+.cyrcle {
+  position: relative;
+}
 .cyrcle::before {
   content: "";
-  display: block;
-  background: transparent;
-  border: 1px solid var(--Color-Black-Black-50);
-  margin: 1rem 30px;
-  width: 2rem;
-  height: 2rem !important;
-  border-radius: 5rem;
+  display: block !important;
+  position: absolute !important;
+  top: -11px !important;
+  right: -25px !important;
+  z-index: 10 !important;
+  margin: 1rem 3px !important;
+  background: var(--background) !important;
+  border: 1px solid var(--Color-Black-Black-50) !important;
+  width: 2rem !important;
+  height: 2rem !important ;
+  border-radius: 5rem !important;
 }
 .Active::before {
   content: "";
-  background: var(--Color-Secondary);
-  border: none;
-}
-
-.cyrcle::after {
-  content: "";
-  display: block;
-  background: var(--Color-Black-Black-50);
-  width: 2px;
-  border-radius: 0px;
-  height: 120px;
-  margin: -1rem 37px;
-}
-.last-item::after {
-  height: 0px !important;
+  background: var(--Color-Secondary) !important;
+  border: none !important;
 }
 
 .JourneyPoints small {
@@ -120,7 +127,8 @@
 .JourneyPoints .heading p {
   font-size: 1.8rem;
   font-weight: 100;
-  width: auto%;
+  width: auto;
+  line-height: 3rem;
   text-align: justify;
 }
 .targets .box {
@@ -131,6 +139,13 @@
   font-size: 2rem;
   margin-right: 5rem;
   font-weight: 400;
+}
+.Green,
+.red {
+  font-weight: 900;
+}
+.Green {
+  color: var(--Color-Primary);
 }
 .red {
   color: var(--Color-Secondary);
@@ -158,10 +173,6 @@
     width: auto;
   }
 
-  .cyrcle::after {
-    margin: -1rem 39px;
-  }
-
   .Section2 .letsDoit {
     display: block;
     opacity: 100;
@@ -169,5 +180,11 @@
   }
   .wrapperImge {
     height: 48.3rem;
+  }
+  .cyrcle::before {
+    margin: 0rem 0px;
+  }
+  .Dots_contants {
+    margin-left: 3rem;
   }
 }

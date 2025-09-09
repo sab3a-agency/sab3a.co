@@ -1,6 +1,8 @@
 :root {
   --Color-Secondary: #e75050;
-  --Color-Primary: rgba(51, 134, 86, 1);
+  /* --Color-Primary: rgba(51, 134, 86, 1); */
+  --Color-Primary: #00682c;
+  /* --Color-Primary-500: #00682c; */
   --Color-White: rgba(242, 246, 248, 1);
   --Color-Primary-Primary-50: rgb(230, 240, 234);
   --Color-White-White-200: rgba(246, 249, 250, 1);
@@ -41,7 +43,8 @@ html {
   margin-top: 2rem;
 }
 .mt-80 {
-  margin-top: 13rem;
+  /* margin-top: 13rem; */
+  margin-top: 9rem;
 }
 @media (min-width: 768px) {
   html {

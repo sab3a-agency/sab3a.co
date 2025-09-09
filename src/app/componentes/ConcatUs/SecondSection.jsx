@@ -14,15 +14,18 @@ export default function SecondSection() {
             </p>
           </div>
           <button
-            className="SecondSectionBtn"
+            className="SecondSectionBtn d-flex align-items-center justify-content-center gap-3 px-4 py-3 rounded-full shadow"
             type="submit"
             onClick={() => {
-              window.location.href =
-                "teal://api.whatsapp.com/send?phone=+96655555555";
+              window.location.href = "tel:+96878495068";
             }}
           >
-            <span>حدد موعد مكالمتك الآن</span>
-            <img alt="arrow" src="/img/arrowPrive.svg" />
+            <span className="fw-semibold fs-5">حدد موعد مكالمتك الآن</span>
+            <img
+              alt="arrow"
+              src="/img/arrowPrive.svg"
+              style={{ width: "10rem", height: "50px" }}
+            />
           </button>
         </div>
       </div>

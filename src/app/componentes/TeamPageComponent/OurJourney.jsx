@@ -7,9 +7,9 @@ const data = {
 };
 export default function OurJourney() {
   return (
-    <section className="OurJourney mt-50">
+    <section className="OurJourney mt-80">
       <div className="container">
-        <div className="hero d-flex flex-column align-items-start justify-content-center">
+        <div className="container hero d-flex flex-column align-items-start justify-content-center">
           <h2>{data.title}</h2>
           <span>{data.discription}</span>
         </div>
