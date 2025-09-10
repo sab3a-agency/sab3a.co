@@ -149,7 +149,7 @@ input.form-control.custom-input:focus {
   font-size: 1rem !important;
 }
 input.form-control.custom-input {
-  width: 95% !important;
+  width: 100% !important;
 }
 textarea.form-control {
   padding: 2rem !important;
@@ -169,7 +169,7 @@ textarea {
 }
 .config {
   font-size: 1.5rem;
-  width: 100% !important;
+  width: 160% !important;
   color: var(--Color-text-secondary);
 }
 .btn {
@@ -211,9 +211,6 @@ textarea {
 
 .SecondSectionBtn:hover::after {
   left: 0;
-}
-
-.SecondSectionBtn:hover::after {
   width: 100%;
 }
 
@@ -255,14 +252,22 @@ input.search-box {
 }
 .SecondSection button img {
   z-index: 20;
-  /* background: var(--Color-Black-Black-500); */
+  /*background: var(--Color-Black-Black-500);
+  */
   padding: 0.9rem;
   display: flex;
   justify-items: end;
-  width: 50% !important;
-  height: 50% !important;
+  width: 30% !important;
+  height: 30% !important;
   border-radius: 5rem;
+  transition: all 0.3s ease-in;
 }
+.SecondSection button:hover img {
+  rotate: calc(180deg);
+
+  background: var(--background);
+}
+
 .react-tel-input .flag-dropdown.open .selected-flag {
   width: 8rem !important;
   padding: 0px !important;
@@ -283,7 +288,7 @@ input.search-box {
 }
 .box_ditales p {
   font-size: 2rem;
-  width: 68%;
+  width: 100%;
   text-align: justify;
 }
 
@@ -297,7 +302,7 @@ input.search-box {
   color: aliceblue;
   padding: 1.5rem;
   border: none;
-  width: 20rem;
+  width: 50%;
   border-radius: 5rem;
   font-weight: 100 !important;
 }
@@ -341,6 +346,10 @@ img.hero-star {
   position: absolute;
   top: -14px;
   left: 20%;
+}
+.react-tel-input .country-list {
+  width: 250% !important;
+  text-align: left;
 }
 @media (min-width: 768px) {
   .custom-phone-input {
@@ -388,5 +397,16 @@ img.hero-star {
   }
   .input.search-box {
     width: 88% !important;
+  }
+  .react-tel-input .country-list {
+    width: 384% !important;
+    text-align: left;
+  }
+  .see_more {
+    width: 27%;
+  }
+  .config {
+    font-size: 1.5rem;
+    width: 100% !important;
   }
 }

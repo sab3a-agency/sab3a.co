@@ -1,12 +1,7 @@
 "use client";
+import SecondSeation from "../ProjectsDetailsComp/SecondSections";
 import LetsDoit from "./LetsDoit";
 import { PartnersMarquee } from "./marquees";
-const LetsDitedata = {
-  btnContent: " معاملة خاصة ",
-  discription: " ابدأ رحلة لاكتشاف ",
-  smallDescription: "عالم من استراتيجيات التصميم المبتكرة.",
-  letsDoit: " دعنا نصمم غرضك هنا  ",
-};
 
 const Data = {
   title: "      شريكك في",
@@ -42,7 +37,6 @@ export default function Section2() {
         </div>
       </div>
       <PartnersMarquee />
-      <LetsDoit data={LetsDitedata} />
     </section>
   );
 }

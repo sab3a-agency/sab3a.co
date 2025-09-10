@@ -1,9 +1,10 @@
-export default function SecondSeation() {
-  let Data = [
+export default function SecondSeation({ OurPhilosophy }) {
+  // بيانات افتراضية
+  const defaultData = [
     {
       title: "ما قمنا به:",
-      discription: `              نؤمن بالتعاون والابتكار وسرد القصص. تركز فلسفتنا على فهم العملاء،
-              ودفع الحدود الإبداعية، وتقديم حلول فعالة.`,
+      discription: `نؤمن بالتعاون والابتكار وسرد القصص. تركز فلسفتنا على فهم العملاء،
+      ودفع الحدود الإبداعية، وتقديم حلول فعالة.`,
       Box: [
         {
           icon: "/img/ProjectsDetails/people.svg",
@@ -15,8 +16,8 @@ export default function SecondSeation() {
             "الأدوات المكتبية",
             "الهوية الرقمية",
             "إرشادات العلامة التجارية",
-            "الزي الرسمي"
-          ]
+            "الزي الرسمي",
+          ],
         },
         {
           icon: "/img/ProjectsDetails/lamp-on.svg",
@@ -26,8 +27,8 @@ export default function SecondSeation() {
             "كتابة النصوص",
             "كتابة السيناريو",
             " إدارة التصوير الفوتوغرافي",
-            " خطة التسويق"
-          ]
+            " خطة التسويق",
+          ],
         },
         {
           icon: "/img/ProjectsDetails/lamp-on.svg",
@@ -37,8 +38,8 @@ export default function SecondSeation() {
             " تحديد موقع العلامة التجارية",
             "استراتيجية التواصل ",
             " إدارة التصوير الفوتوغرافي",
-            " هيكل العلامة التجارية "
-          ]
+            " هيكل العلامة التجارية ",
+          ],
         },
         {
           icon: "/img/ProjectsDetails/story.svg",
@@ -49,49 +50,68 @@ export default function SecondSeation() {
             "الموقع الإلكتروني",
             " واجهة المستخدم",
             " تجربة المستخدم",
-            " النمذجة "
-          ]
-        }
-      ]
-    }
-  ]
+            " النمذجة ",
+          ],
+        },
+      ],
+    },
+  ];
+
+  // اختر البيانات المستخدمة: props إذا موجودة، وإلا استخدم البيانات الافتراضية
+  const DataToUse = OurPhilosophy ? [OurPhilosophy] : defaultData;
+
   return (
     <section className="SecondSeation mt-50">
       <div className="container">
-        <div className="hero d-flex flex-column text-justify ">
-          {Data.map((feature) => (
+        {/* عنوان القسم */}
+        <div className="hero d-flex flex-column text-justify">
+          {DataToUse.map((feature) => (
             <div key={feature.title} className="title text-justify">
               <h1>{feature.title}</h1>
               <p>{feature.discription}</p>
             </div>
           ))}
         </div>
+
+        {/* البوكسات */}
         <div className="container">
           <div className="wapperBox mt-5">
             <div className="row">
-              {Data.map((feature) =>
-                feature.Box.map((boxItem) => (
+              {DataToUse.map((feature) =>
+                feature.Box.map((boxItem, index) => (
                   <div
-                    key={boxItem.title}
-                    className="Box col-6 col-sm-6  col-md-3"
+                    key={`${boxItem.title}-${index}`} // مفتاح فريد لكل Box
+                    className={`Box col-6 col-sm-6 col-md-3    ${
+                      OurPhilosophy ? "default-widthSm " : ""
+                    }`}
                   >
                     <div className="icon">
                       <img src={boxItem.icon} alt="meeting_icon" />
                     </div>
-                    <h3 className="my-4">{boxItem.title}</h3>
+                    {boxItem.smallText && (
+                      <small className="smallText d-block mt-5">
+                        {boxItem.smallText}
+                      </small>
+                    )}
 
-                    {boxItem.subTitle.map((subtitle) => (
-                      <li key={subtitle}>
-                        <div className="innerinfo d-flex gap-3 align-items-center">
-                          <img
-                            src={boxItem.innerIcon}
-                            alt="Check_Icone"
-                            id="Check_Icone"
-                          />
-                          <h4>{subtitle}</h4>
-                        </div>
-                      </li>
-                    ))}
+                    <h3 className="titles my-3">{boxItem.title}</h3>
+
+                    {/* عرض subTitle فقط إذا لم يتم تمرير بيانات props */}
+                    {!OurPhilosophy &&
+                      boxItem.subTitle?.map((subtitle, subIndex) => (
+                        <li key={`${subtitle}-${subIndex}`}>
+                          <div className="innerinfo d-flex gap-3 align-items-center">
+                            <img
+                              src={boxItem.innerIcon}
+                              alt="Check_Icone"
+                              id="Check_Icone"
+                            />
+                            <h4>{subtitle}</h4>
+                          </div>
+                        </li>
+                      ))}
+
+                    {boxItem.description && <p>{boxItem.description}</p>}
                   </div>
                 ))
               )}
@@ -100,5 +120,5 @@ export default function SecondSeation() {
         </div>
       </div>
     </section>
-  )
+  );
 }

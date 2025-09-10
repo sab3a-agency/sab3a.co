@@ -68,7 +68,7 @@ button.navbar-toggler {
   font-family: "Sukar" !important;
   font-weight: 700;
   padding: 13px !important;
-  background-color: #00682c;
+  background-color: var(--Color-Primary);
   border: none;
   border-radius: 3rem;
   font-size: 1.4rem;
@@ -1291,7 +1291,7 @@ marquee {
   border-radius: 2rem;
   text-decoration: none;
   font-size: 1.2rem;
-  border: 0.1rem solid var(--Color-Primary);
+  border: 0.1rem solid var(--background);
   color: var(--Color-White-White-200);
   transition: all 0.3s ease-in-out;
   display: block;
@@ -1314,6 +1314,9 @@ marquee {
   text-align: justify;
   width: 100%;
   color: white;
+}
+.letsDoit .wrapper small {
+  width: 77%;
 }
 .letsDoit .row a img#arrow {
   border: 1px solid var(--Color-White-White-200) !important;
@@ -1390,7 +1393,7 @@ marquee {
   object-fit: cover;
 }
 .FirstSection .infoWrapper p {
-  font-size: 2rem;
+  font-size: 1.8rem;
   font-weight: 100;
   text-align: center;
 }
@@ -1403,8 +1406,8 @@ marquee {
   color: green;
 }
 .SecondSeation .hero .title p {
-  font-size: 2.5rem;
-  font-weight: 500;
+  font-size: 1.8rem;
+  font-weight: 100;
 }
 
 .wapperBox .row {
@@ -1416,6 +1419,10 @@ marquee {
 .wapperBox .Box {
   text-align: justify;
   padding: 5rem;
+}
+
+.default-width {
+  width: 50% !important;
 }
 
 .wapperBox .Box {
@@ -1869,7 +1876,9 @@ section.HeroContent {
     font-size: 3rem;
   }
   .letsDoit .wrapper p {
-    font-size: 3rem;
+    font-size: 4rem;
+    width: 100% !important;
+    font-weight: 900;
   }
   .Part1 .imgWrapper img {
     width: 20rem !important;
@@ -1902,5 +1911,8 @@ section.HeroContent {
   }
   .SucessBtns {
     top: -9rem;
+  }
+  .default-width {
+    width: 50% !important;
   }
 }

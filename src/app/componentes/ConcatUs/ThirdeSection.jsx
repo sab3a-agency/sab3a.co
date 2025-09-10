@@ -8,7 +8,7 @@ export default function ThirdeSection() {
         <div className="col-12 col-md-6">
           <img src="/img/ConcatUS/herosimg.png" alt="img" />
         </div>
-        <div className="col-12 col-md-6 d-flex justify-content-center align-items-center ">
+        <div className="col-12 col-md-6 d-flex justify-content-center align-items-center mx-2 mx-md-0 ">
           <div className="box_ditales d-flex flex-column align-items-start">
             <div className="container">
               <div className=" d-flex ">

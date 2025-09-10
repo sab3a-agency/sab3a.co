@@ -187,4 +187,13 @@
   .Dots_contants {
     margin-left: 3rem;
   }
+  .smallText {
+    color: var(--Color-text-secondary) !important;
+    font-size: 1.5rem;
+  }
+  .titles {
+    color: var(--Color-Black-Black-500);
+    font-size: 2rem;
+    font-weight: 900;
+  }
 }

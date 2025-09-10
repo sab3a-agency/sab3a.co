@@ -78,7 +78,7 @@ export default function FirstSiction() {
   return (
     <section className="ConcatUS mt-50">
       <div className="container">
-        <div className="row">
+        <div className="row mx-2 mx-md-0">
           <div className="col-12 col-md-6">
             <div className="head">
               <div className="containerTitle  d-flex justify-content-center align-items-baseline gap-3">
@@ -157,7 +157,7 @@ export default function FirstSiction() {
                           disableSearchIcon={true}
                           placeholder={`+${getCountryCallingCode(
                             country
-                          )}+ +966 5XX XXXX`}
+                          )} 5XX XXXX`}
                           inputClass="custom-input"
                           containerClass="phone-wrapper"
                           buttonClass="hide-flag"
