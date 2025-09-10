@@ -50,7 +50,7 @@
   text-decoration: none;
   color: var(--Color-Primary);
   font-size: 1.5rem;
-  font-weight: 100;
+  font-weight: 600;
 }
 
 .ContentText .box span {
@@ -302,7 +302,7 @@ input.search-box {
   color: aliceblue;
   padding: 1.5rem;
   border: none;
-  width: 50%;
+  width: 54%;
   border-radius: 5rem;
   font-weight: 100 !important;
 }
