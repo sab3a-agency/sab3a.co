@@ -15,17 +15,17 @@ export default function FirstSection({ projectsData }) {
           return (
             <div key={project.id}>
               <div className="container">
-                <p className="mb-5">{project.intro}</p>
+                <p className="mb-5 mx-2 mx-md-0">{project.intro}</p>
               </div>
               <div className="imgWrapper">
                 <img src={project.src} alt="img" loading="lazy" />
               </div>
               <div className="infoWrapper  d-flex flex-column justify-content-center align-items-center ">
-                <p className="mt-5 text-end text-md-center">
+                <p className="mt-5 mx-2 mx-md-0 text-center text-md-end">
                   {project.FisrtDiscription}
                 </p>
 
-                <p className="mt-2 text-end text-md-center">
+                <p className="mt-2 mx-2 mx-md-0 text-center text-md-end">
                   {project.SecondDescription}
                 </p>
               </div>

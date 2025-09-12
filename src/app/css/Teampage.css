@@ -139,6 +139,7 @@
   font-size: 2rem;
   margin-right: 5rem;
   font-weight: 400;
+  width: 100% !important;
 }
 .Green,
 .red {

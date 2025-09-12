@@ -1386,6 +1386,7 @@ marquee {
   font-size: 2rem;
   font-weight: 100;
   text-align: justify;
+  margin: 0rem 2rem;
 }
 .FirstSection .imgWrapper img {
   width: 100% !important;
@@ -1408,6 +1409,16 @@ marquee {
 .SecondSeation .hero .title p {
   font-size: 1.8rem;
   font-weight: 100;
+}
+.smallText {
+  font-size: 1.6rem;
+}
+.SecondSeation .titles {
+  font-size: 1.5rem;
+}
+.SecondSeation .p {
+  width: 100% !important;
+  font-size: 1.2rem !important;
 }
 
 .wapperBox .row {
@@ -1476,7 +1487,8 @@ marquee {
   margin-top: 7rem !important;
 }
 .innerinfo h4 {
-  font-size: 1.8rem !important;
+  font-size: 1.2rem !important;
+  width: 100% !important;
 }
 
 .divWitherProgress {
@@ -1914,5 +1926,8 @@ section.HeroContent {
   }
   .default-width {
     width: 50% !important;
+  }
+  .FirstSection p {
+    margin: 0rem 0rem;
   }
 }

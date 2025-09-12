@@ -272,6 +272,9 @@ input.search-box {
   width: 8rem !important;
   padding: 0px !important;
 }
+.flag-dropdown.hide-flag {
+  width: 40% !important;
+}
 .see_more svg.svg-inline--fa.fa-arrow-right {
   transform: rotate(182deg);
   color: var(--background);
@@ -297,8 +300,8 @@ input.search-box {
   font-weight: 700;
 }
 .see_more {
-  font-size: large;
-  background: green;
+  font-size: 2rem;
+  background: var(--Color-Primary);
   color: aliceblue;
   padding: 1.5rem;
   border: none;
@@ -402,11 +405,13 @@ img.hero-star {
     width: 384% !important;
     text-align: left;
   }
-  .see_more {
-    width: 27%;
-  }
+
   .config {
     font-size: 1.5rem;
     width: 100% !important;
+  }
+  .see_more {
+    font-size: 1.5rem;
+    width: 27%;
   }
 }

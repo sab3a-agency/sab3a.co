@@ -111,7 +111,9 @@ export default function SecondSeation({ OurPhilosophy }) {
                         </li>
                       ))}
 
-                    {boxItem.description && <p>{boxItem.description}</p>}
+                    {boxItem.description && (
+                      <p className=".p">{boxItem.description}</p>
+                    )}
                   </div>
                 ))
               )}
