@@ -21,11 +21,11 @@ export default function FirstSection({ projectsData }) {
                 <img src={project.src} alt="img" loading="lazy" />
               </div>
               <div className="infoWrapper  d-flex flex-column justify-content-center align-items-center ">
-                <p className="mt-5 mx-2 mx-md-0 text-center text-md-end">
+                <p className="mt-5 mx-2 mx-md-0 text-center ">
                   {project.FisrtDiscription}
                 </p>
 
-                <p className="mt-2 mx-2 mx-md-0 text-center text-md-end">
+                <p className="mt-2 mx-2 mx-md-0 text-center ">
                   {project.SecondDescription}
                 </p>
               </div>
