@@ -1,23 +1,38 @@
-export default function ImgesSection() {
-  let imges = [
-    "/img/ProjectsDetails/adv1.png",
-    "/img/ProjectsDetails/adv2.png",
-    "/img/ProjectsDetails/adv3.png",
-    "/img/ProjectsDetails/adv4.png",
-    "/img/ProjectsDetails/adv5.png",
-    "/img/ProjectsDetails/adv6.png"
-  ]
+"use client";
+
+export default function ImgesSection({ images }) {
+  // Check if images are loading (e.g., the images array is empty or null)
+  const isLoading = !images || images.length === 0;
+
   return (
     <section className="ImgesSection mt-80">
       <div className="wrapperImg d-flex flex-column justify-content-center">
-        {imges.map((img, index) => {
-          return (
-            <div key={img + "_" + index} className="imgWrapper">
-              <img loading="lazy" src={img} alt="adv_img" />
+        {isLoading ? (
+          // Display skeleton loaders if images are loading
+          <>
+            {[...Array(3)].map((_, index) => (
+              <div key={index} className="imgWrapper">
+                <div
+                  className="skeleton-loader image"
+                  style={{ height: 400, marginBottom: "20px" }}
+                ></div>
+              </div>
+            ))}
+          </>
+        ) : (
+          // Display images once they are loaded
+          images.map((imgSrc, index) => (
+            <div key={imgSrc + "_" + index} className="imgWrapper">
+              <img
+                loading="lazy"
+                src={imgSrc}
+                alt="adv_img"
+                className="advimg"
+              />
             </div>
-          )
-        })}
+          ))
+        )}
       </div>
     </section>
-  )
+  );
 }

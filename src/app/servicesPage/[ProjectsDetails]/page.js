@@ -1,130 +1,73 @@
-"use client"
+"use client";
 
-import FirstSection from "@/app/componentes/ProjectsDetailsComp/FirstSection"
-import Hero from "@/app/componentes/ProjectsDetailsComp/hero"
-import ImgesSection from "@/app/componentes/ProjectsDetailsComp/ImgesSection"
-import SecondSeation from "@/app/componentes/ProjectsDetailsComp/SecondSections"
-import SimilarWorks from "@/app/componentes/ProjectsDetailsComp/Similar works"
-import { useParams } from "next/navigation"
+import { useEffect, useState } from "react";
+import { useParams } from "next/navigation";
+
+import FirstSection from "@/app/componentes/ProjectsDetailsComp/FirstSection";
+import Hero from "@/app/componentes/ProjectsDetailsComp/hero";
+import ImgesSection from "@/app/componentes/ProjectsDetailsComp/ImgesSection";
+import SecondSeation from "@/app/componentes/ProjectsDetailsComp/SecondSections";
+import SimilarWorks from "@/app/componentes/ProjectsDetailsComp/Similar works";
 
 export default function ProjectsDitales() {
-  // Assume you have an array of projects  you will get from the backend
-  const projectsData = [
-    {
-      id: 1,
-      src: "/img/ServicePage/img1.png",
-      title: "تطوير البرمجيات المخصصة",
-      discription:
-        "هذا النص هو مثال لنص يمكن ان يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى",
-      tags: [
-        "الرعاية الصحية",
-        "العلامة التجارية",
-        " الهوية البصرية",
-        " التغليف"
-      ],
-      titleEtc: " تطبيق سوبر صديق للأطفال ",
-      span: "20 أكتوبر",
-      small: "ترفيه"
-    },
-    {
-      id: 2,
-      src: "/img/ServicePage/img2.png",
-      title: " اسم المشروع",
-      discription: "نقدم تحليلاً دقيقًا لأنظمتك",
-      tags: [
-        "الرعاية الصحية",
-        "العلامة التجارية",
-        " الهوية البصرية",
-        " التغليف"
-      ],
-      titleEtc: " ",
-      span: "20 أكتوبر",
-      small: "ابداع"
-    },
-    {
-      id: 3,
-      src: "/img/ServicePage/img3.png",
-      title: " اسم المشروع",
-      discription: "نقدم تحليلاً دقيقًا لأنظمتك",
-      tags: [
-        "الرعاية الصحية",
-        "العلامة التجارية",
-        " الهوية البصرية",
-        " التغليف"
-      ],
-      titleEtc: " ",
-      span: "20 أكتوبر",
-      small: "مغامره"
-    },
-    {
-      id: 4,
-      src: "/img/ServicePage/img4.png",
-      title: " اسم المشروع",
-      discription: "نقدم تحليلاً دقيقًا لأنظمتك",
-      tags: [
-        "الرعاية الصحية",
-        "العلامة التجارية",
-        " الهوية البصرية",
-        " التغليف"
-      ],
-      titleEtc: " ",
-      span: "20 أكتوبر",
-      small: "ابتكار"
-    },
-    {
-      id: 5,
-      src: "/img/ServicePage/img5.png",
-      title: " اسم المشروع",
-      discription: "نقدم تحليلاً دقيقًا لأنظمتك",
-      tags: [
-        "الرعاية الصحية",
-        "العلامة التجارية",
-        " الهوية البصرية",
-        " التغليف"
-      ],
-      titleEtc: "",
-      span: "20 أكتوبر",
-      small: "عمل"
-    },
-    {
-      id: 6,
-      src: "/img/ServicePage/img6.png",
-      title: " اسم المشروع",
-      titleEtc: " ",
-      discription: "نقدم تحليلاً دقيقًا لأنظمتك",
-      tags: [
-        "الرعاية الصحية",
-        "العلامة التجارية",
-        " الهوية البصرية",
-        " التغليف"
-      ],
-      span: "20 أكتوبر",
-      small: "ترفيه"
-    }
-  ]
-  //to git the id
-  const param = useParams()
-  const CurrentData = projectsData.find((project) => {
-    return project.id === Number(param.ProjectsDetails)
-  })
+  const param = useParams();
+  const id = param.ProjectsDetails;
+  const [projectData, setProjectData] = useState(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
 
-  //   Hero Data
-  const DefultData = [
-    {
-      title: `${CurrentData?.title}`,
-      titleEtc: `${CurrentData?.titleEtc}`,
-      span: `${CurrentData?.span}`,
-      small: `${CurrentData?.small}`
+  useEffect(() => {
+    async function fetchProject() {
+      if (!id) return;
+
+      try {
+        const response = await fetch(`/api/projects/${id}`);
+        if (!response.ok) {
+          throw new Error("Failed to fetch project details.");
+        }
+        const data = await response.json();
+        setProjectData(data.data);
+      } catch (err) {
+        setError(err.message);
+      } finally {
+        setLoading(false);
+      }
     }
-  ]
+
+    fetchProject();
+  }, [id]);
+
+  if (loading) {
+    return (
+      <div className="spinner-container">
+        <div className="spinner"></div>
+      </div>);
+  }
+
+  if (error) {
+    return <div>Some Things go Wrong {error} </div>;
+  }
+
+  if (!projectData) {
+    return <div>Project not found. 🔍</div>;
+  }
+
+  const heroData = [
+    {
+      title: projectData.title,
+      titleEtc: projectData.sub_title,
+      span: "20 أكتوبر",
+      small: projectData.category,
+    },
+  ];
 
   return (
     <>
-      <Hero DefultData={DefultData} />
-      <FirstSection projectsData={projectsData} />
-      <SecondSeation />
-      <ImgesSection />
+      <Hero DefultData={heroData} />
+      <FirstSection projectsData={projectData} />
+      <SecondSeation projectData={projectData} />
+      <ImgesSection images={projectData.images} />
       <SimilarWorks />
     </>
-  )
+  );
 }

@@ -45,7 +45,7 @@ export default function WhyChooseUs() {
         <div className="partImages">
           {
             <div className="row">
-              <div className="col-6 col-md-2 mb-3 d-none d-md-block">
+              <div className="col-6 col-xl-2 col-md-3 mb-3 d-none d-md-block">
                 <div className="wapp">
                   <Image
                     src={data.srces[0]}
@@ -57,7 +57,7 @@ export default function WhyChooseUs() {
                   />
                 </div>
               </div>
-              <div className="col-6 col-md-6 mb-3 order-3 order-md-2">
+              <div className="col-6 col-xl-4 col-md-9 mb-3 order-3 order-md-2">
                 <div className="wappLongimg">
                   <Image
                     id="wappLongimg"
@@ -70,7 +70,7 @@ export default function WhyChooseUs() {
                   />
                 </div>
               </div>
-              <div className="col-6 col-md-3 mb-3">
+              <div className="col-6 col-xl-3 col-md-6 mb-3">
                 <div className="wappLongimg">
                   <Image
                     src={data.srces[2]}
@@ -83,7 +83,7 @@ export default function WhyChooseUs() {
                 </div>
               </div>
 
-              <div className="col-6 col-md-2 mb-3">
+              <div className="col-6 col-xl-2 col-md-4 mb-3 ">
                 <div className="wappLongimg">
                   <Image
                     src={data.srces[3]}

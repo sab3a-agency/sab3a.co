@@ -83,7 +83,7 @@ export default function HeroPart1() {
 
         <img
           src="/img/BoardsPoster.svg"
-          className="d-none d-md-flex justify-content-center align-items-start  "
+          className="d-none d-md-none d-xl-flex justify-content-center align-items-start  "
           alt="Saba-Image"
         />
       </div>
@@ -97,7 +97,7 @@ export default function HeroPart1() {
             </p>
           </div>
 
-          <div className="d-flex justify-content-between align-items-center gap-5 w-auto">
+          <div className="d-flex my-0 my-md-5 my-xl-0 justify-content-between align-items-center gap-5 w-auto">
             <div className="box_1 d-flex justify-content-center">
               <div className="Box-wrapper d-flex align-items-baseline">
                 <span
@@ -141,7 +141,7 @@ export default function HeroPart1() {
 
             <img
               src="/img/BoardsPoster.svg"
-              className="d-flex d-md-none justify-content-center align-items-center  position-relative"
+              className="d-md-flex d-xl-none justify-content-center align-items-center  position-relative"
               style={{ top: "-9rem", width: "18rem", height: "18rem" }}
               alt="Saba-Image"
             />

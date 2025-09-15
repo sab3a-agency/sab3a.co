@@ -92,7 +92,7 @@ export default function Services() {
             <div className="row">
               {/* Left side */}
               <div className="col-md-6">
-                <div className="d-flex flex-column gap-4">
+                <div className="d-flex flex-column gap-5">
                   {data.Boxes.map((box, index) => (
                     <div
                       key={index}
@@ -112,7 +112,7 @@ export default function Services() {
 
               {/* Right side */}
               <div className="col-md-6">
-                <div className="d-flex flex-column gap-4">
+                <div className="d-flex flex-column gap-5">
                   {data.Boxes2.map((box, index) => (
                     <div
                       key={index}
