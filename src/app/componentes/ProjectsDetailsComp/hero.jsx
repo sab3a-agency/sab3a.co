@@ -14,7 +14,17 @@ export default function Hero() {
 
   useEffect(() => {
     async function fetchProject() {
-      if (!id) return;
+      if (!id) {
+        // لو الـ id مش موجود نوقف اللودينج ونحط قيم ديفولت
+        setProjectData({
+          title: "عنوان افتراضي",
+          sub_title: "وصف مختصر",
+          created_at: new Date().toISOString(),
+          category: "عام",
+        });
+        setLoading(false);
+        return;
+      }
 
       try {
         const response = await fetch(`/api/projects/${id}`);
@@ -25,6 +35,13 @@ export default function Hero() {
         setProjectData(data.data);
       } catch (err) {
         setError(err.message);
+        // fallback: بيانات افتراضية لو حصل error
+        setProjectData({
+          title: "عنوان افتراضي",
+          sub_title: "وصف مختصر",
+          created_at: new Date().toISOString(),
+          category: "عام",
+        });
       } finally {
         setLoading(false);
       }
@@ -77,14 +94,15 @@ export default function Hero() {
   }
 
   if (error) {
-    return <div>Error: {error}</div>;
+    // بدل ما يرجع error فقط، نعرضه ونكمل بالديفولت
+    console.warn("Error fetching project:", error);
   }
 
   if (!projectData) {
-    return null; // Or a placeholder if needed
+    return null; // fallback لو حتى الديفولت مش موجود
   }
 
-  // Use the fetched data to populate the component
+  // نستخدم البيانات أو الديفولت
   return (
     <>
       <section className="Hero mt-50">
@@ -100,16 +118,19 @@ export default function Hero() {
                   <img src="/img/ProjectsDetails/Icon.svg" alt="arrow" />
                 </a>
                 <h1 className="d-flex flex-column align-items-start text-end">
-                  {projectData.title}
-                  {projectData.sub_title}
+                  {projectData.title || "عنوان افتراضي"}
+                  <br />
+                  {projectData.sub_title || "وصف مختصر"}
                 </h1>
               </div>
               <div className="leftSide d-flex align-items-center gap-4">
-                {/* The API data doesn't contain 'span' or 'small', so you need to decide what to show here.
-                    Using category and created_at as an example. */}
-                <span>{projectData.created_at.split("T")[0]}</span>
+                <span>
+                  {projectData.created_at
+                    ? projectData.created_at.split("T")[0]
+                    : "2025-01-01"}
+                </span>
                 <span className="dot">.</span>
-                <small>{projectData.category}</small>
+                <small>{projectData.category || "عام"}</small>
               </div>
             </div>
           </div>

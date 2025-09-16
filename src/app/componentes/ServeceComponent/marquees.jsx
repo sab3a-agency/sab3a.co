@@ -1,34 +1,28 @@
 "use client";
 
-export function PartnersMarquee() {
-  const partners = [
-    {
-      src: "/img/partnersLogo/transport-general-authority-seeklogo 1.svg",
-      link: "https://example.com/1",
-    },
-    {
-      src: "/img/partnersLogo/saudi-inovation-logo .svg",
-      link: "https://example.com/2",
-    },
-    { src: "/img/partnersLogo/image 9.svg", link: "https://example.com/3" },
-    { src: "/img/partnersLogo/image 8.svg", link: "https://example.com/4" },
-    { src: "/img/partnersLogo/image 7.svg", link: "https://example.com/5" },
-    { src: "/img/partnersLogo/image 6.svg", link: "https://example.com/6" },
-    { src: "/img/partnersLogo/image 5.svg", link: "https://example.com/7" },
-    { src: "/img/partnersLogo/image 4.svg", link: "https://example.com/8" },
-    { src: "/img/partnersLogo/image 3.svg", link: "https://example.com/9" },
-    { src: "/img/partnersLogo/image 2.svg", link: "https://example.com/10" },
+import { useEffect, useState } from "react";
 
-    {
-      src: "/img/partnersLogo/GATEKEEPER_LOGO_72 1.svg",
-      link: "https://example.com/11",
-    },
-    { src: "/img/partnersLogo/download.svg", link: "https://example.com/12" },
-    {
-      src: "/img/partnersLogo/Asset 11200 1.svg",
-      link: "https://example.com/13",
-    },
-  ];
+export function PartnersMarquee() {
+  const [partners, setPartners] = useState([]);
+
+  useEffect(() => {
+    async function fetchPartners() {
+      try {
+        const res = await fetch("/api/projects/partners", {
+          cache: "no-store",
+        });
+
+        if (!res.ok) throw new Error("Failed to fetch partners");
+
+        const result = await res.json();
+        setPartners(result.partners || []);
+      } catch (err) {
+        console.error("Error fetching partners:", err);
+      }
+    }
+
+    fetchPartners();
+  }, []);
 
   return (
     <>
@@ -39,15 +33,19 @@ export function PartnersMarquee() {
         className="marqueeLg mt-80"
         data-aos="zoom-out"
       >
-        {partners.map((partner, index) => (
+        {partners.map((partner) => (
           <a
-            key={index}
+            key={partner.id}
             href={partner.link}
             target="_blank"
             rel="noopener noreferrer"
             className="mx-5"
           >
-            <img src={partner.src} alt="partner logo" className="h-16 w-auto" />
+            <img
+              src={partner.src}
+              alt="partner logo"
+              className="partner h-16 object-fit-cover"
+            />
           </a>
         ))}
       </marquee>
@@ -56,14 +54,17 @@ export function PartnersMarquee() {
         className="PartnersMarquee_sm row mt-5 justify-content-center"
         data-aos="zoom-in"
       >
-        {partners.map((partner, index) => (
-          <div key={index} className="col-4 d-flex justify-content-center mb-3">
+        {partners.map((partner) => (
+          <div
+            key={partner.id}
+            className="col-4 d-flex justify-content-center mb-3"
+          >
             <a href={partner.link} target="_blank" rel="noopener noreferrer">
               <div className="outerImgWrrap d-flex align-items-center justify-content-center">
                 <img
                   src={partner.src}
                   alt="partner_logo"
-                  className="partner_logo"
+                  className="partner_logo object-fit-contain"
                   style={{ height: "60px", width: "auto" }}
                 />
               </div>

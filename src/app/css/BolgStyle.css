@@ -79,6 +79,47 @@
 .SimilarArticals .col-md-4 {
   width: 100% !important;
 }
+.skeleton {
+  background: #e0e0e0;
+  border-radius: 8px;
+  display: inline-block;
+  line-height: 1;
+  animation: pulse 1.5s infinite ease-in-out;
+}
+.skeleton-text {
+  height: 16px;
+}
+.skeleton-img {
+  height: 200px;
+}
+.skeleton-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+}
+.skeleton-btn {
+  border-radius: 12px;
+}
+.h-300 {
+  height: 300px;
+}
+.h-200 {
+  height: 200px;
+}
+.h-30 {
+  height: 30px;
+}
+@keyframes pulse {
+  0% {
+    background-color: #e0e0e0;
+  }
+  50% {
+    background-color: #f0f0f0;
+  }
+  100% {
+    background-color: #e0e0e0;
+  }
+}
 
 @media (min-width: 768px) {
   .HeroBlog .head {
@@ -89,13 +130,25 @@
     font-size: 1.8rem;
   }
   .HeroBlog .head h1 {
-    width: 30% !important;
-    font-size: 6rem;
+    font-size: 5rem;
+    width: 23% !important;
   }
   .SimilarArticals .col-md-4 {
     width: 50% !important;
   }
   .ArticalGrid .box img {
     height: 450px !important;
+  }
+}
+
+/* Tablets  */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .HeroBlog .head h1 {
+    font-size: 3rem !important;
+    width: 25% !important;
+  }
+  .HeroBlog .head p {
+    width: 53% !important;
+    font-size: 1.8rem !important;
   }
 }

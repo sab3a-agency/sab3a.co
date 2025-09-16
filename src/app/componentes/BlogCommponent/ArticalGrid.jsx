@@ -10,12 +10,16 @@ export default function ArticalGrid({ data }) {
   return (
     <div className="ArticalGrid container mt-5">
       <div className="row">
-        {articles.map((item, index) => (
-          <div key={index} className="col-12 col-md-6 mb-5" data-aos="fade-up">
+        {articles.map((item) => (
+          <div
+            key={item.id}
+            className="col-12 col-md-6 mb-5"
+            data-aos="fade-up"
+          >
             <div className="box w-100">
               <Link href={`/BlogPage/${item.id}`}>
                 <Image
-                  src={item.src}
+                  src={item.cover_image}
                   alt={item.title || "img"}
                   className="box-img-top"
                   width={1000}
@@ -31,11 +35,10 @@ export default function ArticalGrid({ data }) {
                   <small>{item.small}</small>
                 </small>
 
-                <span>{item.date}</span>
                 <h5 className="boxTitle my-4">{item.title}</h5>
 
                 <Link href={`/BlogPage/${item.id}`} className="btn btn-success">
-                  {item.btn}
+                  {item.title}
                 </Link>
               </div>
             </div>
