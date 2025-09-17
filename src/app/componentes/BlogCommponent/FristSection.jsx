@@ -12,7 +12,6 @@ export default function FirstSection({ projectsData }) {
               <p className="mb-5 mx-2 mx-md-0">{project.intro}</p>
             </div>
 
-            {/* لو في صور متعددة من الـ API */}
             <div className="imgWrapper">
               {project.images && project.images.length > 0 ? (
                 project.images.map((imgSrc, imgIndex) => (
@@ -21,10 +20,22 @@ export default function FirstSection({ projectsData }) {
                     src={imgSrc.replace("\\", "/")}
                     alt={`img-${imgIndex}`}
                     loading="lazy"
+                    onError={(e) => {
+                      e.currentTarget.src = "../img/LoagingState.png";
+                      e.currentTarget.style.objectFit = "contain";
+                    }}
                   />
                 ))
               ) : (
-                <img src={project.src} alt="img" loading="lazy" />
+                <img
+                  src={project.src}
+                  alt="img-Blog"
+                  loading="lazy"
+                  onError={(e) => {
+                    e.currentTarget.src = "../img/LoagingState.png";
+                    e.currentTarget.style.objectFit = "contain";
+                  }}
+                />
               )}
             </div>
 

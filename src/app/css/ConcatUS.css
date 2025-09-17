@@ -23,7 +23,7 @@
   font-weight: 100;
   font-size: 1.8rem;
   text-align: justify;
-  width: 70vw !important;
+  width: 100% !important;
 }
 
 .ConcatUS .head .doted::after {
@@ -132,7 +132,7 @@ input.form-control.custom-input:focus {
   border: none !important;
 }
 .react-tel-input .selected-flag {
-  width: 17rem !important;
+  width: 9rem !important;
   border: none !important;
   background: transparent !important;
 }
@@ -150,6 +150,8 @@ input.form-control.custom-input:focus {
 }
 input.form-control.custom-input {
   width: 100% !important;
+  padding: 0.5rem;
+  font-size: 13px;
 }
 textarea.form-control {
   padding: 2rem !important;
@@ -354,7 +356,47 @@ img.hero-star {
   width: 250% !important;
   text-align: left;
 }
-@media (min-width: 768px) {
+
+.custom-toast {
+  position: fixed;
+  top: 17%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 1rem 2rem;
+  border-radius: 12px;
+  font-weight: bold;
+  font-size: 1.1rem;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  z-index: 9999999999999999999999999999999;
+  opacity: 0.95;
+  text-align: center;
+  min-width: 250px;
+  max-width: 90%;
+  transition: all 0.3s ease-in-out;
+}
+
+.custom-toast.success {
+  background: linear-gradient(135deg, #63c268, var(--Color-Primary));
+  color: white;
+  font-size: 1.3rem;
+}
+
+.custom-toast.error {
+  background: linear-gradient(135deg, var(--Color-Secondary), #e57373);
+  color: white;
+  font-size: 1.3rem;
+}
+
+.custom-toast.loading {
+  background: linear-gradient(135deg, #4d4d4d, #888888);
+  color: white;
+  font-size: 1.3rem;
+}
+
+@media (min-width: 1024px) {
+  input.form-control.custom-input {
+    font-size: 15px;
+  }
   .custom-phone-input {
     border: 1px solid var(--Color-Black-Black-50) !important;
     padding: 3px !important;
@@ -402,7 +444,7 @@ img.hero-star {
     width: 88% !important;
   }
   .react-tel-input .country-list {
-    width: 384% !important;
+    width: auto !important;
     text-align: left;
   }
 

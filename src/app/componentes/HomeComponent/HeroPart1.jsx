@@ -58,6 +58,10 @@ export default function HeroPart1() {
               alt="صورة شخص يرتدي كوفية"
               src={data.src}
               loading="eager"
+              onError={(e) => {
+                e.currentTarget.src = "../img/LoagingState.png";
+                e.currentTarget.style.objectFit = "contain";
+              }}
             />
 
             <p className="imgText w-100 text-center text-md-start">

@@ -16,7 +16,7 @@ export default function GrideTeam() {
         const res = await fetch("/api/projects/teams", { cache: "no-store" });
         const json = await res.json();
         if (json.code === 200) {
-          setTeamData(json.data.items); // ملاحظة هنا: نأخذ items من data
+          setTeamData(json.data.items); // نأخذ items من data
         }
       } catch (error) {
         console.error("Failed to fetch team:", error);
@@ -30,16 +30,26 @@ export default function GrideTeam() {
   const Data = teamData.slice(0, 2);
   const RestOfTheTeam = teamData.slice(2);
 
+  // Fallback function for image
+  const getImage = (src) =>
+    src && src.trim() !== "" ? src : "../img/LoagingState.png";
+
+  // onError fallback handler
+  const handleImageError = (e) => {
+    e.target.src = "../img/LoagingState.png";
+  };
+
   // Skeleton Loader
   const SkeletonCard = ({ type }) => (
     <div className={type === "main" ? "col-12 col-md-6" : "col-6 col-md-3"}>
-      <div
-        className="wrapperImge mt-3"
+      <img
+        src={getImage("../img/LoagingState.png")}
+        alt="Loading"
+        onError={handleImageError}
         style={{
-          backgroundColor: "#e0e0e0",
-          height: type === "main" ? "300px" : "150px",
+          height: type === "main" ? "auto" : "auto",
         }}
-      ></div>
+      />
       <div className="information d-flex flex-column justify-content-center align-items-start mt-2">
         <div className="container">
           <h5
@@ -97,10 +107,11 @@ export default function GrideTeam() {
               <div key={item.id} className="col-12 col-md-6">
                 <div className="wrapperImge mt-3">
                   <img
-                    src={item.image}
+                    src={getImage(item.image)}
                     alt={item.name}
                     loading="eager"
-                    className="object-fit-cover  w-100"
+                    className="object-fit-cover w-100"
+                    onError={handleImageError}
                   />
                 </div>
                 <div className="information d-flex flex-column justify-content-center align-items-start">
@@ -161,7 +172,12 @@ export default function GrideTeam() {
                 <div key={item.id} className="col-6 col-md-3">
                   <div className="box mt-5" data-aos="zoom-in">
                     <div className="Wrapp">
-                      <img src={item.image} alt={item.name} loading="lazy" />
+                      <img
+                        src={getImage(item.image)}
+                        alt={item.name}
+                        loading="lazy"
+                        onError={handleImageError}
+                      />
                     </div>
                     <div className="about d-flex flex-column align-items-start">
                       <h5 className="mt-3">{item.name}</h5>

@@ -1,50 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { useState } from "react";
-
-const partners = [
-  {
-    src: "/img/partnersLogo/transport-general-authority-seeklogo 1.svg",
-    link: "https://example.com/1",
-  },
-  {
-    src: "/img/partnersLogo/saudi-inovation-logo .svg",
-    link: "https://example.com/2",
-  },
-  { src: "/img/partnersLogo/image 9.svg", link: "https://example.com/3" },
-  { src: "/img/partnersLogo/image 8.svg", link: "https://example.com/4" },
-  { src: "/img/partnersLogo/image 7.svg", link: "https://example.com/5" },
-  { src: "/img/partnersLogo/image 6.svg", link: "https://example.com/6" },
-  { src: "/img/partnersLogo/image 5.svg", link: "https://example.com/7" },
-  { src: "/img/partnersLogo/image 4.svg", link: "https://example.com/8" },
-  { src: "/img/partnersLogo/image 3.svg", link: "https://example.com/9" },
-  { src: "/img/partnersLogo/image 2.svg", link: "https://example.com/10" },
-  {
-    src: "/img/partnersLogo/GATEKEEPER_LOGO_72 1.svg",
-    link: "https://example.com/11",
-  },
-  { src: "/img/partnersLogo/download.svg", link: "https://example.com/12" },
-  {
-    src: "/img/partnersLogo/Asset 11200 1.svg",
-    link: "https://example.com/13",
-  },
-  {
-    src: "/img/partnersLogo/transport-general-authority-seeklogo 1.svg",
-    link: "https://example.com/1",
-  },
-  {
-    src: "/img/partnersLogo/saudi-inovation-logo .svg",
-    link: "https://example.com/2",
-  },
-  { src: "/img/partnersLogo/image 9.svg", link: "https://example.com/3" },
-  { src: "/img/partnersLogo/image 8.svg", link: "https://example.com/4" },
-  { src: "/img/partnersLogo/image 7.svg", link: "https://example.com/5" },
-  { src: "/img/partnersLogo/image 6.svg", link: "https://example.com/6" },
-  { src: "/img/partnersLogo/image 5.svg", link: "https://example.com/7" },
-  { src: "/img/partnersLogo/image 4.svg", link: "https://example.com/8" },
-  { src: "/img/partnersLogo/image 3.svg", link: "https://example.com/9" },
-];
+import { useEffect, useState } from "react";
 
 const chunkArray = (arr, size) => {
   let result = [];
@@ -54,23 +11,42 @@ const chunkArray = (arr, size) => {
   return result;
 };
 
-const groupedPartners = chunkArray(partners, 11);
-
 export default function PartnerSession() {
+  const [partners, setPartners] = useState([]);
   const [leftBtnSrc, setLeftBtnSrc] = useState("/img/DefultBTN.svg");
   const [rightBtnSrc, setRightBtnSrc] = useState("/img/DefultBTN.svg");
+
+  useEffect(() => {
+    async function fetchPartners() {
+      try {
+        const res = await fetch("/api/projects/partners", {
+          cache: "no-store",
+        });
+
+        if (!res.ok) throw new Error("Failed to fetch partners");
+
+        const result = await res.json();
+        setPartners(result.partners || []);
+      } catch (err) {
+        console.error("Error fetching partners:", err);
+      }
+    }
+
+    fetchPartners();
+  }, []);
+
+  const groupedPartners = chunkArray(partners, 11);
 
   return (
     <div className="Your_partner_in_success position-relative">
       <div className="container mt-80">
         <div
-          className="title m-5 d-flex justify-content-between align-items-center "
+          className="title m-5 d-flex justify-content-between align-items-center"
           data-aos="zoom-in"
         >
           <h3>
             شريكك في <span>النجاح الرقمي</span>
           </h3>
-          {/* ================================== */}
 
           <div className="SucessBtns d-flex justify-content-between align-items-center gap-5 position-absolute">
             <img
@@ -84,9 +60,9 @@ export default function PartnerSession() {
               data-bs-slide="prev"
             />
             <img
-              className="rightBTN carousel-control-next"
               src={rightBtnSrc}
               alt="Next"
+              className="rightBTN carousel-control-next"
               onMouseEnter={() => setRightBtnSrc("/img/HoverBTN.svg")}
               onMouseLeave={() => setRightBtnSrc("/img/DefultBTN.svg")}
               type="button"
@@ -101,43 +77,39 @@ export default function PartnerSession() {
             id="carouselExampleInterval"
             className="carousel slide position-relative"
           >
-            {/* ================================== */}
-
             <div className="carousel-inner">
-              {groupedPartners.map((group, index) => {
-                return (
-                  <div
-                    key={index}
-                    className={`carousel-item ${index === 0 ? "active" : ""}`}
-                  >
-                    <div className="d-flex flex-column align-items-center gap-3">
-                      <div className="Wrapperbox d-flex flex-wrap justify-content-center gap-3">
-                        {group.map((partner, i) => (
-                          <div
-                            key={i}
-                            className="box p-2 d-flex justify-content-center align-items-center"
+              {groupedPartners.map((group, index) => (
+                <div
+                  key={index}
+                  className={`carousel-item ${index === 0 ? "active" : ""}`}
+                >
+                  <div className="d-flex flex-column align-items-center gap-3">
+                    <div className="Wrapperbox d-flex flex-wrap justify-content-center gap-3">
+                      {group.map((partner, i) => (
+                        <div
+                          key={i}
+                          className="box p-2 d-flex justify-content-center align-items-center"
+                        >
+                          <a
+                            href={partner.link}
+                            target="_blank"
+                            rel="noopener noreferrer"
                           >
-                            <a
-                              href={partner.link}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                            >
-                              <Image
-                                src={partner.src}
-                                alt="شعار الشريك"
-                                className="img-fluid"
-                                width={150}
-                                height={150}
-                                loading="lazy"
-                              />
-                            </a>
-                          </div>
-                        ))}
-                      </div>
+                            <Image
+                              src={partner.src}
+                              alt="شعار الشريك"
+                              className="img-fluid"
+                              width={150}
+                              height={150}
+                              loading="lazy"
+                            />
+                          </a>
+                        </div>
+                      ))}
                     </div>
                   </div>
-                );
-              })}
+                </div>
+              ))}
             </div>
           </div>
         </div>

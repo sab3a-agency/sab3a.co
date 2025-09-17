@@ -46,7 +46,7 @@ export default function OureTeam() {
       <HeroTeamSection />
       <OurJourney />
       <Section2 />
-      <SecondSeation OurPhilosophy={OurPhilosophy} />
+      <SecondSeation projectData={OurPhilosophy} />
       <LetsDoit data={LetsDitedata} />
 
 

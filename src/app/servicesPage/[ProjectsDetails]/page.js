@@ -8,6 +8,7 @@ import Hero from "@/app/componentes/ProjectsDetailsComp/hero";
 import ImgesSection from "@/app/componentes/ProjectsDetailsComp/ImgesSection";
 import SecondSeation from "@/app/componentes/ProjectsDetailsComp/SecondSections";
 import SimilarWorks from "@/app/componentes/ProjectsDetailsComp/Similar works";
+import Erorr from "@/app/componentes/Erorr";
 
 export default function ProjectsDitales() {
   const param = useParams();
@@ -39,9 +40,8 @@ export default function ProjectsDitales() {
 
   if (loading) {
     return (
-      <div className="spinner-container">
-        <div className="spinner"></div>
-      </div>);
+      <Erorr />
+    )
   }
 
   if (error) {

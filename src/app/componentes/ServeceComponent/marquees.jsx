@@ -51,14 +51,11 @@ export function PartnersMarquee() {
       </marquee>
 
       <div
-        className="PartnersMarquee_sm row mt-5 justify-content-center"
+        className="PartnersMarquee_sm row mt-5 d-flex justify-content-center"
         data-aos="zoom-in"
       >
         {partners.map((partner) => (
-          <div
-            key={partner.id}
-            className="col-4 d-flex justify-content-center mb-3"
-          >
+          <div key={partner.id} className="col-4 col-xl-2  mb-3">
             <a href={partner.link} target="_blank" rel="noopener noreferrer">
               <div className="outerImgWrrap d-flex align-items-center justify-content-center">
                 <img

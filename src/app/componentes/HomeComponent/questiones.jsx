@@ -2,6 +2,7 @@
 import { useEffect, useState } from "react";
 import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { useRouter } from "next/navigation"; // ✅ Next.js router
 
 export default function Questiones() {
   const [faqData, setFaqData] = useState({
@@ -19,7 +20,7 @@ export default function Questiones() {
   });
 
   const [loading, setLoading] = useState(true);
-
+  const navigate = useRouter();
   useEffect(() => {
     const fetchFaqs = async () => {
       try {
@@ -149,7 +150,13 @@ export default function Questiones() {
                       {link.text} <FontAwesomeIcon icon={link.icon} />
                     </button>
                   ) : (
-                    <a key={index} href={link.href}>
+                    <a
+                      style={{ cursor: "pointer" }}
+                      key={index}
+                      onClick={() => {
+                        navigate.push("/ConcatUS");
+                      }}
+                    >
                       {link.text}
                     </a>
                   )

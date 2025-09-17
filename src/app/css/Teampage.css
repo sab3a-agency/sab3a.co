@@ -198,3 +198,16 @@
     font-weight: 900;
   }
 }
+@media (min-width: 768px) and (max-width: 1024px) {
+  .JourneyPoints .heading h3 {
+    font-size: 2rem;
+    text-align: start;
+  }
+  .JourneyPoints .heading p {
+    text-align: justify;
+    font-size: 1.3rem;
+    font-weight: 100;
+    line-height: 2rem;
+    width: 100% !important;
+  }
+}

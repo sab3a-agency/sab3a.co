@@ -62,7 +62,7 @@ export default function FirstSection() {
           className="imgWrapper skeleton-loader image"
           style={{ height: 400 }}
         >
-          {/* The img tag itself is replaced by the skeleton placeholder */}
+          <img src="../img/LoagingState.png" alt="LoagingState" />
         </div>
         <div className="infoWrapper d-flex flex-column justify-content-center align-items-center container">
           <p className="mt-5 text-center text-md-end container">
@@ -86,7 +86,11 @@ export default function FirstSection() {
   }
 
   if (error) {
-    return <p>حدث خطأ: {error} </p>;
+    return (
+      <div className="eror">
+        <img src="../" alt="" />
+      </div>
+    );
   }
 
   if (!projectData) {
@@ -100,7 +104,15 @@ export default function FirstSection() {
           <p className="mb-5">{projectData.description}</p>
         </div>
         <div className="imgWrapper">
-          <img src={projectData.cover_image} alt="img" loading="lazy" />
+          <img
+            src={projectData.cover_image}
+            alt="img"
+            loading="lazy"
+            onError={(e) => {
+              e.currentTarget.src = "../img/LoagingState.png";
+              e.currentTarget.style.objectFit = "contain";
+            }}
+          />
         </div>
         <div className="infoWrapper d-flex flex-column justify-content-center align-items-center container">
           <p className="mt-5 text-center text-md-end container">

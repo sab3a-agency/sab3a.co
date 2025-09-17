@@ -651,6 +651,7 @@ img.w-50 {
 .Your_partner_in_success img {
   width: 18rem;
   height: 4rem;
+  object-fit: contain;
 }
 
 .Your_partner_in_success .imgwrap {
@@ -1429,6 +1430,9 @@ marquee {
   /* background: aquamarine; */
   border-radius: 2rem;
   border: 1px solid rgba(236, 236, 236, 1);
+  display: flex;
+  justify-content: space-around;
+  align-items: stretch;
 }
 
 .wapperBox .Box {
@@ -1538,35 +1542,45 @@ section.HeroContent {
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 100vw;
   height: 100vh;
 }
 
-.spinner {
-  width: 50px;
-  height: 50px;
-  border: 5px solid #f3f3f3;
-  border-top-color: #000000;
-  border-radius: 50%;
-  animation: spin 1s linear infinite;
+.Loading {
+  object-fit: cover;
 }
 
-@keyframes spin {
+/* @keyframes spin {
   0% {
     transform: rotate(0deg);
   }
   100% {
     transform: rotate(360deg);
   }
-}
+} */
+
 .skeleton-loader {
-  background-color: #e0e0e0; /* A light grey color */
-  border-radius: 4px; /* Optional: adds rounded corners */
-  animation: pulse 1.5s infinite ease-in-out; /* The pulsing animation */
+  background-color: #a6a6a6;
+  /*Alightgreycolor*/
+  border-radius: 4px;
+  /*Optional:;
+  addsroundedcorners*/
+  animation: pulse 1.5s infinite ease-in-out;
+  /*Thepulsinganimation*/
   width: 100%;
+  -webkit-animation: pulse 1.5s infinite ease-in-out;
 }
 
-.skeleton-loader.image {
+.skeleton-loader.image img {
   /* Specific styling for image placeholders */
+  width: 50%;
+  height: 50%;
+  margin: auto 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  object-fit: contain;
+  background: #a6a6a6;
 }
 
 @keyframes pulse {
@@ -2265,7 +2279,7 @@ section.HeroContent {
     }
     .Hero .head h1 {
       width: 60% !important;
-      font-size: 6rem;
+      font-size: 5rem;
     }
     .adv h2 {
       justify-content: center;

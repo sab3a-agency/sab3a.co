@@ -28,6 +28,10 @@ export default function ImgesSection({ images }) {
                 src={imgSrc}
                 alt="adv_img"
                 className="advimg"
+                onError={(e) => {
+                  e.currentTarget.src = "../img/LoagingState.png";
+                  e.currentTarget.style.objectFit = "contain";
+                }}
               />
             </div>
           ))

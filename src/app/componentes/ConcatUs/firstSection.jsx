@@ -17,7 +17,7 @@ const getCountryName = (countryCode) => {
 export default function FirstSiction() {
   const [phoneValue, setPhone] = useState("");
   const [country, setCountry] = useState("US");
-
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const data = {
     small: "اتصل",
     title: "نود أن نسمع منك",
@@ -60,19 +60,72 @@ export default function FirstSiction() {
     setValue((prev) => ({ ...prev, phone: phoneValue }));
   };
 
-  const handleSubmit = (e) => {
+  const [notification, setNotification] = useState({
+    message: "",
+    type: "", // "success", "error", "loading"
+    visible: false,
+  });
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    alert(
-      `
-      TestingFormSendData ..
-      
-    Hello :: 
-     Your Name :: ${value.name} ${value.family} ,
-     Your Email :: ${value.email} ,
-     your PhoneNumber :: ${value.phone} ,
-     your Massage :: ${value.message} ,
-     your Accept :: ${value.Accept} `
-    );
+    setIsSubmitting(true);
+    setNotification({
+      message: "جاري الإرسال ...",
+      type: "loading",
+      visible: true,
+    });
+
+    const payload = {
+      name: `${value.name} ${value.family}`,
+      email: value.email,
+      phone: phoneValue,
+      message: value.message,
+      agree_to_policy: value.Accept,
+    };
+
+    try {
+      const res = await fetch("/api/projects/Contact_US", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
+      });
+
+      const data = await res.json();
+
+      if (!res.ok || data.code !== 200) {
+        throw new Error(data.message || "فشل إرسال البيانات");
+      }
+
+      setValue({
+        name: "",
+        family: "",
+        email: "",
+        phone: "",
+        message: "",
+        Accept: false,
+      });
+      setPhone("");
+      setCountry("US");
+
+      setNotification({
+        message: "تم إرسال الرسالة بنجاح! 🎉",
+        type: "success",
+        visible: true,
+      });
+    } catch (error) {
+      console.error(error);
+      setNotification({
+        message: "حدث خطأ، يرجى المحاولة مرة أخرى",
+        type: "error",
+        visible: true,
+      });
+    } finally {
+      setIsSubmitting(false);
+      setTimeout(
+        () => setNotification((prev) => ({ ...prev, visible: false })),
+        3000
+      );
+    }
   };
 
   return (
@@ -210,10 +263,18 @@ export default function FirstSiction() {
                     </label>
                   </div>
 
-                  <button className="btn btn-success p-3">إرسال الرسالة</button>
+                  <button className="btn btn-success p-3">
+                    {" "}
+                    {isSubmitting ? "جاري الإرسال..." : "إرسال الرسالة"}
+                  </button>
                 </div>
               </div>
             </form>
+            {notification.visible && (
+              <div className={`custom-toast ${notification.type}`}>
+                {notification.message}
+              </div>
+            )}
           </div>
         </div>
       </div>

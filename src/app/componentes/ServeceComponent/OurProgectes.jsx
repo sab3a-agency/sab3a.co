@@ -1,7 +1,6 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import Image from "next/image";
 import Link from "next/link";
 import SkeletonBox from "../SkeletonBox";
 
@@ -11,28 +10,30 @@ export default function OurProgectes({ Data }) {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    if (Data && Array.isArray(Data) && Data.length > 0) {
-      setProjects(Data.slice(0, 2));
+    if (Data && Array.isArray(Data) && Data.length === 2) {
+      setProjects(Data);
       setLoading(false);
       return;
     }
 
-    fetch("/api/projects")
-      .then((res) => {
+    async function fetchProjects() {
+      try {
+        const res = await fetch("/api/projects");
         if (!res.ok) throw new Error("Network response was not ok");
-        return res.json();
-      })
-      .then((data) => {
+        const data = await res.json();
+
         setProjects(data.data.items);
-      })
-      .catch((err) => {
+      } catch (err) {
         setError(err.message);
-      })
-      .finally(() => setLoading(false));
+      } finally {
+        setLoading(false);
+      }
+    }
+
+    fetchProjects();
   }, [Data]);
 
   if (loading) {
-    const skeletonCount = Data && Data.length > 0 ? 2 : 6;
     return (
       <div
         className="projectsWrapper mt-5"
@@ -40,7 +41,7 @@ export default function OurProgectes({ Data }) {
         data-aos-duration="1000"
       >
         <div className="row justify-content-between flex-wrap-wrap">
-          {[...Array(skeletonCount)].map((_, i) => (
+          {[...Array(2)].map((_, i) => (
             <SkeletonBox key={i} />
           ))}
         </div>
@@ -57,29 +58,32 @@ export default function OurProgectes({ Data }) {
       data-aos-duration="1000"
     >
       <div className="row justify-content-between flex-wrap-wrap">
-        {projects.length > 0 &&
-          projects.map((project) => (
-            <div key={project.id} className="box col-12 col-md-6">
-              <Link
-                href={`/servicesPage/${project.id}`}
-                className="imgWrapper"
-                style={{ cursor: "pointer" }}
-              >
-                <img
-                  src={project.cover_image?.replace(/\\/g, "/")}
-                  alt={project.title}
-                  loading="eager"
-                />
-              </Link>
-              <div className="info mt-2 p-3">
-                <h2 className="mb-4">{project.title}</h2>
-                <p className="my-3">{project.sub_title}</p>
-              </div>
-              <div className="anchors d-flex gap-3 container">
-                <a href="#">{project.category}</a>
-              </div>
+        {projects.map((project) => (
+          <div key={project.id} className="box col-12 col-md-6">
+            <Link
+              href={`/servicesPage/${project.id}`}
+              className="imgWrapper"
+              style={{ cursor: "pointer" }}
+            >
+              <img
+                src={project.cover_image?.replace(/\\/g, "/")}
+                alt={project.title}
+                loading="eager"
+                onError={(e) => {
+                  e.currentTarget.src = "../img/LoagingState.png";
+                  e.currentTarget.style.objectFit = "contain";
+                }}
+              />
+            </Link>
+            <div className="info mt-2 p-3">
+              <h2 className="mb-4">{project.title}</h2>
+              <p className="my-3">{project.sub_title}</p>
             </div>
-          ))}
+            <div className="anchors d-flex gap-3 container">
+              <a href="#">{project.category}</a>
+            </div>
+          </div>
+        ))}
       </div>
     </div>
   );
