@@ -152,7 +152,14 @@ export default function JourneyPoints() {
               <div className="box">
                 <div className="detals d-flex flex-column justify-content-center align-items-center">
                   <div className="d-flex gap-5">
-                    <img src={item.src} alt="icon" />
+                    <img
+                      src={item.src}
+                      alt="icon"
+                      onError={(e) => {
+                        e.currentTarget.src = "../img/LoagingState.png";
+                        e.currentTarget.style.objectFit = "contain";
+                      }}
+                    />
                     <h3
                       ref={(el) => (countersRef.current[index] = el)}
                       className="counter"

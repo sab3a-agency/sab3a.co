@@ -29,10 +29,18 @@ export default function HeroTeamSection() {
           </h1>
           <Link
             href="/ConcatUS"
-            className="d-flex align-items-center gap-4 text-decoration-none  justify-content-center"
+            className="d-flex align-items-center gap-4 text-decoration-none  justify-content-center w-md-100"
             data-aos="fade-up-right"
           >
-            <img id="arrow" src="../img/ServicePage/arrow.svg" alt="arrow" />
+            <img
+              id="arrow"
+              src="../img/ServicePage/arrow.svg"
+              alt="arrow"
+              onError={(e) => {
+                e.currentTarget.src = "../img/LoagingState.png";
+                e.currentTarget.style.objectFit = "contain";
+              }}
+            />
             <h4>{Data.btnContent}</h4>
           </Link>
         </div>

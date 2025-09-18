@@ -24,7 +24,15 @@ export default function LetsDoit({ data }) {
               href="/ConcatUS"
               className="d-flex align-items-center gap-4 text-decoration-none  justify-content-center"
             >
-              <img id="arrow" src="../img/ServicePage/arrow.svg" alt="arrow" />
+              <img
+                id="arrow"
+                src="../img/ServicePage/arrow.svg"
+                alt="arrow"
+                onError={(e) => {
+                  e.currentTarget.src = "../img/LoagingState.png";
+                  e.currentTarget.style.objectFit = "contain";
+                }}
+              />
               <h4>{data.letsDoit}</h4>
             </Link>
           </div>

@@ -4,8 +4,6 @@ import ArticalGrid from "./ArticalGrid";
 import SkeletonBox from "../SkeletonBox";
 
 export default function OtherArticals({ data }) {
-  // إذا وصلت بيانات عبر البروبس → نمررها مباشرة
-  // خلاف ذلك → سيقوم ArticalGrid بجلبها من الـ API
   return (
     <section className="SimilarArticals mt-5">
       <div className="container">
@@ -21,7 +19,6 @@ export default function OtherArticals({ data }) {
           </div>
         </div>
 
-        {/* مرر بيانات البروبس إذا وجدت، أو سيجلبها ArticalGrid */}
         <ArticalGrid data={data} />
       </div>
     </section>

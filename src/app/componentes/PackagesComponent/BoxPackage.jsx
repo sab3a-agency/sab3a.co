@@ -41,7 +41,7 @@ export function BoxPackage() {
   return (
     <section className="boxPackages mt-5 ">
       <div className="container">
-        <div className="WrapperBoxOuter d-flex flex-column justify-content-center align-items-center gap-5">
+        <div className="WrapperBoxOuter d-flex-column  d-md-flex d-xl-flex justify-content-center align-items-center gap-5">
           {Data.map((outeritem, index) => {
             return (
               <div
@@ -52,7 +52,14 @@ export function BoxPackage() {
               >
                 <div className="container">
                   <small>
-                    <img src={outeritem.ouetricon} alt="Icon" />
+                    <img
+                      src={outeritem.ouetricon}
+                      alt="Icon"
+                      onError={(e) => {
+                        e.currentTarget.src = "../img/LoagingState.png";
+                        e.currentTarget.style.objectFit = "contain";
+                      }}
+                    />
                   </small>
                   <h4 className="mt-4">{outeritem.h4}</h4>
                   <h2>{outeritem.h2}</h2>
@@ -64,7 +71,14 @@ export function BoxPackage() {
                           key={index}
                           className="innerfeatures d-flex justify-content-center align-items-center gap-3 my-3"
                         >
-                          <img src={outeritem.Innericon} alt="check" />
+                          <img
+                            src={outeritem.Innericon}
+                            alt="check"
+                            onError={(e) => {
+                              e.currentTarget.src = "../img/LoagingState.png";
+                              e.currentTarget.style.objectFit = "contain";
+                            }}
+                          />
                           <p key={index} className="inner_P_Tag mb-0">
                             {item}
                           </p>

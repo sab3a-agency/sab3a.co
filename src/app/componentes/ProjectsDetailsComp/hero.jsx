@@ -115,7 +115,14 @@ export default function Hero() {
                   className="arrow"
                   style={{ cursor: "pointer" }}
                 >
-                  <img src="/img/ProjectsDetails/Icon.svg" alt="arrow" />
+                  <img
+                    src="/img/ProjectsDetails/Icon.svg"
+                    alt="arrow"
+                    onError={(e) => {
+                      e.currentTarget.src = "../img/LoagingState.png";
+                      e.currentTarget.style.objectFit = "contain";
+                    }}
+                  />
                 </a>
                 <h1 className="d-flex flex-column align-items-start text-end">
                   {projectData.title || "عنوان افتراضي"}

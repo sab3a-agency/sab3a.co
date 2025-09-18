@@ -45,6 +45,10 @@ export function PartnersMarquee() {
               src={partner.src}
               alt="partner logo"
               className="partner h-16 object-fit-cover"
+              onError={(e) => {
+                e.currentTarget.src = "../img/LoagingState.png";
+                e.currentTarget.style.objectFit = "contain";
+              }}
             />
           </a>
         ))}
@@ -63,6 +67,10 @@ export function PartnersMarquee() {
                   alt="partner_logo"
                   className="partner_logo object-fit-contain"
                   style={{ height: "60px", width: "auto" }}
+                  onError={(e) => {
+                    e.currentTarget.src = "../img/LoagingState.png";
+                    e.currentTarget.style.objectFit = "contain";
+                  }}
                 />
               </div>
             </a>

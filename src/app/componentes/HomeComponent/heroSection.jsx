@@ -16,7 +16,15 @@ export default function Herosection() {
         <div className="lastPart row  mt-90">
           <div className="container">
             <div className="imgWrapper" data-aos="fade-up">
-              <img src={data.src} loading="lazy" alt="meeting" />
+              <img
+                src={data.src}
+                loading="lazy"
+                alt="meeting"
+                onError={(e) => {
+                  e.currentTarget.src = "../img/LoagingState.png";
+                  e.currentTarget.style.objectFit = "contain";
+                }}
+              />
             </div>
           </div>
         </div>
@@ -38,7 +46,14 @@ export default function Herosection() {
                     key={index}
                     className="sliderImg d-flex justify-content-center align-items-center gap-5 px-3"
                   >
-                    <img src={data.innerSrc} alt="Star" />
+                    <img
+                      src={data.innerSrc}
+                      alt="Star"
+                      onError={(e) => {
+                        e.currentTarget.src = "../img/LoagingState.png";
+                        e.currentTarget.style.objectFit = "contain";
+                      }}
+                    />
                     <small>{title}</small>
                   </div>
                 );

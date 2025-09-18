@@ -1,14 +1,14 @@
-"use client"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+"use client";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faSquareFacebook,
   faInstagram,
   faLinkedin,
   faTiktok,
-  faYoutube
-} from "@fortawesome/free-brands-svg-icons"
+  faYoutube,
+} from "@fortawesome/free-brands-svg-icons";
 // import { text } from "@fortawesome/fontawesome-svg-core";
-import Link from "next/link"
+import Link from "next/link";
 
 const footerData = {
   socialLinks: [
@@ -16,14 +16,14 @@ const footerData = {
     { icon: faInstagram, link: "#" },
     { icon: faLinkedin, link: "#" },
     { icon: faTiktok, link: "#" },
-    { icon: faYoutube, link: "#" }
+    { icon: faYoutube, link: "#" },
   ],
   quickLinks: [
     { text: "الرئيسية", paht: "/" },
     { text: "خدماتنا", paht: "/servicesPage" },
     { text: "الباقات", paht: "/OurePackagesPage" },
     { text: "فريقنا", paht: "/OurTeamPage" },
-    { text: "المدونة", paht: "/BlogPage" }
+    { text: "المدونة", paht: "/BlogPage" },
   ],
 
   fields: [
@@ -31,30 +31,30 @@ const footerData = {
     "تصميم تجربة المستخدم",
     "تطوير التطبيقات والمواقع",
     "الفن الرقمي",
-    "التسويق الرقمي"
+    "التسويق الرقمي",
   ],
   contacts: [
     {
       icon: "../img/phone.svg",
       title: "هاتف",
       value: "+968 7849 5068",
-      link: "tel:+96878495068"
+      link: "tel:+96878495068",
     },
     {
       icon: "../img/Massge.svg",
       title: "البريد الإلكتروني",
       value: "sab3a.agency@gmail.com",
-      link: "mailto:sab3a.agency@gmail.com"
-    }
+      link: "mailto:sab3a.agency@gmail.com",
+    },
   ],
   infoItems: [
     { icon: "../img/location.svg", text: "نعمل عن بعد من عُمان ومصر" },
     {
       icon: "../img/clock.svg",
-      text: "من الأحد إلى الخميس، 9:30 صباحًا - 5:30 مساءً"
-    }
-  ]
-}
+      text: "من الأحد إلى الخميس، 9:30 صباحًا - 5:30 مساءً",
+    },
+  ],
+};
 
 export default function Footer() {
   return (
@@ -65,7 +65,14 @@ export default function Footer() {
           <div className="containerrWrap">
             <div className="logo text-justify d-flex">
               <a href="#">
-                <img src="/img/IconSite.svg" alt="Logo" />
+                <img
+                  src="/img/IconSite.svg"
+                  alt="Logo"
+                  onError={(e) => {
+                    e.currentTarget.src = "../img/LoagingState.png";
+                    e.currentTarget.style.objectFit = "contain";
+                  }}
+                />
               </a>
             </div>
 
@@ -83,7 +90,14 @@ export default function Footer() {
                       key={index}
                       className="part d-flex   align-items-center justify-content-center gap-1"
                     >
-                      <img src={item.icon} alt="" />
+                      <img
+                        src={item.icon}
+                        alt="icon"
+                        onError={(e) => {
+                          e.currentTarget.src = "../img/LoagingState.png";
+                          e.currentTarget.style.objectFit = "contain";
+                        }}
+                      />
                       <p>{item.text}</p>
                     </div>
                   ))}
@@ -118,7 +132,14 @@ export default function Footer() {
                     className="part d-flex flex-column justify-content-start align-items-start"
                   >
                     <div className="info">
-                      <img src={contact.icon} alt={contact.title} />
+                      <img
+                        src={contact.icon}
+                        alt={contact.title}
+                        onError={(e) => {
+                          e.currentTarget.src = "../img/LoagingState.png";
+                          e.currentTarget.style.objectFit = "contain";
+                        }}
+                      />
                       <h2>{contact.title}</h2>
                     </div>
                     <a href={contact.link}>{contact.value}</a>
@@ -127,7 +148,14 @@ export default function Footer() {
               </div>
             </div>
             <div className="sabaShadow">
-              <img src="/img/Sab3a.svg" alt="img" />
+              <img
+                src="/img/Sab3a.svg"
+                alt="img"
+                onError={(e) => {
+                  e.currentTarget.src = "../img/LoagingState.png";
+                  e.currentTarget.style.objectFit = "contain";
+                }}
+              />
             </div>
             <hr />
             <div className="FooterBottom mt-4 d-flex justify-content-between flex-warp">
@@ -156,5 +184,5 @@ export default function Footer() {
         </div>
       </footer>
     </>
-  )
+  );
 }

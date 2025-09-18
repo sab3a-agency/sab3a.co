@@ -6,7 +6,15 @@ export default function SecondSection() {
 
   return (
     <section className="SecondSection position-relative mt-50">
-      <img src="/img/ConcatUS/Star.svg" alt="star" className="hero-star" />
+      <img
+        src="/img/ConcatUS/Star.svg"
+        alt="star"
+        className="hero-star"
+        onError={(e) => {
+          e.currentTarget.src = "../img/LoagingState.png";
+          e.currentTarget.style.objectFit = "contain";
+        }}
+      />
       <div className="container">
         <div className="d-flex flex-column justify-content-between align-items-start w-100">
           <div className="head d-flex flex-column align-items-start">
@@ -29,6 +37,10 @@ export default function SecondSection() {
             <img
               alt="arrow"
               src={isHovered ? "/img/Icon2.svg" : "/img/Icon1.svg"}
+              onError={(e) => {
+                e.currentTarget.src = "../img/LoagingState.png";
+                e.currentTarget.style.objectFit = "contain";
+              }}
               style={{ width: "5rem !important", height: "5rem !important" }}
             />
           </button>

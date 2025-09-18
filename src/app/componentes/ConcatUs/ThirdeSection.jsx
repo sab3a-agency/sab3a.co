@@ -17,6 +17,10 @@ export default function ThirdeSection() {
                   src="/img/ConcatUS/Huge-icon.png"
                   alt="dimon"
                   className="dimon"
+                  onError={(e) => {
+                    e.currentTarget.src = "../img/LoagingState.png";
+                    e.currentTarget.style.objectFit = "contain";
+                  }}
                 />
               </div>
               <p className="my-4">
@@ -35,8 +39,20 @@ export default function ThirdeSection() {
         id="Wow-Emoje"
         src="/img/ConcatUS/Wow-Emoje.svg"
         alt="Wow-Emoje.svg"
+        onError={(e) => {
+          e.currentTarget.src = "../img/LoagingState.png";
+          e.currentTarget.style.objectFit = "contain";
+        }}
       />
-      <img src="/img/ConcatUS/Star.svg" lt="dimon" className="star" />
+      <img
+        src="/img/ConcatUS/Star.svg"
+        lt="dimon"
+        className="star"
+        onError={(e) => {
+          e.currentTarget.src = "../img/LoagingState.png";
+          e.currentTarget.style.objectFit = "contain";
+        }}
+      />
     </section>
   );
 }

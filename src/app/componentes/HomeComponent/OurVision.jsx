@@ -95,7 +95,6 @@ export default function OurVision() {
 
     numbersRef.current.forEach((numberEl) => numberObserver.observe(numberEl));
 
-    // ✅ Initialize Bootstrap tooltips dynamically (to fix document is not defined)
     import("bootstrap/dist/js/bootstrap.esm.min.js").then(({ Tooltip }) => {
       const tooltipTriggerList = document.querySelectorAll(
         '[data-bs-toggle="tooltip"]'
@@ -128,8 +127,8 @@ export default function OurVision() {
             className="boxWrapper d-flex flex-column align-items-center text-center"
             data-aos="zoom-in"
           >
-            <div className="boxWrap d-flex justify-content-center gap-4">
-              <div className="box d-flex flex-column justify-content-center align-items-center">
+            <div className="boxWrap d-flex-row  flex-md-row d-xl-flex justify-content-center gap-4 w-100">
+              <div className="box d-flex flex-column justify-content-center align-items-center flex-grow-1">
                 <span
                   ref={(el) => (numbersRef.current[0] = el)}
                   className="number"
@@ -141,7 +140,7 @@ export default function OurVision() {
                 <p>{OurVisionData.box1.innerdescrption}</p>
               </div>
 
-              <div className="box d-flex flex-column justify-content-center align-items-center box2">
+              <div className="box d-flex flex-column justify-content-center align-items-center box2 flex-grow-1">
                 <span
                   ref={(el) => (numbersRef.current[1] = el)}
                   className="number stragety"
@@ -157,7 +156,15 @@ export default function OurVision() {
             <div className="divWitherProgress row d-flex flex-column gap-1">
               <div className="outerWrapper col-12 col-md-6">
                 <div className="boxImg">
-                  <img src="../img/Meating.jpeg" alt="img" loading="lazy" />
+                  <img
+                    src="../img/Meating.jpeg"
+                    alt="img"
+                    loading="lazy"
+                    onError={(e) => {
+                      e.currentTarget.src = "../img/LoagingState.png";
+                      e.currentTarget.style.objectFit = "contain";
+                    }}
+                  />
                 </div>
               </div>
 
@@ -185,7 +192,15 @@ export default function OurVision() {
                       <span>20%</span>
                       <span>+</span>
                     </div>
-                    <img src="../img/shape.svg" alt="Shape" loading="lazy" />
+                    <img
+                      src="../img/shape.svg"
+                      alt="Shape"
+                      loading="lazy"
+                      onError={(e) => {
+                        e.currentTarget.src = "../img/LoagingState.png";
+                        e.currentTarget.style.objectFit = "contain";
+                      }}
+                    />
                   </div>
                 </div>
               </div>

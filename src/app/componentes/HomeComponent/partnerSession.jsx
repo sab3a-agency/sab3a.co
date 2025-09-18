@@ -58,6 +58,10 @@ export default function PartnerSession() {
               type="button"
               data-bs-target="#carouselExampleInterval"
               data-bs-slide="prev"
+              onError={(e) => {
+                e.currentTarget.src = "../img/LoagingState.png";
+                e.currentTarget.style.objectFit = "contain";
+              }}
             />
             <img
               src={rightBtnSrc}
@@ -68,6 +72,10 @@ export default function PartnerSession() {
               type="button"
               data-bs-target="#carouselExampleInterval"
               data-bs-slide="next"
+              onError={(e) => {
+                e.currentTarget.src = "../img/LoagingState.png";
+                e.currentTarget.style.objectFit = "contain";
+              }}
             />
           </div>
         </div>

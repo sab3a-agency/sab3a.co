@@ -1,4 +1,5 @@
 "use client"
+import { useEffect, useState } from "react"
 import ActWithTeam from "../componentes/HomeComponent/ActWithTeam"
 import HeroPart1 from "../componentes/HomeComponent/HeroPart1"
 import Herosection from "../componentes/HomeComponent/heroSection"
@@ -13,6 +14,7 @@ import WhyChooseUs from "../componentes/HomeComponent/whyChooseUs"
 
 
 export function HomePage() {
+
   return (
     <>
       <div className="HeaderWithHeroSition"> </div>

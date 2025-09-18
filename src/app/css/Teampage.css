@@ -210,4 +210,12 @@
     line-height: 2rem;
     width: 100% !important;
   }
+  .icones p {
+    text-align: start;
+    width: 100%;
+    line-height: 3rem;
+  }
+  .box .about span {
+    text-align: start;
+  }
 }

@@ -56,7 +56,14 @@ export default function Header() {
     <nav className="navbar navbar-expand-lg bg-body-tertiary p-3 d-flex justify-content-center align-items-baseline mt-2  ">
       <div className="container">
         <Link className="navbar-brand" href="/" onClick={closeNavbar}>
-          <img src="/img/IconSite.svg" alt="img" />
+          <img
+            src="/img/IconSite.svg"
+            alt="img"
+            onError={(e) => {
+              e.currentTarget.src = "../img/LoagingState.png";
+              e.currentTarget.style.objectFit = "contain";
+            }}
+          />
         </Link>
         <button
           className="navbar-toggler"

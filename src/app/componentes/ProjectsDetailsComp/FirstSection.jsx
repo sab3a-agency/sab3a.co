@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { useParams } from "next/navigation";
+import Erorr from "../Erorr";
 
 const data = {
   intro: `
@@ -62,7 +63,14 @@ export default function FirstSection() {
           className="imgWrapper skeleton-loader image"
           style={{ height: 400 }}
         >
-          <img src="../img/LoagingState.png" alt="LoagingState" />
+          <img
+            src="../img/LoagingState.png"
+            alt="LoagingState"
+            onError={(e) => {
+              e.currentTarget.src = "../img/LoagingState.png";
+              e.currentTarget.style.objectFit = "contain";
+            }}
+          />
         </div>
         <div className="infoWrapper d-flex flex-column justify-content-center align-items-center container">
           <p className="mt-5 text-center text-md-end container">
@@ -88,13 +96,20 @@ export default function FirstSection() {
   if (error) {
     return (
       <div className="eror">
-        <img src="../" alt="" />
+        <img
+          src="../"
+          alt=""
+          onError={(e) => {
+            e.currentTarget.src = "../img/LoagingState.png";
+            e.currentTarget.style.objectFit = "contain";
+          }}
+        />
       </div>
     );
   }
 
   if (!projectData) {
-    return <p>لم يتم العثور على المشروع. 🔍</p>;
+    return <Erorr />;
   }
 
   return (

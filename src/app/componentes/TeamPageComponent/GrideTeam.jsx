@@ -37,6 +37,7 @@ export default function GrideTeam() {
   // onError fallback handler
   const handleImageError = (e) => {
     e.target.src = "../img/LoagingState.png";
+    e.currentTarget.style.objectFit = "contain";
   };
 
   // Skeleton Loader

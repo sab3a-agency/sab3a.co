@@ -52,12 +52,11 @@ a:focus {
   background-size: cover;
   background-position: center;
   margin-bottom: -87px;
-
   position: absolute;
   top: 0rem;
-  height: 100rem;
+  height: 110rem !important;
   width: 100% !important;
-  max-height: 120rem !important;
+  /* max-height: 120rem !important; */
   z-index: -100000;
 }
 .navbar-toggler-icon {
@@ -357,11 +356,16 @@ img.w-50 {
 
 .infoServers .Wrappericon {
   background: var(--Color-Primary-Primary-50);
-  padding: 1rem;
+  padding: 0rem;
   width: 6rem;
   border-radius: 20rem;
-  height: 6rem;
-  margin-left: 2rem;
+  height: auto;
+  margin-left: 0.8rem;
+}
+.infoServers .Wrappericon img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: contain !important;
 }
 
 .infoServers .info {
@@ -450,11 +454,11 @@ img.w-50 {
   margin-bottom: 2rem;
   border: 1px solid var(--Color-Black-Black-50);
   width: 31rem;
-  height: 22rem;
+  height: 100%;
 }
 
 .ContenerWrapper h2 {
-  font-size: 3rem;
+  font-size: 2rem;
   font-weight: 700;
   color: var(--Color-Primary);
 }
@@ -464,7 +468,7 @@ img.w-50 {
 }
 .ContenerWrapper p {
   text-align: center !important;
-  font-size: 1.6rem !important;
+  font-size: 1.3rem !important;
   font-weight: 100;
 }
 
@@ -1518,9 +1522,6 @@ section.HeroContent {
   max-width: 100%;
 }
 
-.HeaderWithHeroSition {
-  width: 99% !important;
-}
 .RunningLikePost {
   width: 100% !important;
   padding: 0 0 0 0 !important;
@@ -1619,6 +1620,9 @@ section.HeroContent {
   }
 }
 
+.TowBoxes {
+  margin: 5rem 0rem;
+}
 /* ----------------------------- */
 /* Responsive  */
 
@@ -1639,9 +1643,25 @@ section.HeroContent {
   }
 } */
 
-/* mobile  */
-/* mobile  */
-@media (min-width: 768px) {
+@media (min-width: 992px) {
+  .HeaderWithHeroSition {
+    height: 125rem !important;
+  }
+  .HowWeAre .row .col-md-6 {
+    width: 48% !important;
+  }
+  .innerFooterContent {
+    flex-direction: row !important;
+  }
+  .FooterBottom.mt-4.d-flex.justify-content-between {
+    flex-direction: row;
+  }
+  .infoServers .info p {
+    width: 100% !important;
+    font-size: 1.5rem !important;
+    font-weight: 400 !important;
+  }
+
   html {
     font-size: 10px;
   }
@@ -1658,9 +1678,9 @@ section.HeroContent {
     width: 100% !important;
   }
   .imgText {
-    width: 48% !important;
+    width: 100% !important;
     top: 8px;
-    font-size: 14px !important;
+    font-size: 12px !important;
   }
 
   /* .Part1 .imgWrapper {
@@ -1668,10 +1688,10 @@ section.HeroContent {
   } */
 
   .text-wikala {
-    font-size: 6rem !important;
+    font-size: 5rem !important;
   }
   .BigText {
-    font-size: 6rem;
+    font-size: 5rem;
     width: 100rem;
     line-height: 58.42px;
     margin-top: 3rem;
@@ -1686,7 +1706,7 @@ section.HeroContent {
     width: 100% !important;
   }
   .innerWrappe.col-md-3.gap-5 {
-    gap: 8% !important;
+    gap: 6% !important;
   }
 
   .innerWrappe p.spaheal {
@@ -1698,9 +1718,7 @@ section.HeroContent {
     width: 26rem;
     left: 0px;
   }
-  .HeaderWithHeroSition {
-    height: 128rem !important;
-  }
+
   .wapperServices {
     gap: 25rem !important;
   }
@@ -1824,405 +1842,8 @@ section.HeroContent {
   .divWitherProgress {
     flex-direction: row !important;
   }
-  .outerWrapper.col-12.col-md-6 {
-    width: 58% !important;
-  }
-  .heroprogress {
-    width: 41% !important;
-    /* max-height: 340px; */
-  }
-  .innerWrapper {
-    position: relative !important;
-  }
-
-  /* The larger Screen  */
-  @media (min-width: 1400px) {
-    .heroprogress .innerWrapper {
-      top: 8rem !important;
-    }
-
-    .position {
-      left: 20px;
-      /* top: -18px; */
-    }
-    /* .questiones .container {
-    width: 70rem !important;
-  } */
-    .accordion-body {
-      font-size: 1.5rem !important;
-    }
-
-    /* Footer */
-    .list h4 {
-      font-size: 2rem;
-    }
-    .list a {
-      font-size: 1.7rem !important;
-    }
-
-    /* ------------------------------ */
-    /* Services page Style */
-    .adv .info p {
-      font-size: 2.5rem !important;
-    }
-    /* .Hero .head h1 {
-    width: 67rem;
-    font-size: 5rem;
-  } */
-    .Hero .head h4,
-    .letsDoit .row a h4 {
-      font-size: 3rem;
-    }
-    .head.d-flex.align-items-start.justify-content-between.flex-column.aos-init.aos-animate {
-      flex-direction: row !important;
-      align-items: center !important;
-    }
-    .Hero .head h1 {
-      width: 60% !important;
-      font-size: 6rem;
-    }
-    .adv h2 {
-      justify-content: center;
-    }
-    .PartnersMarquee_sm {
-      display: none !important;
-    }
-    .marqueeLg {
-      display: block !important;
-    }
-    .letsDoit {
-      padding: 6rem;
-    }
-    .letsDoit
-      .col-12.col-md-6.d-flex.justify-content-start.align-items-end.aos-init.aos-animate {
-      justify-content: center !important;
-    }
-    .headWrapper,
-    .rigthside h1 {
-      flex-direction: row !important;
-      align-items: center !important;
-    }
-    .rigthside h1 small {
-      border-left: 4px solid var(--Color-Primary);
-      margin-left: 14px;
-      padding-left: 7px;
-    }
-    .rigthside h1 {
-      font-size: 2.5rem;
-    }
-    .SecondSeation .hero .title p,
-    .FirstSection .infoWrapper p {
-      font-size: 2rem;
-    }
-    .wapperBox .Box,
-    .wapperBox .Box:nth-child(2) {
-      border-left: 3px solid rgba(236, 236, 236, 1) !important;
-      border-bottom: none;
-    }
-
-    .wapperBox .Box:last-child {
-      border-left: none;
-    }
-    .SimilarWorks .leftSide p {
-      font-size: 4rem;
-    }
-    .SimilarWorks .leftSide p {
-      width: 100%;
-    }
-
-    .leftSide small {
-      padding: 5px 2rem;
-      /* font-size: 1.9rem; */
-      font-size: 1.7rem;
-    }
-    .wapperBox h3.my-4 {
-      font-size: 2rem;
-    }
-    .innerinfo h4 {
-      font-size: 1.5rem !important;
-    }
-    .title.m-5 {
-      margin-bottom: 5rem !important;
-    }
-    .btns {
-      width: 10% !important;
-    }
-
-    .sessionWhyChooseUs .BoxText {
-      width: 75% !important;
-    }
-    .ContentOurServices .Text {
-      width: 110% !important;
-      font-size: 4rem;
-    }
-    .divWitherProgress {
-      width: 102% !important;
-    }
-    /* New Changes  */
-    .adv h2 {
-      font-size: 5rem;
-    }
-    .adv .info {
-      width: 100%;
-    }
-    .box.p-2.d-flex.justify-content-center.align-items-center {
-      height: 15rem !important;
-      width: 15rem !important;
-      margin-top: 0rem !important;
-    }
-    .info h3 {
-      font-size: 3.8rem;
-    }
-    .questiones p {
-      padding: 0px 7rem;
-    }
-
-    .head h3 {
-      font-size: 3rem;
-    }
-    .letsDoit .wrapper p {
-      font-size: 3rem;
-      width: 100% !important;
-      font-weight: 900;
-    }
-    .Part1 .imgWrapper img {
-      width: 20rem !important;
-      position: relative;
-      top: -3rem;
-    }
-    .Part1 .imgWrapper {
-      width: 80% !important;
-    }
-    .textBox {
-      font-size: 21px;
-    }
-    .textBox3 {
-      width: 100%;
-    }
-    .lastPart {
-      width: 100%;
-      height: 100%;
-      overflow: hidden;
-      margin-top: 18rem !important;
-    }
-    .sessionWhyChooseUs h3 {
-      font-size: 4.8rem;
-    }
-    .sessionWhyChooseUs p {
-      margin: 35px 1px;
-    }
-    .sessionWhyChooseUs button.btn.btn-danger {
-      margin-top: 2rem;
-    }
-    .SucessBtns {
-      top: -9rem;
-    }
-    .default-width {
-      width: 50% !important;
-    }
-    .FirstSection p {
-      margin: 0rem 0rem;
-    }
-  }
-}
-
-@media (min-width: 1024px) {
-  @media (min-width: 992px) {
-    .HowWeAre .row .col-md-6 {
-      width: 48% !important;
-    }
-    .innerFooterContent {
-      flex-direction: row !important;
-    }
-    .FooterBottom.mt-4.d-flex.justify-content-between {
-      flex-direction: row;
-    }
-    .infoServers .info p {
-      width: 46rem !important;
-      font-size: 1.5rem !important;
-    }
-  }
-  html {
-    font-size: 10px;
-  }
-
-  .wrap.col-md-12.flex-column.justify-content-between {
-    display: flex !important;
-    flex-direction: row !important;
-  }
-  .onscroll {
-    padding: 0.9rem;
-    border-radius: 4rem;
-  }
-  .onscroll {
-    width: 100% !important;
-  }
-  .imgText {
-    width: 48% !important;
-    top: 8px;
-    font-size: 14px !important;
-  }
-
-  /* .Part1 .imgWrapper {
-    width: 47rem !important;
-  } */
-
-  .text-wikala {
-    font-size: 6rem !important;
-  }
-  .BigText {
-    font-size: 6rem;
-    width: 100rem;
-    line-height: 58.42px;
-    margin-top: 3rem;
-  }
-  .section1part1.col-md-12.justify-content-between {
-    display: flex;
-    flex-direction: row;
-  }
-  .innerWrappe {
-    display: flex;
-    flex-wrap: nowrap;
-    width: 100% !important;
-  }
-  .innerWrappe.col-md-3.gap-5 {
-    gap: 8% !important;
-  }
-
-  .innerWrappe p.spaheal {
-    width: 36rem;
-  }
-  .col-md-3.aos-init.aos-animate {
-    position: relative;
-    top: 0rem;
-    width: 26rem;
-    left: 0px;
-  }
-  .HeaderWithHeroSition {
-    height: 128rem !important;
-  }
-  .wapperServices {
-    gap: 25rem !important;
-  }
-  .infoServers .info {
-    width: 50rem;
-  }
-  .info p {
-    width: 47rem !important;
-    font-size: 1.5rem;
-  }
-  .infoServers h1 {
-    width: 50rem;
-  }
-  .partImages .row {
-    justify-content: space-between !important;
-  }
-
-  .col-12.col-sm-6.d-flex.justify-content-center {
-    margin-top: 0rem;
-  }
-  .boxWrap.d-flex.justify-content-center.gap-4 {
-    flex-direction: row;
-  }
-
-  .div.d-flex.justify-content-center.align-items-center.gap-4 {
-    flex-direction: row;
-  }
-
-  .d-flex.gap-100 {
-    flex-direction: row;
-  }
-  .list h4 {
-    text-align: center;
-  }
-  /* .IconWithText {
-    position: relative;
-    bottom: 0rem;
-  } */
-
-  .FooterWrapper.container.p-5 {
-    position: relative;
-  }
-  .sliderImg img {
-    width: 4rem;
-  }
-
-  .col-md-12.d-flex.justify-content-center.gap-5 {
-    height: 5rem;
-  }
-
-  /*  Editing head Home Page */
-  img.w-50 {
-    width: 20rem !important;
-    right: 5rem;
-    position: absolute !important;
-    top: -5.4rem !important;
-  }
-  .wrap.col-md-12.d-flex.flex-column.gap-5 {
-    flex-direction: row !important;
-    margin-bottom: 3rem;
-    gap: 8rem !important;
-  }
-  .Text-Running small {
-    font-size: 2rem;
-    margin-left: 0rem;
-  }
-  .SecondImg {
-    height: 7rem !important;
-  }
-
-  .wrapperPoster {
-    position: relative;
-    top: 0rem;
-    width: 20%;
-    left: 0rem;
-  }
-  #innerManshit {
-    position: absolute;
-    left: 25px;
-    width: 19rem;
-    top: -64px;
-  }
-  /* sessionWhyChooseUs imges */
-  /* in desktop */
-  .sessionWhyChooseUs .partImages .col-md-6 {
-    width: 42rem;
-  }
-  /* to Reset the order of the image in desktop */
-  .order-md-2 {
-    order: 0 !important;
-  }
-  /* section how we are */
-  .HowWeAre .row .col-md-6 {
-    width: auto;
-  }
-  .HowWeAre .imgWrapp img {
-    height: 63rem !important;
-  }
-  .HowWeAre .info h3 {
-    width: 80% !important;
-  }
-  .heroinfo {
-    font-size: 3.8rem !important;
-  }
-  .WrappersubSession {
-    padding: 4rem;
-  }
-
-  .HowWeAre .info p {
-    font-size: 1.5rem;
-  }
-  .WrappersubSession .boxs .box .information p {
-    font-size: 1.4rem;
-    /* width: 46rem; */
-  }
-  /* .btns {
-    right: 78rem !important;
-    top: 0rem !important;
-  } */
-  /* progress */
-  .divWitherProgress {
-    flex-direction: row !important;
+  .TowBoxes {
+    margin: 0rem;
   }
   .outerWrapper.col-12.col-md-6 {
     width: 58% !important;
@@ -2233,201 +1854,14 @@ section.HeroContent {
   }
   .innerWrapper {
     position: relative !important;
-  }
-
-  /* The larger Screen  */
-  @media (min-width: 1400px) {
-    .heroprogress .innerWrapper {
-      top: 8rem !important;
-    }
-
-    .position {
-      left: 20px;
-      /* top: -18px; */
-    }
-    /* .questiones .container {
-    width: 70rem !important;
-  } */
-    .accordion-body {
-      font-size: 1.5rem !important;
-    }
-
-    /* Footer */
-    .list h4 {
-      font-size: 2rem;
-    }
-    .list a {
-      font-size: 1.7rem !important;
-    }
-
-    /* ------------------------------ */
-    /* Services page Style */
-    .adv .info p {
-      font-size: 2.5rem !important;
-    }
-    /* .Hero .head h1 {
-    width: 67rem;
-    font-size: 5rem;
-  } */
-    .Hero .head h4,
-    .letsDoit .row a h4 {
-      font-size: 3rem;
-    }
-    .head.d-flex.align-items-start.justify-content-between.flex-column.aos-init.aos-animate {
-      flex-direction: row !important;
-      align-items: center !important;
-    }
-    .Hero .head h1 {
-      width: 60% !important;
-      font-size: 5rem;
-    }
-    .adv h2 {
-      justify-content: center;
-    }
-    .PartnersMarquee_sm {
-      display: none !important;
-    }
-    .marqueeLg {
-      display: block !important;
-    }
-    .letsDoit {
-      padding: 6rem;
-    }
-    .letsDoit
-      .col-12.col-md-6.d-flex.justify-content-start.align-items-end.aos-init.aos-animate {
-      justify-content: center !important;
-    }
-    .headWrapper,
-    .rigthside h1 {
-      flex-direction: row !important;
-      align-items: center !important;
-    }
-    .rigthside h1 small {
-      border-left: 4px solid var(--Color-Primary);
-      margin-left: 14px;
-      padding-left: 7px;
-    }
-    .rigthside h1 {
-      font-size: 2.5rem;
-    }
-    .SecondSeation .hero .title p,
-    .FirstSection .infoWrapper p {
-      font-size: 2rem;
-    }
-    .wapperBox .Box,
-    .wapperBox .Box:nth-child(2) {
-      border-left: 3px solid rgba(236, 236, 236, 1) !important;
-      border-bottom: none;
-    }
-
-    .wapperBox .Box:last-child {
-      border-left: none;
-    }
-    .SimilarWorks .leftSide p {
-      font-size: 5rem;
-    }
-    .SimilarWorks .leftSide p {
-      width: 100%;
-    }
-
-    .leftSide small {
-      padding: 5px 2rem;
-      /* font-size: 1.9rem; */
-      font-size: 1.7rem;
-    }
-    .wapperBox h3.my-4 {
-      font-size: 2rem;
-    }
-    .innerinfo h4 {
-      font-size: 1.5rem !important;
-    }
-    .title.m-5 {
-      margin-bottom: 5rem !important;
-    }
-    .btns {
-      width: 10% !important;
-    }
-
-    .sessionWhyChooseUs .BoxText {
-      width: 75% !important;
-    }
-    .ContentOurServices .Text {
-      width: 110% !important;
-      font-size: 4rem;
-    }
-    .divWitherProgress {
-      width: 102% !important;
-    }
-    /* New Changes  */
-    .adv h2 {
-      font-size: 5rem;
-    }
-    .adv .info {
-      width: 100%;
-    }
-    .box.p-2.d-flex.justify-content-center.align-items-center {
-      height: 15rem !important;
-      width: 15rem !important;
-      margin-top: 0rem !important;
-    }
-    .info h3 {
-      font-size: 3.8rem;
-    }
-    .questiones p {
-      padding: 0px 7rem;
-    }
-
-    .head h3 {
-      font-size: 3rem;
-    }
-    .letsDoit .wrapper p {
-      font-size: 3rem;
-      width: 100% !important;
-      font-weight: 900;
-    }
-    .Part1 .imgWrapper img {
-      width: 20rem !important;
-      position: relative;
-      top: -3rem;
-    }
-    .Part1 .imgWrapper {
-      width: 80% !important;
-    }
-    .textBox {
-      font-size: 21px;
-    }
-    .textBox3 {
-      width: 100%;
-    }
-    .lastPart {
-      width: 100%;
-      height: 100%;
-      overflow: hidden;
-      margin-top: 18rem !important;
-    }
-    .sessionWhyChooseUs h3 {
-      font-size: 4.8rem;
-    }
-    .sessionWhyChooseUs p {
-      margin: 35px 1px;
-    }
-    .sessionWhyChooseUs button.btn.btn-danger {
-      margin-top: 2rem;
-    }
-    .SucessBtns {
-      top: -9rem;
-    }
-    .default-width {
-      width: 50% !important;
-    }
-    .FirstSection p {
-      margin: 0rem 0rem;
-    }
   }
 }
 
 /* Tablets  */
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 575px) and (max-width: 992px) {
+  .HeaderWithHeroSition {
+    height: 110rem !important;
+  }
   .Hero .head h1 {
     font-size: 3rem !important;
   }
@@ -2508,5 +1942,199 @@ section.HeroContent {
   }
   .PartnersMarquee_sm .col-4 {
     width: 19% !important;
+  }
+}
+/* The larger Screen  */
+@media (min-width: 1024px) {
+  .HeaderWithHeroSition {
+    height: 125rem !important;
+  }
+
+  .heroprogress .innerWrapper {
+    top: 8rem !important;
+  }
+
+  .position {
+    left: 20px;
+    /* top: -18px; */
+  }
+  /* .questiones .container {
+    width: 70rem !important;
+  } */
+  .accordion-body {
+    font-size: 1.5rem !important;
+  }
+
+  /* Footer */
+  .list h4 {
+    font-size: 2rem;
+  }
+  .list a {
+    font-size: 1.7rem !important;
+  }
+
+  /* ------------------------------ */
+  /* Services page Style */
+  .adv .info p {
+    font-size: 2.5rem !important;
+  }
+  /* .Hero .head h1 {
+    width: 67rem;
+    font-size: 5rem;
+  } */
+  .Hero .head h4,
+  .letsDoit .row a h4 {
+    font-size: 3rem;
+  }
+  .head.d-flex.align-items-start.justify-content-between.flex-column.aos-init.aos-animate {
+    flex-direction: row !important;
+    align-items: center !important;
+  }
+  .Hero .head h1 {
+    width: 60% !important;
+    font-size: 4rem;
+  }
+  .adv h2 {
+    justify-content: center;
+  }
+  .PartnersMarquee_sm {
+    display: none !important;
+  }
+  .marqueeLg {
+    display: block !important;
+  }
+  .letsDoit {
+    padding: 6rem;
+  }
+  .letsDoit
+    .col-12.col-md-6.d-flex.justify-content-start.align-items-end.aos-init.aos-animate {
+    justify-content: center !important;
+  }
+  .headWrapper,
+  .rigthside h1 {
+    flex-direction: row !important;
+    align-items: center !important;
+  }
+  .rigthside h1 small {
+    border-left: 4px solid var(--Color-Primary);
+    margin-left: 14px;
+    padding-left: 7px;
+  }
+  .rigthside h1 {
+    font-size: 2.5rem;
+  }
+  .SecondSeation .hero .title p,
+  .FirstSection .infoWrapper p {
+    font-size: 2rem;
+  }
+  .wapperBox .Box,
+  .wapperBox .Box:nth-child(2) {
+    border-left: 3px solid rgba(236, 236, 236, 1) !important;
+    border-bottom: none;
+  }
+
+  .wapperBox .Box:last-child {
+    border-left: none;
+  }
+  .SimilarWorks .leftSide p {
+    font-size: 5rem;
+  }
+  .SimilarWorks .leftSide p {
+    width: 100%;
+  }
+
+  .leftSide small {
+    padding: 5px 2rem;
+    /* font-size: 1.9rem; */
+    font-size: 1.7rem;
+  }
+  .wapperBox h3.my-4 {
+    font-size: 2rem;
+  }
+  .innerinfo h4 {
+    font-size: 1.5rem !important;
+  }
+  .title.m-5 {
+    margin-bottom: 5rem !important;
+  }
+  .btns {
+    width: 10% !important;
+  }
+
+  .sessionWhyChooseUs .BoxText {
+    width: 75% !important;
+  }
+  .ContentOurServices .Text {
+    width: 100% !important;
+    font-size: 3rem;
+  }
+  .divWitherProgress {
+    width: 102% !important;
+    height: 50rem !important;
+  }
+  /* New Changes  */
+  .adv h2 {
+    font-size: 5rem;
+  }
+  .adv .info {
+    width: 100%;
+  }
+  .box.p-2.d-flex.justify-content-center.align-items-center {
+    height: 15rem !important;
+    width: 15rem !important;
+    margin-top: 0rem !important;
+  }
+  .info h3 {
+    font-size: 3rem;
+  }
+  .questiones p {
+    padding: 0px 7rem;
+  }
+
+  .head h3 {
+    font-size: 3rem;
+  }
+  .letsDoit .wrapper p {
+    font-size: 3rem;
+    width: 100% !important;
+    font-weight: 900;
+  }
+  .Part1 .imgWrapper img {
+    width: 20rem !important;
+    position: relative;
+    top: -3rem;
+  }
+  .Part1 .imgWrapper {
+    width: 80% !important;
+  }
+  .textBox {
+    font-size: 21px;
+  }
+  .textBox3 {
+    width: 100%;
+  }
+  .lastPart {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    margin-top: 18rem !important;
+  }
+  .sessionWhyChooseUs h3 {
+    font-size: 3.8rem;
+  }
+  .sessionWhyChooseUs p {
+    margin: 15px 1px;
+  }
+  .sessionWhyChooseUs button.btn.btn-danger {
+    margin-top: 2rem;
+  }
+  .SucessBtns {
+    top: -9rem;
+  }
+  .default-width {
+    width: 50% !important;
+  }
+  .FirstSection p {
+    margin: 0rem 0rem;
   }
 }

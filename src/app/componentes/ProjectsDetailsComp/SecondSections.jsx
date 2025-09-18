@@ -86,7 +86,14 @@ export default function SecondSeation({ projectData }) {
                     className="Box col-6 col-sm-6 col-md-3"
                   >
                     <div className="icon">
-                      <img src={boxItem.icon} alt="icon" />
+                      <img
+                        src={boxItem.icon}
+                        alt="icon"
+                        onError={(e) => {
+                          e.currentTarget.src = "../img/LoagingState.png";
+                          e.currentTarget.style.objectFit = "contain";
+                        }}
+                      />
                     </div>
 
                     {boxItem.smallText && (
@@ -105,6 +112,10 @@ export default function SecondSeation({ projectData }) {
                               src={boxItem.innerIcon}
                               alt="Check_Icone"
                               id="Check_Icone"
+                              onError={(e) => {
+                                e.currentTarget.src = "../img/LoagingState.png";
+                                e.currentTarget.style.objectFit = "contain";
+                              }}
                             />
                           )}
                           <h4>{subtitle}</h4>

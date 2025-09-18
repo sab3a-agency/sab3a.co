@@ -43,7 +43,15 @@ export default function ActWithTeam() {
                 return (
                   <div className="imgWrapper" key={index}>
                     <a href="#">
-                      <img src={item} alt="img" loading="lazy" />
+                      <img
+                        src={item}
+                        alt="img"
+                        loading="lazy"
+                        onError={(e) => {
+                          e.currentTarget.src = "../img/LoagingState.png";
+                          e.currentTarget.style.objectFit = "contain";
+                        }}
+                      />
                     </a>
                   </div>
                 );
@@ -57,7 +65,15 @@ export default function ActWithTeam() {
                     key={index}
                   >
                     <a href="#">
-                      <img src={item} alt="img" loading="lazy" />
+                      <img
+                        src={item}
+                        alt="img"
+                        loading="lazy"
+                        onError={(e) => {
+                          e.currentTarget.src = "../img/LoagingState.png";
+                          e.currentTarget.style.objectFit = "contain";
+                        }}
+                      />
                     </a>
                   </div>
                 );

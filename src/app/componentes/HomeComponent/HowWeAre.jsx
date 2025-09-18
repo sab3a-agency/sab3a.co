@@ -29,8 +29,8 @@ export default function HowWeAre() {
   return (
     <div className="HowWeAre mt-80">
       <div className="container py-5 mt-5">
-        <div className="row align-items-center">
-          <div className="col-12 col-md-6 text-center" data-aos="zoom-in">
+        <div className="d-flex-column d-md-flex-column d-xl-flex justify-content-between align-items-center gap-5">
+          <div className=" text-center" data-aos="zoom-in">
             <div className="imgWrapp">
               <Image
                 className="img-fluid"
@@ -43,10 +43,7 @@ export default function HowWeAre() {
             </div>
           </div>
 
-          <div
-            className="col-12 col-md-6 d-flex flex-column gap-3"
-            data-aos="zoom-in"
-          >
+          <div className=" d-flex flex-column gap-3" data-aos="zoom-in">
             <div className="info mb-4 mt-5 container">
               <small>{DataAboutUs.small}</small>
               <h3 className="heroinfo my-4">
@@ -68,6 +65,10 @@ export default function HowWeAre() {
                         src={feature.iconSrc}
                         style={{ maxWidth: "20rem !important" }}
                         alt="icon"
+                        onError={(e) => {
+                          e.currentTarget.src = "../img/LoagingState.png";
+                          e.currentTarget.style.objectFit = "contain";
+                        }}
                       />
                     </div>
                     <div className="information  d-flex flex-column align-items-start justify-content-center ">

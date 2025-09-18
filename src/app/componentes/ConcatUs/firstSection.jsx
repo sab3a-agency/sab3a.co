@@ -147,7 +147,14 @@ export default function FirstSiction() {
                   key={index}
                   className="box mb-5 d-flex flex-column align-items-start gap-2"
                 >
-                  <img src={box.img} alt="message-img" />
+                  <img
+                    src={box.img}
+                    alt="message-img"
+                    onError={(e) => {
+                      e.currentTarget.src = "../img/LoagingState.png";
+                      e.currentTarget.style.objectFit = "contain";
+                    }}
+                  />
                   <h4 className="my-3">{box.title}</h4>
                   <p>{box.text}</p>
                   {box.span && <span>{box.span}</span>}

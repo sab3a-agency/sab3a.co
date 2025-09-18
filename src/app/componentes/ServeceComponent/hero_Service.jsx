@@ -32,6 +32,10 @@ export default function Hero_Service() {
                   id="arrow"
                   src="../img/ServicePage/arrow.svg"
                   alt="arrow"
+                  onError={(e) => {
+                    e.currentTarget.src = "../img/LoagingState.png";
+                    e.currentTarget.style.objectFit = "contain";
+                  }}
                 />
                 <h4>{Data.btnContent}</h4>
               </Link>
