@@ -284,14 +284,7 @@ export default function HeroPart1() {
                 <h3>{data.statistics[2]?.title}</h3>
                 <div className="text d-flex align-items-baseline">
                   <span className="Star">
-                    <img
-                      src="../img/Star.svg"
-                      alt="Star"
-                      onError={(e) => {
-                        e.currentTarget.src = "../img/LoagingState.png";
-                        e.currentTarget.style.objectFit = "contain";
-                      }}
-                    />
+                    <img src="../img/Star.svg" alt="Star" />
                   </span>
 
                   <p className="p-1 textBox3">{data.statistics[2]?.value}</p>
