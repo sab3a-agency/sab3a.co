@@ -162,7 +162,7 @@ export default function WhyChooseUs() {
                   />
                 </div>
               </div>
-              <div className="col-6 col-xl-3 col-md-9 mb-3 order-3 order-md-2">
+              <div className="col-12 col-xl-3 col-md-11 mb-3 order-3 order-md-2">
                 <div className="wappLongimg">
                   <Image
                     id="wappLongimg"
@@ -175,7 +175,7 @@ export default function WhyChooseUs() {
                   />
                 </div>
               </div>
-              <div className="col-6 col-xl-3 col-md-6 mb-3">
+              <div className="col-6 col-xl-3 col-md-4 mb-3">
                 <div className="wappLongimg">
                   <Image
                     src={data.srces[2]}

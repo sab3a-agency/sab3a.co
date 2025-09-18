@@ -90,9 +90,18 @@ export default function FirstSiction() {
         body: JSON.stringify(payload),
       });
 
-      const data = await res.json();
+      // The server might not return JSON on error, so we need to handle that.
+      const data = await res.json().catch(() => ({}));
 
-      if (!res.ok || data.code !== 200) {
+      if (!res.ok) {
+        console.error("Server responded with a non-OK status:", res.status);
+        console.error("Server response data:", data);
+        throw new Error(data.message || "فشل إرسال البيانات");
+      }
+
+      if (data.code !== 200) {
+        console.error("API returned a non-200 code:", data.code);
+        console.error("API message:", data.message);
         throw new Error(data.message || "فشل إرسال البيانات");
       }
 
@@ -113,7 +122,7 @@ export default function FirstSiction() {
         visible: true,
       });
     } catch (error) {
-      console.error(error);
+      console.error("An error occurred:", error);
       setNotification({
         message: "حدث خطأ، يرجى المحاولة مرة أخرى",
         type: "error",

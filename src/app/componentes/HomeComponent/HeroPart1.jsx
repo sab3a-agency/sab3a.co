@@ -222,7 +222,7 @@ export default function HeroPart1() {
 
         <img
           src="/img/BoardsPoster.svg"
-          className="d-none d-md-none d-xl-flex justify-content-center align-items-start  "
+          className="LargPoster d-none d-md-none d-xl-flex justify-content-center align-items-start  "
           alt="Saba-Image"
           onError={(e) => {
             e.currentTarget.src = "../img/LoagingState.png";
@@ -231,7 +231,7 @@ export default function HeroPart1() {
         />
       </div>
 
-      <div className="d-flex " data-aos="fade-up">
+      <div className="outWrrape d-flex " data-aos="fade-up">
         <div className="innerWrappe col-3  my-5 d-flex justify-content-start align-content-start  gap-4 w-100">
           <div className="text">
             <p className="textBox spaheal d-flex align-items-center">
@@ -300,7 +300,7 @@ export default function HeroPart1() {
             </div>
             <img
               src="/img/BoardsPoster.svg"
-              className="d-md-flex d-xl-none justify-content-center align-items-center  position-relative"
+              className="miniposters d-md-flex d-xl-none justify-content-center align-items-center  position-relative"
               style={{ top: "-9rem", width: "18rem", height: "18rem" }}
               alt="Saba-Image"
               onError={(e) => {

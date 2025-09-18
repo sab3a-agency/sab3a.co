@@ -127,7 +127,7 @@ export default function OurVision() {
             className="boxWrapper d-flex flex-column align-items-center text-center"
             data-aos="zoom-in"
           >
-            <div className="boxWrap d-flex-row  flex-md-row d-xl-flex justify-content-center gap-4 w-100">
+            <div className="boxWrap d-flex-column  d-xl-flex justify-content-center gap-4 ">
               <div className="box d-flex flex-column justify-content-center align-items-center flex-grow-1">
                 <span
                   ref={(el) => (numbersRef.current[0] = el)}
