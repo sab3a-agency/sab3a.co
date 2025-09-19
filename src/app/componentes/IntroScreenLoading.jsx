@@ -5,10 +5,14 @@ import loadingAnim from "../LoadingStripLoop.json";
 
 export default function IntroScreenLoading() {
   useEffect(() => {
-    document.body.style.overflow = "hidden";
+    if (typeof window !== "undefined") {
+      document.body.style.overflow = "hidden";
+    }
 
     return () => {
-      document.body.style.overflow = "auto";
+      if (typeof window !== "undefined") {
+        document.body.style.overflow = "auto";
+      }
     };
   }, []);
   return (

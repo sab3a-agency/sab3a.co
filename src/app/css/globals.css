@@ -1163,7 +1163,6 @@ footer .textBox a {
 
 .FooterWrapper.container.p-5 {
   position: relative;
-  z-index: 0 !important;
 }
 
 .sliderImg img {
@@ -1801,7 +1800,6 @@ section.HeroContent {
 
   .FooterWrapper.container.p-5 {
     position: relative;
-    z-index: 0 !important;
   }
   .sliderImg img {
     width: 4rem;
