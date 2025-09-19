@@ -1652,7 +1652,11 @@ section.HeroContent {
   height: 30rem;
   top: 10%;
   left: 50%;
-  transform: translate(-50%, 100%);
+  transform: translate(-50%, 90%);
+  -webkit-transform: translate(-50%, 90%);
+  -moz-transform: translate(-50%, 90%);
+  -ms-transform: translate(-50%, 90%);
+  -o-transform: translate(-50%, 90%);
 }
 
 .intrologo,
@@ -1682,7 +1686,7 @@ section.HeroContent {
 
 @media (min-width: 992px) {
   .LoadinAnim {
-    transform: translate(-50%, 70%);
+    transform: translate(-50%, 60%) !important;
   }
   .HeaderWithHeroSition {
     height: 125rem !important;
@@ -1950,11 +1954,7 @@ section.HeroContent {
 /* Tablets  */
 @media (min-width: 575px) and (max-width: 992px) {
   .LoadinAnim {
-    transform: translate(-50%, 160%);
-    -webkit-transform: translate(-50%, 160%);
-    -moz-transform: translate(-50%, 160%);
-    -ms-transform: translate(-50%, 160%);
-    -o-transform: translate(-50%, 160%);
+    transform: translate(-50%, 155%);
   }
   /* Handel the tablet */
   img.miniposters.d-md-flex.d-xl-none.justify-content-center.align-items-center.position-relative {
@@ -2081,6 +2081,9 @@ section.HeroContent {
 }
 /* The larger Screen  */
 @media (min-width: 1024px) {
+  .LoadinAnim {
+    transform: translate(-50%, 60%);
+  }
   .adv h2 {
     font-size: 4rem !important;
   }
