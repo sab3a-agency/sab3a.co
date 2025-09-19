@@ -1626,6 +1626,40 @@ section.HeroContent {
 .outWrrape {
   margin: 0rem 0rem;
 }
+
+.introScreen {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden !important;
+  position: absolute;
+  top: 0;
+}
+.introWrap {
+  display: flex !important;
+  flex-direction: column !important;
+}
+.introScreen .backg {
+  width: 100%;
+  height: 100%;
+}
+.intrologo {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.LoadinAnim {
+  width: 100%;
+  height: 30rem;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, 90%);
+}
+
+.intrologo,
+.introScreen {
+  z-index: 9999999999999999999999999999999999999999;
+}
+
 /* ----------------------------- */
 /* Responsive  */
 
@@ -1647,6 +1681,9 @@ section.HeroContent {
 } */
 
 @media (min-width: 992px) {
+  .LoadinAnim {
+    transform: translate(-50%, 70%);
+  }
   .HeaderWithHeroSition {
     height: 125rem !important;
   }
@@ -1912,6 +1949,9 @@ section.HeroContent {
 
 /* Tablets  */
 @media (min-width: 575px) and (max-width: 992px) {
+  .LoadinAnim {
+    transform: translate(-50%, 90%);
+  }
   /* Handel the tablet */
   img.miniposters.d-md-flex.d-xl-none.justify-content-center.align-items-center.position-relative {
     display: none !important;

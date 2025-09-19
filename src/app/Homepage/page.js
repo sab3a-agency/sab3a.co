@@ -9,6 +9,7 @@ import PartnerSession from "../componentes/HomeComponent/partnerSession"
 import Questiones from "../componentes/HomeComponent/questiones"
 import Services from "../componentes/HomeComponent/services"
 import WhyChooseUs from "../componentes/HomeComponent/whyChooseUs"
+
 // import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 
 
@@ -17,6 +18,7 @@ export function HomePage() {
 
   return (
     <>
+
       <div className="HeaderWithHeroSition"> </div>
       <HeroPart1 />
       <Herosection />
