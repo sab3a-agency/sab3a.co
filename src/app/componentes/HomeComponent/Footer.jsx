@@ -20,7 +20,7 @@ const footerData = {
   ],
   quickLinks: [
     { text: "الرئيسية", paht: "/" },
-    { text: "خدماتنا", paht: "/servicesPage" },
+    { text: "اعمالنا", paht: "/servicesPage" },
     { text: "الباقات", paht: "/OurePackagesPage" },
     { text: "فريقنا", paht: "/OurTeamPage" },
     { text: "المدونة", paht: "/BlogPage" },

@@ -35,6 +35,7 @@ body {
   border: none !important;
   /* padding-top: 4rem; */
   font-size: "Sukar" !important;
+  overflow-x: hidden !important;
 }
 
 img:focus,
