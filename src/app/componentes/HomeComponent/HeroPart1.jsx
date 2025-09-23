@@ -1,5 +1,6 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
+import ErrorRequest from "../ErrorRequest";
 
 const Hero_data = {
   Massges: `                  انضم إلينا في رحلة الابتكار والإبداع، حيث نبني معًا شيئًا
@@ -177,7 +178,7 @@ export default function HeroPart1() {
   }
 
   if (error) {
-    return <div>Error: {error}</div>;
+    return <ErrorRequest />;
   }
 
   return (

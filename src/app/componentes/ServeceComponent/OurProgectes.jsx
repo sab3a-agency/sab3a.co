@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import SkeletonBox from "../SkeletonBox";
+import ErrorRequest from "../ErrorRequest";
 
 export default function OurProgectes({ Data }) {
   const [projects, setProjects] = useState([]);
@@ -49,7 +50,7 @@ export default function OurProgectes({ Data }) {
     );
   }
 
-  if (error) return <p style={{ color: "red" }}>Error: {error}</p>;
+  if (error) return <ErrorRequest />;
 
   return (
     <div

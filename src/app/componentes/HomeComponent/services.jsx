@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import ErrorRequest from "../ErrorRequest";
 
 let data = {
   titleEnd: "المصممة لاحتياجات عملك",
@@ -163,7 +164,6 @@ export default function Services() {
           throw new Error(result.message || "Upstream API error");
         }
 
-        // تخزين services فقط في الـ state
         setServices(result.data.services || []);
       } catch (err) {
         setError(err.message);
@@ -180,7 +180,7 @@ export default function Services() {
   }
 
   if (error) {
-    return <div className="text-danger">Error: {error}</div>;
+    return <ErrorRequest />;
   }
   // console.log("Servicess :: ", services);
 

@@ -1913,7 +1913,7 @@ section.HeroContent {
     display: none !important;
   }
   .innerWrappe p.spaheal {
-    width: 32rem !important;
+    width: 45rem !important;
   }
   .miniposters {
     display: none !important;
@@ -1954,6 +1954,10 @@ section.HeroContent {
 
 /* Tablets  */
 @media (min-width: 575px) and (max-width: 992px) {
+  .LargPoster {
+    display: flex !important;
+    width: 20%;
+  }
   .LoadinAnim {
     transform: translate(-50%, 155%);
   }

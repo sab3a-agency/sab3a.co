@@ -9,6 +9,7 @@ import ImgesSection from "@/app/componentes/ProjectsDetailsComp/ImgesSection";
 import SecondSeation from "@/app/componentes/ProjectsDetailsComp/SecondSections";
 import SimilarWorks from "@/app/componentes/ProjectsDetailsComp/Similar works";
 import Erorr from "@/app/componentes/Erorr";
+import ErrorRequest from "@/app/componentes/ErrorRequest";
 
 export default function ProjectsDitales() {
   const param = useParams();
@@ -45,11 +46,11 @@ export default function ProjectsDitales() {
   }
 
   if (error) {
-    return <div>Some Things go Wrong {error} </div>;
+    return <ErrorRequest />;
   }
 
   if (!projectData) {
-    return <div>Project not found. 🔍</div>;
+    return <ErrorRequest />;
   }
 
   const heroData = [

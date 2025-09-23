@@ -4,6 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import SkeletonBox from "../SkeletonBox";
+import ErrorRequest from "../ErrorRequest";
 
 const getTwoRandomItems = (arr) => {
   if (!arr || arr.length <= 2) return arr;
@@ -73,12 +74,7 @@ export default function ArticalGrid({ data }) {
     );
   }
 
-  if (error)
-    return (
-      <p className="w-100 h-100 d-flex justify-content-center align-items-center ">
-        Error: {error}
-      </p>
-    );
+  if (error) return <ErrorRequest />;
 
   return (
     <div className="ArticalGrid container mt-5">

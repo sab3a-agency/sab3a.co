@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { useRouter, useParams } from "next/navigation";
+import ErrorRequest from "../ErrorRequest";
 
 export default function Hero() {
   const router = useRouter();
@@ -15,7 +16,6 @@ export default function Hero() {
   useEffect(() => {
     async function fetchProject() {
       if (!id) {
-        // لو الـ id مش موجود نوقف اللودينج ونحط قيم ديفولت
         setProjectData({
           title: "عنوان افتراضي",
           sub_title: "وصف مختصر",
@@ -35,7 +35,6 @@ export default function Hero() {
         setProjectData(data.data);
       } catch (err) {
         setError(err.message);
-        // fallback: بيانات افتراضية لو حصل error
         setProjectData({
           title: "عنوان افتراضي",
           sub_title: "وصف مختصر",
@@ -94,15 +93,14 @@ export default function Hero() {
   }
 
   if (error) {
-    // بدل ما يرجع error فقط، نعرضه ونكمل بالديفولت
     console.warn("Error fetching project:", error);
+    return <ErrorRequest />;
   }
 
   if (!projectData) {
-    return null; // fallback لو حتى الديفولت مش موجود
+    return null;
   }
 
-  // نستخدم البيانات أو الديفولت
   return (
     <>
       <section className="Hero mt-50">

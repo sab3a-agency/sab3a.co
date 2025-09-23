@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import OurProgectes from "../ServeceComponent/OurProgectes";
 import SkeletonBox from "../SkeletonBox";
+import ErrorRequest from "../ErrorRequest";
 
 const getTwoRandomItems = (arr) => {
   if (arr.length <= 2) return arr;
@@ -56,7 +57,7 @@ export default function SimilarWorks() {
     );
   }
 
-  if (error) return <p style={{ color: "red" }}>Error: {error}</p>;
+  if (error) return <ErrorRequest />;
 
   return (
     <section className="SimilarWorks mt-80">
