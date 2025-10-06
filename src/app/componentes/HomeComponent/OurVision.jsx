@@ -23,6 +23,8 @@ const OurVisionDataDefult = {
 export default function OurVision() {
   const barsRef = useRef([]);
   const numbersRef = useRef([]);
+  const [OurVisionData] = useState(OurVisionDataDefult);
+  const [stats, setStats] = useState([]);
 
   useEffect(() => {
     if (!barsRef.current.length || !numbersRef.current.length) return;
@@ -47,7 +49,7 @@ export default function OurVision() {
             if (currentHeight2 < targetHeight2) {
               currentHeight2++;
               span2.style.height = `${currentHeight2}%`;
-              number2.textContent = `${currentHeight2}%`;
+              number2.textContent = `${currentHeight2} مشروع`;
 
               if (currentHeight2 >= 85) {
                 span2.style.background = "rgba(137, 175, 72, 1)";
@@ -82,7 +84,7 @@ export default function OurVision() {
           const animateNumber = () => {
             if (currentValue < targetValue) {
               currentValue++;
-              numberEl.textContent = `${currentValue}%`;
+              numberEl.textContent = `${currentValue} %`;
               requestAnimationFrame(animateNumber);
             }
           };
@@ -106,9 +108,28 @@ export default function OurVision() {
       observer.disconnect();
       numberObserver.disconnect();
     };
-  }, []);
+  }, [stats]);
 
-  const [OurVisionData] = useState(OurVisionDataDefult);
+  useEffect(() => {
+    async function fetchData() {
+      try {
+        const res = await fetch("/api/projects/heroprogress", {
+          cache: "no-store",
+        });
+        const json = await res.json();
+        if (json?.data?.statistics) {
+          const filtered = json.data.statistics.filter((s) =>
+            [5, 6, 7, 8].includes(s.id)
+          );
+          setStats(filtered);
+        }
+      } catch (error) {
+        console.error("Error fetching stats:", error);
+      }
+    }
+
+    fetchData();
+  }, []);
 
   return (
     <section className="OurVision mt-80">
@@ -170,27 +191,45 @@ export default function OurVision() {
 
               <div className="heroprogress col-12 col-md-6">
                 <div className="innerWrapper d-flex justify-content-center align-items-center gap-2">
-                  {[95, 40, 75, 20].map((height, index) => (
+                  {stats.map((item, index) => (
                     <div
-                      key={index}
+                      key={item.id}
                       ref={(el) => (barsRef.current[index] = el)}
-                      className="bar2"
+                      className="bar2 d-flex flex-column justify-content-end align-items-center"
                     >
+                      <small className="ProjectTitle text-white fw-normal mb-2">
+                        {item.title}
+                      </small>
+
                       <span
-                        data-height={`${height}%`}
+                        data-height={`${item.value}%`}
                         data-bs-toggle="tooltip"
                         data-bs-placement="top"
-                        title={`${height}%`}
+                        title={`${item.value}%`}
+                        style={index === 0 ? { background: "#89AF48" } : {}}
                       >
-                        <div className="number">0%</div>
+                        <div
+                          className="number  "
+                          style={
+                            index === 0
+                              ? {
+                                  background: "#000",
+                                  color: "#fff",
+                                }
+                              : {}
+                          }
+                        >
+                          0 مشروع
+                        </div>
                       </span>
                     </div>
                   ))}
+
                   <div className="position">
                     <div className="boxing">
                       <h4>زيادة في التحويل</h4>
-                      <span>20%</span>
-                      <span>+</span>
+                      <span className="fw-bolder">20%</span>
+                      <span className="fw-bolder">+</span>
                     </div>
                     <img
                       src="../img/shape.svg"
