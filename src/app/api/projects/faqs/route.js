@@ -1,10 +1,11 @@
 // app/api/projects/route.js
 import { NextResponse } from "next/server";
+import { API_BASE_URL } from "../homepage/route";
 
 export async function GET() {
     try {
         // جلب البيانات من الخادم الخارجي
-        const res = await fetch("https://admin.sab3a.co/api/v1/faqs", {
+        const res = await fetch(`${API_BASE_URL}api/v1/faqs`, {
             cache: "no-store",
         });
 

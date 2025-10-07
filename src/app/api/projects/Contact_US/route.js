@@ -1,10 +1,11 @@
 import { NextResponse } from "next/server";
+import { API_BASE_URL } from "../homepage/route";
 
 export async function POST(req) {
     try {
-        const body = await req.json(); // قراءة body من الفورم
+        const body = await req.json();
 
-        const res = await fetch("https://admin.sab3a.co/api/v1/contact-us", {
+        const res = await fetch(`${API_BASE_URL}api/v1/contact-us`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",

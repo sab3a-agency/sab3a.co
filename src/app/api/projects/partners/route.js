@@ -1,8 +1,9 @@
 import { NextResponse } from "next/server";
+import { API_BASE_URL } from "../homepage/route";
 
 export async function GET() {
     try {
-        const res = await fetch("https://admin.sab3a.co/api/v1/partners", {
+        const res = await fetch(`${API_BASE_URL}api/v1/partners`, {
             cache: "no-store",
         });
 

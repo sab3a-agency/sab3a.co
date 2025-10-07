@@ -31,20 +31,20 @@ export default function ArticalPage() {
     }
     if (id) fetchArticle()
   }, [id])
-
-  // Default data لو API فشل أو لسه
   const defaultArticle = {
     id: "0",
-    title: "عنوان افتراضي",
-    sub_title: "مقال تجريبي",
-    type: "الأعمال",
-    description: "هذا نص افتراضي لمحتوى المقال...",
+    title: "جاري التحميل...",
+    sub_title: "",
+    type: "",
+    description: "",
+    description_below: "",
     cover_image: "../img/Blog/img1.png",
     images: ["../img/Blog/img1.png"],
-    created_at: "2025-01-01T00:00:00.000000Z",
+    created_at: new Date().toISOString(),
   }
 
-  const finalArticle = article || defaultArticle
+  // لو الـ API رجع بيانات، نستخدمها مباشرة
+  const finalArticle = article ?? defaultArticle
 
   // Hero Data
   const HeroData = [
@@ -64,9 +64,13 @@ export default function ArticalPage() {
     {
       id: finalArticle.id,
       intro: finalArticle.description,
-      FisrtDiscription: "فقرة أولى من تفاصيل المقال (تعدل حسب الحاجة).",
-      SecondDescription: "فقرة ثانية من تفاصيل المقال (تعدل حسب الحاجة).",
-      src: finalArticle.images[0]?.replace("\\", "/") || finalArticle.cover_image,
+      FisrtDiscription: finalArticle.description,
+      SecondDescription:
+        finalArticle.description_below ||
+        "لا توجد فقرة ثانية متوفرة.",
+      src:
+        finalArticle.images?.[0]?.replace(/\\/g, "/") ||
+        finalArticle.cover_image?.replace(/\\/g, "/"),
     },
   ]
 
@@ -152,7 +156,7 @@ export default function ArticalPage() {
 
   return (
     <div className="ArticalPage">
-      <Hero DefultData={HeroData} />
+      <Hero data={HeroData[0]} />
       <FirstSection projectsData={Firstdata} />
       <OtherArticals />
     </div>

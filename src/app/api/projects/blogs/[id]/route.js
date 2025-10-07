@@ -1,11 +1,12 @@
 import { NextResponse } from "next/server";
+import { API_BASE_URL } from "../../homepage/route";
 
 export async function GET(request, { params }) {
     const { id } = params;
 
     try {
 
-        const res = await fetch(`https://admin.sab3a.co/api/v1/blogs/${id}`, {
+        const res = await fetch(`${API_BASE_URL}api/v1/blogs/${id}`, {
             cache: "no-store",
         });
 
