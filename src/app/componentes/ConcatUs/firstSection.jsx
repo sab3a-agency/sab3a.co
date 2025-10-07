@@ -20,23 +20,6 @@ export default function FirstSiction() {
   const [country, setCountry] = useState("US");
   const [isSubmitting, setIsSubmitting] = useState(false);
 
-  useEffect(() => {
-    const handleInputChange = (e) => {
-      const { name, value: newValue } = e.target;
-      setValue((prev) => ({ ...prev, [name]: newValue }));
-    };
-
-    const inputs = document.querySelectorAll("input, textarea");
-    inputs.forEach((input) =>
-      input.addEventListener("input", handleInputChange)
-    );
-
-    return () => {
-      inputs.forEach((input) =>
-        input.removeEventListener("input", handleInputChange)
-      );
-    };
-  }, []);
   const data = {
     small: "اتصل",
     title: "نود أن نسمع منك",
