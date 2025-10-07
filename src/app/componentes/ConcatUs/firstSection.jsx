@@ -1,6 +1,6 @@
 "use client";
 import dynamic from "next/dynamic";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import {
   getCountryCallingCode,
   getRegionCodeForCountryCode,
@@ -13,21 +13,6 @@ const getCountryName = (countryCode) => {
   const countryNames = new Intl.DisplayNames(["ar"], { type: "region" });
   return countryNames.of(countryCode) || "غير معروف";
 };
-useEffect(() => {
-  const handleInputChange = (e) => {
-    const { name, value: newValue } = e.target;
-    setValue((prev) => ({ ...prev, [name]: newValue }));
-  };
-
-  const inputs = document.querySelectorAll("input, textarea");
-  inputs.forEach((input) => input.addEventListener("input", handleInputChange));
-
-  return () => {
-    inputs.forEach((input) =>
-      input.removeEventListener("input", handleInputChange)
-    );
-  };
-}, []);
 
 export default function FirstSiction() {
   const [errors, setErrors] = useState({});
@@ -35,6 +20,23 @@ export default function FirstSiction() {
   const [country, setCountry] = useState("US");
   const [isSubmitting, setIsSubmitting] = useState(false);
 
+  useEffect(() => {
+    const handleInputChange = (e) => {
+      const { name, value: newValue } = e.target;
+      setValue((prev) => ({ ...prev, [name]: newValue }));
+    };
+
+    const inputs = document.querySelectorAll("input, textarea");
+    inputs.forEach((input) =>
+      input.addEventListener("input", handleInputChange)
+    );
+
+    return () => {
+      inputs.forEach((input) =>
+        input.removeEventListener("input", handleInputChange)
+      );
+    };
+  }, []);
   const data = {
     small: "اتصل",
     title: "نود أن نسمع منك",
