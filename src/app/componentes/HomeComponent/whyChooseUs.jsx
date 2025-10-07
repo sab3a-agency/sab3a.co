@@ -1,6 +1,7 @@
 "use client";
 import Image from "next/image";
 import { useEffect, useState } from "react";
+import ErrorRequest from "../ErrorRequest";
 const data = {
   srces: [
     "/img/withHeadphone.png",
@@ -140,7 +141,7 @@ export default function WhyChooseUs() {
     fetchData();
   }, []);
 
-  if (!homepageData) return <div>Loading...</div>;
+  if (!homepageData) return <ErrorRequest />;
 
   console.log("feauter :: ", homepageData.features);
 

@@ -4,7 +4,7 @@ export async function POST(req) {
     try {
         const body = await req.json(); // قراءة body من الفورم
 
-        const res = await fetch("http://136.244.85.31/api/v1/contact-us", {
+        const res = await fetch("https://admin.sab3a.co/api/v1/contact-us", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",

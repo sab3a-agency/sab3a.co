@@ -12,7 +12,7 @@ export async function GET(request) {
     }
 
     try {
-        const response = await fetch(`http://136.244.85.31/api/v1/projects/${id}`);
+        const response = await fetch(`https://admin.sab3a.co/api/v1/projects/${id}`);
         const data = await response.json();
 
         if (response.status !== 200) {

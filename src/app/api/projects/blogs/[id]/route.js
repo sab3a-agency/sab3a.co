@@ -4,9 +4,9 @@ export async function GET(request, { params }) {
     const { id } = params;
 
     try {
-        // نداء مباشر للـ API تبع الباك إند
-        const res = await fetch(`http://136.244.85.31/api/v1/blogs/${id}`, {
-            cache: "no-store", // علشان ما يخزن الكاش
+
+        const res = await fetch(`https://admin.sab3a.co/api/v1/blogs/${id}`, {
+            cache: "no-store",
         });
 
         if (!res.ok) {
@@ -15,7 +15,7 @@ export async function GET(request, { params }) {
 
         const data = await res.json();
 
-        // لو الـ API بيرجع blog داخل data
+
         return NextResponse.json(data);
     } catch (err) {
         return NextResponse.json(

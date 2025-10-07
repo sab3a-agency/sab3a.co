@@ -3,7 +3,7 @@ import { NextResponse } from "next/server";
 
 export async function GET() {
     try {
-        const res = await fetch("http://136.244.85.31/api/v1/homepage", {
+        const res = await fetch("https://admin.sab3a.co/api/v1/homepage", {
             cache: "no-store",
         });
 

@@ -1,6 +1,6 @@
 export async function GET() {
     try {
-        const res = await fetch("http://136.244.85.31/api/v1/teams", {
+        const res = await fetch("https://admin.sab3a.co/api/v1/teams", {
             cache: "no-store",
         });
 

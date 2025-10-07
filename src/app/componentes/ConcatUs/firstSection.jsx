@@ -14,7 +14,42 @@ const getCountryName = (countryCode) => {
   return countryNames.of(countryCode) || "غير معروف";
 };
 
+const validateForm = () => {
+  let newErrors = {};
+
+  if (!value.name.trim() || value.name.length < 2) {
+    newErrors.name = "الاسم الأول يجب أن يحتوي على حرفين على الأقل.";
+  }
+
+  if (!value.family.trim() || value.family.length < 2) {
+    newErrors.family = "اسم العائلة يجب أن يحتوي على حرفين على الأقل.";
+  }
+
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (!emailRegex.test(value.email)) {
+    newErrors.email = "يرجى إدخال بريد إلكتروني صحيح.";
+  }
+
+  if (!phoneValue || phoneValue.length < 8 || !/^\+\d+$/.test(phoneValue)) {
+    newErrors.phone = "يرجى إدخال رقم هاتف صحيح يبدأ بـ +.";
+  }
+
+  if (!value.message.trim() || value.message.length < 10) {
+    newErrors.message = "الرسالة يجب أن تكون على الأقل 10 أحرف.";
+  }
+
+  if (!value.Accept) {
+    newErrors.Accept = "يجب الموافقة على سياسة الخصوصية.";
+  }
+
+  setErrors(newErrors);
+
+  // لو مفيش أخطاء بيرجع true
+  return Object.keys(newErrors).length === 0;
+};
+
 export default function FirstSiction() {
+  const [errors, setErrors] = useState({});
   const [phoneValue, setPhone] = useState("");
   const [country, setCountry] = useState("US");
   const [isSubmitting, setIsSubmitting] = useState(false);
