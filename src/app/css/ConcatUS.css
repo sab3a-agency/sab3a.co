@@ -392,6 +392,11 @@ img.hero-star {
   color: white;
   font-size: 1.3rem;
 }
+.error-text {
+  color: #e63946;
+  font-size: 0.9rem;
+  margin-top: 4px;
+}
 
 @media (min-width: 1024px) {
   input.form-control.custom-input {

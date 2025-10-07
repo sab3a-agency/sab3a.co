@@ -13,46 +13,28 @@ const getCountryName = (countryCode) => {
   const countryNames = new Intl.DisplayNames(["ar"], { type: "region" });
   return countryNames.of(countryCode) || "غير معروف";
 };
+useEffect(() => {
+  const handleInputChange = (e) => {
+    const { name, value: newValue } = e.target;
+    setValue((prev) => ({ ...prev, [name]: newValue }));
+  };
 
-const validateForm = () => {
-  let newErrors = {};
+  const inputs = document.querySelectorAll("input, textarea");
+  inputs.forEach((input) => input.addEventListener("input", handleInputChange));
 
-  if (!value.name.trim() || value.name.length < 2) {
-    newErrors.name = "الاسم الأول يجب أن يحتوي على حرفين على الأقل.";
-  }
-
-  if (!value.family.trim() || value.family.length < 2) {
-    newErrors.family = "اسم العائلة يجب أن يحتوي على حرفين على الأقل.";
-  }
-
-  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  if (!emailRegex.test(value.email)) {
-    newErrors.email = "يرجى إدخال بريد إلكتروني صحيح.";
-  }
-
-  if (!phoneValue || phoneValue.length < 8 || !/^\+\d+$/.test(phoneValue)) {
-    newErrors.phone = "يرجى إدخال رقم هاتف صحيح يبدأ بـ +.";
-  }
-
-  if (!value.message.trim() || value.message.length < 10) {
-    newErrors.message = "الرسالة يجب أن تكون على الأقل 10 أحرف.";
-  }
-
-  if (!value.Accept) {
-    newErrors.Accept = "يجب الموافقة على سياسة الخصوصية.";
-  }
-
-  setErrors(newErrors);
-
-  // لو مفيش أخطاء بيرجع true
-  return Object.keys(newErrors).length === 0;
-};
+  return () => {
+    inputs.forEach((input) =>
+      input.removeEventListener("input", handleInputChange)
+    );
+  };
+}, []);
 
 export default function FirstSiction() {
   const [errors, setErrors] = useState({});
   const [phoneValue, setPhone] = useState("");
   const [country, setCountry] = useState("US");
   const [isSubmitting, setIsSubmitting] = useState(false);
+
   const data = {
     small: "اتصل",
     title: "نود أن نسمع منك",
@@ -101,8 +83,50 @@ export default function FirstSiction() {
     visible: false,
   });
 
+  const validateForm = () => {
+    const newErrors = {};
+
+    if (!value.name.trim() || value.name.length < 2) {
+      newErrors.name = "الاسم الأول يجب أن يحتوي على حرفين على الأقل.";
+    }
+
+    if (!value.family.trim() || value.family.length < 2) {
+      newErrors.family = "اسم العائلة يجب أن يحتوي على حرفين على الأقل.";
+    }
+
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(value.email)) {
+      newErrors.email = "يرجى إدخال بريد إلكتروني صحيح.";
+    }
+
+    if (!phoneValue || phoneValue.length < 8 || !/^\+\d+$/.test(phoneValue)) {
+      newErrors.phone = "يرجى إدخال رقم هاتف صحيح يبدأ بـ +.";
+    }
+
+    if (!value.message.trim() || value.message.length < 10) {
+      newErrors.message = "الرسالة يجب أن تكون على الأقل 10 أحرف.";
+    }
+
+    if (!value.Accept) {
+      newErrors.Accept = "يجب الموافقة على سياسة الخصوصية.";
+    }
+
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0;
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
+
+    if (!validateForm()) {
+      setNotification({
+        message: "يرجى تصحيح الأخطاء قبل الإرسال.",
+        type: "error",
+        visible: true,
+      });
+      return;
+    }
+
     setIsSubmitting(true);
     setNotification({
       message: "جاري الإرسال ...",
@@ -125,18 +149,13 @@ export default function FirstSiction() {
         body: JSON.stringify(payload),
       });
 
-      // The server might not return JSON on error, so we need to handle that.
       const data = await res.json().catch(() => ({}));
 
       if (!res.ok) {
-        console.error("Server responded with a non-OK status:", res.status);
-        console.error("Server response data:", data);
         throw new Error(data.message || "فشل إرسال البيانات");
       }
 
       if (data.code !== 200) {
-        console.error("API returned a non-200 code:", data.code);
-        console.error("API message:", data.message);
         throw new Error(data.message || "فشل إرسال البيانات");
       }
 
@@ -157,7 +176,6 @@ export default function FirstSiction() {
         visible: true,
       });
     } catch (error) {
-      console.error("An error occurred:", error);
       setNotification({
         message: "حدث خطأ، يرجى المحاولة مرة أخرى",
         type: "error",
@@ -244,6 +262,9 @@ export default function FirstSiction() {
                           }
                         />
                       </label>
+                      {errors[key] && (
+                        <p className="error-text">{errors[key]}</p>
+                      )}
                     </div>
                   ))}
 
@@ -271,6 +292,9 @@ export default function FirstSiction() {
                           {getCountryName(country)}
                         </div>
                       </div>
+                      {errors.phone && (
+                        <p className="error-text">{errors.phone}</p>
+                      )}
                     </div>
                   </div>
 
@@ -291,6 +315,9 @@ export default function FirstSiction() {
                           }))
                         }
                       ></textarea>
+                      {errors.message && (
+                        <p className="error-text">{errors.message}</p>
+                      )}
                     </div>
                   </div>
 
@@ -313,9 +340,11 @@ export default function FirstSiction() {
                       </h6>
                     </label>
                   </div>
+                  {errors.Accept && (
+                    <p className="error-text">{errors.Accept}</p>
+                  )}
 
                   <button className="btn btn-success p-3">
-                    {" "}
                     {isSubmitting ? "جاري الإرسال..." : "إرسال الرسالة"}
                   </button>
                 </div>
