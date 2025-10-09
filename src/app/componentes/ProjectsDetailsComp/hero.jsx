@@ -4,9 +4,11 @@ import { useRouter } from "next/navigation";
 export default function Hero({ data }) {
   const router = useRouter();
 
-  if (!data) {
+  if (!data || !Array.isArray(data) || !data.length) {
     return null;
   }
+
+  const { title, titleEtc, span, small } = data[0];
 
   return (
     <section className="Hero mt-50">
@@ -29,14 +31,14 @@ export default function Hero({ data }) {
                 />
               </a>
               <h1 className="d-flex flex-column align-items-start text-end">
-                {data.title || "عنوان افتراضي"}
-                {data.titleEtc || "وصف مختصر"}
+                {title}
+                {titleEtc}
               </h1>
             </div>
             <div className="leftSide d-flex align-items-center gap-4">
-              <span>{data.span || "2025-01-01"}</span>
+              <span>{span}</span>
               <span className="dot">.</span>
-              <small>{data.small || "عام"}</small>
+              <small>{small}</small>
             </div>
           </div>
         </div>

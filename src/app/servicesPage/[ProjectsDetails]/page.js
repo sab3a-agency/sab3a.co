@@ -55,16 +55,27 @@ export default function ProjectsDitales() {
 
   const heroData = [
     {
-      title: projectData.title,
-      titleEtc: projectData.sub_title,
-      span: "20 أكتوبر",
-      small: projectData.category,
+      title: projectData.title || "عنوان المشروع غير متوفر",
+      titleEtc: projectData.sub_title || "وصف مختصر للمشروع",
+      span:
+        projectData.implemented_date
+          ? new Date(projectData.implemented_date).toLocaleDateString("ar-EG", {
+            day: "numeric",
+            month: "long",
+            year: "numeric",
+          })
+          : new Date(projectData.created_at).toLocaleDateString("ar-EG", {
+            day: "numeric",
+            month: "long",
+            year: "numeric",
+          }) || "تاريخ غير متوفر",
+      small: projectData.category || projectData.type || "تصنيف غير محدد",
     },
   ];
 
   return (
     <>
-      <Hero DefultData={heroData} />
+      <Hero data={heroData} />
       <FirstSection projectsData={projectData} />
       <SecondSeation projectData={projectData} />
       <ImgesSection images={projectData.images} />
