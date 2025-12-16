@@ -41,7 +41,7 @@ export function PartnersMarquee() {
             rel="noopener noreferrer"
             className="mx-5"
           >
-            <img
+            <img loading="lazy"
               src={partner.src}
               alt="partner logo"
               className="partner h-16 object-fit-cover"
@@ -62,7 +62,7 @@ export function PartnersMarquee() {
           <div key={partner.id} className="col-4 col-xl-2  mb-3">
             <a href={partner.link} target="_blank" rel="noopener noreferrer">
               <div className="outerImgWrrap d-flex align-items-center justify-content-center">
-                <img
+                <img loading="lazy"
                   src={partner.src}
                   alt="partner_logo"
                   className="partner_logo object-fit-contain"

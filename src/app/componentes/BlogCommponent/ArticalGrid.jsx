@@ -93,7 +93,7 @@ export default function ArticalGrid({ data }) {
                   className="box-img-top"
                   width={1000}
                   height={1000}
-                  loading="eager"
+                  loading="lazy"
                   onError={(e) => {
                     e.currentTarget.src = "../img/LoagingState.png";
                     e.currentTarget.style.objectFit = "contain";

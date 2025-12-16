@@ -57,6 +57,7 @@ export default function Header() {
       <div className="container">
         <Link className="navbar-brand" href="/" onClick={closeNavbar}>
           <img
+            loading="lazy"
             src="/img/IconSite.svg"
             alt="img"
             onError={(e) => {

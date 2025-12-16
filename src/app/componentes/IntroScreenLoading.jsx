@@ -17,12 +17,13 @@ export default function IntroScreenLoading() {
   }, []);
   return (
     <div className="introScreen">
-      <img className="backg" src="../img/HomeLoading.png" alt="Intro" />
+      <img className="backg" src="../img/HomeLoading.png" alt="Intro"   loading="lazy" />
       <div className="introWrap">
         <img
           src="../img/LoagingState.png"
           className="intrologo d-flex justify-content-center align-items-center position-absolute "
           alt="Sabaa Logo"
+          loading="lazy"
         />
         <Lottie
           className="LoadinAnim position-absolute"

@@ -52,6 +52,7 @@ export default function PartnerSession() {
             <img
               src={leftBtnSrc}
               alt="Previous"
+              loading="lazy"
               className="leftBTN carousel-control-prev"
               onMouseEnter={() => setLeftBtnSrc("/img/HoverBTN.svg")}
               onMouseLeave={() => setLeftBtnSrc("/img/DefultBTN.svg")}
@@ -66,6 +67,7 @@ export default function PartnerSession() {
             <img
               src={rightBtnSrc}
               alt="Next"
+              loading="lazy"
               className="rightBTN carousel-control-next"
               onMouseEnter={() => setRightBtnSrc("/img/HoverBTN.svg")}
               onMouseLeave={() => setRightBtnSrc("/img/DefultBTN.svg")}
@@ -104,6 +106,7 @@ export default function PartnerSession() {
                             rel="noopener noreferrer"
                           >
                             <Image
+                              
                               src={partner.src}
                               alt="شعار الشريك"
                               className="img-fluid"

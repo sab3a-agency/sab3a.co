@@ -24,7 +24,7 @@ export default function LetsDoit({ data }) {
               href="/ConcatUS"
               className="d-flex align-items-center gap-4 text-decoration-none  justify-content-center"
             >
-              <img
+              <img loading="lazy"
                 id="arrow"
                 src="../img/ServicePage/arrow.svg"
                 alt="arrow"

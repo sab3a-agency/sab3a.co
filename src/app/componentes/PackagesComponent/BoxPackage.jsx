@@ -52,7 +52,7 @@ export function BoxPackage() {
               >
                 <div className="container">
                   <small>
-                    <img
+                    <img loading="lazy"
                       src={outeritem.ouetricon}
                       alt="Icon"
                       onError={(e) => {
@@ -71,7 +71,7 @@ export function BoxPackage() {
                           key={index}
                           className="innerfeatures d-flex justify-content-center align-items-center gap-3 my-3"
                         >
-                          <img
+                          <img loading="lazy"
                             src={outeritem.Innericon}
                             alt="check"
                             onError={(e) => {

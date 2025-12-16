@@ -152,7 +152,7 @@ export default function JourneyPoints() {
               <div className="box">
                 <div className="detals d-flex flex-column justify-content-center align-items-center">
                   <div className="d-flex gap-5">
-                    <img
+                    <img loading="lazy"
                       src={item.src}
                       alt="icon"
                       onError={(e) => {

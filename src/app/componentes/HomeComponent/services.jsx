@@ -226,6 +226,7 @@ export default function Services() {
                       >
                         <div className="Wrappericon me-3 d-flex align-items-center justify-content-center">
                           <img
+                            loading="lazy"
                             className="icon"
                             src={service.icon}
                             alt={service.title}
@@ -256,6 +257,7 @@ export default function Services() {
                       >
                         <div className="Wrappericon me-3 d-flex align-items-center justify-content-center">
                           <img
+                            loading="lazy"
                             className="icon"
                             src={service.icon}
                             alt={service.title}

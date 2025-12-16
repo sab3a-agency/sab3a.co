@@ -21,7 +21,7 @@ export default function Hero({ data }) {
                 className="arrow"
                 style={{ cursor: "pointer" }}
               >
-                <img
+                <img loading="lazy"
                   src="/img/ProjectsDetails/Icon.svg"
                   alt="arrow"
                   onError={(e) => {

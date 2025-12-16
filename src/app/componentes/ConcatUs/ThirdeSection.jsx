@@ -6,7 +6,7 @@ export default function ThirdeSection() {
     <section className="ThirdeSection">
       <div className="row">
         <div className="col-12 col-md-6">
-          <img src="/img/ConcatUS/herosimg.png" alt="img" />
+          <img src="/img/ConcatUS/herosimg.png" alt="img" loading="lazy" />
         </div>
         <div className="col-12 col-md-6 d-flex justify-content-center align-items-center mx-2 mx-md-0 ">
           <div className="box_ditales d-flex flex-column align-items-start">
@@ -17,6 +17,7 @@ export default function ThirdeSection() {
                   src="/img/ConcatUS/Huge-icon.png"
                   alt="dimon"
                   className="dimon"
+                  loading="lazy"
                   onError={(e) => {
                     e.currentTarget.src = "../img/LoagingState.png";
                     e.currentTarget.style.objectFit = "contain";
@@ -36,6 +37,7 @@ export default function ThirdeSection() {
         </div>
       </div>
       <img
+        loading="lazy"
         id="Wow-Emoje"
         src="/img/ConcatUS/Wow-Emoje.svg"
         alt="Wow-Emoje.svg"
@@ -45,6 +47,7 @@ export default function ThirdeSection() {
         }}
       />
       <img
+        loading="lazy"
         src="/img/ConcatUS/Star.svg"
         lt="dimon"
         className="star"

@@ -1,24 +1,33 @@
-"use client";
-import dynamic from "next/dynamic";
-import { useState, useEffect } from "react";
+"use client"
+import dynamic from "next/dynamic"
+import { useState } from "react"
 import {
   getCountryCallingCode,
-  getRegionCodeForCountryCode,
-} from "libphonenumber-js";
-import "react-phone-input-2/lib/style.css";
+} from "libphonenumber-js"
+import Select from "react-select"
 
-const PhoneInput = dynamic(() => import("react-phone-input-2"), { ssr: false });
+import "react-phone-input-2/lib/style.css"
+
+const PhoneInput = dynamic(() => import("react-phone-input-2"), { ssr: false })
 
 const getCountryName = (countryCode) => {
-  const countryNames = new Intl.DisplayNames(["ar"], { type: "region" });
-  return countryNames.of(countryCode) || "غير معروف";
-};
+  const countryNames = new Intl.DisplayNames(["ar"], { type: "region" })
+  return countryNames.of(countryCode) || "غير معروف"
+}
+
+const SubjectOptions = [
+  { value: "باقة الإطلاق الأولي 'MVP'", label: "باقة الإطلاق الأولي 'MVP'" },
+  {
+    value: "باقة المشاريع الكبيرة أو فرص التعاون",
+    label: "باقة المشاريع الكبيرة أو فرص التعاون"
+  }
+]
 
 export default function FirstSiction() {
-  const [errors, setErrors] = useState({});
-  const [phoneValue, setPhone] = useState("");
-  const [country, setCountry] = useState("US");
-  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [errors, setErrors] = useState({})
+  const [phoneValue, setPhone] = useState("")
+  const [country, setCountry] = useState("US")
+  const [isSubmitting, setIsSubmitting] = useState(false)
 
   const data = {
     small: "اتصل",
@@ -30,22 +39,24 @@ export default function FirstSiction() {
         img: "/img/ConcatUS/Location.svg",
         title: "البريد الإلكتروني",
         text: "تواصل معنا على مدار الساعة",
-        link: "sab3a.agency@gmail.com",
+        link: "sab3a.agency@gmail.com"
       },
       {
         img: "/img/ConcatUS/Massage.svg",
         title: "مكتب",
         text: "تواصل معنا من أي مكان!",
-        span: "وكالة سبعة رقمية تخدم السعودية، عُمان، ومصر عن بُعد.",
+        span: "وكالة سبعة رقمية تخدم السعودية، عُمان، ومصر عن بُعد."
       },
       {
         img: "/img/ConcatUS/Telphone.svg",
-        title: "ساعات العمل",
+        title: "الهاتف",
         text: "من الأحد إلى الخميس من 9:30 صباحًا حتى 5:30 مساءً.",
         phone: "+96878495068",
-      },
-    ],
-  };
+        full: true
+      }
+    ]
+  }
+
   // Now need to do Functionality to accept data from form
 
   const [value, setValue] = useState({
@@ -53,95 +64,97 @@ export default function FirstSiction() {
     family: "",
     email: "",
     phone: "",
+    subject: "باقة الإطلاق الأولي 'MVP'",
     message: "",
-    Accept: false,
-  });
+    Accept: false
+  })
   const handleChange = (phoneValue, countryData) => {
-    setPhone(phoneValue);
-    setCountry(countryData?.countryCode?.toUpperCase() || "SA");
-    setValue((prev) => ({ ...prev, phone: phoneValue }));
-  };
+    setPhone(phoneValue)
+    setCountry(countryData?.countryCode?.toUpperCase() || "SA")
+    setValue((prev) => ({ ...prev, phone: phoneValue }))
+  }
 
   const [notification, setNotification] = useState({
     message: "",
     type: "", // "success", "error", "loading"
-    visible: false,
-  });
+    visible: false
+  })
 
   const validateForm = () => {
-    const newErrors = {};
+    const newErrors = {}
 
     if (!value.name.trim() || value.name.length < 2) {
-      newErrors.name = "الاسم الأول يجب أن يحتوي على حرفين على الأقل.";
+      newErrors.name = "الاسم الأول يجب أن يحتوي على حرفين على الأقل."
     }
 
     if (!value.family.trim() || value.family.length < 2) {
-      newErrors.family = "اسم العائلة يجب أن يحتوي على حرفين على الأقل.";
+      newErrors.family = "اسم العائلة يجب أن يحتوي على حرفين على الأقل."
     }
 
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
     if (!emailRegex.test(value.email)) {
-      newErrors.email = "يرجى إدخال بريد إلكتروني صحيح.";
+      newErrors.email = "يرجى إدخال بريد إلكتروني صحيح."
     }
 
     if (!phoneValue || phoneValue.length < 8 || !/^\+\d+$/.test(phoneValue)) {
-      newErrors.phone = "يرجى إدخال رقم هاتف صحيح يبدأ بـ +.";
+      newErrors.phone = "يرجى إدخال رقم هاتف صحيح يبدأ بـ +."
     }
 
     if (!value.message.trim() || value.message.length < 10) {
-      newErrors.message = "الرسالة يجب أن تكون على الأقل 10 أحرف.";
+      newErrors.message = "الرسالة يجب أن تكون على الأقل 10 أحرف."
     }
 
     if (!value.Accept) {
-      newErrors.Accept = "يجب الموافقة على سياسة الخصوصية.";
+      newErrors.Accept = "يجب الموافقة على سياسة الخصوصية."
     }
 
-    setErrors(newErrors);
-    return Object.keys(newErrors).length === 0;
-  };
+    setErrors(newErrors)
+    return Object.keys(newErrors).length === 0
+  }
 
   const handleSubmit = async (e) => {
-    e.preventDefault();
+    e.preventDefault()
 
     if (!validateForm()) {
       setNotification({
         message: "يرجى تصحيح الأخطاء قبل الإرسال.",
         type: "error",
-        visible: true,
-      });
-      return;
+        visible: true
+      })
+      return
     }
 
-    setIsSubmitting(true);
+    setIsSubmitting(true)
     setNotification({
       message: "جاري الإرسال ...",
       type: "loading",
-      visible: true,
-    });
+      visible: true
+    })
 
     const payload = {
       name: `${value.name} ${value.family}`,
       email: value.email,
       phone: phoneValue,
+      subject: value.subject,
       message: value.message,
-      agree_to_policy: value.Accept,
-    };
+      agree_to_policy: value.Accept
+    }
 
     try {
       const res = await fetch("/api/projects/Contact_US", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(payload),
-      });
+        body: JSON.stringify(payload)
+      })
 
-      const data = await res.json().catch(() => ({}));
+      const data = await res.json().catch(() => ({}))
 
       if (!res.ok) {
-        throw new Error(data.message || "فشل إرسال البيانات");
+        throw new Error(data.message || "فشل إرسال البيانات")
       }
 
       if (data.code !== 200) {
-        throw new Error(data.message || "فشل إرسال البيانات");
+        throw new Error(data.message || "فشل إرسال البيانات")
       }
 
       setValue({
@@ -149,31 +162,32 @@ export default function FirstSiction() {
         family: "",
         email: "",
         phone: "",
+        subject: "باقة الإطلاق الأولي 'MVP'",
         message: "",
-        Accept: false,
-      });
-      setPhone("");
-      setCountry("US");
+        Accept: false
+      })
+      setPhone("")
+      setCountry("US")
 
       setNotification({
         message: "تم إرسال الرسالة بنجاح! 🎉",
         type: "success",
-        visible: true,
-      });
+        visible: true
+      })
     } catch (error) {
       setNotification({
         message: "حدث خطأ، يرجى المحاولة مرة أخرى",
         type: "error",
-        visible: true,
-      });
+        visible: true
+      })
     } finally {
-      setIsSubmitting(false);
+      setIsSubmitting(false)
       setTimeout(
         () => setNotification((prev) => ({ ...prev, visible: false })),
         3000
-      );
+      )
     }
-  };
+  }
 
   return (
     <section className="ConcatUS mt-50">
@@ -192,18 +206,20 @@ export default function FirstSiction() {
               {data.boxes.map((box, index) => (
                 <div
                   key={index}
-                  className="box mb-5 d-flex flex-column align-items-start gap-2"
+                  className={`box mb-5 d-flex flex-column align-items-start gap-2
+                    ${box.full ? "w-100" : "w-40"}`}
                 >
                   <img
                     src={box.img}
                     alt="message-img"
+                    loading="lazy"
                     onError={(e) => {
-                      e.currentTarget.src = "../img/LoagingState.png";
-                      e.currentTarget.style.objectFit = "contain";
+                      e.currentTarget.src = "../img/LoagingState.png"
+                      e.currentTarget.style.objectFit = "contain"
                     }}
                   />
                   <h4 className="my-3">{box.title}</h4>
-                  <p>{box.text}</p>
+                  <p className="">{box.text}</p>
                   {box.span && <span>{box.span}</span>}
                   {box.link && <a href={`mailto:${box.link}`}>{box.link}</a>}
                   {box.phone && <a href={`tel:${box.phone}`}>{box.phone}</a>}
@@ -228,7 +244,7 @@ export default function FirstSiction() {
                   {[
                     { label: "الاسم الأول", key: "name", type: "text" },
                     { label: "اسم العائلة", key: "family", type: "text" },
-                    { label: "البريد الإلكتروني", key: "email", type: "email" },
+                    { label: "البريد الإلكتروني", key: "email", type: "email" }
                   ].map(({ label, key, type }) => (
                     <div key={key} className="col-6 col-md-6">
                       <label className="form-label">
@@ -242,7 +258,7 @@ export default function FirstSiction() {
                           onChange={(e) =>
                             setValue((prev) => ({
                               ...prev,
-                              [key]: e.target.value,
+                              [key]: e.target.value
                             }))
                           }
                         />
@@ -284,6 +300,27 @@ export default function FirstSiction() {
                   </div>
 
                   <div className="col-12 col-md-12">
+                    <label className="form-label">
+                      <h6>الموضوع</h6>
+                      <Select
+                        className="basic-single"
+                        classNamePrefix="select "
+                        styles={{
+                          indicatorSeparator: () => ({ display: "none" }),
+                        }}
+                        defaultValue={SubjectOptions[0]}
+                        // isDisabled={isDisabled}
+                        // isLoading={isLoading}
+                        // isClearable={isClearable}
+                        isRtl={true}
+                        // isSearchable={isSearchable}
+                        name="Subject"
+                        options={SubjectOptions}
+                      />
+                    </label>
+                  </div>
+
+                  <div className="col-12 col-md-12">
                     <div className="phone-input-container">
                       <label className="phone-label form-label">
                         <h6>رسالتك</h6>
@@ -296,7 +333,7 @@ export default function FirstSiction() {
                         onChange={(e) =>
                           setValue((prev) => ({
                             ...prev,
-                            message: e.target.value,
+                            message: e.target.value
                           }))
                         }
                       ></textarea>
@@ -315,8 +352,8 @@ export default function FirstSiction() {
                       onClick={() => {
                         setValue((prev) => ({
                           ...prev,
-                          Accept: !prev.Accept,
-                        }));
+                          Accept: !prev.Accept
+                        }))
                       }}
                     />
                     <label>
@@ -344,5 +381,5 @@ export default function FirstSiction() {
         </div>
       </div>
     </section>
-  );
+  )
 }

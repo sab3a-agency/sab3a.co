@@ -42,6 +42,7 @@ function HeroSkeleton() {
           <span className="placeholder col-7 rounded-pill"></span>
         </p>
         <img
+          loading="lazy"
           src="../img/LoagingState.png"
           className="placeholder bg-light bg-opacity-50 rounded-circle placeholder-wave"
           style={{ width: "200px", height: "200px", objectFit: "contain" }}
@@ -193,7 +194,7 @@ export default function HeroPart1() {
               className="CofiaVector"
               alt="صورة شخص يرتدي كوفية"
               src={Hero_data.src}
-              loading="eager"
+              loading="lazy"
               onError={(e) => {
                 e.currentTarget.src = "../img/LoagingState.png";
                 e.currentTarget.style.objectFit = "contain";
@@ -222,7 +223,9 @@ export default function HeroPart1() {
         <p className="BigText">{Hero_data.advPoster}</p>
 
         <img
+          
           src="/img/BoardsPoster.svg"
+          loading="lazy"
           className="LargPoster d-none d-md-none d-xl-flex justify-content-center align-items-start  "
           alt="Saba-Image"
           onError={(e) => {
@@ -275,6 +278,7 @@ export default function HeroPart1() {
                 <img
                   src="../img/Avatar.png"
                   alt="Avtar"
+                    loading="lazy"
                   onError={(e) => {
                     e.currentTarget.src = "../img/LoagingState.png";
                     e.currentTarget.style.objectFit = "contain";
@@ -286,6 +290,7 @@ export default function HeroPart1() {
                 <div className="text d-flex align-items-baseline">
                   <span className="Star">
                     <img
+                        loading="lazy"
                       src="../img/Star.svg"
                       alt="Star"
                       onError={(e) => {
@@ -300,6 +305,7 @@ export default function HeroPart1() {
               </div>
             </div>
             <img
+              loading="lazy"
               src="/img/BoardsPoster.svg"
               className="miniposters d-md-flex d-xl-none justify-content-center align-items-center  position-relative"
               style={{ top: "-9rem", width: "18rem", height: "18rem" }}

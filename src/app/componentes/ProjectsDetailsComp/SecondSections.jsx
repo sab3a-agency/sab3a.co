@@ -86,7 +86,7 @@ export default function SecondSeation({ projectData }) {
                     className="Box col-6 col-sm-6 col-md-3"
                   >
                     <div className="icon">
-                      <img
+                      <img loading="lazy"
                         src={boxItem.icon}
                         alt="icon"
                         onError={(e) => {
@@ -108,7 +108,7 @@ export default function SecondSeation({ projectData }) {
                       <li key={`${subtitle}-${subIndex}`}>
                         <div className="innerinfo d-flex gap-3 align-items-center">
                           {boxItem.innerIcon && (
-                            <img
+                            <img loading="lazy"
                               src={boxItem.innerIcon}
                               alt="Check_Icone"
                               id="Check_Icone"

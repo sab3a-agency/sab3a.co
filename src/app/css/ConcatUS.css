@@ -1,8 +1,7 @@
 @import url("../css/ComoneStyle.css");
 
-.ConcatUS .box {
-  width: 40% !important;
-}
+
+
 .ConcatUS .head {
   text-align: justify !important;
 }
@@ -398,7 +397,7 @@ img.hero-star {
   margin-top: 4px;
 }
 
-@media (min-width: 1024px) {
+@media (max-width: 1024px) {
   input.form-control.custom-input {
     font-size: 15px;
   }

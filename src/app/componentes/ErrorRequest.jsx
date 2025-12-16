@@ -7,6 +7,7 @@ export default function ErrorRequest() {
         className="backg"
         src="../img/LoagingState.png"
         alt="Erorr Requist"
+        loading="lazy"
       />
     </div>
   );

@@ -66,6 +66,7 @@ export default function Footer() {
             <div className="logo text-justify d-flex">
               <a href="#">
                 <img
+                  loading="lazy"
                   src="/img/IconSite.svg"
                   alt="Logo"
                   onError={(e) => {
@@ -91,6 +92,7 @@ export default function Footer() {
                       className="part d-flex   align-items-center justify-content-center gap-1"
                     >
                       <img
+                        loading="lazy"
                         src={item.icon}
                         alt="icon"
                         onError={(e) => {
@@ -133,6 +135,7 @@ export default function Footer() {
                   >
                     <div className="info">
                       <img
+                        loading="lazy"
                         src={contact.icon}
                         alt={contact.title}
                         onError={(e) => {
@@ -151,6 +154,7 @@ export default function Footer() {
               <img
                 src="/img/Sab3a.svg"
                 alt="img"
+                loading="lazy"
                 onError={(e) => {
                   e.currentTarget.src = "../img/LoagingState.png";
                   e.currentTarget.style.objectFit = "contain";

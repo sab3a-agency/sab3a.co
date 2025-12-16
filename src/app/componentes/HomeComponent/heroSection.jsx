@@ -49,6 +49,7 @@ export default function Herosection() {
                     <img
                       src={data.innerSrc}
                       alt="Star"
+                      loading="lazy"
                       onError={(e) => {
                         e.currentTarget.src = "../img/LoagingState.png";
                         e.currentTarget.style.objectFit = "contain";

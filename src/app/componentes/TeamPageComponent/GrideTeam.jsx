@@ -1,54 +1,55 @@
-"use client";
+"use client"
 import {
   faLinkedin,
-  faSquareFacebook,
-} from "@fortawesome/free-brands-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { useEffect, useState } from "react";
+  faSquareFacebook
+} from "@fortawesome/free-brands-svg-icons"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { useEffect, useState } from "react"
 
 export default function GrideTeam() {
-  const [teamData, setTeamData] = useState([]);
-  const [loading, setLoading] = useState(true);
+  const [teamData, setTeamData] = useState([])
+  const [loading, setLoading] = useState(true)
 
   useEffect(() => {
     async function fetchTeam() {
       try {
-        const res = await fetch("/api/projects/teams", { cache: "no-store" });
-        const json = await res.json();
+        const res = await fetch("/api/projects/teams", { cache: "no-store" })
+        const json = await res.json()
         if (json.code === 200) {
-          setTeamData(json.data.items); // نأخذ items من data
+          setTeamData(json.data.items) // نأخذ items من data
         }
       } catch (error) {
-        console.error("Failed to fetch team:", error);
+        console.error("Failed to fetch team:", error)
       } finally {
-        setLoading(false);
+        setLoading(false)
       }
     }
-    fetchTeam();
-  }, []);
+    fetchTeam()
+  }, [])
 
-  const Data = teamData.slice(0, 2);
-  const RestOfTheTeam = teamData.slice(2);
+  const Data = teamData.slice(0, 2)
+  const RestOfTheTeam = teamData.slice(2)
 
   // Fallback function for image
   const getImage = (src) =>
-    src && src.trim() !== "" ? src : "../img/LoagingState.png";
+    src && src.trim() !== "" ? src : "../img/LoagingState.png"
 
   // onError fallback handler
   const handleImageError = (e) => {
-    e.target.src = "../img/LoagingState.png";
-    e.currentTarget.style.objectFit = "contain";
-  };
+    e.target.src = "../img/LoagingState.png"
+    e.currentTarget.style.objectFit = "contain"
+  }
 
   // Skeleton Loader
   const SkeletonCard = ({ type }) => (
     <div className={type === "main" ? "col-12 col-md-6" : "col-6 col-md-3"}>
       <img
+        loading="lazy"
         src={getImage("../img/LoagingState.png")}
         alt="Loading"
         onError={handleImageError}
         style={{
-          height: type === "main" ? "auto" : "auto",
+          height: type === "main" ? "auto" : "auto"
         }}
       />
       <div className="information d-flex flex-column justify-content-center align-items-start mt-2">
@@ -64,7 +65,7 @@ export default function GrideTeam() {
                 backgroundColor: "#e0e0e0",
                 width: "80%",
                 height: "14px",
-                marginBottom: "4px",
+                marginBottom: "4px"
               }}
             ></small>
             <small
@@ -72,7 +73,7 @@ export default function GrideTeam() {
                 display: "block",
                 backgroundColor: "#e0e0e0",
                 width: "50%",
-                height: "14px",
+                height: "14px"
               }}
             ></small>
           </p>
@@ -82,7 +83,7 @@ export default function GrideTeam() {
                 width: "32px",
                 height: "32px",
                 backgroundColor: "#e0e0e0",
-                borderRadius: "50%",
+                borderRadius: "50%"
               }}
             ></div>
             <div
@@ -90,14 +91,14 @@ export default function GrideTeam() {
                 width: "32px",
                 height: "32px",
                 backgroundColor: "#e0e0e0",
-                borderRadius: "50%",
+                borderRadius: "50%"
               }}
             ></div>
           </div>
         </div>
       </div>
     </div>
-  );
+  )
 
   return (
     <div className="Gred mt-50 container" data-aos="fade-up">
@@ -108,9 +109,9 @@ export default function GrideTeam() {
               <div key={item.id} className="col-12 col-md-6">
                 <div className="wrapperImge mt-3">
                   <img
+                    loading="lazy"
                     src={getImage(item.image)}
                     alt={item.name}
-                    loading="eager"
                     className="object-fit-cover w-100"
                     onError={handleImageError}
                   />
@@ -174,9 +175,9 @@ export default function GrideTeam() {
                   <div className="box mt-5" data-aos="zoom-in">
                     <div className="Wrapp">
                       <img
+                        loading="lazy"
                         src={getImage(item.image)}
                         alt={item.name}
-                        loading="lazy"
                         onError={handleImageError}
                       />
                     </div>
@@ -190,5 +191,5 @@ export default function GrideTeam() {
         </div>
       </div>
     </div>
-  );
+  )
 }

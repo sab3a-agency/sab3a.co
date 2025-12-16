@@ -9,6 +9,7 @@ export default function SecondSection() {
       <img
         src="/img/ConcatUS/Star.svg"
         alt="star"
+        loading="lazy"
         className="hero-star"
         onError={(e) => {
           e.currentTarget.src = "../img/LoagingState.png";
@@ -35,6 +36,7 @@ export default function SecondSection() {
           >
             <span className="fw-semibold fs-5">حدد موعد مكالمتك الآن</span>
             <img
+              loading="lazy"
               alt="arrow"
               src={isHovered ? "/img/Icon2.svg" : "/img/Icon1.svg"}
               onError={(e) => {

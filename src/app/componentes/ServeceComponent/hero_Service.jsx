@@ -28,7 +28,7 @@ export default function Hero_Service() {
                 className="d-flex align-items-center gap-4 text-decoration-none  justify-content-center"
                 data-aos="fade-up-right"
               >
-                <img
+                <img loading="lazy"
                   id="arrow"
                   src="../img/ServicePage/arrow.svg"
                   alt="arrow"

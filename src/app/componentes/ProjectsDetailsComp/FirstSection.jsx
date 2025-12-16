@@ -1,8 +1,8 @@
-"use client";
+"use client"
 
-import { useEffect, useState } from "react";
-import { useParams } from "next/navigation";
-import Erorr from "../Erorr";
+import { useEffect, useState } from "react"
+import { useParams } from "next/navigation"
+import Erorr from "../Erorr"
 
 const data = {
   intro: `
@@ -19,36 +19,36 @@ const data = {
            كثير من الأحيان أن يطلع على صورة حقيقية لتصميم الموقع. هنا وجب على
            المصمم أن يضع نصوصا مؤقتة على التصميم ليظهر للعميل الشكل كاملاً،دور
            مولد النص العربى أن يوفر على المصمم عناء البحث عن نص بديل لا علاقة
-           له بالموضوع الذى يتحدث عنه التصميم فيظهر بشكل لا يليق.`,
-};
+           له بالموضوع الذى يتحدث عنه التصميم فيظهر بشكل لا يليق.`
+}
 
 export default function FirstSection() {
-  const param = useParams();
-  const id = param.ProjectsDetails;
-  const [projectData, setProjectData] = useState(null);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
+  const param = useParams()
+  const id = param.ProjectsDetails
+  const [projectData, setProjectData] = useState(null)
+  const [loading, setLoading] = useState(true)
+  const [error, setError] = useState(null)
 
   useEffect(() => {
     async function fetchProject() {
-      if (!id) return;
+      if (!id) return
 
       try {
-        const response = await fetch(`/api/projects/${id}`);
+        const response = await fetch(`/api/projects/${id}`)
         if (!response.ok) {
-          throw new Error("Failed to fetch project details.");
+          throw new Error("Failed to fetch project details.")
         }
-        const data = await response.json();
-        setProjectData(data.data);
+        const data = await response.json()
+        setProjectData(data.data)
       } catch (err) {
-        setError(err.message);
+        setError(err.message)
       } finally {
-        setLoading(false);
+        setLoading(false)
       }
     }
 
-    fetchProject();
-  }, [id]);
+    fetchProject()
+  }, [id])
 
   if (loading) {
     return (
@@ -64,11 +64,12 @@ export default function FirstSection() {
           style={{ height: 400 }}
         >
           <img
+            loading="lazy"
             src="../img/LoagingState.png"
             alt="LoagingState"
             onError={(e) => {
-              e.currentTarget.src = "../img/LoagingState.png";
-              e.currentTarget.style.objectFit = "contain";
+              e.currentTarget.src = "../img/LoagingState.png"
+              e.currentTarget.style.objectFit = "contain"
             }}
           />
         </div>
@@ -90,26 +91,27 @@ export default function FirstSection() {
           </p>
         </div>
       </section>
-    );
+    )
   }
 
   if (error) {
     return (
       <div className="eror">
         <img
+          loading="lazy"
           src="../"
           alt=""
           onError={(e) => {
-            e.currentTarget.src = "../img/LoagingState.png";
-            e.currentTarget.style.objectFit = "contain";
+            e.currentTarget.src = "../img/LoagingState.png"
+            e.currentTarget.style.objectFit = "contain"
           }}
         />
       </div>
-    );
+    )
   }
 
   if (!projectData) {
-    return <Erorr />;
+    return <Erorr />
   }
 
   return (
@@ -120,12 +122,12 @@ export default function FirstSection() {
         </div>
         <div className="imgWrapper">
           <img
+            loading="lazy"
             src={projectData.cover_image}
             alt="img"
-            loading="lazy"
             onError={(e) => {
-              e.currentTarget.src = "../img/LoagingState.png";
-              e.currentTarget.style.objectFit = "contain";
+              e.currentTarget.src = "../img/LoagingState.png"
+              e.currentTarget.style.objectFit = "contain"
             }}
           />
         </div>
@@ -136,5 +138,5 @@ export default function FirstSection() {
         </div>
       </section>
     </>
-  );
+  )
 }

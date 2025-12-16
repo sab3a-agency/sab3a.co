@@ -65,6 +65,7 @@ export default function HowWeAre() {
                         src={feature.iconSrc}
                         style={{ maxWidth: "20rem !important" }}
                         alt="icon"
+                        loading="lazy"
                         onError={(e) => {
                           e.currentTarget.src = "../img/LoagingState.png";
                           e.currentTarget.style.objectFit = "contain";
