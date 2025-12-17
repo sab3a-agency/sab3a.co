@@ -202,7 +202,7 @@ export default function FirstSiction() {
               <h3>{data.title}</h3>
               <p className="my-4">{data.discription}</p>
             </div>
-            <div className="ContentText d-flex flex-wrap gap-3 mt-5 justify-content-start">
+            <div className="ContentText d-flex flex-wrap gap-5 text-right mt-5 justify-content-start">
               {data.boxes.map((box, index) => (
                 <div
                   key={index}
