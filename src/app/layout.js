@@ -1,6 +1,6 @@
 'use client';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import './css/globals.css';
+import '@/css/globals.css';
 
 import Footer from './components/HomeComponent/Footer';
 import Header from './components/HomeComponent/Header';

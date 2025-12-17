@@ -5,7 +5,7 @@ import LetsDoit from '../components/ServeceComponent/LetsDoit';
 import Section2 from '../components/ServeceComponent/section2';
 import HeroTeamSection from '../components/TeamPageComponent/Hero';
 import OurJourney from '../components/TeamPageComponent/OurJourney';
-import '../css/Teampage.css';
+import '@/css/Teampage.css';
 
 const LetsDitedata = {
   btnContent: ' معاملة خاصة ',

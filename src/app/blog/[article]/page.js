@@ -4,7 +4,7 @@ import FirstSection from '@/app/components/BlogCommponent/FristSection';
 import OtherArticals from '@/app/components/BlogCommponent/otherArticals';
 import Hero from '@/app/components/ProjectsDetailsComp/hero';
 import { useParams } from 'next/navigation';
-import '../../css/blog-style.css';
+import '@/css/blog-style.css';
 
 export default function ArticlePage() {
   const params = useParams();
