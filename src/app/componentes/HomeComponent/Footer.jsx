@@ -19,11 +19,11 @@ const footerData = {
     { icon: faYoutube, link: "#" },
   ],
   quickLinks: [
-    { text: "الرئيسية", paht: "/" },
-    { text: "اعمالنا", paht: "/servicesPage" },
-    { text: "الباقات", paht: "/OurePackagesPage" },
-    { text: "فريقنا", paht: "/OurTeamPage" },
-    { text: "المدونة", paht: "/BlogPage" },
+    { text: "الرئيسية", path: "/" },
+    { text: "اعمالنا", path: "/services" },
+    { text: "الباقات", path: "/packages" },
+    { text: "فريقنا", path: "/team" },
+    { text: "المدونة", path: "/blog" },
   ],
 
   fields: [
@@ -121,7 +121,7 @@ export default function Footer() {
                   <ul>
                     {footerData.quickLinks.map((page, index) => (
                       <li key={index}>
-                        <Link href={page.paht}>{page.text}</Link>
+                        <Link href={page.path}>{page.text}</Link>
                       </li>
                     ))}
                   </ul>

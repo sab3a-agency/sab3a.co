@@ -15,10 +15,10 @@ export default function Header() {
 
   const currentPage = [
     { path: "/", name: "الرئيسية" },
-    { path: "/servicesPage", name: "أعمالنا" },
-    { path: "/OurePackagesPage", name: "الباقات" },
-    { path: "/OurTeamPage", name: "فريقنا" },
-    { path: "/BlogPage", name: "المدونة" },
+    { path: "/services", name: "أعمالنا" },
+    { path: "/packages", name: "الباقات" },
+    { path: "/team", name: "فريقنا" },
+    { path: "/blog", name: "المدونة" },
   ];
 
   useEffect(() => {
@@ -103,7 +103,7 @@ export default function Header() {
             ))}
           </ul>
           <div id="btn">
-            <Link href="/ConcatUS" onClick={closeNavbar}>
+            <Link href="/contact-us" onClick={closeNavbar}>
               <button className="btn btn-success" type="submit">
                 اتصل بنا
               </button>

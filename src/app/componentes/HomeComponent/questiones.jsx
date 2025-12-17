@@ -154,7 +154,7 @@ export default function Questiones() {
                       style={{ cursor: "pointer" }}
                       key={index}
                       onClick={() => {
-                        navigate.push("/ConcatUS");
+                        navigate.push("/contact-us");
                       }}
                     >
                       {link.text}

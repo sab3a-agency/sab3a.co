@@ -1,11 +1,27 @@
-"use client"; // لو انت في Next.js App Router
+import ActWithTeam from "./componentes/HomeComponent/ActWithTeam"
+import HeroPart1 from "./componentes/HomeComponent/HeroPart1"
+import Herosection from "./componentes/HomeComponent/heroSection"
+import HowWeAre from "./componentes/HomeComponent/HowWeAre"
+import OurVision from "./componentes/HomeComponent/OurVision"
+import PartnerSession from "./componentes/HomeComponent/partnerSession"
+import Questiones from "./componentes/HomeComponent/questiones"
+import Services from "./componentes/HomeComponent/services"
+import WhyChooseUs from "./componentes/HomeComponent/whyChooseUs"
 
-import { HomePage } from "./Homepage/page";
 
 export default function Home() {
-
-
   return (
-    <HomePage />
+    <>
+      <div className='HeaderWithHeroSition'> </div>
+      <HeroPart1 />
+      <Herosection />
+      <Services />
+      <WhyChooseUs />
+      <HowWeAre />
+      <PartnerSession />
+      <ActWithTeam />
+      <OurVision />
+      <Questiones />
+    </>
   );
 }
