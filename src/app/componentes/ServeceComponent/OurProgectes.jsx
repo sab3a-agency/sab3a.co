@@ -62,7 +62,7 @@ export default function OurProgectes({ Data }) {
         {projects.map((project) => (
           <div key={project.id} className="box col-12 col-md-6">
             <Link
-              href={`/servicesPage/${project.id}`}
+              href={`/services/${project.id}`}
               className="imgWrapper"
               style={{ cursor: "pointer" }}
             >
