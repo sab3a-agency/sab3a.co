@@ -86,7 +86,7 @@ export default function ArticalGrid({ data }) {
             data-aos="fade-up"
           >
             <div className="box w-100">
-              <Link href={`/BlogPage/${item.id}`}>
+              <Link href={`/blog/${item.id}`}>
                 <Image
                   src={item.cover_image}
                   alt={item.title || "img"}
@@ -107,7 +107,7 @@ export default function ArticalGrid({ data }) {
                   <small>{item.small}</small>
                 </small>
                 <h5 className="boxTitle my-4">{item.title}</h5>
-                <Link href={`/BlogPage/${item.id}`} className="btn btn-success">
+                <Link href={`/blog/${item.id}`} className="btn btn-success">
                   {item.title}
                 </Link>
               </div>
