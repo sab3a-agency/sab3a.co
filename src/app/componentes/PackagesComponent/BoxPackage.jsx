@@ -90,7 +90,7 @@ export function BoxPackage() {
 
                 <div className="Wrapper ">
                   <Link
-                    href="/ConcatUS"
+                    href="/contact-us"
                     className="d-flex justify-content-center"
                   >
                     <button>{outeritem.btnContent}</button>
