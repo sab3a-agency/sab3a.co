@@ -36,22 +36,22 @@ jobs:
           port: ${{ secrets.SERVER_PORT || 22 }}
           script: |
             # Navigate to project directory
-            cd /var/www/front-sab3a.co
-            
+            cd /var/www/html
+
             # Pull latest changes
             git pull origin main
-            
+
             # Install dependencies
             yarn install --frozen-lockfile
-            
+
             # Build the application
             yarn build
-            
+
             # Restart PM2 process
             pm2 restart sab3a-frontend || pm2 start ecosystem.config.js
-            
+
             # Save PM2 configuration
             pm2 save
-            
+
             echo "✅ Deployment completed successfully!"
 
