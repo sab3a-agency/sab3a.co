@@ -14,7 +14,7 @@ const LetsDitedata = {
   letsDoit: " دعنا نصمم غرضك هنا  "
 }
 
-export default function OureTeam() {
+export default function Team() {
   const OurPhilosophy = {
     title: "فلسفتنا",
     discription: `نؤمن بالتعاون والابتكار وسرد القصص. تركز فلسفتنا على فهم العملاء، ودفع الحدود الإبداعية، وتقديم حلول فعالة.`,

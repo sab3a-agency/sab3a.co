@@ -28,7 +28,7 @@ export default function HeroTeamSection() {
             </small>
           </h1>
           <Link
-            href="/ConcatUS"
+            href="/contact-us"
             className="d-flex align-items-center gap-4 text-decoration-none  justify-content-center w-md-100"
             data-aos="fade-up-right"
           >
