@@ -2,7 +2,7 @@ module.exports = {
   apps: [
     {
       name: 'sab3a-frontend',
-      script: 'npm',
+      script: 'yarn',
       args: 'start',
       cwd: '/var/www/front-sab3a.co',
       instances: 1,
