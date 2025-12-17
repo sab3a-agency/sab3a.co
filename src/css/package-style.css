@@ -46,7 +46,7 @@ hr {
 .heroPackages .boxWrapper {
   background: var(--background);
   padding: 6rem;
-  border-radius: 6rem;
+  border-radius: 2.5rem;
   text-align: justify;
   border: 1px solid var(--Color-Black-Black-50);
   width: 100%;
