@@ -2,9 +2,9 @@
 import FirstSiction from "../componentes/ConcatUs/firstSection"
 import SecondSection from "../componentes/ConcatUs/SecondSection"
 import ThirdeSection from "../componentes/ConcatUs/ThirdeSection"
-import "../css/ConcatUS.css"
+import "../css/contact-us.css"
 
-export default function ConcatUS() {
+export default function ContactUs() {
   return (
     <>
       <FirstSiction />

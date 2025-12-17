@@ -2,10 +2,10 @@
 
 
 
-.ConcatUS .head {
+.contact-us .head {
   text-align: justify !important;
 }
-.ConcatUS .head .containerTitle {
+.contact-us .head .containerTitle {
   display: block;
   width: 15%;
   background: var(--Color-White-White-200);
@@ -25,7 +25,7 @@
   width: 100% !important;
 }
 
-.ConcatUS .head .doted::after {
+.contact-us .head .doted::after {
   content: "";
   width: 8px;
   height: 8px;
@@ -56,12 +56,12 @@
   width: 133%;
 }
 
-.ConcatUS .form-label {
+.contact-us .form-label {
   text-align: justify !important;
   width: 100% !important;
 }
 
-.ConcatUS .form-label input {
+.contact-us .form-label input {
   width: 100% !important;
   padding: 1rem 1rem;
   box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
@@ -71,7 +71,7 @@
   font-size: 1.5rem;
 }
 
-.ConcatUS .form-label h6 {
+.contact-us .form-label h6 {
   font-size: 1.6rem !important;
   font-weight: 700;
 }

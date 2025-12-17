@@ -190,7 +190,7 @@ export default function FirstSiction() {
   }
 
   return (
-    <section className="ConcatUS mt-50">
+    <section className="contact-us mt-50">
       <div className="container">
         <div className="row mx-2 mx-md-0">
           <div className="col-12 col-md-6">
