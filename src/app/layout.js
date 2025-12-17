@@ -2,11 +2,11 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '@/css/globals.css';
 
-import Footer from './components/HomeComponent/Footer';
-import Header from './components/HomeComponent/Header';
+import Footer from '../components/HomeComponent/Footer';
+import Header from '../components/HomeComponent/Header';
 import { useEffect, useState } from 'react';
-import AosWrapper from './components/AOSWrapper ';
-import IntroScreenLoading from './components/IntroScreenLoading';
+import AosWrapper from '../components/AOSWrapper ';
+import IntroScreenLoading from '../components/IntroScreenLoading';
 
 // export const metadata = {
 //   title: "الصفحة الرئيسية",

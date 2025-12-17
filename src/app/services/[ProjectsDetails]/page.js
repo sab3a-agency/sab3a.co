@@ -3,13 +3,13 @@
 import { useEffect, useState } from 'react';
 import { useParams } from 'next/navigation';
 
-import FirstSection from '@/app/components/ProjectsDetailsComp/FirstSection';
-import Hero from '@/app/components/ProjectsDetailsComp/hero';
-import ImgesSection from '@/app/components/ProjectsDetailsComp/ImgesSection';
-import SecondSeation from '@/app/components/ProjectsDetailsComp/SecondSections';
-import SimilarWorks from '@/app/components/ProjectsDetailsComp/Similar works';
-import Erorr from '@/app/components/Erorr';
-import ErrorRequest from '@/app/components/ErrorRequest';
+import FirstSection from '@/components/ProjectsDetailsComp/FirstSection';
+import Hero from '@/components/ProjectsDetailsComp/hero';
+import ImgesSection from '@/components/ProjectsDetailsComp/ImgesSection';
+import SecondSeation from '@/components/ProjectsDetailsComp/SecondSections';
+import SimilarWorks from '@/components/ProjectsDetailsComp/Similar works';
+import Erorr from '@/components/Erorr';
+import ErrorRequest from '@/components/ErrorRequest';
 
 export default function ProjectsDitales() {
   const param = useParams();

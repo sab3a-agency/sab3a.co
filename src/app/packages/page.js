@@ -1,8 +1,8 @@
 'use client';
 import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
-import Questiones from '../components/HomeComponent/questiones';
-import HeroPackages from '../components/PackagesComponent/heroPackages';
-import LetsDoit from '../components/ServeceComponent/LetsDoit';
+import Questiones from '../../components/HomeComponent/questiones';
+import HeroPackages from '../../components/PackagesComponent/heroPackages';
+import LetsDoit from '../../components/ServeceComponent/LetsDoit';
 import '@/css/package-style.css';
 import { useMemo } from 'react';
 

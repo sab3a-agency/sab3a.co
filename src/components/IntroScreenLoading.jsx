@@ -1,7 +1,7 @@
 "use client";
 import Lottie from "lottie-react";
 import React, { useEffect } from "react";
-import loadingAnim from "../LoadingStripLoop.json";
+import loadingAnim from "./LoadingStripLoop.json";
 
 export default function IntroScreenLoading() {
   useEffect(() => {

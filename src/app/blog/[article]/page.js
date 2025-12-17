@@ -1,8 +1,8 @@
 'use client';
 import { useEffect, useState } from 'react';
-import FirstSection from '@/app/components/BlogCommponent/FristSection';
-import OtherArticals from '@/app/components/BlogCommponent/otherArticals';
-import Hero from '@/app/components/ProjectsDetailsComp/hero';
+import FirstSection from '@/components/BlogCommponent/FristSection';
+import OtherArticals from '@/components/BlogCommponent/otherArticals';
+import Hero from '@/components/ProjectsDetailsComp/hero';
 import { useParams } from 'next/navigation';
 import '@/css/blog-style.css';
 
