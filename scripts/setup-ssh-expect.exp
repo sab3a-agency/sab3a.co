@@ -1,0 +1,32 @@
+#!/usr/bin/expect -f
+
+set timeout 60
+set server_ip "95.179.244.192"
+set server_user "root"
+set server_pass "\$Gz9\[s_\$DZ%T3c+Y"
+set ssh_key [exec cat $env(HOME)/.ssh/sab3a_deploy.pub]
+
+# Copy SSH key to server
+spawn ssh -o StrictHostKeyChecking=no $server_user@$server_ip
+
+expect {
+    "password:" {
+        send "$server_pass\r"
+        exp_continue
+    }
+    "# " {
+        send "mkdir -p ~/.ssh && chmod 700 ~/.ssh\r"
+        expect "# "
+        send "echo '$ssh_key' >> ~/.ssh/authorized_keys\r"
+        expect "# "
+        send "chmod 600 ~/.ssh/authorized_keys\r"
+        expect "# "
+        send "echo 'SSH key added successfully!'\r"
+        expect "# "
+        send "exit\r"
+    }
+}
+
+expect eof
+puts "\n✅ SSH key setup completed!"
+
