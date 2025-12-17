@@ -36,7 +36,7 @@ jobs:
           port: ${{ secrets.SERVER_PORT || 22 }}
           script: |
             # Navigate to project directory
-            cd /var/www/html
+            cd /var/www/html/sab3a.co
 
             # Pull latest changes
             git pull origin main
@@ -45,7 +45,8 @@ jobs:
             yarn install --frozen-lockfile
 
             # Build the application
-            yarn build
+            rm -rf .next
+            NODE_ENV=production yarn build
 
             # Restart PM2 process
             pm2 restart sab3a-frontend || pm2 start ecosystem.config.js
