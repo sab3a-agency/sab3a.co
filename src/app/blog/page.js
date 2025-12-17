@@ -1,5 +1,5 @@
 import Hero_Blog from "../componentes/BlogCommponent/Hero_Blog"
-import "../css/BlogStyle.css"
+import "../css/blog-style.css"
 
 export const metadata = {
   title: "مدونة سبعة",
