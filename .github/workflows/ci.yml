@@ -16,10 +16,10 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 20
-          cache: npm
+          cache: yarn
 
       - name: Install dependencies
-        run: npm ci
+        run: yarn install --frozen-lockfile
 
       # ESLint disabled temporarily (interactive on first run)
       # Enable after configuring ESLint locally
@@ -27,4 +27,4 @@ jobs:
       #   run: npm run lint
 
       - name: Build Next.js app
-        run: npm run build
+        run: yarn build
