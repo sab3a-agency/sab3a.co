@@ -1,15 +1,15 @@
-"use client";
+'use client';
 
-import { useEffect, useState } from "react";
-import { useParams } from "next/navigation";
+import { useEffect, useState } from 'react';
+import { useParams } from 'next/navigation';
 
-import FirstSection from "@/app/componentes/ProjectsDetailsComp/FirstSection";
-import Hero from "@/app/componentes/ProjectsDetailsComp/hero";
-import ImgesSection from "@/app/componentes/ProjectsDetailsComp/ImgesSection";
-import SecondSeation from "@/app/componentes/ProjectsDetailsComp/SecondSections";
-import SimilarWorks from "@/app/componentes/ProjectsDetailsComp/Similar works";
-import Erorr from "@/app/componentes/Erorr";
-import ErrorRequest from "@/app/componentes/ErrorRequest";
+import FirstSection from '@/app/components/ProjectsDetailsComp/FirstSection';
+import Hero from '@/app/components/ProjectsDetailsComp/hero';
+import ImgesSection from '@/app/components/ProjectsDetailsComp/ImgesSection';
+import SecondSeation from '@/app/components/ProjectsDetailsComp/SecondSections';
+import SimilarWorks from '@/app/components/ProjectsDetailsComp/Similar works';
+import Erorr from '@/app/components/Erorr';
+import ErrorRequest from '@/app/components/ErrorRequest';
 
 export default function ProjectsDitales() {
   const param = useParams();
@@ -25,7 +25,7 @@ export default function ProjectsDitales() {
       try {
         const response = await fetch(`/api/projects/${id}`);
         if (!response.ok) {
-          throw new Error("Failed to fetch project details.");
+          throw new Error('Failed to fetch project details.');
         }
         const data = await response.json();
         setProjectData(data.data);
@@ -40,9 +40,7 @@ export default function ProjectsDitales() {
   }, [id]);
 
   if (loading) {
-    return (
-      <Erorr />
-    )
+    return <Erorr />;
   }
 
   if (error) {
@@ -55,22 +53,21 @@ export default function ProjectsDitales() {
 
   const heroData = [
     {
-      title: projectData.title || "عنوان المشروع غير متوفر",
-      titleEtc: projectData.sub_title || "وصف مختصر للمشروع",
-      span:
-        projectData.implemented_date
-          ? new Date(projectData.implemented_date).toLocaleDateString("ar-EG", {
-            day: "numeric",
-            month: "long",
-            year: "numeric",
+      title: projectData.title || 'عنوان المشروع غير متوفر',
+      titleEtc: projectData.sub_title || 'وصف مختصر للمشروع',
+      span: projectData.implemented_date
+        ? new Date(projectData.implemented_date).toLocaleDateString('ar-EG', {
+            day: 'numeric',
+            month: 'long',
+            year: 'numeric'
           })
-          : new Date(projectData.created_at).toLocaleDateString("ar-EG", {
-            day: "numeric",
-            month: "long",
-            year: "numeric",
-          }) || "تاريخ غير متوفر",
-      small: projectData.category || projectData.type || "تصنيف غير محدد",
-    },
+        : new Date(projectData.created_at).toLocaleDateString('ar-EG', {
+            day: 'numeric',
+            month: 'long',
+            year: 'numeric'
+          }) || 'تاريخ غير متوفر',
+      small: projectData.category || projectData.type || 'تصنيف غير محدد'
+    }
   ];
 
   return (

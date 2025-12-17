@@ -1,44 +1,44 @@
-"use client"
+'use client';
 
-import SecondSeation from "../componentes/ProjectsDetailsComp/SecondSections"
-import LetsDoit from "../componentes/ServeceComponent/LetsDoit"
-import Section2 from "../componentes/ServeceComponent/section2"
-import HeroTeamSection from "../componentes/TeamPageComponent/Hero"
-import OurJourney from "../componentes/TeamPageComponent/OurJourney"
-import "../css/Teampage.css"
+import SecondSeation from '../components/ProjectsDetailsComp/SecondSections';
+import LetsDoit from '../components/ServeceComponent/LetsDoit';
+import Section2 from '../components/ServeceComponent/section2';
+import HeroTeamSection from '../components/TeamPageComponent/Hero';
+import OurJourney from '../components/TeamPageComponent/OurJourney';
+import '../css/Teampage.css';
 
 const LetsDitedata = {
-  btnContent: " معاملة خاصة ",
-  discription: " ابدأ رحلة لاكتشاف ",
-  smallDescription: "عالم من استراتيجيات التصميم المبتكرة.",
-  letsDoit: " دعنا نصمم غرضك هنا  "
-}
+  btnContent: ' معاملة خاصة ',
+  discription: ' ابدأ رحلة لاكتشاف ',
+  smallDescription: 'عالم من استراتيجيات التصميم المبتكرة.',
+  letsDoit: ' دعنا نصمم غرضك هنا  '
+};
 
 export default function Team() {
   const OurPhilosophy = {
-    title: "فلسفتنا",
+    title: 'فلسفتنا',
     discription: `نؤمن بالتعاون والابتكار وسرد القصص. تركز فلسفتنا على فهم العملاء، ودفع الحدود الإبداعية، وتقديم حلول فعالة.`,
 
     Box: [
       {
-        smallText: "التعاون",
-        title: "معًا، نخلق",
+        smallText: 'التعاون',
+        title: 'معًا، نخلق',
         description: `في سبعة، التعاون هو الأساس. نؤمن أن الأفكار العظيمة تأتي من العمل عن كثب مع العملاء ومع بعضنا البعض.`,
-        icon: "/img/ProjectsDetails/people.svg",
+        icon: '/img/ProjectsDetails/people.svg'
       },
       {
-        smallText: "الابتكار",
-        title: "دفع الحدود",
+        smallText: 'الابتكار',
+        title: 'دفع الحدود',
         description: `الابتكار هو ما يدفعنا. نستكشف تقنيات جديدة وتكنولوجيا مبتكرة للبقاء في المقدمة.`,
-        icon: "/img/ProjectsDetails/lamp-on.svg",
+        icon: '/img/ProjectsDetails/lamp-on.svg'
       },
       {
-        smallText: "سرد القصص",
-        title: "صياغة السرديات",
+        smallText: 'سرد القصص',
+        title: 'صياغة السرديات',
         description: `لكل علامة تجارية قصة، ونحن شغوفون بسرد قصتك. يربط سرد القصص، ويُلهم، ويشرك جمهورك.`,
-        icon: "/img/ProjectsDetails/story.svg",
-      },
-    ],
+        icon: '/img/ProjectsDetails/story.svg'
+      }
+    ]
   };
 
   return (
@@ -48,8 +48,6 @@ export default function Team() {
       <Section2 />
       <SecondSeation projectData={OurPhilosophy} />
       <LetsDoit data={LetsDitedata} />
-
-
     </>
-  )
+  );
 }

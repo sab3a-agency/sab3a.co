@@ -1,8 +1,8 @@
-"use client"
-import FirstSiction from "../componentes/ConcatUs/firstSection"
-import SecondSection from "../componentes/ConcatUs/SecondSection"
-import ThirdeSection from "../componentes/ConcatUs/ThirdeSection"
-import "../css/contact-us.css"
+'use client';
+import FirstSiction from '../components/ConcatUs/firstSection';
+import SecondSection from '../components/ConcatUs/SecondSection';
+import ThirdeSection from '../components/ConcatUs/ThirdeSection';
+import '../css/contact-us.css';
 
 export default function ContactUs() {
   return (
@@ -11,5 +11,5 @@ export default function ContactUs() {
       <SecondSection />
       <ThirdeSection />
     </>
-  )
+  );
 }

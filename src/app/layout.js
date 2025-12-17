@@ -1,12 +1,12 @@
-"use client"
-import "bootstrap/dist/css/bootstrap.min.css"
-import "./css/globals.css"
+'use client';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import './css/globals.css';
 
-import Footer from "./componentes/HomeComponent/Footer"
-import Header from "./componentes/HomeComponent/Header"
-import { useEffect, useState } from "react"
-import AosWrapper from "./componentes/AOSWrapper "
-import IntroScreenLoading from "./componentes/IntroScreenLoading"
+import Footer from './components/HomeComponent/Footer';
+import Header from './components/HomeComponent/Header';
+import { useEffect, useState } from 'react';
+import AosWrapper from './components/AOSWrapper ';
+import IntroScreenLoading from './components/IntroScreenLoading';
 
 // export const metadata = {
 //   title: "الصفحة الرئيسية",
@@ -29,21 +29,24 @@ export default function RootLayout({ children }) {
   }, []);
 
   useEffect(() => {
-    require("bootstrap/dist/js/bootstrap.bundle.min.js")
-  }, [])
+    require('bootstrap/dist/js/bootstrap.bundle.min.js');
+  }, []);
   return (
-    <html lang="ar" dir="rtl">
+    <html lang='ar' dir='rtl'>
       <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name='viewport' content='width=device-width, initial-scale=1.0' />
       </head>
       <body>
-        {showIntro ? <IntroScreenLoading /> :
-      <AosWrapper >
-        < Header />
-        {children}
-        <Footer />
-      </AosWrapper>}
+        {showIntro ? (
+          <IntroScreenLoading />
+        ) : (
+          <AosWrapper>
+            <Header />
+            {children}
+            <Footer />
+          </AosWrapper>
+        )}
       </body>
     </html>
-  )
+  );
 }
