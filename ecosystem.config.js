@@ -4,7 +4,7 @@ module.exports = {
       name: 'sab3a-frontend',
       script: 'yarn',
       args: 'start',
-      cwd: '/var/www/front-sab3a.co',
+      cwd: '/var/www/html/sab3a.co',
       instances: 1,
       autorestart: true,
       watch: false,
