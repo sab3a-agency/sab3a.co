@@ -1750,7 +1750,7 @@ section.HeroContent {
     font-size: 5rem !important;
   }
   .BigText {
-    font-size: 5rem;
+    font-size: 6rem;
     width: 100rem;
     line-height: 58.42px;
     margin-top: 3rem;
@@ -1921,10 +1921,7 @@ section.HeroContent {
     font-size: 4rem !important;
   }
   .BigText {
-    font-size: 4rem;
-  }
-  .innerBox img {
-    display: none !important;
+    font-size: 6rem;
   }
   .innerWrappe p.spaheal {
     width: 45rem !important;
