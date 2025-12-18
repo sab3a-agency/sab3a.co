@@ -8,11 +8,18 @@ import Questiones from '@/components/HomeComponent/questiones';
 import Services from '@/components/HomeComponent/services';
 import WhyChooseUs from '@/components/HomeComponent/whyChooseUs';
 
-export default function Home() {
+export default async function Home() {
+  const res = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}/homepage`, {
+    cache: 'no-store'
+  });
+  const { data } = await res.json();
+
+  const heroSection = data.sections.find((section) => section.section_key === 'hero');
+  const statistics = data.statistics.slice(0, 3);
+
   return (
     <>
-      <div className='HeaderWithHeroSition'> </div>
-      <HeroPart1 />
+      <HeroPart1 data={{ heroSection, statistics }} />
       <Herosection />
       <Services />
       <WhyChooseUs />
