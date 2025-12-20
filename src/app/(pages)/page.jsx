@@ -6,7 +6,7 @@ import OurVision from '@/components/HomeComponent/OurVision';
 import PartnerSession from '@/components/HomeComponent/partnerSession';
 import Questiones from '@/components/HomeComponent/questiones';
 import ServicesSection from '@/components/HomeComponent/services-section';
-import WhyChooseUs from '@/components/HomeComponent/whyChooseUs';
+import FeaturesSection from '@/components/HomeComponent/features-section';
 
 export default async function Home() {
   const res = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}/homepage`, {
@@ -18,13 +18,15 @@ export default async function Home() {
   const statistics = data.statistics.slice(0, 3);
   const servicesSection = data.sections.find((section) => section.section_key === 'services');
   const services = data.services;
+  const featuresSection = data.sections.find((section) => section.section_key === 'features');
+  const features = data.features;
 
   return (
     <>
       <HeroSection data={{ heroSection, statistics }} />
       <MarqueeSection />
       <ServicesSection data={{ servicesSection, services }} />
-      <WhyChooseUs />
+      <FeaturesSection data={{ featuresSection, features }} />
       <HowWeAre />
       <PartnerSession />
       <ActWithTeam />
