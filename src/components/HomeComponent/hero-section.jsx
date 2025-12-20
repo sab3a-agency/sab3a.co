@@ -1,6 +1,6 @@
 import Image from 'next/image';
 
-export default function HeroPart1({ data }) {
+export default function HeroSection({ data }) {
   return (
     <div className='container px-5 mt-80 pt-0'>
       <div className='Part1 row w-100 mx-auto' data-aos='fade-up'>
