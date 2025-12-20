@@ -302,7 +302,7 @@ img.w-50 {
 }
 
 .lastPart .imgWrapper img {
-  border-radius: 10rem 10rem 0 0px;
+  border-radius: 4.5rem 4.5rem 0 0px;
 }
 .Text-Running {
   background: linear-gradient(90deg, #ec7373 0%, #00682c 100%);
@@ -1841,7 +1841,7 @@ section.HeroContent {
     gap: 8rem !important;
   }
   .Text-Running small {
-    font-size: 2rem;
+    font-size: 3rem;
     margin-left: 0rem;
   }
   .SecondImg {
@@ -2245,8 +2245,7 @@ section.HeroContent {
     width: 75% !important;
   }
   .ContentOurServices .Text {
-    width: 100% !important;
-    font-size: 3rem;
+    font-size: 4rem;
   }
   .divWitherProgress {
     width: 102% !important;
