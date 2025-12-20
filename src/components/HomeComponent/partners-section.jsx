@@ -1,6 +1,6 @@
 import Image from 'next/image';
 
-export default async function PartnerSession() {
+export default async function PartnersSection() {
   const res = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}/partners`, {
     cache: 'no-store'
   });

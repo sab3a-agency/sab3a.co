@@ -3,7 +3,7 @@ import HeroSection from '@/components/HomeComponent/hero-section';
 import MarqueeSection from '@/components/HomeComponent/marquee-section';
 import About from '@/components/HomeComponent/about-section';
 import OurVision from '@/components/HomeComponent/OurVision';
-import PartnerSession from '@/components/HomeComponent/partners-section';
+import PartnersSection from '@/components/HomeComponent/partners-section';
 import Questiones from '@/components/HomeComponent/questiones';
 import ServicesSection from '@/components/HomeComponent/services-section';
 import FeaturesSection from '@/components/HomeComponent/features-section';
@@ -29,7 +29,7 @@ export default async function Home() {
       <ServicesSection data={{ servicesSection, services }} />
       <FeaturesSection data={{ featuresSection, features }} />
       <About data={{ aboutSection }} />
-      <PartnerSession />
+      <PartnersSection />
       <ActWithTeam />
       <OurVision />
       <Questiones />
