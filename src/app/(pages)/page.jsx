@@ -1,7 +1,7 @@
 import ActWithTeam from '@/components/HomeComponent/ActWithTeam';
 import HeroSection from '@/components/HomeComponent/hero-section';
 import MarqueeSection from '@/components/HomeComponent/marquee-section';
-import HowWeAre from '@/components/HomeComponent/HowWeAre';
+import About from '@/components/HomeComponent/about-section';
 import OurVision from '@/components/HomeComponent/OurVision';
 import PartnerSession from '@/components/HomeComponent/partnerSession';
 import Questiones from '@/components/HomeComponent/questiones';
@@ -20,6 +20,7 @@ export default async function Home() {
   const services = data.services;
   const featuresSection = data.sections.find((section) => section.section_key === 'features');
   const features = data.features;
+  const aboutSection = data.sections.find((section) => section.section_key === 'about');
 
   return (
     <>
@@ -27,7 +28,7 @@ export default async function Home() {
       <MarqueeSection />
       <ServicesSection data={{ servicesSection, services }} />
       <FeaturesSection data={{ featuresSection, features }} />
-      <HowWeAre />
+      <About data={{ aboutSection }} />
       <PartnerSession />
       <ActWithTeam />
       <OurVision />
