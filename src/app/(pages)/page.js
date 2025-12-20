@@ -1,6 +1,6 @@
 import ActWithTeam from '@/components/HomeComponent/ActWithTeam';
-import HeroPart1 from '@/components/HomeComponent/HeroPart1';
-import Herosection from '@/components/HomeComponent/heroSection';
+import HeroSection from '@/components/HomeComponent/hero-section';
+import MarqueeSection from '@/components/HomeComponent/marquee-section';
 import HowWeAre from '@/components/HomeComponent/HowWeAre';
 import OurVision from '@/components/HomeComponent/OurVision';
 import PartnerSession from '@/components/HomeComponent/partnerSession';
@@ -19,8 +19,8 @@ export default async function Home() {
 
   return (
     <>
-      <HeroPart1 data={{ heroSection, statistics }} />
-      <Herosection />
+      <HeroSection data={{ heroSection, statistics }} />
+      <MarqueeSection />
       <Services />
       <WhyChooseUs />
       <HowWeAre />
