@@ -576,7 +576,17 @@ img.w-50 {
   gap: 6rem !important;
 }
 
-/* the Style of Carousel  */
+.WrappersubSession .icon {
+  width: 6.5rem;
+  height: 6.5rem;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  background: #e6f0ea;
+  border-radius: 50%;
+}
+
+/*  Style of Carousel  */
 
 .SucessBtns {
   outline: none;
