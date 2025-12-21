@@ -22,6 +22,8 @@ export default async function Home() {
   const features = data.features;
   const aboutSection = data.sections.find((section) => section.section_key === 'about');
   const teamSection = data.sections.find((section) => section.section_key === 'our team');
+  const visionSection = data.sections.find((section) => section.section_key === 'vision');
+  const visionStats = data.statistics.slice(3);
 
   return (
     <>
@@ -32,7 +34,7 @@ export default async function Home() {
       <About data={{ aboutSection }} />
       <PartnersSection />
       <TeamSection data={{ teamSection }} />
-      <OurVision />
+      <OurVision data={{ visionSection, statistics: visionStats }} />
       <Questiones />
     </>
   );
