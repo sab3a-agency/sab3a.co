@@ -38,6 +38,23 @@ jobs:
             # Pull latest changes
             git pull origin main
 
+            # Check if .env file exists
+            if [ ! -f .env ]; then
+              echo "❌ Error: .env file not found!"
+              exit 1
+            fi
+
+            # Check if NEXT_PUBLIC_API_BASE_URL exists in .env
+            if ! grep -q "NEXT_PUBLIC_API_BASE_URL=https://admin.sab3a.co/api/v1" .env; then
+              echo "❌ Error: NEXT_PUBLIC_API_BASE_URL not found or incorrect in .env file!"
+              echo "Expected: NEXT_PUBLIC_API_BASE_URL=https://admin.sab3a.co/api/v1"
+              echo "Current .env content:"
+              cat .env
+              exit 1
+            fi
+
+            echo "✅ .env file validated successfully!"
+
             # Install dependencies
             yarn install --frozen-lockfile
 
