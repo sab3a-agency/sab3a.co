@@ -1,9 +1,14 @@
+import localFont from 'next/font/local';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '@/css/globals.css';
 
 import Footer from '@/components/HomeComponent/Footer';
 import Header from '@/components/HomeComponent/Header';
 import AosWrapper from '@/components/AOSWrapper ';
+
+const sukarFont = localFont({
+  src: '../../../public/fonts/sukar-font.ttf'
+});
 
 export const metadata = {
   title: {
@@ -24,7 +29,7 @@ export default function RootLayout({ children }) {
       <head>
         <meta name='viewport' content='width=device-width, initial-scale=1.0' />
       </head>
-      <body>
+      <body className={sukarFont.className}>
         <AosWrapper>
           <Header />
           {children}
