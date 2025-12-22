@@ -1,9 +1,9 @@
-@font-face {
+/* @font-face {
   font-family: 'Sukar';
   src: url('/fonts/alfont_com_Sukar-Regular.ttf') format('truetype');
   font-weight: 400;
   font-style: italic;
-}
+} */
 
 :root {
   --Color-Secondary: #e75050;
