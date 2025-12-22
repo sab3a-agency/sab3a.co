@@ -302,7 +302,7 @@ img.w-50 {
 }
 
 .lastPart .imgWrapper img {
-  border-radius: 10rem 10rem 0 0px;
+  border-radius: 4.5rem 4.5rem 0 0px;
 }
 .Text-Running {
   background: linear-gradient(90deg, #ec7373 0%, #00682c 100%);
@@ -576,7 +576,17 @@ img.w-50 {
   gap: 6rem !important;
 }
 
-/* the Style of Carousel  */
+.WrappersubSession .icon {
+  width: 6.5rem;
+  height: 6.5rem;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  background: #e6f0ea;
+  border-radius: 50%;
+}
+
+/*  Style of Carousel  */
 
 .SucessBtns {
   outline: none;
@@ -1750,7 +1760,7 @@ section.HeroContent {
     font-size: 5rem !important;
   }
   .BigText {
-    font-size: 5rem;
+    font-size: 6rem;
     width: 100rem;
     line-height: 58.42px;
     margin-top: 3rem;
@@ -1841,7 +1851,7 @@ section.HeroContent {
     gap: 8rem !important;
   }
   .Text-Running small {
-    font-size: 2rem;
+    font-size: 3rem;
     margin-left: 0rem;
   }
   .SecondImg {
@@ -1921,10 +1931,7 @@ section.HeroContent {
     font-size: 4rem !important;
   }
   .BigText {
-    font-size: 4rem;
-  }
-  .innerBox img {
-    display: none !important;
+    font-size: 6rem;
   }
   .innerWrappe p.spaheal {
     width: 45rem !important;
@@ -2248,8 +2255,7 @@ section.HeroContent {
     width: 75% !important;
   }
   .ContentOurServices .Text {
-    width: 100% !important;
-    font-size: 3rem;
+    font-size: 4rem;
   }
   .divWitherProgress {
     width: 102% !important;
