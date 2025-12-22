@@ -3,8 +3,6 @@ name: CI
 on:
   pull_request:
     branches: [ main ]
-  push:
-    branches: [ main ]
 
 jobs:
   build:
@@ -23,14 +21,10 @@ jobs:
       - name: Install dependencies
         run: yarn install --frozen-lockfile
 
-      # ESLint disabled temporarily (interactive on first run)
-      # Enable after configuring ESLint locally
-      # - name: Lint
-      #   run: npm run lint
-
       - name: Build Next.js app
         run: yarn build
 
       - name: Build Status
         if: success()
         run: echo "✅ Build completed successfully!"
+

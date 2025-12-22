@@ -3,9 +3,6 @@ name: Deploy to Production
 on:
   release:
     types: [published]
-  # Uncomment the following to also deploy on push to main
-  # push:
-  #   branches: [ main ]
 
 jobs:
   deploy:
