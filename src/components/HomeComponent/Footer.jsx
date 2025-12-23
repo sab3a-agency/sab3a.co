@@ -59,7 +59,7 @@ const footerData = {
 export default function Footer() {
   return (
     <>
-      <footer className="footer mt-5 ">
+      <footer className="footer">
         <div className="line"></div>
         <div className="FooterWrapper container p-5">
           <div className="containerrWrap">

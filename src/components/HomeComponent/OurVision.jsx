@@ -132,7 +132,7 @@ export default function OurVision() {
   }, []);
 
   return (
-    <section className="OurVision mt-80">
+    <section >
       <div className="container p-5">
         <div className="OurVisionWapper container">
           <div className="info" data-aos="fade-left">

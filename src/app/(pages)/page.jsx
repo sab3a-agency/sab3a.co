@@ -34,7 +34,7 @@ export default async function Home() {
       <FeaturesSection data={{ featuresSection, features }} />
       <About data={{ aboutSection }} />
       <PartnersSection />
-      <TeamSection data={{ teamSection }} />
+      {/* <TeamSection data={{ teamSection }} /> */}
       <OurVision data={{ visionSection, statistics: visionStats }} />
       <FaqsSection data={{ faqsSection }} />
     </>

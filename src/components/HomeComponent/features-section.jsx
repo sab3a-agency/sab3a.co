@@ -38,7 +38,7 @@ export default function FeaturesSection({ data }) {
                   {features.map((box, index) => {
                     return (
                       <div key={box.id}  className='col-12 col-sm-6 d-flex justify-content-center'>
-                        <div className='FirstSide d-flex flex-column align-items-center'>
+                        <div className='FirstSide d-flex flex-column align-items-center w-100'>
                           <div className={`box ${index === 0 ? 'Active' : ''}`}>
                             <div className='boxContent' data-aos='fade-zoom-in'>
                               <h2>{box.title}</h2>

@@ -1,9 +1,7 @@
 "use client"
 import dynamic from "next/dynamic"
 import { useState } from "react"
-import {
-  getCountryCallingCode,
-} from "libphonenumber-js"
+import { getCountryCallingCode } from "libphonenumber-js"
 import Select from "react-select"
 
 import "react-phone-input-2/lib/style.css"
@@ -31,9 +29,9 @@ export default function FirstSiction() {
 
   const data = {
     small: "اتصل",
-    title: "نود أن نسمع منك",
+    title: "تواصل معنا",
     discription:
-      "فريقنا الرقمي متاح لمساعدتك والإجابة على جميع استفساراتك عبر القنوات التالية:",
+      "لديك أسئلة أو تحتاج إلى استشارة؟ املأ النموذج أدناه، وسيتواصل معك فريقنا في أقرب وقت.",
     boxes: [
       {
         img: "/img/ConcatUS/Location.svg",
@@ -46,14 +44,14 @@ export default function FirstSiction() {
         title: "مكتب",
         text: "تواصل معنا من أي مكان!",
         span: "وكالة سبعة رقمية تخدم السعودية، عُمان، ومصر عن بُعد."
-      },
-      {
-        img: "/img/ConcatUS/Telphone.svg",
-        title: "الهاتف",
-        text: "من الأحد إلى الخميس من 9:30 صباحًا حتى 5:30 مساءً.",
-        phone: "+96878495068",
-        full: true
       }
+      // {
+      //   img: "/img/ConcatUS/Telphone.svg",
+      //   title: "الهاتف",
+      //   text: "من الأحد إلى الخميس من 9:30 صباحًا حتى 5:30 مساءً.",
+      //   phone: "+96878495068",
+      //   full: true
+      // }
     ]
   }
 
@@ -202,7 +200,7 @@ export default function FirstSiction() {
               <h3>{data.title}</h3>
               <p className="my-4">{data.discription}</p>
             </div>
-            <div className="ContentText d-flex flex-wrap gap-5 text-right mt-5 justify-content-start">
+            <div className="ContentText d-flex flex-column  gap-5 text-right mt-5 justify-content-start">
               {data.boxes.map((box, index) => (
                 <div
                   key={index}
@@ -229,18 +227,10 @@ export default function FirstSiction() {
           </div>
 
           <div className="col-12 col-md-6">
-            <div className="head d-flex flex-column gap-3 align-items-start">
-              <h3>تواصل معنا</h3>
-              <p>
-                لديك أسئلة أو تحتاج إلى استشارة؟ املأ النموذج أدناه، وسيتواصل
-                معك فريقنا في أقرب وقت.
-              </p>
-            </div>
-
             {/* Form */}
-            <form className="mt-5" onSubmit={handleSubmit}>
-              <div className="container">
-                <div className="row g-3">
+            <form className="mt-5 form-contact-box" onSubmit={handleSubmit}>
+              <div className="container ">
+                <div className="row g-4 ">
                   {[
                     { label: "الاسم الأول", key: "name", type: "text" },
                     { label: "اسم العائلة", key: "family", type: "text" },
@@ -306,7 +296,7 @@ export default function FirstSiction() {
                         className="basic-single"
                         classNamePrefix="select "
                         styles={{
-                          indicatorSeparator: () => ({ display: "none" }),
+                          indicatorSeparator: () => ({ display: "none" })
                         }}
                         defaultValue={SubjectOptions[0]}
                         // isDisabled={isDisabled}

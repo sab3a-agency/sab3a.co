@@ -10,7 +10,7 @@ export default async function PartnersSection() {
 
   return (
     <div className='Your_partner_in_success position-relative'>
-      <div className='container mt-80'>
+      <div className='container'>
         <div className='title m-5 d-flex justify-content-between align-items-center' data-aos='zoom-in'>
           <h3>
             شريكك في <span>النجاح الرقمي</span>
@@ -53,9 +53,9 @@ export default async function PartnersSection() {
         <div className='partnersLogos' data-aos='fade-up'>
           <div id='carouselExampleInterval' className='carousel slide position-relative'>
             <div className='carousel-inner'>
-              <div className='Wrapperbox d-flex flex-wrap justify-content-center gap-3'>
+              <div className='Wrapperbox d-flex flex-wrap justify-content-center gap-3 '>
                 {items.map((partner, i) => (
-                  <div key={i} className='box p-2 d-flex justify-content-center align-items-center'>
+                  <div key={i} className='box p-2 d-flex justify-content-center align-items-center min-w-150'>
                     <a href={partner.url} target='_blank' rel='noopener noreferrer'>
                       <Image src={partner.logo} alt='شعار الشريك' className='img-fluid' width={150} height={150} loading='lazy' />
                     </a>

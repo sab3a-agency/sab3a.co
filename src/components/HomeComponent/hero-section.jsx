@@ -64,7 +64,7 @@ export default function HeroSection({ data }) {
                 <h3>{data.statistics[2]?.title}</h3>
                 <div className='text d-flex align-items-start'>
                   <span className='Star'>
-                    <Image loading='lazy' src='/img/Star.svg' alt='Star' width={20} height={20} />
+                    <Image loading='lazy' src='/img/star.svg' alt='Star' width={20} height={20} />
                   </span>
 
                   <p className='p-1 pt-0 textBox3 fs-4'>{data.statistics[2]?.value}</p>
