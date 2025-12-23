@@ -17,8 +17,9 @@ export default function Header() {
     { path: "/", name: "الرئيسية" },
     { path: "/services", name: "أعمالنا" },
     { path: "/packages", name: "الباقات" },
-    { path: "/team", name: "فريقنا" },
-    { path: "/blog", name: "المدونة" },
+    // { path: "/team", name: "فريقنا" },
+    // { path: "/blog", name: "المدونة" },
+    { path: "/#", name: "ملف الشركة" },
   ];
 
   useEffect(() => {

@@ -72,6 +72,9 @@
   font-size: 1.6rem !important;
   font-weight: 700;
 }
+.react-tel-input{
+  min-height: 45px;
+}
 
 .react-tel-input .form-control {
   padding: 7px;
@@ -167,7 +170,7 @@ textarea {
 }
 .config {
   font-size: 1.5rem;
-  width: 160% !important;
+  /* width: 140% !important; */
   color: var(--Color-text-secondary);
 }
 .btn {
@@ -195,6 +198,14 @@ textarea {
   border: none;
   padding: 2px 25px;
   gap: 5rem;
+}
+
+.form-contact-box{
+  border: 1px solid var(--Color-Black-Black-50);
+  border-radius: 5rem;
+  padding: 2rem;
+  min-height: 550px;
+
 }
 
 .SecondSectionBtn:after {
@@ -308,35 +319,36 @@ input.search-box {
 .ThirdeSection {
   position: relative;
   width: 95%;
+  margin-top:40px ;
 }
 img.star {
   position: absolute;
-  top: -14%;
+  top: -12%;
   left: 27%;
   width: 1.5%;
 }
-img#Wow-Emoje {
+/* img#Wow-Emoje {
   position: absolute;
   top: 80%;
   left: 12%;
   width: 14%;
-}
+} */
 img.dimon {
   background: #ffbd4f;
   display: flex;
   justify-content: space-between;
   position: absolute;
-  left: 16%;
+  left: 10%;
   align-items: center;
   padding: 0.3%;
-  top: 47%;
+  top: 20%;
   border-radius: 100% !important;
   width: 6%;
 }
 
 img.star {
   position: absolute;
-  top: -14%;
+  top: -10%;
   left: 27%;
   width: 4.5%;
 }

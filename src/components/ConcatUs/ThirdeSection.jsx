@@ -6,7 +6,7 @@ export default function ThirdeSection() {
     <section className="ThirdeSection">
       <div className="row">
         <div className="col-12 col-md-6">
-          <img src="/img/ConcatUS/herosimg.png" alt="img" loading="lazy" />
+          <img src="/img/ConcatUS/herosimg.png" alt="img" width={'100%'} loading="lazy" />
         </div>
         <div className="col-12 col-md-6 d-flex justify-content-center align-items-center mx-2 mx-md-0 ">
           <div className="box_ditales d-flex flex-column align-items-start">
@@ -28,7 +28,7 @@ export default function ThirdeSection() {
                 حوّل فكرتك إلى واقع مع MVP جاهز للانطلاق مقابل{" "}
                 <span>15,000 ريال </span>فقط. لا تفوّت الفرصة، وانطلق اليوم!
               </p>
-              <a href="#" className="see_more d-flex align-items-center gap-2">
+              <a href="/packages" className="see_more d-flex align-items-center gap-2">
                 الإطلاع على الميزات
                 <FontAwesomeIcon icon={faArrowRight} />
               </a>
@@ -36,7 +36,7 @@ export default function ThirdeSection() {
           </div>
         </div>
       </div>
-      <img
+      {/* <img
         loading="lazy"
         id="Wow-Emoje"
         src="/img/ConcatUS/Wow-Emoje.svg"
@@ -45,7 +45,7 @@ export default function ThirdeSection() {
           e.currentTarget.src = "../img/LoagingState.png";
           e.currentTarget.style.objectFit = "contain";
         }}
-      />
+      /> */}
       <img
         loading="lazy"
         src="/img/ConcatUS/Star.svg"

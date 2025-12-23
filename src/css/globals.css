@@ -13,6 +13,7 @@
   --Color-Primary-Primary-50: rgb(230, 240, 234);
   --Color-White-White-200: rgba(246, 249, 250, 1);
   --Color-Black-Black-50: rgba(233, 233, 233, 1);
+  --Color-White-50: #FDFEFE;
   --Color-Black-Black-500: rgba(37, 36, 36, 1);
   --Color-Warning-Warning-100: rgba(254, 237, 197, 1);
   --Color-text-secondary: rgba(109, 108, 108, 1);
@@ -33,7 +34,7 @@ body {
   outline: none !important;
   border: none !important;
   /* padding-top: 4rem; */
-  font-size: 'Sukar' !important;
+  font-size: "Sukar" !important;
   overflow-x: hidden !important;
 }
 
@@ -47,7 +48,7 @@ a:focus {
 }
 
 .HeaderWithHeroSition {
-  background-image: url('/img/backgroung.svg') !important;
+  background-image: url("/img/backgroung.svg") !important;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -60,11 +61,11 @@ a:focus {
   z-index: -100000;
 }
 .navbar-toggler-icon {
-  --bs-navbar-toggler-icon-bg: url('/img/menu-02.svg') !important;
+  --bs-navbar-toggler-icon-bg: url("/img/menu-02.svg") !important;
 }
 
 button.navbar-toggler {
-  font-family: 'Sukar' !important;
+  font-family: "Sukar" !important;
   font-weight: 700;
   padding: 13px !important;
   background-color: var(--Color-Primary);
@@ -656,7 +657,10 @@ img.w-50 {
 }
 
 /* the End of Style  Carousel  */
-
+.Your_partner_in_success {
+  background-color: var(--Color-White-White-200);
+  padding: 56px 0rem;
+}
 .Your_partner_in_success h3 {
   text-align: justify;
   font-size: 3rem;
@@ -714,9 +718,6 @@ img.w-50 {
   gap: 25px;
 }
 
-.OurVision {
-  background-color: var(--Color-White-White-200);
-}
 .boxWrapper {
   gap: 2rem;
   margin-top: 5rem;
@@ -903,10 +904,16 @@ img.custemImg {
 .head span {
   color: var(--Color-Secondary);
 }
+.questiones {
+  background-color: var(--Color-White-White-200);
+  padding: 56px 0rem;
+}
+
 .questiones .container {
   border: 1px solid var(--Color-Black-Black-50);
   padding: 6rem;
-  border-radius: 6rem;
+  border-radius: 4rem;
+  background-color: var(--Color-White-50);
   width: auto;
 }
 .questiones p {
@@ -941,7 +948,7 @@ img.custemImg {
 }
 
 .accordion-button::after {
-  content: '';
+  content: "";
   width: 20px;
   height: 20px;
   background-image: var(--bs-accordion-btn-icon);
@@ -956,8 +963,8 @@ img.custemImg {
 }
 
 .accordion {
-  --bs-accordion-btn-active-icon: url('/img/minus.svg') !important;
-  --bs-accordion-btn-icon: url('/img/plus.svg') !important;
+  --bs-accordion-btn-active-icon: url("/img/minus.svg") !important;
+  --bs-accordion-btn-icon: url("/img/plus.svg") !important;
   border: none;
 }
 
@@ -967,7 +974,7 @@ img.custemImg {
 }
 
 .accordion-button::after {
-  content: '';
+  content: "";
   position: absolute;
   left: 0;
   width: 1.5rem;
@@ -1556,7 +1563,7 @@ section.HeroContent {
 }
 .box.p-2.d-flex.justify-content-center.align-items-center {
   height: 15rem !important;
-  width: 1rem !important;
+  width: 15rem !important;
   margin-top: 3rem !important;
 }
 .spinner-container {
@@ -2014,7 +2021,7 @@ section.HeroContent {
 
   /* End handel  */
   .box.p-2.d-flex.justify-content-center.align-items-center {
-    width: 7rem !important;
+    width: 20rem !important;
   }
   .HeaderWithHeroSition {
     height: 105rem !important;
@@ -2197,7 +2204,8 @@ section.HeroContent {
   .letsDoit {
     padding: 6rem;
   }
-  .letsDoit .col-12.col-md-6.d-flex.justify-content-start.align-items-end.aos-init.aos-animate {
+  .letsDoit
+    .col-12.col-md-6.d-flex.justify-content-start.align-items-end.aos-init.aos-animate {
     justify-content: center !important;
   }
   .headWrapper,

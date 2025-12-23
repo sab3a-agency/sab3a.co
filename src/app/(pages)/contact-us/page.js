@@ -8,7 +8,7 @@ export default function ContactUs() {
   return (
     <>
       <FirstSiction />
-      <SecondSection />
+      {/* <SecondSection /> */}
       <ThirdeSection />
     </>
   );
