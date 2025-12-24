@@ -10,7 +10,7 @@ export default function HeroPackages() {
       "سواء كنت تبحث عن بداية سريعة مع MVP أو تطوير مشروع كامل، نحن هنا لمساعدتك في تحقيق أهدافك بكل كفاءة واحترافية. اكتشف الباقات المناسبة أدناه وابدأ رحلتك الرقمية معنا!",
   };
   return (
-    <div className="heroPackages mt-50">
+    <div className="heroPackages mt-50 pb-80">
       <div className="container">
         <div
           className="d-flex flex-column align-items-center justify-content-center"

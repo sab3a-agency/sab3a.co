@@ -42,6 +42,9 @@ html {
   /* margin-top: 13rem; */
   margin-top: 9rem;
 }
+.pb-80 {
+  margin-bottom: 9rem;
+}
 @media (min-width: 768px) {
   html {
     font-size: 10px;
