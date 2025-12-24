@@ -14,8 +14,7 @@ export default async function FaqsSection({ data }) {
 
   return (
     <>
-      <hr />
-      <section className='questiones ' >
+      <section className='questiones' >
         <div className='container ' data-aos='zoom-in'>
           <div className='wrapper'>
             <div className='head text-center'>
