@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export default function LetsDoit({ data }) {
   return (
-    <section className="letsDoit mt-80">
+    <section className="letsDoit">
       <div className="container">
         <div className="row">
           <div className="col-12 col-md-6" data-aos="fade-up">
