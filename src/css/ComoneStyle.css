@@ -21,14 +21,9 @@
   --Color-White-White-200: rgba(246, 249, 250, 1);
   --Color-White-White-100: rgba(249, 251, 252, 1);
 }
-@font-face {
-  font-family: "Sukar" !important;
-  src: url("/sabaa/public/Fonts/Sukar.ttf") format("truetype") !important;
-}
 
 body {
   overflow-x: hidden;
-  font-family: Sukar !important;
   font-weight: 900;
   letter-spacing: 0%;
   text-align: center;
