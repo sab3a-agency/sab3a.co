@@ -9,7 +9,7 @@ const Data = {
   btnContent: ' تواصل معنا '
 };
 
-export default function Hero_Service() {
+export default function ProjectsHeader() {
   return (
     <>
       <header className='Hero_Service mt-80'>

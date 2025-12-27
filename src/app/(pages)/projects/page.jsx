@@ -1,11 +1,11 @@
-import Hero_Service from '@/components/projects/hero_Service';
+import ProjectsHeader from '@/components/projects/projects-header';
 import LetsDoit from '@/components/LetsDoit';
 import Section2 from '@/components/projects/section2';
 
 export default function ServicesPage() {
   return (
     <>
-      <Hero_Service />
+      <ProjectsHeader />
       <Section2 />
       <LetsDoit />
     </>
