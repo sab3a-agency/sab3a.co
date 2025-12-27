@@ -1,16 +1,15 @@
-'use client';
 import { PartnersMarquee } from './marquees';
 
 const Data = {
   title: 'شريكك في',
   span: 'النجاح الرقمي ',
-  innerTitle: 'في',
-  innerSpan: 'سبعة',
+  innerTitle: 'في ',
+  innerSpan: ' سبعة',
   innerTitleEnd: '، نؤمن بأن التصميم الاستثنائي يتجاوز الجماليات.',
-  discriptions: ' إنه يشمل الوظائف والقدرة على تحقيق الغرض المقصود. فريقنا الم dedicated هو مدفوع بهدف إنشاء علامات تجارية تُحدث تأثيرًا ذا  مغزى.'
+  description: ' إنه يشمل الوظائف والقدرة على تحقيق الغرض المقصود. فريقنا الم dedicated هو مدفوع بهدف إنشاء علامات تجارية تُحدث تأثيرًا ذا  مغزى.'
 };
 
-export default function Section2() {
+export default function PartnersSection() {
   return (
     <section className='Section2 mt-80 '>
       <div className='container'>
@@ -28,7 +27,7 @@ export default function Section2() {
                 <span>{Data.innerSpan}</span>
                 {Data.innerTitleEnd}
               </p>
-              <p>{Data.discriptions}</p>
+              <p>{Data.description}</p>
             </div>
           </div>
         </div>

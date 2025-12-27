@@ -2,7 +2,7 @@
 
 import SecondSeation from '@/components/ProjectsDetailsComp/SecondSections';
 import LetsDoit from '@/components/LetsDoit';
-import Section2 from '@/components/projects/section2';
+import PartnersSection from '@/components/projects/partners-section';
 import HeroTeamSection from '@/components/TeamPageComponent/Hero';
 import OurJourney from '@/components/TeamPageComponent/OurJourney';
 import '@/css/Teampage.css';
@@ -38,7 +38,7 @@ export default function Team() {
     <>
       <HeroTeamSection />
       <OurJourney />
-      <Section2 />
+      <PartnersSection />
       <SecondSeation projectData={OurPhilosophy} />
       <LetsDoit />
     </>

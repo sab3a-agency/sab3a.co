@@ -1,12 +1,12 @@
 import ProjectsHeader from '@/components/projects/projects-header';
 import LetsDoit from '@/components/LetsDoit';
-import Section2 from '@/components/projects/section2';
+import PartnersSection from '@/components/projects/partners-section';
 
 export default function ServicesPage() {
   return (
     <>
       <ProjectsHeader />
-      <Section2 />
+      <PartnersSection />
       <LetsDoit />
     </>
   );
