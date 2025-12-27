@@ -11,7 +11,7 @@ const Data = {
 
 export default function PartnersSection() {
   return (
-    <section className='Section2 mt-80 '>
+    <section className='Section2 mt-80 pb-5'>
       <div className='container'>
         <div className='adv '>
           <div className='container d-flex-column d-md-flex  justify-content-between align-items-center '>
