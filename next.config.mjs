@@ -12,7 +12,7 @@ const nextConfig = {
     },
     async redirects() {
         return [
-            { source: '/servicesPage', destination: '/services', permanent: true },
+            { source: '/servicesPage', destination: '/projects', permanent: true },
             { source: '/OurePackagesPage', destination: '/packages', permanent: true },
             { source: '/BlogPage', destination: '/blog', permanent: true },
             { source: '/BlogPage/:path*', destination: '/blog/:path*', permanent: true },

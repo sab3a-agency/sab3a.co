@@ -4,7 +4,7 @@ import '@/css/globals.css';
 
 import Footer from '@/components/HomeComponent/Footer';
 import Header from '@/components/HomeComponent/Header';
-import AosWrapper from '@/components/AOSWrapper ';
+import AosWrapper from '@/components/AOSWrapper';
 
 const sukarFont = localFont({
   src: '../../../public/fonts/sukar-font.ttf'
