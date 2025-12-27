@@ -1,6 +1,6 @@
-import Hero_Service from '@/components/ServeceComponent/hero_Service';
+import Hero_Service from '@/components/projects/hero_Service';
 import LetsDoit from '@/components/LetsDoit';
-import Section2 from '@/components/ServeceComponent/section2';
+import Section2 from '@/components/projects/section2';
 
 export default function ServicesPage() {
   return (

@@ -2,7 +2,7 @@
 
 import SecondSeation from '@/components/ProjectsDetailsComp/SecondSections';
 import LetsDoit from '@/components/LetsDoit';
-import Section2 from '@/components/ServeceComponent/section2';
+import Section2 from '@/components/projects/section2';
 import HeroTeamSection from '@/components/TeamPageComponent/Hero';
 import OurJourney from '@/components/TeamPageComponent/OurJourney';
 import '@/css/Teampage.css';
