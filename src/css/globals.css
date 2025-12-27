@@ -1239,8 +1239,10 @@ hr {
 .letsDoit .row a img#arrow {
   background: var(--Color-Secondary);
   padding: 1rem;
-  border-radius: 2rem;
+  border-radius: 50%;
   border: none;
+  width: 4rem;
+  height: 4rem;
 }
 
 .Hero .head h4,
