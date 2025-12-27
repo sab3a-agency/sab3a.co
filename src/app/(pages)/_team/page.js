@@ -1,18 +1,11 @@
 'use client';
 
 import SecondSeation from '@/components/ProjectsDetailsComp/SecondSections';
-import LetsDoit from '@/components/ServeceComponent/LetsDoit';
+import LetsDoit from '@/components/LetsDoit';
 import Section2 from '@/components/ServeceComponent/section2';
 import HeroTeamSection from '@/components/TeamPageComponent/Hero';
 import OurJourney from '@/components/TeamPageComponent/OurJourney';
 import '@/css/Teampage.css';
-
-const LetsDitedata = {
-  btnContent: ' معاملة خاصة ',
-  discription: ' ابدأ رحلة لاكتشاف ',
-  smallDescription: 'عالم من استراتيجيات التصميم المبتكرة.',
-  letsDoit: ' دعنا نصمم غرضك هنا  '
-};
 
 export default function Team() {
   const OurPhilosophy = {
@@ -47,7 +40,7 @@ export default function Team() {
       <OurJourney />
       <Section2 />
       <SecondSeation projectData={OurPhilosophy} />
-      <LetsDoit data={LetsDitedata} />
+      <LetsDoit />
     </>
   );
 }
