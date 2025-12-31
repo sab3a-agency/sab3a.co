@@ -45,6 +45,9 @@ html {
 .pb-80 {
   margin-bottom: 9rem;
 }
+.border-gray {
+  border-color: #e9eff7;
+}
 @media (min-width: 768px) {
   html {
     font-size: 10px;

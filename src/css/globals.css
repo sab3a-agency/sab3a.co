@@ -52,7 +52,7 @@ a:focus {
   /* max-height: 120rem !important; */
   z-index: -100000;
 }
-.navbar-toggler-icon {  
+.navbar-toggler-icon {
   --bs-navbar-toggler-icon-bg: url('/img/menu-02.svg') !important;
 }
 
@@ -1257,14 +1257,19 @@ hr {
 }
 
 .projectsWrapper .box .imgWrapper img {
-  border-radius: 1rem 1rem 0px 0px;
-  height: 50rem;
+  border-radius: 2rem 2rem 0px 0px;
+  width: 100%;
+  height: auto;
   object-fit: cover;
 }
-.projectsWrapper .box h2,
+.projectsWrapper .box a h2,
 .adv h2 {
   font-size: 2rem;
   font-weight: 700;
+}
+.projectsWrapper .box a {
+  color: #111928;
+  text-decoration: none;
 }
 
 .projectsWrapper .box p,
@@ -1277,7 +1282,7 @@ hr {
   text-align: justify;
 }
 
-.anchors a {
+.anchors span {
   padding: 1rem;
   border-radius: 2rem;
   text-decoration: none;
@@ -1285,9 +1290,10 @@ hr {
   border: 0.1rem solid var(--Color-Primary);
   color: var(--Color-Primary);
   transition: all 0.3s ease-in-out;
+  cursor: pointer;
 }
 
-.anchors a:hover {
+.anchors span:hover {
   background: var(--Color-Primary);
   color: var(--Color-White-White-200);
 }
