@@ -21,15 +21,7 @@ export async function PartnersMarquee() {
           <div key={partner.id} className='col-4 col-xl-2  mb-3'>
             <a href={partner.link} target='_blank' rel='noopener noreferrer'>
               <div className='outerImgWrrap d-flex align-items-center justify-content-center'>
-                <Image
-                  loading='lazy'
-                  src={partner.logo}
-                  alt='partner_logo'
-                  width={200}
-                  height={60}
-                  className='partner_logo object-fit-contain'
-                  style={{ height: '60px', width: 'auto' }}
-                />
+                <Image loading='lazy' src={partner.logo} alt='partner logo' className='partner h-auto object-fit-cover' width={200} height={60} />
               </div>
             </a>
           </div>
