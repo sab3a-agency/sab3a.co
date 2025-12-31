@@ -22,8 +22,9 @@ const footerData = {
     { text: "الرئيسية", path: "/" },
     { text: "اعمالنا", path: "/projects" },
     { text: "الباقات", path: "/packages" },
-    { text: "فريقنا", path: "/team" },
-    { text: "المدونة", path: "/blog" },
+    { text: "ملف الشركة", path: "/" },
+    // { text: "فريقنا", path: "/team" },
+    // { text: "المدونة", path: "/blog" },
   ],
 
   fields: [
@@ -139,13 +140,13 @@ export default function Footer() {
                         src={contact.icon}
                         alt={contact.title}
                         onError={(e) => {
-                          e.currentTarget.src = "../img/LoagingState.png";
+                          e.currentTarget.src = "/img/LoagingState.png";
                           e.currentTarget.style.objectFit = "contain";
                         }}
                       />
                       <h2>{contact.title}</h2>
                     </div>
-                    <a href={contact.link}>{contact.value}</a>
+                    <a href={contact.link} dir="ltr">{contact.value}</a>
                   </div>
                 ))}
               </div>
