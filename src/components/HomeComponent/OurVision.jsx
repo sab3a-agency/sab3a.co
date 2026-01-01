@@ -1,26 +1,8 @@
-"use client";
+'use client';
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from 'react';
 
-const OurVisionDataDefult = {
-  small: " رؤيتنا ",
-  title: "  نؤمن بأن  ",
-  span: " التكنولوجيا والإبداع  ",
-  titleEnd: `هما سر نجاحك في العالم الرقمي.`,
-  discription: " ",
-  box1: {
-    target: "97",
-    title: " حلول إبداعية ",
-    innerdescrption: `هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى.`,
-  },
-  box2: {
-    target: "95",
-    title: " الاستراتيجية الرقمية  ",
-    innerdescrption: `نطور استراتيجيات رقمية مبتكرة تساعدك على تحقيق أهدافك وتعزيز وجودك في السوق الرقمي.`,
-  },
-};
-
-export default function OurVision() {
+export default function OurVision({ data: { visionSection, statistics } }) {
   const barsRef = useRef([]);
   const numbersRef = useRef([]);
   const [OurVisionData] = useState(OurVisionDataDefult);
