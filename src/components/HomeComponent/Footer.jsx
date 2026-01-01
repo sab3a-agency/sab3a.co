@@ -91,7 +91,7 @@ export default function Footer() {
               </div>
               <div className='d-flex wrap  gap-5'>
                 <div className='list'>
-                  <h4>المجالات التي نعمل بها</h4>
+                  <h5>المجالات التي نعمل بها</h5>
                   <ul>
                     {footerData.fields.map((field, index) => (
                       <li key={index}>
@@ -101,7 +101,7 @@ export default function Footer() {
                   </ul>
                 </div>
                 <div className='list '>
-                  <h4>روابط سريعة</h4>
+                  <h5>روابط سريعة</h5>
                   <ul>
                     {footerData.quickLinks.map((page, index) => (
                       <li key={index}>

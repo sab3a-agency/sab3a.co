@@ -27,7 +27,7 @@ export default function ServicesSection({ data }) {
                     <img loading='lazy' className='icon' src={service.icon} alt={service.title} />
                   </div>
                   <div className='info'>
-                    <h5 className='fw-bold fs-3'>{service.title}</h5>
+                    <h4 className='fw-bold fs-3'>{service.title}</h4>
                     <p>{service.description}</p>
                   </div>
                 </div>
