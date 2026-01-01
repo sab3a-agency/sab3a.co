@@ -1,3 +1,4 @@
+import { normalizeSlashes } from '@/lib/utils';
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -9,8 +10,16 @@ export default function Projects({ projects }) {
           <div className='row justify-content-between flex-wrap-wrap '>
             {projects.map((project) => (
               <div key={project.id} className='box col-12 col-md-6 px-3'>
-                <Link href={`/projects/${project.id}`} className='imgWrapper d-inline-block w-100'>
-                  <Image src={project.cover_image} alt={project.title} loading='eager' width={608} height={500} />
+                <Link href={`/projects/${project.id}`} className='d-block project-cover ratio ratio-32x25'>
+                  <Image
+                    src={normalizeSlashes(project.cover_image)}
+                    alt={project.title}
+                    fill
+                    className='cover-img'
+                    sizes='(max-width: 576px) 100vw, (max-width: 992px) 50vw, 33vw'
+                    quality={90}
+                    priority={false}
+                  />
                 </Link>
                 <div className='info mt-2 p-3'>
                   <Link href={`/projects/${project.id}`}>

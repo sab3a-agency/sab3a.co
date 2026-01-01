@@ -1,82 +1,45 @@
-'use client';
-
-import { useEffect, useState } from 'react';
-import { useParams } from 'next/navigation';
-
 import FirstSection from '@/components/ProjectsDetailsComp/FirstSection';
 import Hero from '@/components/ProjectsDetailsComp/hero';
-import ImgesSection from '@/components/ProjectsDetailsComp/ImgesSection';
-import SecondSeation from '@/components/ProjectsDetailsComp/SecondSections';
+import ImagesSection from '@/components/ProjectsDetailsComp/ImgesSection';
+import SecondSection from '@/components/ProjectsDetailsComp/SecondSections';
 import SimilarWorks from '@/components/ProjectsDetailsComp/Similar works';
-import Erorr from '@/components/Erorr';
 import ErrorRequest from '@/components/ErrorRequest';
 
-export default function ProjectsDitales() {
-  const param = useParams();
-  const id = param.ProjectsDetails;
-  const [projectData, setProjectData] = useState(null);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
+export default async function ProjectDetailsPage({ params }) {
+  const { id } = await params;
 
-  useEffect(() => {
-    async function fetchProject() {
-      if (!id) return;
+  const res = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}/projects/${id}`, {
+    cache: 'no-store'
+  });
 
-      try {
-        const response = await fetch(`/api/projects/${id}`);
-        if (!response.ok) {
-          throw new Error('Failed to fetch project details.');
-        }
-        const data = await response.json();
-        setProjectData(data.data);
-      } catch (err) {
-        setError(err.message);
-      } finally {
-        setLoading(false);
-      }
-    }
-
-    fetchProject();
-  }, [id]);
-
-  if (loading) {
-    return <Erorr />;
-  }
-
-  if (error) {
+  if (!res.ok) {
     return <ErrorRequest />;
   }
 
-  if (!projectData) {
-    return <ErrorRequest />;
-  }
+  const { data: projectData } = await res.json();
 
-  const heroData = [
-    {
-      title: projectData.title || 'عنوان المشروع غير متوفر',
-      titleEtc: projectData.sub_title || 'وصف مختصر للمشروع',
-      span: projectData.implemented_date
-        ? new Date(projectData.implemented_date).toLocaleDateString('ar-EG', {
-            day: 'numeric',
-            month: 'long',
-            year: 'numeric'
-          })
-        : new Date(projectData.created_at).toLocaleDateString('ar-EG', {
-            day: 'numeric',
-            month: 'long',
-            year: 'numeric'
-          }) || 'تاريخ غير متوفر',
-      small: projectData.category || projectData.type || 'تصنيف غير محدد'
-    }
-  ];
+  console.log(projectData);
 
   return (
     <>
-      <Hero data={heroData} />
-      <FirstSection projectsData={projectData} />
-      <SecondSeation projectData={projectData} />
-      <ImgesSection images={projectData.images} />
-      <SimilarWorks />
+      <Hero
+        data={{
+          title: projectData.title,
+          sub_title: projectData.sub_title,
+          category: projectData.category,
+          implemented_date: projectData.implemented_date
+        }}
+      />
+      <FirstSection
+        data={{
+          description: projectData.description,
+          cover_image: projectData.cover_image,
+          description_below: projectData.description_below
+        }}
+      />
+      <SecondSection data={projectData} />
+      <ImagesSection data={projectData.images} />
+      <SimilarWorks id={id} />
     </>
   );
 }
