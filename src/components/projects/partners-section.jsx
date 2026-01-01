@@ -15,13 +15,13 @@ export default function PartnersSection() {
       <div className='container'>
         <div className='adv '>
           <div className='container d-flex-column d-md-flex  justify-content-between align-items-center '>
-            <div className='info ' data-aos='zoom-in'>
+            <div className='info aos-init' data-aos='zoom-in'>
               <h2 className=' d-flex gap-2 justify-content-start'>
                 {data.title}
                 <span>{data.span}</span>
               </h2>
             </div>
-            <div className='info   d-flex flex-column gap-5' data-aos='zoom-in'>
+            <div className='info   d-flex flex-column gap-5 aos-init' data-aos='zoom-in'>
               <p>
                 {data.innerTitle}
                 <span>{data.innerSpan}</span>
