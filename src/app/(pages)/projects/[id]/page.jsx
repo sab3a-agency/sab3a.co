@@ -18,7 +18,6 @@ export default async function ProjectDetailsPage({ params }) {
 
   const { data: projectData } = await res.json();
 
-  console.log(projectData);
 
   return (
     <>
