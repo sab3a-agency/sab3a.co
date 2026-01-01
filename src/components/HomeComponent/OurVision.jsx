@@ -17,12 +17,12 @@ export default function OurVision({ data: { visionSection, statistics } }) {
           if (!entry.isIntersecting) return;
 
           const bar2 = entry.target;
-          const span2 = bar2.querySelector("span");
-          const number2 = bar2.querySelector(".number");
+          const span2 = bar2.querySelector('span');
+          const number2 = bar2.querySelector('.number');
           const targetHeight2 = parseInt(span2.dataset.height);
 
-          if (bar2.dataset.animated === "true") return;
-          bar2.dataset.animated = "true";
+          if (bar2.dataset.animated === 'true') return;
+          bar2.dataset.animated = 'true';
 
           let currentHeight2 = 0;
 
@@ -33,7 +33,7 @@ export default function OurVision({ data: { visionSection, statistics } }) {
               number2.textContent = `${currentHeight2} مشروع`;
 
               if (currentHeight2 >= 85) {
-                span2.style.background = "rgba(137, 175, 72, 1)";
+                span2.style.background = 'rgba(137, 175, 72, 1)';
               }
 
               requestAnimationFrame(animateHeight);
@@ -57,8 +57,8 @@ export default function OurVision({ data: { visionSection, statistics } }) {
 
           const numberEl = entry.target;
           const targetValue = parseInt(numberEl.dataset.target);
-          if (numberEl.dataset.animated === "true") return;
-          numberEl.dataset.animated = "true";
+          if (numberEl.dataset.animated === 'true') return;
+          numberEl.dataset.animated = 'true';
 
           let currentValue = 0;
 
@@ -78,10 +78,8 @@ export default function OurVision({ data: { visionSection, statistics } }) {
 
     numbersRef.current.forEach((numberEl) => numberObserver.observe(numberEl));
 
-    import("bootstrap/dist/js/bootstrap.esm.min.js").then(({ Tooltip }) => {
-      const tooltipTriggerList = document.querySelectorAll(
-        '[data-bs-toggle="tooltip"]'
-      );
+    import('bootstrap/dist/js/bootstrap.esm.min.js').then(({ Tooltip }) => {
+      const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
       tooltipTriggerList.forEach((el) => new Tooltip(el));
     });
 
