@@ -31,7 +31,9 @@ export default function RootLayout({ children }) {
       <body className={sukarFont.className}>
         <AosWrapper />
         <Header />
-        {children}
+        <main id='main' role='main'>
+          {children}
+        </main>
         <Footer />
       </body>
     </html>
