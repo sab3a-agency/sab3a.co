@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSquareFacebook, faInstagram, faLinkedin, faTiktok, faYoutube } from '@fortawesome/free-brands-svg-icons';
 // import { text } from "@fortawesome/fontawesome-svg-core";
 import Link from 'next/link';
+import Image from 'next/image';
 
 const footerData = {
   socialLinks: [
@@ -57,9 +58,9 @@ const footerData = {
     }
   ],
   infoItems: [
-    { icon: '../img/location.svg', text: 'نعمل عن بعد من عُمان ومصر' },
+    { icon: '/img/location.svg', text: 'نعمل عن بعد من عُمان ومصر' },
     {
-      icon: '../img/clock.svg',
+      icon: '/img/clock.svg',
       text: 'من الأحد إلى الخميس، 9:30 صباحًا - 5:30 مساءً'
     }
   ]
@@ -73,17 +74,9 @@ export default function Footer() {
         <div className='FooterWrapper container p-5'>
           <div className='containerrWrap'>
             <div className='logo text-justify d-flex'>
-              <a href='#'>
-                <img
-                  loading='lazy'
-                  src='/img/IconSite.svg'
-                  alt='شعار وكالة سبعة الرقمية'
-                  onError={(e) => {
-                    e.currentTarget.src = '../img/LoagingState.png';
-                    e.currentTarget.style.objectFit = 'contain';
-                  }}
-                />
-              </a>
+              <Link href='/'>
+                <Image width={99} height={60} loading='lazy' src='/img/IconSite.svg' alt='شعار وكالة سبعة الرقمية' />
+              </Link>
             </div>
 
             <div className='innerFooterContent d-flex justify-content-between flex-wrap flex-column align-items-start gap-5 '>
@@ -95,15 +88,7 @@ export default function Footer() {
                 <div className='IconWithText '>
                   {footerData.infoItems.map((item, index) => (
                     <div key={index} className='part d-flex   align-items-center justify-content-center gap-1'>
-                      <img
-                        loading='lazy'
-                        src={item.icon}
-                        alt='icon'
-                        onError={(e) => {
-                          e.currentTarget.src = '../img/LoagingState.png';
-                          e.currentTarget.style.objectFit = 'contain';
-                        }}
-                      />
+                      <img loading='lazy' src={item.icon} alt='' aria-hidden='true' />
                       <p>{item.text}</p>
                     </div>
                   ))}
@@ -135,15 +120,7 @@ export default function Footer() {
                 {footerData.contacts.map((contact, index) => (
                   <div key={index} className='part d-flex flex-column justify-content-start align-items-start'>
                     <div className='info'>
-                      <img
-                        loading='lazy'
-                        src={contact.icon}
-                        alt={contact.title}
-                        onError={(e) => {
-                          e.currentTarget.src = '/img/LoagingState.png';
-                          e.currentTarget.style.objectFit = 'contain';
-                        }}
-                      />
+                      <img loading='lazy' src={contact.icon} alt={contact.title} />
                       <h2>{contact.title}</h2>
                     </div>
                     <a href={contact.link} dir='ltr'>
@@ -154,15 +131,7 @@ export default function Footer() {
               </div>
             </div>
             <div className='sabaShadow'>
-              <img
-                src='/img/Sab3a.svg'
-                alt='وكالة سبعة الرقمية'
-                loading='lazy'
-                onError={(e) => {
-                  e.currentTarget.src = '../img/LoagingState.png';
-                  e.currentTarget.style.objectFit = 'contain';
-                }}
-              />
+              <img src='/img/Sab3a.svg' alt='وكالة سبعة الرقمية' loading='lazy' />
             </div>
             <hr />
             <div className='FooterBottom mt-4 d-flex justify-content-between flex-warp'>
