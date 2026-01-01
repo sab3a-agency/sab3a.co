@@ -7,7 +7,8 @@ import Header from '@/components/HomeComponent/Header';
 import AosWrapper from '@/components/AOSWrapper';
 
 const sukarFont = localFont({
-  src: '../../../public/fonts/sukar-font.ttf'
+  src: '../../../public/fonts/sukar-font.ttf',
+  display: 'swap'
 });
 
 export const viewport = {
