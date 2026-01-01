@@ -1,10 +1,9 @@
 // app/api/blogs/route.js
 import { NextResponse } from "next/server";
-import { API_BASE_URL } from "../homepage/route";
 
 export async function GET() {
     try {
-        const res = await fetch(`${API_BASE_URL}api/v1/blogs`, {
+        const res = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}api/v1/blogs`, {
             cache: "no-store",
         });
 

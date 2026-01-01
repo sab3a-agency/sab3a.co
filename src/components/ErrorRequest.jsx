@@ -5,7 +5,7 @@ export default function ErrorRequest() {
     <div className="w-vw-100 h-vh-100 object-fit-contain">
       <img
         className="backg"
-        src="../img/LoagingState.png"
+        src="/img/LoagingState.png"
         alt="Erorr Requist"
         loading="lazy"
       />

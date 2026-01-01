@@ -1,7 +1,6 @@
 // src/app/api/projects/[id]/route.js
 
 import { NextResponse } from 'next/server';
-import { API_BASE_URL } from '../homepage/route';
 
 
 export async function GET(request) {
@@ -13,7 +12,7 @@ export async function GET(request) {
     }
 
     try {
-        const response = await fetch(`${API_BASE_URL}api/v1/projects/${id}`);
+        const response = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}api/v1/projects/${id}`);
         const data = await response.json();
 
         if (response.status !== 200) {

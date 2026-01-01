@@ -52,7 +52,7 @@ a:focus {
   /* max-height: 120rem !important; */
   z-index: -100000;
 }
-.navbar-toggler-icon {  
+.navbar-toggler-icon {
   --bs-navbar-toggler-icon-bg: url('/img/menu-02.svg') !important;
 }
 
@@ -403,9 +403,33 @@ img.w-50 {
   height: 22rem;
   object-fit: cover;
 }
-.advimg {
-  width: 100% !important;
-  object-fit: contain;
+
+.fullwidth-img {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+}
+
+.project-cover,
+.project-hero {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px 12px 0 0;
+}
+.ratio-32x25::before {
+  padding-top: calc(25 / 32 * 100%);
+  content: '';
+  display: block;
+}
+.ratio-32x25 > * {
+  position: absolute;
+  inset: 0;
+}
+
+.img-cover {
+  object-fit: cover;
+  object-position: center;
 }
 
 /* sessionWhyChooseUs  part2 */
@@ -1239,8 +1263,10 @@ hr {
 .letsDoit .row a img#arrow {
   background: var(--Color-Secondary);
   padding: 1rem;
-  border-radius: 2rem;
+  border-radius: 50%;
   border: none;
+  width: 4rem;
+  height: 4rem;
 }
 
 .Hero .head h4,
@@ -1255,14 +1281,30 @@ hr {
 }
 
 .projectsWrapper .box .imgWrapper img {
-  border-radius: 1rem 1rem 0px 0px;
-  height: 50rem;
+  border-radius: 2rem 2rem 0px 0px;
+  width: 100%;
+  height: 100%;
+  max-height: 500px;
   object-fit: cover;
 }
-.projectsWrapper .box h2,
+.project-cover,
+.project-hero {
+  position: relative;
+  overflow: hidden;
+}
+
+.cover-img {
+  object-fit: cover;
+  object-position: center;
+}
+.projectsWrapper .box a h2,
 .adv h2 {
   font-size: 2rem;
   font-weight: 700;
+}
+.projectsWrapper .box a {
+  color: #111928;
+  text-decoration: none;
 }
 
 .projectsWrapper .box p,
@@ -1275,7 +1317,7 @@ hr {
   text-align: justify;
 }
 
-.anchors a {
+.anchors span {
   padding: 1rem;
   border-radius: 2rem;
   text-decoration: none;
@@ -1283,9 +1325,10 @@ hr {
   border: 0.1rem solid var(--Color-Primary);
   color: var(--Color-Primary);
   transition: all 0.3s ease-in-out;
+  cursor: pointer;
 }
 
-.anchors a:hover {
+.anchors span:hover {
   background: var(--Color-Primary);
   color: var(--Color-White-White-200);
 }
@@ -1379,8 +1422,12 @@ marquee {
 .rigthside a.arrow {
   padding: 0.5rem;
   border: 1px solid var(--Color-Black-Black-50);
-  border-radius: 5rem;
+  border-radius: 50%;
   width: 5rem;
+  height: 5rem;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
 }
 .leftSide {
   font-size: 2rem;
@@ -1389,11 +1436,11 @@ marquee {
 }
 
 .leftSide .dot {
-  font-size: 5rem;
-  margin-bottom: 14px;
-  color: var(--Color-Primary);
+  background-color: var(--Color-Primary);
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
 }
-
 .leftSide small {
   background: var(--Color-Primary-Primary-50);
   padding: 7px 1rem;
@@ -1467,13 +1514,8 @@ marquee {
 }
 
 .wapperBox .Box {
-  border-left: 3px solid rgba(236, 236, 236, 1);
-  border-bottom: 3px solid rgba(236, 236, 236, 1);
-}
-
-.wapperBox .Box:last-child,
-.wapperBox .Box:nth-child(2) {
-  border-left: none !important;
+  border-left: 1px solid rgba(236, 236, 236, 1);
+  border-bottom: 1px solid rgba(236, 236, 236, 1);
 }
 
 .wapperBox .Box:nth-child(3),
@@ -1614,9 +1656,9 @@ section.HeroContent {
   }
 }
 .headWrapper .leftSide span {
-  font-size: 1.8rem;
-  font-weight: 600;
-  color: #959595;
+  font-size: 2rem;
+  font-weight: 500;
+  color: #252424;
 }
 .partner {
   width: 8% !important;
@@ -1702,6 +1744,13 @@ section.HeroContent {
     font-size: 1.5rem !important;
   }
 } */
+
+@media (max-width: 767px) {
+  .wapperBox .Box:last-child,
+  .wapperBox .Box:nth-child(2) {
+    border-left: none !important;
+  }
+}
 
 @media (min-width: 992px) {
   .bar2 .number {
@@ -2217,7 +2266,6 @@ section.HeroContent {
   }
   .wapperBox .Box,
   .wapperBox .Box:nth-child(2) {
-    border-left: 3px solid rgba(236, 236, 236, 1) !important;
     border-bottom: none;
   }
 

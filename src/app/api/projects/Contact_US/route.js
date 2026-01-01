@@ -1,11 +1,10 @@
 import { NextResponse } from "next/server";
-import { API_BASE_URL } from "../homepage/route";
 
 export async function POST(req) {
     try {
         const body = await req.json();
 
-        const res = await fetch(`${API_BASE_URL}api/v1/contact-us`, {
+        const res = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}api/v1/contact-us`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
