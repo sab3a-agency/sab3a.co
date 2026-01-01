@@ -1,6 +1,6 @@
 'use client';
 
-import SecondSeation from '@/components/ProjectsDetailsComp/SecondSections';
+import SecondSection from '@/components/ProjectsDetailsComp/SecondSections';
 import LetsDoit from '@/components/LetsDoit';
 import PartnersSection from '@/components/projects/partners-section';
 import HeroTeamSection from '@/components/TeamPageComponent/Hero';
@@ -39,7 +39,7 @@ export default function Team() {
       <HeroTeamSection />
       <OurJourney />
       <PartnersSection />
-      <SecondSeation projectData={OurPhilosophy} />
+      <SecondSection projectData={OurPhilosophy} />
       <LetsDoit />
     </>
   );
