@@ -3,6 +3,7 @@
 import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import Image from 'next/image';
 
 export default function Header() {
   const pathname = usePathname();
@@ -57,15 +58,7 @@ export default function Header() {
     <nav className='navbar navbar-expand-lg bg-body-tertiary p-3 d-flex justify-content-center align-items-baseline mt-2  '>
       <div className='container'>
         <Link className='navbar-brand' href='/' onClick={closeNavbar}>
-          <img
-            loading='lazy'
-            src='/img/IconSite.svg'
-            alt='شعار وكالة سبعة الرقمية'
-            onError={(e) => {
-              e.currentTarget.src = '../img/LoagingState.png';
-              e.currentTarget.style.objectFit = 'contain';
-            }}
-          />
+          <Image width={99} height={60} loading='lazy' src='/img/IconSite.svg' alt='شعار وكالة سبعة الرقمية' />
         </Link>
         <button
           className='navbar-toggler'
