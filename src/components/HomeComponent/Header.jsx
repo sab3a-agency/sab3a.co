@@ -1,12 +1,12 @@
-"use client";
+'use client';
 
-import React, { useEffect, useState } from "react";
-import Link from "next/link";
-import { usePathname } from "next/navigation";
+import React, { useEffect, useState } from 'react';
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 
 export default function Header() {
   const pathname = usePathname();
-  const [Active, setActive] = useState("");
+  const [Active, setActive] = useState('');
 
   // if path Change will close the navbar
   useEffect(() => {
@@ -14,12 +14,12 @@ export default function Header() {
   }, [pathname]);
 
   const currentPage = [
-    { path: "/", name: "الرئيسية" },
-    { path: "/projects", name: "أعمالنا" },
-    { path: "/packages", name: "الباقات" },
+    { path: '/', name: 'الرئيسية' },
+    { path: '/projects', name: 'أعمالنا' },
+    { path: '/packages', name: 'الباقات' },
     // { path: "/team", name: "فريقنا" },
     // { path: "/blog", name: "المدونة" },
-    { path: "/#", name: "ملف الشركة" },
+    { path: '/#', name: 'ملف الشركة' }
   ];
 
   useEffect(() => {
@@ -29,72 +29,65 @@ export default function Header() {
     }
 
     const handleScroll = () => {
-      const HeadBar = document.querySelector(".container");
+      const HeadBar = document.querySelector('.container');
       if (HeadBar) {
         if (window.pageYOffset >= HeadBar.offsetTop) {
-          HeadBar.classList.add("onscroll");
+          HeadBar.classList.add('onscroll');
         } else {
-          HeadBar.classList.remove("onscroll");
+          HeadBar.classList.remove('onscroll');
         }
       }
     };
 
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
   }, [pathname]);
 
   const closeNavbar = () => {
-    const navbarCollapse = document.getElementById("navbarNav");
-    if (navbarCollapse.classList.contains("show")) {
+    const navbarCollapse = document.getElementById('navbarNav');
+    if (navbarCollapse.classList.contains('show')) {
       const bsCollapse = new bootstrap.Collapse(navbarCollapse, {
-        toggle: false,
+        toggle: false
       });
       bsCollapse.hide();
     }
   };
 
   return (
-    <nav className="navbar navbar-expand-lg bg-body-tertiary p-3 d-flex justify-content-center align-items-baseline mt-2  ">
-      <div className="container">
-        <Link className="navbar-brand" href="/" onClick={closeNavbar}>
+    <nav className='navbar navbar-expand-lg bg-body-tertiary p-3 d-flex justify-content-center align-items-baseline mt-2  '>
+      <div className='container'>
+        <Link className='navbar-brand' href='/' onClick={closeNavbar}>
           <img
-            loading="lazy"
-            src="/img/IconSite.svg"
-            alt="img"
+            loading='lazy'
+            src='/img/IconSite.svg'
+            alt='شعار وكالة سبعة الرقمية'
             onError={(e) => {
-              e.currentTarget.src = "../img/LoagingState.png";
-              e.currentTarget.style.objectFit = "contain";
+              e.currentTarget.src = '../img/LoagingState.png';
+              e.currentTarget.style.objectFit = 'contain';
             }}
           />
         </Link>
         <button
-          className="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
+          className='navbar-toggler'
+          type='button'
+          data-bs-toggle='collapse'
+          data-bs-target='#navbarNav'
+          aria-controls='navbarNav'
+          aria-expanded='false'
+          aria-label='Toggle navigation'
         >
-          <span className="navbar-toggler-icon"></span>
+          <span className='navbar-toggler-icon'></span>
         </button>
-        <div className="collapse navbar-collapse mx-4" id="navbarNav">
-          <ul className="navbar-nav mx-auto d-flex align-items-center flex-wrap gap-5">
+        <div className='collapse navbar-collapse mx-4' id='navbarNav'>
+          <ul className='navbar-nav mx-auto d-flex align-items-center flex-wrap gap-5'>
             {currentPage.map((item) => (
-              <li className="nav-item" key={item.name}>
-                <Link
-                  className="nav-link"
-                  href={item.path}
-                  onClick={closeNavbar}
-                >
+              <li className='nav-item' key={item.name}>
+                <Link className='nav-link' href={item.path} onClick={closeNavbar}>
                   <span
                     style={{
-                      color:
-                        Active === item.name
-                          ? "var(--Color-Secondary)"
-                          : "black",
-                      fontWeight: Active === item.name ? "bold" : "normal",
-                      fontSize: Active === item.name ? "larger" : "1.4rem",
+                      color: Active === item.name ? 'var(--Color-Secondary)' : 'black',
+                      fontWeight: Active === item.name ? 'bold' : 'normal',
+                      fontSize: Active === item.name ? 'larger' : '1.4rem'
                     }}
                   >
                     {item.name}
@@ -103,9 +96,9 @@ export default function Header() {
               </li>
             ))}
           </ul>
-          <div id="btn">
-            <Link href="/contact-us" onClick={closeNavbar}>
-              <button className="btn btn-success" type="submit">
+          <div id='btn'>
+            <Link href='/contact-us' onClick={closeNavbar}>
+              <button className='btn btn-success' type='submit'>
                 اتصل بنا
               </button>
             </Link>

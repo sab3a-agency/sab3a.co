@@ -128,7 +128,7 @@ export default function OurVision({ data: { visionSection, statistics } }) {
             <div className='divWitherProgress row d-flex flex-column gap-1'>
               <div className='outerWrapper col-12 col-md-6'>
                 <div className='boxImg'>
-                  <Image width={700} height={500} src='/img/meeting-hijab.png' quality={90} alt='img' loading='lazy' />
+                  <Image width={700} height={500} src='/img/meeting-hijab.png' quality={90} alt='اجتماع عمل لمناقشة حلول تقنية مع عميل' loading='lazy' />
                 </div>
               </div>
 
