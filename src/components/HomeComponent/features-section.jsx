@@ -16,7 +16,16 @@ export default function FeaturesSection({ data }) {
             {images.map((img) => (
               <div className={img.class} key={img.src}>
                 <div className='wappLongimg'>
-                  <Image id='wappLongimg' src={img.src} alt='Image from Sab3a Agency' data-aos='zoom-in' width={1000} height={1000} loading='lazy' />
+                  <Image
+                    id='wappLongimg'
+                    src={img.src}
+                    alt='Image from Sab3a Agency'
+                    className=' aos-init'
+                    data-aos='zoom-in'
+                    width={1000}
+                    height={1000}
+                    loading='lazy'
+                  />
                 </div>
               </div>
             ))}
@@ -25,7 +34,7 @@ export default function FeaturesSection({ data }) {
         <div className='part2 pt-md-5 mt-80'>
           <div className='row'>
             <div className='col-md-5'>
-              <div className='BoxText' data-aos='zoom-in'>
+              <div className='BoxText aos-init' data-aos='zoom-in'>
                 <h3 className='lh-base'>{featuresSection.title}</h3>
                 <p>{featuresSection.content}</p>
                 <button className='btn btn-danger d-flex align-items-center  justify-content-center'>{featuresSection.button_text}</button>
@@ -37,10 +46,10 @@ export default function FeaturesSection({ data }) {
                 <div className='row d-flex flex-wrap'>
                   {features.map((box, index) => {
                     return (
-                      <div key={box.id}  className='col-12 col-sm-6 d-flex justify-content-center'>
+                      <div key={box.id} className='col-12 col-sm-6 d-flex justify-content-center'>
                         <div className='FirstSide d-flex flex-column align-items-center w-100'>
                           <div className={`box ${index === 0 ? 'Active' : ''}`}>
-                            <div className='boxContent' data-aos='fade-zoom-in'>
+                            <div className='boxContent aos-init' data-aos='fade-zoom-in'>
                               <h2>{box.title}</h2>
                               <p>{box.description}</p>
                             </div>
