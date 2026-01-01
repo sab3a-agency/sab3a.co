@@ -53,7 +53,7 @@ export function BoxPackage() {
               >
                 <div className='container'>
                   <small>
-                    <Image loading='lazy' width={16} height={33} className='w-auto' src={outeritem.ouetricon} alt='Icon' />
+                    <img loading='lazy' className='h-6 w-auto' src={outeritem.ouetricon} alt='Icon' />
                   </small>
                   <h4 className='mt-4'>{outeritem.h4}</h4>
                   <h2>{outeritem.h2}</h2>
