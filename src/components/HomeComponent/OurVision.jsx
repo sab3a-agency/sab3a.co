@@ -111,16 +111,12 @@ export default function OurVision({ data: { visionSection, statistics } }) {
   }, []);
 
   return (
-    <section >
-      <div className="container p-5">
-        <div className="OurVisionWapper container">
-          <div className="info" data-aos="fade-left">
-            <small>{OurVisionData.small}</small>
-            <h3>
-              {OurVisionData.title}
-              <span>{OurVisionData.span}</span>
-              {OurVisionData.titleEnd}
-            </h3>
+    <section className='OurVision'>
+      <div className='container p-5'>
+        <div className='OurVisionWapper container'>
+          <div className='info' data-aos='fade-left'>
+            <small>{visionSection.title}</small>
+            <h3>{visionSection.subtitle}</h3>
           </div>
 
           <div
