@@ -1,4 +1,3 @@
-import TeamSection from '@/components/HomeComponent/team-section';
 import HeroSection from '@/components/HomeComponent/hero-section';
 import MarqueeSection from '@/components/HomeComponent/marquee-section';
 import About from '@/components/HomeComponent/about-section';
