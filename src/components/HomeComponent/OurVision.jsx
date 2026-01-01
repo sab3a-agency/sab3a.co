@@ -92,24 +92,8 @@ export default function OurVision({ data: { visionSection, statistics } }) {
   }, [stats]);
 
   useEffect(() => {
-    async function fetchData() {
-      try {
-        const res = await fetch("/api/projects/heroprogress", {
-          cache: "no-store",
-        });
-        const json = await res.json();
-        if (json?.data?.statistics) {
-          const filtered = json.data.statistics.filter((s) =>
-            [5, 6, 7, 8].includes(s.id)
-          );
-          setStats(filtered);
-        }
-      } catch (error) {
-        console.error("Error fetching stats:", error);
-      }
-    }
-
-    fetchData();
+    const filtered = statistics.filter((s) => [5, 6, 7, 8].includes(s.id));
+    setStats(filtered);
   }, []);
 
   return (
