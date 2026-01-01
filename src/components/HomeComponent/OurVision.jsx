@@ -67,7 +67,7 @@ export default function OurVision({ data: { visionSection, statistics } }) {
           const animateNumber = () => {
             if (currentValue < targetValue) {
               currentValue++;
-              numberEl.textContent = `${currentValue} %`;
+              numberEl.textContent = `${currentValue} ${targetSuffix}`;
               requestAnimationFrame(animateNumber);
             }
           };
