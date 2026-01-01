@@ -20,7 +20,7 @@ export default function FeaturesSection({ data }) {
                     id={`wappLongimg-${img.src}`}
                     src={img.src}
                     alt=''
-                    aria-hidden='true'
+                    aria-hidden='true'c
                     className=' aos-init'
                     data-aos='zoom-in'
                     width={1000}

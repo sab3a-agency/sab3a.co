@@ -21,7 +21,7 @@ export default function MarqueeSection() {
       <div className='RunningLikePost'>
         <div className='Text-Running'>
           <marquee className='my-4' behavior='scroll' direction='left' scrollamount='15' loop='infinite'>
-            <div className='d-flex align-items-center justify-content-between'>
+            <div className='d-flex align-items-center justify-content-between column-gap-10'>
               {data.marquees.map((title, index) => {
                 return (
                   <div key={index} className='sliderImg d-flex justify-content-center align-items-center gap-5 px-3'>
