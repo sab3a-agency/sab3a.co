@@ -15,7 +15,7 @@ export default async function FaqsSection({ data }) {
   return (
     <>
       <section className='questiones' >
-        <div className='container ' data-aos='zoom-in'>
+        <div className='container aos-init' data-aos='zoom-in'>
           <div className='wrapper'>
             <div className='head text-center'>
               <h3>{faqsSection.title}</h3>
