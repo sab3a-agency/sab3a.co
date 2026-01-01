@@ -8,7 +8,7 @@ export default function About({ data }) {
         <div className='d-flex-column d-md-flex-column d-xl-flex justify-content-between align-items-center gap-5'>
           <div className=' text-center aos-init' data-aos='zoom-in'>
             <div className='imgWrapp'>
-              <Image className='img-fluid' src={'/img/image-hijab.png'} alt='meeting_img' loading='lazy' width={1000} height={1000} />
+              <Image className='img-fluid' src={'/img/image-hijab.png'} alt='اجتماع عمل لمناقشة حلول تقنية مع عميل' loading='lazy' width={1000} height={1000} />
             </div>
           </div>
 
@@ -25,7 +25,7 @@ export default function About({ data }) {
               <div className='boxs d-flex flex-column  gap-5'>
                 <div className='box d-flex gap-4 align-items-start '>
                   <div className='icon'>
-                    <Image width={32} height={32} src={'img/cloud-add.svg'} alt='icon' loading='lazy' />
+                    <Image width={32} height={32} src={'img/cloud-add.svg'} alt='' aria-hidden='true' loading='lazy' />
                   </div>
                   <div className='information  d-flex flex-column align-items-start justify-content-center mt-2'>
                     <h3 className='fs-2'>البنية التحتية لتكنولوجيا المعلومات </h3>
@@ -34,7 +34,7 @@ export default function About({ data }) {
                 </div>
                 <div className='box d-flex gap-4 align-items-start '>
                   <div className='icon'>
-                    <Image width={32} height={32} src={'img/color-swatch.svg'} alt='icon' loading='lazy' />
+                    <Image width={32} height={32} src={'img/color-swatch.svg'} alt='' aria-hidden='true' loading='lazy' />
                   </div>
                   <div className='information  d-flex flex-column align-items-start justify-content-center mt-2'>
                     <h3 className='fs-2'>تصميم واجهة المستخدم وتجربة المستخدم</h3>
