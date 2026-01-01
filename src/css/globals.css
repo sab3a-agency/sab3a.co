@@ -2,7 +2,7 @@
 :root {
   --Color-Secondary: #e75050;
   /* --Color-Primary: rgba(51, 134, 86, 1); */
-  --Color-Primary: #00662B;
+  --Color-Primary: #00662b;
   --Color-White: rgba(242, 246, 248, 1);
   --Color-Primary-Primary-50: rgb(230, 240, 234);
   --Color-White-White-200: rgba(246, 249, 250, 1);
@@ -1119,7 +1119,7 @@ footer .line {
 }
 
 .FooterBottom p span {
-  color: #AF1818;
+  color: #af1818;
 }
 
 .social a {
@@ -2372,5 +2372,12 @@ section.HeroContent {
   }
   .FirstSection p {
     margin: 0rem 0rem;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  [data-aos] {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
   }
 }
