@@ -13,7 +13,7 @@ export default function HeroPackages() {
     <div className="heroPackages mt-50 pb-80">
       <div className="container">
         <div
-          className="d-flex flex-column align-items-center justify-content-center"
+          className="d-flex flex-column align-items-center justify-content-center aos-init"
           data-aos="fade-up"
         >
           <small>{Data.span}</small>

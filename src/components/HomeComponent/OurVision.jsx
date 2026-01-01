@@ -101,12 +101,12 @@ export default function OurVision({ data: { visionSection, statistics } }) {
     <section className='OurVision'>
       <div className='container p-5'>
         <div className='OurVisionWapper container'>
-          <div className='info' data-aos='fade-left'>
+          <div className='info aos-init' data-aos='fade-left'>
             <small>{visionSection.title}</small>
             <h3>{visionSection.subtitle}</h3>
           </div>
 
-          <div className='boxWrapper d-flex flex-column align-items-center text-center' data-aos='zoom-in'>
+          <div className='boxWrapper d-flex flex-column align-items-center text-center aos-init' data-aos='zoom-in'>
             <div className='boxWrap d-flex-column  d-xl-flex justify-content-center gap-4 '>
               <div className='box d-flex flex-column justify-content-center align-items-center flex-grow-1'>
                 <span ref={(el) => (numbersRef.current[0] = el)} className='number' data-target={statistics[0]?.value}>
@@ -128,7 +128,7 @@ export default function OurVision({ data: { visionSection, statistics } }) {
             <div className='divWitherProgress row d-flex flex-column gap-1'>
               <div className='outerWrapper col-12 col-md-6'>
                 <div className='boxImg'>
-                  <Image width={700} height={500} src='/img/meeting-hijab.png' quality={90} alt='img' loading='lazy' />
+                  <Image width={700} height={500} src='/img/meeting-hijab.png' quality={90} alt='اجتماع عمل لمناقشة حلول تقنية مع عميل' loading='lazy' />
                 </div>
               </div>
 

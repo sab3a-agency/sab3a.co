@@ -11,8 +11,8 @@ export default function MarqueeSection() {
       <div className='container p-5 pt-0 mb-5 mb-md-0'>
         <div className='lastPart row  mt-90'>
           <div className='container'>
-            <div className='imgWrapper' data-aos='fade-up'>
-              <Image width={1240} height={700} src={data.src} alt='meeting' className='object-fit-cover' />
+            <div className='imgWrapper aos-init' data-aos='fade-up'>
+              <Image width={1240} height={700} src={data.src} alt="" aria-hidden="true" className='object-fit-cover' />
             </div>
           </div>
         </div>
@@ -21,7 +21,7 @@ export default function MarqueeSection() {
       <div className='RunningLikePost'>
         <div className='Text-Running'>
           <marquee className='my-4' behavior='scroll' direction='left' scrollamount='15' loop='infinite'>
-            <div className='d-flex align-items-center justify-content-between'>
+            <div className='d-flex align-items-center justify-content-between column-gap-10'>
               {data.marquees.map((title, index) => {
                 return (
                   <div key={index} className='sliderImg d-flex justify-content-center align-items-center gap-5 px-3'>

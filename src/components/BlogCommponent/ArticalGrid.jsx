@@ -61,7 +61,7 @@ export default function ArticalGrid({ data }) {
   if (loading) {
     return (
       <div
-        className="projectsWrapper mt-5"
+        className="projectsWrapper mt-5 aos-init"
         data-aos="fade-up"
         data-aos-duration="1000"
       >
@@ -82,7 +82,7 @@ export default function ArticalGrid({ data }) {
         {Bloges.map((item) => (
           <div
             key={item.id}
-            className="col-12 col-md-6 mb-5"
+            className="col-12 col-md-6 mb-5 aos-init"
             data-aos="fade-up"
           >
             <div className="box w-100">

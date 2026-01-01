@@ -48,6 +48,10 @@ html {
 .border-gray {
   border-color: #e9eff7;
 }
+.column-gap-10 {
+  column-gap: 5rem !important;
+}
+
 @media (min-width: 768px) {
   html {
     font-size: 10px;

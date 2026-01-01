@@ -101,7 +101,7 @@ export default function GrideTeam() {
   )
 
   return (
-    <div className="Gred mt-50 container" data-aos="fade-up">
+    <div className="Gred mt-50 container aos-init" data-aos="fade-up">
       <div className="row">
         {loading
           ? [0, 1].map((_, idx) => <SkeletonCard key={idx} type="main" />)
@@ -172,7 +172,7 @@ export default function GrideTeam() {
               ))
             : RestOfTheTeam.map((item) => (
                 <div key={item.id} className="col-6 col-md-3">
-                  <div className="box mt-5" data-aos="zoom-in">
+                  <div className="box mt-5 aos-init" data-aos="zoom-in">
                     <div className="Wrapp">
                       <img
                         loading="lazy"

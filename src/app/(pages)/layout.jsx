@@ -10,11 +10,13 @@ const sukarFont = localFont({
   src: '../../../public/fonts/sukar-font.ttf'
 });
 
+export const viewport = {
+  width: 'device-width',
+  initialScale: 1
+};
+
 export const metadata = {
-  title: {
-    template: 'سبعة | %s',
-    default: 'سبعة'
-  },
+  title: { template: 'سبعة | %s', default: 'سبعة' },
   description:
     'وكالة تقنية متخصصة في تقديم حلول رقمية مبتكرة. نعتمد على الإبداع والتكنولوجيا لتحويل أفكارك إلى واقع ملموس، مع التركيز على الجودة والاحترافية. نعمل عن بعد من عُمان ومصر وقطاع غزة لخدمة عملائنا في جميع أنحاء العالم.',
   icons: [
@@ -25,16 +27,14 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang='ar' dir='rtl'>
-      <head>
-        <meta name='viewport' content='width=device-width, initial-scale=1.0' />
-      </head>
+    <html lang='ar' dir='rtl' data-scroll-behavior='smooth'>
       <body className={sukarFont.className}>
-        <AosWrapper>
-          <Header />
+        <AosWrapper />
+        <Header />
+        <main id='main' role='main'>
           {children}
-          <Footer />
-        </AosWrapper>
+        </main>
+        <Footer />
       </body>
     </html>
   );

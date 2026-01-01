@@ -47,13 +47,13 @@ export function BoxPackage() {
             return (
               <div
                 key={index}
-                className={`boxWrapper ${index === 1 ? 'Active ' : ''} `}
+                className={`boxWrapper ${index === 1 ? 'Active ' : ''}  aos-init`}
                 // data-aos={index % 2 === 0 ? "fade-right" : "fade-left"}
                 data-aos='zoom-in'
               >
                 <div className='container'>
                   <small>
-                    <Image loading='lazy' width={16} height={33} className='w-auto' src={outeritem.ouetricon} alt='Icon' />
+                    <img loading='lazy' className='h-6 w-auto' src={outeritem.ouetricon} alt='Icon' />
                   </small>
                   <h4 className='mt-4'>{outeritem.h4}</h4>
                   <h2>{outeritem.h2}</h2>

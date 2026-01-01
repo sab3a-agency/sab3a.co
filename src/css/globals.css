@@ -1,7 +1,8 @@
+@import url('./ComoneStyle.css');
 :root {
   --Color-Secondary: #e75050;
   /* --Color-Primary: rgba(51, 134, 86, 1); */
-  --Color-Primary: #00682c;
+  --Color-Primary: #00662B;
   --Color-White: rgba(242, 246, 248, 1);
   --Color-Primary-Primary-50: rgb(230, 240, 234);
   --Color-White-White-200: rgba(246, 249, 250, 1);
@@ -1118,7 +1119,7 @@ footer .line {
 }
 
 .FooterBottom p span {
-  color: var(--Color-Secondary);
+  color: #AF1818;
 }
 
 .social a {

@@ -6,7 +6,7 @@ export default function ServicesSection({ data }) {
   return (
     <section className='ContentOurServices'>
       <div className='container p-5 mt-4'>
-        <div className='wapperServices  d-flex flex-column flex-md-row justify-content-space-between ' data-aos='fade-down'>
+        <div className='wapperServices  d-flex flex-column flex-md-row justify-content-space-between aos-init' data-aos='fade-down'>
           <div className='Text'>{servicesSection.title}</div>
 
           <div className='Description'>
@@ -18,7 +18,7 @@ export default function ServicesSection({ data }) {
         </div>
 
         {/* Servers */}
-        <div className='infoServers mt-50' data-aos='fade-up'>
+        <div className='infoServers mt-50 aos-init' data-aos='fade-up'>
           <div className='row'>
             {services.map((service) => (
               <div className='col-md-6' key={service.id}>
@@ -27,7 +27,7 @@ export default function ServicesSection({ data }) {
                     <img loading='lazy' className='icon' src={service.icon} alt={service.title} />
                   </div>
                   <div className='info'>
-                    <h5 className='fw-bold fs-3'>{service.title}</h5>
+                    <h4 className='fw-bold fs-3'>{service.title}</h4>
                     <p>{service.description}</p>
                   </div>
                 </div>

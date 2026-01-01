@@ -14,7 +14,7 @@ export default function HeroTeamSection() {
     <section className="Hero mt-50">
       <div className="container">
         <div
-          className="container head d-flex align-items-start justify-content-between flex-column gap-5"
+          className="container head d-flex align-items-start justify-content-between flex-column gap-5 aos-init"
           data-aos="fade-left"
         >
           <h1 className="d-flex flex-column align-items-start">
@@ -29,7 +29,7 @@ export default function HeroTeamSection() {
           </h1>
           <Link
             href="/contact-us"
-            className="d-flex align-items-center gap-4 text-decoration-none  justify-content-center w-md-100"
+            className="d-flex align-items-center gap-4 text-decoration-none  justify-content-center w-md-100 aos-init"
             data-aos="fade-up-right"
           >
             <img loading="lazy"

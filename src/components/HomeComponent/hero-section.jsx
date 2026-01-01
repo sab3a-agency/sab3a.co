@@ -5,7 +5,7 @@ export default function HeroSection({ data }) {
     <div className='container px-5 mt-80 pt-0'>
       <div className='Part1 row w-100 mx-auto' data-aos='fade-up'>
         <div className='wrap d-md-flex justify-content-between align-content-center align-items-center gap-5'>
-          <div className='imgWrapper d-flex align-items-center justify-content-start gap-0 w-100 position-relative ' data-aos='fade-up '>
+          <div className='imgWrapper d-flex align-items-center justify-content-start gap-0 w-100 position-relative aos-init' data-aos='fade-up '>
             <Image className='CofiaVector' alt='صورة شخص يرتدي كوفية' src={'/img/SomeOne_kofia.png'} loading='lazy' width={129} height={146} />
 
             <p className='imgText w-100 text-center text-md-start'>انضم إلينا في رحلة الابتكار والإبداع، حيث نبني معًا شيئًا استثنائيًا يفوق التوقعات.</p>
@@ -19,7 +19,7 @@ export default function HeroSection({ data }) {
         </div>
       </div>
 
-      <div className='mt-2 my-0 position-relative d-flex justify-content-start align-items-center' data-aos='fade-up'>
+      <div className='mt-2 my-0 position-relative d-flex justify-content-start align-items-center aos-init' data-aos='fade-up'>
         <p className='BigText'>{data.heroSection.subtitle}</p>
 
         <Image
@@ -31,7 +31,7 @@ export default function HeroSection({ data }) {
         />
       </div>
 
-      <div className='outWrrape d-flex ' data-aos='fade-up'>
+      <div className='outWrrape d-flex aos-init' data-aos='fade-up'>
         <div className='innerWrappe col-3  my-5 d-flex justify-content-start align-content-start  gap-4 w-100'>
           <div className='text'>
             <p className='textBox spaheal d-flex align-items-center'>{data.heroSection.content}</p>
@@ -64,7 +64,7 @@ export default function HeroSection({ data }) {
                 <h3>{data.statistics[2]?.title}</h3>
                 <div className='text d-flex align-items-start'>
                   <span className='Star'>
-                    <Image loading='lazy' src='/img/star.svg' alt='Star' width={20} height={20} />
+                    <Image loading='lazy' className='h-auto' src='/img/star.svg' alt='Star' width={20} height={20} />
                   </span>
 
                   <p className='p-1 pt-0 textBox3 fs-4'>{data.statistics[2]?.value}</p>
