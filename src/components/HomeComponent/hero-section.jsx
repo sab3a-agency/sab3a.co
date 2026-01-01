@@ -6,7 +6,7 @@ export default function HeroSection({ data }) {
       <div className='Part1 row w-100 mx-auto' data-aos='fade-up'>
         <div className='wrap d-md-flex justify-content-between align-content-center align-items-center gap-5'>
           <div className='imgWrapper d-flex align-items-center justify-content-start gap-0 w-100 position-relative aos-init' data-aos='fade-up '>
-            <Image className='CofiaVector' alt='صورة شخص يرتدي كوفية' src={'/img/SomeOne_kofia.png'} loading='lazy' width={129} height={146} />
+            <Image className='CofiaVector' alt='صورة شخص يرتدي كوفية' src='/img/SomeOne_kofia.png' width={129} height={146} priority />
 
             <p className='imgText w-100 text-center text-md-start'>انضم إلينا في رحلة الابتكار والإبداع، حيث نبني معًا شيئًا استثنائيًا يفوق التوقعات.</p>
           </div>
@@ -19,16 +19,18 @@ export default function HeroSection({ data }) {
         </div>
       </div>
 
-      <div className='mt-2 my-0 position-relative d-flex justify-content-start align-items-center aos-init' data-aos='fade-up'>
+      <div className='mt-2 my-0 position-relative d-flex justify-content-start align-items-center'>
         <p className='BigText'>{data.heroSection.subtitle}</p>
 
-        <Image
-          src='/img/BoardsPoster.svg'
-          width={217}
-          height={164}
-          className='LargPoster d-none d-md-none d-xl-flex justify-content-center align-items-start  '
-          alt='Saba-Image'
-        />
+        <div className='aos-init' data-aos='fade-up'>
+          <Image
+            src='/img/BoardsPoster.svg'
+            width={217}
+            height={164}
+            className='LargPoster d-none d-md-none d-xl-flex justify-content-center align-items-start'
+            alt='ملصق توضيحي'
+          />
+        </div>
       </div>
 
       <div className='outWrrape d-flex aos-init' data-aos='fade-up'>
@@ -71,7 +73,7 @@ export default function HeroSection({ data }) {
                 </div>
               </div>
             </div>
-            <Image
+            {/* <Image
               loading='lazy'
               width={217}
               height={164}
@@ -79,7 +81,7 @@ export default function HeroSection({ data }) {
               className='miniposters d-md-flex d-xl-none justify-content-center align-items-center  position-relative'
               style={{ top: '-9rem', width: '18rem', height: '18rem' }}
               alt='Saba-Image'
-            />
+            /> */}
           </div>
         </div>
       </div>
