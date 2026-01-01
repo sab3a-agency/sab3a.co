@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSquareFacebook, faInstagram, faLinkedin, faTiktok, faYoutube } from '@fortawesome/free-brands-svg-icons';
 // import { text } from "@fortawesome/fontawesome-svg-core";
 import Link from 'next/link';
+import Image from 'next/image';
 
 const footerData = {
   socialLinks: [
@@ -73,17 +74,9 @@ export default function Footer() {
         <div className='FooterWrapper container p-5'>
           <div className='containerrWrap'>
             <div className='logo text-justify d-flex'>
-              <a href='#'>
-                <img
-                  loading='lazy'
-                  src='/img/IconSite.svg'
-                  alt='شعار وكالة سبعة الرقمية'
-                  onError={(e) => {
-                    e.currentTarget.src = '../img/LoagingState.png';
-                    e.currentTarget.style.objectFit = 'contain';
-                  }}
-                />
-              </a>
+              <Link href='/'>
+                <Image width={99} height={60} loading='lazy' src='/img/IconSite.svg' alt='شعار وكالة سبعة الرقمية' />
+              </Link>
             </div>
 
             <div className='innerFooterContent d-flex justify-content-between flex-wrap flex-column align-items-start gap-5 '>

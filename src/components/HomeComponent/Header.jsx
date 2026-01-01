@@ -55,7 +55,7 @@ export default function Header() {
   };
 
   return (
-    <nav className='navbar navbar-expand-lg bg-body-tertiary p-3 d-flex justify-content-center align-items-baseline mt-2  '>
+    <nav className='navbar navbar-expand-lg bg-body-tertiary p-3 d-flex justify-content-center align-items-baseline mt-2'>
       <div className='container'>
         <Link className='navbar-brand' href='/' onClick={closeNavbar}>
           <Image width={99} height={60} loading='lazy' src='/img/IconSite.svg' alt='شعار وكالة سبعة الرقمية' />
