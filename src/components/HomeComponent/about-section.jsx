@@ -6,13 +6,13 @@ export default function About({ data }) {
     <div className='HowWeAre mt-80'>
       <div className='container py-5 mt-5'>
         <div className='d-flex-column d-md-flex-column d-xl-flex justify-content-between align-items-center gap-5'>
-          <div className=' text-center' data-aos='zoom-in'>
+          <div className=' text-center aos-init' data-aos='zoom-in'>
             <div className='imgWrapp'>
               <Image className='img-fluid' src={'/img/image-hijab.png'} alt='meeting_img' loading='lazy' width={1000} height={1000} />
             </div>
           </div>
 
-          <div className=' d-flex flex-column gap-3' data-aos='zoom-in'>
+          <div className=' d-flex flex-column gap-3 aos-init' data-aos='zoom-in'>
             <div className='info mb-4 mt-5 container'>
               {/* TODO: use subtitle from api when added */}
               <small>من نحن</small>
