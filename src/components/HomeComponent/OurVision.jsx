@@ -105,77 +105,56 @@ export default function OurVision({ data: { visionSection, statistics } }) {
             <h3>{visionSection.subtitle}</h3>
           </div>
 
-          <div
-            className="boxWrapper d-flex flex-column align-items-center text-center"
-            data-aos="zoom-in"
-          >
-            <div className="boxWrap d-flex-column  d-xl-flex justify-content-center gap-4 ">
-              <div className="box d-flex flex-column justify-content-center align-items-center flex-grow-1">
-                <span
-                  ref={(el) => (numbersRef.current[0] = el)}
-                  className="number"
-                  data-target={OurVisionData.box1.target}
-                >
-                  0%
+          <div className='boxWrapper d-flex flex-column align-items-center text-center' data-aos='zoom-in'>
+            <div className='boxWrap d-flex-column  d-xl-flex justify-content-center gap-4 '>
+              <div className='box d-flex flex-column justify-content-center align-items-center flex-grow-1'>
+                <span ref={(el) => (numbersRef.current[0] = el)} className='number' data-target={statistics[0]?.value}>
+                  0 %
                 </span>
-                <h3>{OurVisionData.box1.title}</h3>
-                <p>{OurVisionData.box1.innerdescrption}</p>
+                <h3>{statistics[0]?.title}</h3>
+                <p>{statistics[0]?.description}</p>
               </div>
 
-              <div className="box d-flex flex-column justify-content-center align-items-center box2 flex-grow-1">
-                <span
-                  ref={(el) => (numbersRef.current[1] = el)}
-                  className="number stragety"
-                  data-target={OurVisionData.box2.target}
-                >
-                  0%
+              <div className='box d-flex flex-column justify-content-center align-items-center box2 flex-grow-1'>
+                <span ref={(el) => (numbersRef.current[1] = el)} className='number stragety' data-target={statistics[1]?.value}>
+                  0 مشروع
                 </span>
-                <h3 className="stragety">{OurVisionData.box2.title}</h3>
-                <p>{OurVisionData.box2.innerdescrption}</p>
+                <h3 className='stragety'>{statistics[1]?.title}</h3>
+                <p>{statistics[1]?.description}</p>
               </div>
             </div>
 
-            <div className="divWitherProgress row d-flex flex-column gap-1">
-              <div className="outerWrapper col-12 col-md-6">
-                <div className="boxImg">
+            <div className='divWitherProgress row d-flex flex-column gap-1'>
+              <div className='outerWrapper col-12 col-md-6'>
+                <div className='boxImg'>
                   <img
-                    src="../img/Meating.jpeg"
-                    alt="img"
-                    loading="lazy"
-                    onError={(e) => {
-                      e.currentTarget.src = "../img/LoagingState.png";
-                      e.currentTarget.style.objectFit = "contain";
-                    }}
+                    src='/img/Meating.jpeg'
+                    alt='img'
+                    loading='lazy'
                   />
                 </div>
               </div>
 
-              <div className="heroprogress col-12 col-md-6">
-                <div className="innerWrapper d-flex justify-content-center align-items-center gap-2">
+              <div className='heroprogress col-12 col-md-6'>
+                <div className='innerWrapper d-flex justify-content-center align-items-center gap-2'>
                   {stats.map((item, index) => (
-                    <div
-                      key={item.id}
-                      ref={(el) => (barsRef.current[index] = el)}
-                      className="bar2 d-flex flex-column justify-content-end align-items-center"
-                    >
-                      <small className="ProjectTitle text-white fw-normal mb-2">
-                        {item.title}
-                      </small>
+                    <div key={item.id} ref={(el) => (barsRef.current[index] = el)} className='bar2 d-flex flex-column justify-content-end align-items-center'>
+                      <small className='ProjectTitle text-white fw-normal mb-2'>{item.title}</small>
 
                       <span
                         data-height={`${item.value}%`}
-                        data-bs-toggle="tooltip"
-                        data-bs-placement="top"
+                        data-bs-toggle='tooltip'
+                        data-bs-placement='top'
                         title={`${item.value}%`}
-                        style={index === 0 ? { background: "#89AF48" } : {}}
+                        style={index === 0 ? { background: '#89AF48' } : {}}
                       >
                         <div
-                          className="number  "
+                          className='number  '
                           style={
                             index === 0
                               ? {
-                                  background: "#000",
-                                  color: "#fff",
+                                  background: '#000',
+                                  color: '#fff'
                                 }
                               : {}
                           }
@@ -186,20 +165,16 @@ export default function OurVision({ data: { visionSection, statistics } }) {
                     </div>
                   ))}
 
-                  <div className="position">
-                    <div className="boxing">
+                  <div className='position'>
+                    <div className='boxing'>
                       <h4>زيادة في التحويل</h4>
-                      <span className="fw-bolder">20%</span>
-                      <span className="fw-bolder">+</span>
+                      <span className='fw-bolder'>20%</span>
+                      <span className='fw-bolder'>+</span>
                     </div>
                     <img
-                      src="../img/shape.svg"
-                      alt="Shape"
-                      loading="lazy"
-                      onError={(e) => {
-                        e.currentTarget.src = "../img/LoagingState.png";
-                        e.currentTarget.style.objectFit = "contain";
-                      }}
+                      src='/img/shape.svg'
+                      alt='Shape'
+                      loading='lazy'
                     />
                   </div>
                 </div>
