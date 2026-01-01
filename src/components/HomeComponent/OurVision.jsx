@@ -62,6 +62,8 @@ export default function OurVision({ data: { visionSection, statistics } }) {
 
           let currentValue = 0;
 
+          const targetSuffix = numberEl.textContent.includes('%') ? ' %' : ' مشروع';
+
           const animateNumber = () => {
             if (currentValue < targetValue) {
               currentValue++;
