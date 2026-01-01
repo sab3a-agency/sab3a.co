@@ -10,6 +10,11 @@ const sukarFont = localFont({
   src: '../../../public/fonts/sukar-font.ttf'
 });
 
+export const viewport = {
+  width: 'device-width',
+  initialScale: 1
+};
+
 export const metadata = {
   title: {
     template: 'سبعة | %s',
