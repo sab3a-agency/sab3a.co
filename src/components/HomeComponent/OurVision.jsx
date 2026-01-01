@@ -5,7 +5,6 @@ import { useEffect, useRef, useState } from 'react';
 export default function OurVision({ data: { visionSection, statistics } }) {
   const barsRef = useRef([]);
   const numbersRef = useRef([]);
-  const [OurVisionData] = useState(OurVisionDataDefult);
   const [stats, setStats] = useState([]);
 
   useEffect(() => {
