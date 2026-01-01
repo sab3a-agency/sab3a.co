@@ -6,11 +6,31 @@ import Link from 'next/link';
 
 const footerData = {
   socialLinks: [
-    { icon: faSquareFacebook, link: '#' },
-    { icon: faInstagram, link: '#' },
-    { icon: faLinkedin, link: '#' },
-    { icon: faTiktok, link: '#' },
-    { icon: faYoutube, link: '#' }
+    {
+      icon: faSquareFacebook,
+      link: '#',
+      label: 'صفحة سبعة على فيسبوك'
+    },
+    {
+      icon: faInstagram,
+      link: '#',
+      label: 'صفحة سبعة على إنستغرام'
+    },
+    {
+      icon: faLinkedin,
+      link: '#',
+      label: 'صفحة سبعة على لينكدإن'
+    },
+    {
+      icon: faTiktok,
+      link: '#',
+      label: 'صفحة سبعة على تيك توك'
+    },
+    {
+      icon: faYoutube,
+      link: '#',
+      label: 'قناة سبعة على يوتيوب'
+    }
   ],
   quickLinks: [
     { text: 'الرئيسية', path: '/' },
@@ -156,8 +176,15 @@ export default function Footer() {
               <div className='social '>
                 <div className='icons d-flex justify-content-between align-items-center gap-5'>
                   {footerData.socialLinks.map((social, index) => (
-                    <a key={index} href={social.link} className='d-flex align-items-center justify-content-center'>
-                      <FontAwesomeIcon icon={social.icon} size='2x' />
+                    <a
+                      key={index}
+                      href={social.link}
+                      aria-label={social.label}
+                      target='_blank'
+                      rel='noopener noreferrer'
+                      className='d-flex align-items-center justify-content-center'
+                    >
+                      <FontAwesomeIcon icon={social.icon} size='2x' aria-hidden='true' />
                     </a>
                   ))}
                 </div>
