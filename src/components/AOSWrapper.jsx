@@ -1,19 +1,21 @@
-"use client";
+'use client';
 
-import { useEffect } from "react";
-import AOS from "aos";
-import "aos/dist/aos.css";
+import { useEffect } from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
-const AosWrapper = ({ children }) => {
+export default function AosWrapper() {
   useEffect(() => {
-    require("bootstrap/dist/js/bootstrap.bundle.min.js");
+    import('bootstrap/dist/js/bootstrap.bundle.min.js');
+
     AOS.init({
       duration: 800,
       once: true,
+      offset: 100
     });
+
+    AOS.refreshHard();
   }, []);
 
-  return <>{children}</>;
-};
-
-export default AosWrapper;
+  return null;
+}
