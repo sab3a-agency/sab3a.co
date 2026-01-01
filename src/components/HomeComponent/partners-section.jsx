@@ -11,7 +11,7 @@ export default async function PartnersSection() {
   return (
     <div className='Your_partner_in_success position-relative'>
       <div className='container'>
-        <div className='title m-5 d-flex justify-content-between align-items-center' data-aos='zoom-in'>
+        <div className='title m-5 d-flex justify-content-between align-items-center aos-init' data-aos='zoom-in'>
           <h3>
             شريكك في <span>النجاح الرقمي</span>
           </h3>
@@ -50,7 +50,7 @@ export default async function PartnersSection() {
           </div> */}
         </div>
 
-        <div className='partnersLogos' data-aos='fade-up'>
+        <div className='partnersLogos aos-init' data-aos='fade-up'>
           <div id='carouselExampleInterval' className='carousel slide position-relative'>
             <div className='carousel-inner'>
               <div className='Wrapperbox d-flex flex-wrap justify-content-center gap-3 '>
