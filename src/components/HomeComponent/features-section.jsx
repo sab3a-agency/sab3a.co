@@ -17,9 +17,10 @@ export default function FeaturesSection({ data }) {
               <div className={img.class} key={img.src}>
                 <div className='wappLongimg'>
                   <Image
-                    id='wappLongimg'
+                    id={`wappLongimg-${img.src}`}
                     src={img.src}
-                    alt='Image from Sab3a Agency'
+                    alt=''
+                    aria-hidden='true'
                     className=' aos-init'
                     data-aos='zoom-in'
                     width={1000}
