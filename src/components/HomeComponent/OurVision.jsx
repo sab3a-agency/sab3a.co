@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import { useEffect, useRef, useState } from 'react';
 
 export default function OurVision({ data: { visionSection, statistics } }) {
@@ -167,11 +168,7 @@ export default function OurVision({ data: { visionSection, statistics } }) {
                       <span className='fw-bolder'>20%</span>
                       <span className='fw-bolder'>+</span>
                     </div>
-                    <img
-                      src='/img/shape.svg'
-                      alt='Shape'
-                      loading='lazy'
-                    />
+                    <Image width={95} height={96} src='/img/shape.svg' alt='Shape' loading='lazy' />
                   </div>
                 </div>
               </div>
