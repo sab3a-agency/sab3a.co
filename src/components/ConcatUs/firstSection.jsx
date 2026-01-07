@@ -1,17 +1,6 @@
 "use client"
-import dynamic from "next/dynamic"
 import { useState } from "react"
-import { getCountryCallingCode } from "libphonenumber-js"
 import Select from "react-select"
-
-import "react-phone-input-2/lib/style.css"
-
-const PhoneInput = dynamic(() => import("react-phone-input-2"), { ssr: false })
-
-const getCountryName = (countryCode) => {
-  const countryNames = new Intl.DisplayNames(["ar"], { type: "region" })
-  return countryNames.of(countryCode) || "غير معروف"
-}
 
 const SubjectOptions = [
   { value: "باقة الإطلاق الأولي 'MVP'", label: "باقة الإطلاق الأولي 'MVP'" },
@@ -23,8 +12,6 @@ const SubjectOptions = [
 
 export default function FirstSiction() {
   const [errors, setErrors] = useState({})
-  const [phoneValue, setPhone] = useState("")
-  const [country, setCountry] = useState("US")
   const [isSubmitting, setIsSubmitting] = useState(false)
 
   const data = {
@@ -66,9 +53,8 @@ export default function FirstSiction() {
     message: "",
     Accept: false
   })
-  const handleChange = (phoneValue, countryData) => {
-    setPhone(phoneValue)
-    setCountry(countryData?.countryCode?.toUpperCase() || "SA")
+  const handlePhoneChange = (e) => {
+    const phoneValue = e.target.value
     setValue((prev) => ({ ...prev, phone: phoneValue }))
   }
 
@@ -94,8 +80,8 @@ export default function FirstSiction() {
       newErrors.email = "يرجى إدخال بريد إلكتروني صحيح."
     }
 
-    if (!phoneValue || phoneValue.length < 8 || !/^\+\d+$/.test(phoneValue)) {
-      newErrors.phone = "يرجى إدخال رقم هاتف صحيح يبدأ بـ +."
+    if (!value.phone || value.phone.length < 8) {
+      newErrors.phone = "يرجى إدخال رقم هاتف صحيح."
     }
 
     if (!value.message.trim() || value.message.length < 10) {
@@ -164,8 +150,6 @@ export default function FirstSiction() {
         message: "",
         Accept: false
       })
-      setPhone("")
-      setCountry("US")
 
       setNotification({
         message: "تم إرسال الرسالة بنجاح! 🎉",
@@ -260,39 +244,29 @@ export default function FirstSiction() {
                   ))}
 
                   <div className="col-6 col-md-6">
-                    <div className="phone-input-container">
-                      <label className="phone-label form-label">
-                        <h6>رقم الهاتف</h6>
-                      </label>
-                      <div className="custom-phone-input">
-                        <PhoneInput
-                          country={country.toLowerCase()}
-                          value={phoneValue}
-                          onChange={handleChange}
-                          enableSearch={true}
-                          disableSearchIcon={true}
-                          placeholder={`+${getCountryCallingCode(
-                            country
-                          )} 5XX XXXX`}
-                          inputClass="custom-input"
-                          containerClass="phone-wrapper"
-                          buttonClass="hide-flag"
-                          required
-                        />
-                        <div className="country-name-box">
-                          {getCountryName(country)}
-                        </div>
-                      </div>
+                    <label className="form-label">
+                      <h6>رقم الهاتف</h6>
+                      <input
+                        type="tel"
+                        name="phone"
+                        value={value.phone}
+                        onChange={handlePhoneChange}
+                        placeholder="+966 5XX XXX XXX"
+                        dir="ltr"
+                        style={{ textAlign: 'right' }}
+                        required
+                      />
                       {errors.phone && (
                         <p className="error-text">{errors.phone}</p>
                       )}
-                    </div>
+                    </label>
                   </div>
 
                   <div className="col-12 col-md-12">
                     <label className="form-label">
                       <h6>الموضوع</h6>
                       <Select
+                        instanceId="subject-select"
                         className="basic-single"
                         classNamePrefix="select "
                         styles={{

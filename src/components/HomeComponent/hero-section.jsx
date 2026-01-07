@@ -3,9 +3,9 @@ import Image from 'next/image';
 export default function HeroSection({ data }) {
   return (
     <div className='container px-5 mt-80 pt-0'>
-      <div className='Part1 row w-100 mx-auto' data-aos='fade-up'>
+      <div className='Part1 row w-100 mx-auto' data-aos='fade-up' suppressHydrationWarning>
         <div className='wrap d-md-flex justify-content-between align-content-center align-items-center gap-5'>
-          <div className='imgWrapper d-flex align-items-center justify-content-start gap-0 w-100 position-relative aos-init' data-aos='fade-up '>
+          <div className='imgWrapper d-flex align-items-center justify-content-start gap-0 w-100 position-relative' data-aos='fade-up ' suppressHydrationWarning>
             <Image className='CofiaVector' alt='صورة شخص يرتدي كوفية' src='/img/SomeOne_kofia.png' width={129} height={146} priority />
 
             <p className='imgText w-100 text-center text-md-start'>انضم إلينا في رحلة الابتكار والإبداع، حيث نبني معًا شيئًا استثنائيًا يفوق التوقعات.</p>
@@ -22,7 +22,7 @@ export default function HeroSection({ data }) {
       <div className='mt-2 my-0 position-relative d-flex justify-content-start align-items-center'>
         <p className='BigText'>{data.heroSection.subtitle}</p>
 
-        <div className='aos-init' data-aos='fade-up'>
+        <div data-aos='fade-up' suppressHydrationWarning>
           <Image
             src='/img/BoardsPoster.svg'
             width={217}
@@ -33,7 +33,7 @@ export default function HeroSection({ data }) {
         </div>
       </div>
 
-      <div className='outWrrape d-flex aos-init' data-aos='fade-up'>
+      <div className='outWrrape d-flex' data-aos='fade-up' suppressHydrationWarning>
         <div className='innerWrappe col-3  my-5 d-flex justify-content-start align-content-start  gap-4 w-100'>
           <div className='text'>
             <p className='textBox spaheal d-flex align-items-center'>{data.heroSection.content}</p>

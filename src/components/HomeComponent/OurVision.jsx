@@ -101,12 +101,12 @@ export default function OurVision({ data: { visionSection, statistics } }) {
     <section className='OurVision'>
       <div className='container p-5'>
         <div className='OurVisionWapper container'>
-          <div className='info aos-init' data-aos='fade-left'>
+          <div className='info' data-aos='fade-left' suppressHydrationWarning>
             <small>{visionSection.title}</small>
             <h3>{visionSection.subtitle}</h3>
           </div>
 
-          <div className='boxWrapper d-flex flex-column align-items-center text-center aos-init' data-aos='zoom-in'>
+          <div className='boxWrapper d-flex flex-column align-items-center text-center' data-aos='zoom-in' suppressHydrationWarning>
             <div className='boxWrap d-flex-column  d-xl-flex justify-content-center gap-4 '>
               <div className='box d-flex flex-column justify-content-center align-items-center flex-grow-1'>
                 <span ref={(el) => (numbersRef.current[0] = el)} className='number' data-target={statistics[0]?.value}>

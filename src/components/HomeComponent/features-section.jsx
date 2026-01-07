@@ -20,12 +20,13 @@ export default function FeaturesSection({ data }) {
                     id={`wappLongimg-${img.src}`}
                     src={img.src}
                     alt=''
-                    aria-hidden='true'c
-                    className=' aos-init'
+                    aria-hidden='true'
+                    className=' '
                     data-aos='zoom-in'
                     width={1000}
                     height={1000}
                     loading='lazy'
+                    suppressHydrationWarning
                   />
                 </div>
               </div>
@@ -35,7 +36,7 @@ export default function FeaturesSection({ data }) {
         <div className='part2 pt-md-5 mt-80'>
           <div className='row'>
             <div className='col-md-5'>
-              <div className='BoxText aos-init' data-aos='zoom-in'>
+              <div className='BoxText' data-aos='zoom-in' suppressHydrationWarning>
                 <h3 className='lh-base'>{featuresSection.title}</h3>
                 <p>{featuresSection.content}</p>
                 <button className='btn btn-danger d-flex align-items-center  justify-content-center'>{featuresSection.button_text}</button>
@@ -50,7 +51,7 @@ export default function FeaturesSection({ data }) {
                       <div key={box.id} className='col-12 col-sm-6 d-flex justify-content-center'>
                         <div className='FirstSide d-flex flex-column align-items-center w-100'>
                           <div className={`box ${index === 0 ? 'Active' : ''}`}>
-                            <div className='boxContent aos-init' data-aos='fade-zoom-in'>
+                            <div className='boxContent' data-aos='fade-zoom-in' suppressHydrationWarning>
                               <h2>{box.title}</h2>
                               <p>{box.description}</p>
                             </div>

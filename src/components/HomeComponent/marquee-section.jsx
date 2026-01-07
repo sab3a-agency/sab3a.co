@@ -11,7 +11,7 @@ export default function MarqueeSection() {
       <div className='container p-5 pt-0 mb-5 mb-md-0'>
         <div className='lastPart row  mt-90'>
           <div className='container'>
-            <div className='imgWrapper aos-init' data-aos='fade-up'>
+            <div className='imgWrapper' data-aos='fade-up' suppressHydrationWarning>
               <Image width={1240} height={700} src={data.src} alt="" aria-hidden="true" className='object-fit-cover' />
             </div>
           </div>

@@ -21,16 +21,6 @@ const footerData = {
       icon: faLinkedin,
       link: '#',
       label: 'صفحة سبعة على لينكدإن'
-    },
-    {
-      icon: faTiktok,
-      link: '#',
-      label: 'صفحة سبعة على تيك توك'
-    },
-    {
-      icon: faYoutube,
-      link: '#',
-      label: 'قناة سبعة على يوتيوب'
     }
   ],
   quickLinks: [
@@ -138,10 +128,6 @@ export default function Footer() {
               <p className='Text_copyRight'>
                 جميع الحقوق محفوظة&copy; 2025 <span>وكالة سبعة الرقمية</span>
               </p>
-              <div className='textBox d-flex gap-5'>
-                <a href='#'>سياسة الاستخدام والخصوصية</a>
-                <a href='#'>شروط الاستخدام</a>
-              </div>
               <div className='social '>
                 <div className='icons d-flex justify-content-between align-items-center gap-5'>
                   {footerData.socialLinks.map((social, index) => (

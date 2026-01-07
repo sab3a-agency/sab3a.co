@@ -72,86 +72,11 @@
   font-size: 1.6rem !important;
   font-weight: 700;
 }
-.react-tel-input{
-  min-height: 45px;
-}
 
-.react-tel-input .form-control {
-  padding: 7px;
-}
-.flag {
-  display: none;
-}
-.phone-container.d-flex.align-items-center.gap-2 {
-  position: relative;
-}
-.custom-phone-input {
-  display: flex;
-  align-items: center;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  padding: 0px;
-  background: white;
-  width: 100%;
-}
-
-.country-name-box {
-  padding: 10px;
-  font-size: 14px;
-  font-weight: bold;
-  color: #333;
-  white-space: nowrap;
-}
-
-.phone-input-container {
-  flex-grow: 1;
-}
-
-.hide-flag .flag {
-  display: none !important; /* إخفاء العلم */
-}
-
-.react-tel-input .form-control {
-  padding: 0px;
-  background: transparent;
-  border: 0px;
-}
-.country-name-box {
-  position: absolute;
-}
 .form-label {
   margin-bottom: 0px !important;
 }
-.custom-phone-input {
-  padding: 0px !important;
-}
 
-input.form-control.custom-input:focus {
-  box-shadow: none !important;
-  border: none !important;
-}
-.react-tel-input .selected-flag {
-  width: 9rem !important;
-  border: none !important;
-  background: transparent !important;
-}
-
-.react-tel-input .selected-flag,
-.react-tel-input .flag-dropdown {
-  background: transparent !important;
-  z-index: 2;
-  border: none !important;
-}
-
-.country-name-box {
-  z-index: 1;
-  font-size: 1rem !important;
-}
-input.form-control.custom-input {
-  width: 100% !important;
-  padding: 0.5rem;
-  font-size: 13px;
-}
 textarea.form-control {
   padding: 2rem !important;
 }
@@ -160,13 +85,10 @@ textarea {
   font-size: 2rem !important;
   resize: none !important;
 }
+
 .form-control:focus {
   border: 1px solid var(--Color-Black-Black-50) !important;
   box-shadow: none !important;
-}
-.custom-phone-input {
-  border: 1px solid var(--Color-Black-Black-50) !important;
-  padding: 0px !important;
 }
 .config {
   font-size: 1.5rem;
@@ -237,12 +159,6 @@ textarea {
   color: var(--background);
   /* animation: scaleUp 0.3s ease-in-out; */
 }
-.react-tel-input .country-list {
-  width: 120% !important;
-}
-input.search-box {
-  width: 88% !important;
-}
 
 @keyframes scaleUp {
   0% {
@@ -271,17 +187,9 @@ input.search-box {
 }
 .SecondSection button:hover img {
   rotate: calc(180deg);
-
   background: var(--background);
 }
 
-.react-tel-input .flag-dropdown.open .selected-flag {
-  width: 8rem !important;
-  padding: 0px !important;
-}
-.flag-dropdown.hide-flag {
-  width: 40% !important;
-}
 .see_more svg.svg-inline--fa.fa-arrow-right {
   transform: rotate(182deg);
   color: var(--background);
@@ -357,10 +265,6 @@ img.hero-star {
   position: absolute;
   top: -14px;
   left: 20%;
-}
-.react-tel-input .country-list {
-  width: 250% !important;
-  text-align: left;
 }
 
 .custom-toast {
@@ -447,16 +351,6 @@ img.hero-star {
     top: 68%;
     left: 16%;
     width: 5%;
-  }
-  .react-tel-input .country-list {
-    width: auto !important;
-  }
-  .input.search-box {
-    width: 88% !important;
-  }
-  .react-tel-input .country-list {
-    width: auto !important;
-    text-align: left;
   }
 
   .config {
