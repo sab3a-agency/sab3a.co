@@ -8,7 +8,7 @@ import ErrorRequest from '@/components/ErrorRequest';
 export default async function ProjectDetailsPage({ params }) {
   const { id } = await params;
 
-  const res = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}/projects/${id}`, {
+  const res = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}api/v1/projects/${id}`, {
     cache: 'no-store'
   });
 

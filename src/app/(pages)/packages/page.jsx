@@ -8,7 +8,7 @@ export const metadata = {
 };
 
 export default async function Packages() {
-  const res = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}/homepage`, {
+  const res = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}api/v1/homepage`, {
     cache: 'no-store'
   });
   const { data } = await res.json();

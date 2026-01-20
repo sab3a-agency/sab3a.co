@@ -1,7 +1,7 @@
 import Image from 'next/image';
 
 export async function PartnersMarquee() {
-  const res = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}/partners`);
+  const res = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}api/v1/partners`);
   const {
     data: { items: partners }
   } = await res.json();

@@ -1,7 +1,7 @@
 import Projects from '../projects/projects';
 
 export default async function SimilarWorks({ id }) {
-  const res = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}/projects`, {
+  const res = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}api/v1/projects`, {
     cache: 'no-store'
   });
   const { data } = await res.json();

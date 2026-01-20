@@ -5,7 +5,7 @@ import Link from 'next/link';
 export default async function FaqsSection({ data }) {
   const { faqsSection } = data;
 
-  const res = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}/faqs`, {
+  const res = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}api/v1/faqs`, {
     cache: 'no-store'
   });
   const {
