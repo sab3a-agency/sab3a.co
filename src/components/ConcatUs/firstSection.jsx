@@ -118,7 +118,7 @@ export default function FirstSiction() {
     const payload = {
       name: `${value.name} ${value.family}`,
       email: value.email,
-      phone: phoneValue,
+      phone: value.phone,
       subject: value.subject,
       message: value.message,
       agree_to_policy: value.Accept
@@ -133,6 +133,9 @@ export default function FirstSiction() {
 
       const data = await res.json().catch(() => ({}))
 
+      console.log("Response status:", res.status)
+      console.log("Response data:", data)
+
       if (!res.ok) {
         throw new Error(data.message || "فشل إرسال البيانات")
       }
@@ -141,6 +144,7 @@ export default function FirstSiction() {
         throw new Error(data.message || "فشل إرسال البيانات")
       }
 
+      // Reset form
       setValue({
         name: "",
         family: "",
@@ -151,14 +155,18 @@ export default function FirstSiction() {
         Accept: false
       })
 
+      // Clear errors
+      setErrors({})
+
       setNotification({
         message: "تم إرسال الرسالة بنجاح! 🎉",
         type: "success",
         visible: true
       })
     } catch (error) {
+      console.error("Error submitting form:", error)
       setNotification({
-        message: "حدث خطأ، يرجى المحاولة مرة أخرى",
+        message: error.message || "حدث خطأ، يرجى المحاولة مرة أخرى",
         type: "error",
         visible: true
       })
@@ -272,12 +280,14 @@ export default function FirstSiction() {
                         styles={{
                           indicatorSeparator: () => ({ display: "none" })
                         }}
-                        defaultValue={SubjectOptions[0]}
-                        // isDisabled={isDisabled}
-                        // isLoading={isLoading}
-                        // isClearable={isClearable}
+                        value={SubjectOptions.find(option => option.value === value.subject)}
+                        onChange={(selectedOption) =>
+                          setValue((prev) => ({
+                            ...prev,
+                            subject: selectedOption.value
+                          }))
+                        }
                         isRtl={true}
-                        // isSearchable={isSearchable}
                         name="Subject"
                         options={SubjectOptions}
                       />
@@ -311,16 +321,17 @@ export default function FirstSiction() {
                     <input
                       type="checkbox"
                       required
-                      id=""
-                      name=""
-                      onClick={() => {
+                      id="accept-policy"
+                      name="accept-policy"
+                      checked={value.Accept}
+                      onChange={(e) => {
                         setValue((prev) => ({
                           ...prev,
-                          Accept: !prev.Accept
+                          Accept: e.target.checked
                         }))
                       }}
                     />
-                    <label>
+                    <label htmlFor="accept-policy">
                       <h6 className="config my-4">
                         أنت توافق على سياسة الخصوصية الودية لدينا.
                       </h6>
