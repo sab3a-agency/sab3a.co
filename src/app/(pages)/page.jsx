@@ -8,7 +8,7 @@ import ServicesSection from '@/components/HomeComponent/services-section';
 import FeaturesSection from '@/components/HomeComponent/features-section';
 
 export default async function Home() {
-  const res = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}/homepage`, {
+  const res = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}api/v1/homepage`, {
     cache: 'no-store'
   });
   const { data } = await res.json();

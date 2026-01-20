@@ -51,7 +51,7 @@ export default function FirstSiction() {
     phone: "",
     subject: "باقة الإطلاق الأولي 'MVP'",
     message: "",
-    Accept: false
+    Accept: true
   })
   const handlePhoneChange = (e) => {
     const phoneValue = e.target.value
@@ -88,9 +88,10 @@ export default function FirstSiction() {
       newErrors.message = "الرسالة يجب أن تكون على الأقل 10 أحرف."
     }
 
-    if (!value.Accept) {
-      newErrors.Accept = "يجب الموافقة على سياسة الخصوصية."
-    }
+    // Accept is always true, no need to validate
+    // if (!value.Accept) {
+    //   newErrors.Accept = "يجب الموافقة على سياسة الخصوصية."
+    // }
 
     setErrors(newErrors)
     return Object.keys(newErrors).length === 0
@@ -152,7 +153,7 @@ export default function FirstSiction() {
         phone: "",
         subject: "باقة الإطلاق الأولي 'MVP'",
         message: "",
-        Accept: false
+        Accept: true
       })
 
       // Clear errors
@@ -317,19 +318,14 @@ export default function FirstSiction() {
                     </div>
                   </div>
 
-                  <div className="col-6 col-md-12 d-flex align-items-center gap-4">
+                  {/* Hidden checkbox - always checked */}
+                  <div className="col-6 col-md-12 d-flex align-items-center gap-4" style={{ display: 'none' }}>
                     <input
                       type="checkbox"
-                      required
                       id="accept-policy"
                       name="accept-policy"
                       checked={value.Accept}
-                      onChange={(e) => {
-                        setValue((prev) => ({
-                          ...prev,
-                          Accept: e.target.checked
-                        }))
-                      }}
+                      readOnly
                     />
                     <label htmlFor="accept-policy">
                       <h6 className="config my-4">
@@ -337,9 +333,6 @@ export default function FirstSiction() {
                       </h6>
                     </label>
                   </div>
-                  {errors.Accept && (
-                    <p className="error-text">{errors.Accept}</p>
-                  )}
 
                   <button className="btn btn-success p-3">
                     {isSubmitting ? "جاري الإرسال..." : "إرسال الرسالة"}
