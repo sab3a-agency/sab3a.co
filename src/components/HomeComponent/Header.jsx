@@ -20,7 +20,7 @@ export default function Header() {
     { path: '/packages', name: 'الباقات' },
     // { path: "/team", name: "فريقنا" },
     // { path: "/blog", name: "المدونة" },
-    { path: '/#', name: 'ملف الشركة' }
+    { path: '/company-profile', name: 'ملف الشركة' }
   ];
 
   useEffect(() => {
